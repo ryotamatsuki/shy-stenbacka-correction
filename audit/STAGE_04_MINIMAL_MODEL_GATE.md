@@ -742,7 +742,7 @@ The source Hotelling analysis omits:
 2. the corner price-equilibrium correspondence;
 3. the off-path continuation-selection issue.
 
-The literal-game multiplicity remains part of the audit. Separately, the re-audit proves from the source payoff that every \(p_j<c_j\) is weakly dominated by \(p_j=c_j\). Deleting only those dominated prices yields a unique corner continuation. This is reported explicitly as an **no-loss refinement**, not as a hidden source primitive and not as a trembling-hand/proper-equilibrium theorem.
+The literal-game multiplicity remains part of the audit. Separately, the re-audit proves from the source payoff that every \(p_j<c_j\) is weakly dominated by \(p_j=c_j\), while Stage 4A also proves that \(p_j=c_j\) is itself weakly dominated by any fixed \(p_j=c_j+\varepsilon\). Therefore the auxiliary game is stated transparently as an explicit **no-loss restriction** \(p_j\ge c_j\), not as deletion of all weakly dominated strategies, a hidden source primitive, or a trembling-hand/proper-equilibrium theorem.
 
 The exact refined Stage-I survival/failure region is derived in audit/STAGE_04_HOTELLING_REAUDIT.md. This strengthens rather than removes the Hotelling correction, so HYBRID architecture is restored.
 
@@ -791,8 +791,8 @@ The Stage-4 verification assertions were also rechecked independently after repl
 | CP2: corrected symmetric Cournot action | **PROVED** |
 | CP3: exhaustive general-\(N\) asymmetric correspondence | **NOT RETAINED**; overbroad relative to correction need |
 | CP4: complete Hotelling price continuation | **PROVED** |
-| CP5: Hotelling symmetric candidate is globally defeated | **LITERAL GAME: selection-dependent; UNDOMINATED REFINEMENT: PROVED false on exact nonempty region** |
-| CP6: one unified correction architecture | **RESTORED AS E′** — literal multiplicity + no-loss refinement are stated separately |
+| CP5: Hotelling symmetric candidate is globally defeated | **LITERAL GAME: selection-dependent; NO-LOSS RESTRICTION: PROVED false on exact nonempty region** |
+| CP6: one unified correction architecture | **RETAINED AS SECONDARY ROBUSTNESS** — literal multiplicity + no-loss refinement are stated separately |
 | CP7: Proposition 5 needs global correction | **PROVED in stronger form** |
 
 ---
