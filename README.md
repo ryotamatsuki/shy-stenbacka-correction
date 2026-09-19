@@ -1,131 +1,74 @@
 # Shy–Stenbacka Correction
 
-Reproducible adversarial equilibrium audit and correction project for Shy & Stenbacka (2005).
+Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (2005).
 
-## Project status
+## Canonical status
 
-**Canonical Stage 4 — Minimal Model Gate: PASS**
+\[
+\boxed{\textbf{STAGE 4 — PASS}}
+\]
 
-[
-oxed{	extbf{GO TO STAGE 4A}}
-]
+\[
+\boxed{\textbf{NEXT: STAGE 4A — INDEPENDENT MATHEMATICAL ADVERSARIAL CERTIFICATION}}
+\]
 
-Canonical workflow: `research-paper-workflow` **v2.2**, pinned at commit `42574d6c5931275ccff3ef7e8b4acc188077332a`.
+Workflow: \`research-paper-workflow\` v2.2.
 
-Completed reports:
+Completed:
 
-- `audit/STAGE_01_SOURCE_MATHEMATICAL_AUDIT.md`
-- `audit/STAGE_02_LITERATURE_NOVELTY_GATE.md`
-- `audit/STAGE_03_MECHANISM_SEARCH.md`
-- `audit/STAGE_04_MINIMAL_MODEL_GATE.md`
+- Stage 1 — Source & Mathematical Audit
+- Stage 2 — Literature Frontier / Novelty Kill Gate
+- Stage 3 — Candidate Mechanism Search
+- Stage 4 — Minimal Model Gate
 
-Stage-4 supporting artifacts:
+Canonical reports:
 
-- `audit/stage04_continuation_ledger.md`
-- `audit/stage04_theorem_certificates.md`
-- `code/stage04_verify.py`
+- \`audit/STAGE_01_SOURCE_MATHEMATICAL_AUDIT.md\`
+- \`audit/STAGE_02_LITERATURE_NOVELTY_GATE.md\`
+- \`audit/STAGE_03_MECHANISM_SEARCH.md\`
+- \`audit/STAGE_04_MINIMAL_MODEL_GATE.md\`
 
-Next canonical stage:
+## Stage-4 canonical paper architecture
 
-- **Stage 4A — Independent Mathematical Adversarial Certification Gate**
+Stage 3's unified Cournot + Hotelling Candidate E was rejected as the minimal paper architecture because the source Hotelling price subgame has off-path equilibrium multiplicity.
 
-## Stage-4 architecture decision
+The canonical object routed to Stage 4A is:
 
-The Stage-3 preferred unified Cournot + Hotelling architecture was tested and **not retained** as the canonical minimal paper.
+**Candidate C — Complete Cournot correction.**
 
-Reason: outside the Hotelling interior-share region, the source price subgame has multiple valid pure equilibria with different continuation profits. The source specifies no selection/refinement rule, so the reduced Stage-I payoff is not single-valued.
+Main Stage-4 results:
 
-The pre-authorized fallback therefore activates:
+1. every feasible Cournot sourcing profile has a unique nonnegative-quantity continuation;
+2. the reduced Stage-I payoff is globally strictly concave in own outsourcing under the source SOC;
+3. the corrected symmetric action is
+   \[
+   i_C^*=\min\left\{\phi,\frac{HND}{b(N+1)^2-H^2N}\right\};
+   \]
+4. the source equation-(14)/Proposition-3 competition effect has the wrong sign;
+5. Proposition 5 is false globally: the source duopoly BR can contain a slope-\(+2\) rival-exit segment;
+6. the source duopoly has a complete pure-equilibrium classification, including asymmetric equilibria and a continuum at \(b/H^2=2/3\).
 
-[
-oxed{	extbf{Candidate C — Complete Cournot correction}}
-]
+## Hotelling diagnostic
 
-## Corrected Cournot core
+The Hotelling continuation is unique for \(|c_B-c_A|\le3\tau\) and multiple for larger cost gaps.
 
-Let
+The earlier Stage-1 conclusion that a corner deviation simply defeats Proposition 6 is superseded: the same sourcing deviation can be profitable or unprofitable under different valid off-path price equilibria.
 
-[
-D=a-Hphi-rac{gammaphi^2}{2}>0.
-]
+No no-below-cost refinement or other new selection rule is imposed.
 
-The corrected symmetric outsourcing equilibrium is
+## Verification
 
-[
-oxed{
-i_C^*
-=
-minleft{
-phi,,
-rac{HND}{b(N+1)^2-H^2N}
-ight}.
-}
-]
+- \`code/stage01_verify.py\`
+- \`code/stage04_verify.py\`
+- \`audit/stage04_continuation_ledger.md\`
+- \`audit/stage04_theorem_certificates.md\`
 
-The competition comparative static is weakly negative and strictly negative on the interior branch for (N>1).
+Exact symbolic identities, rational counterexamples, continuation regressions, and the duopoly equilibrium classification have been checked.
 
-The source equation-(14) sign is therefore reversed.
+## Branch policy
 
-## New Stage-4 duopoly finding
+Current audit branch:
 
-The published strategic-substitutes result is only a regular both-active-branch result.
+\`audit/full-equilibrium-correspondence\`
 
-With
-
-[
-ho=rac b{H^2},
-]
-
-the source permits
-
-[
-rac49<ho<rac23,
-]
-
-and in this region the **global** outsourcing best response contains a regime with
-
-[
-rac{dBR}{di_k}=2>0.
-]
-
-The mechanism is downstream rival exit: a firm outsources just enough to make the rival's Cournot quantity zero.
-
-Consequences include asymmetric Stage-I equilibria and, at (ho=2/3), a continuum of equilibria.
-
-## Hotelling correction to the audit record
-
-The earlier Stage-1 claim that one corner deviation unconditionally overturns the reported Hotelling candidate is superseded.
-
-Correct Stage-4 finding:
-
-- (|c_B-c_A|le3	au): unique source price equilibrium;
-- (|c_B-c_A|>3	au): continuum of corner price equilibria;
-- the same Stage-I outsourcing deviation can be profitable under one valid price continuation and unprofitable under another.
-
-Thus the source has an off-path equilibrium-selection problem. No selection refinement is added.
-
-## Source-model discipline
-
-The published monitoring cost remains
-
-[
-M(i_j)=i_j^2.
-]
-
-No generalized (eta i_j^2), new fixed cost, outside option, bargaining stage, uncertainty, or supplier market power is introduced.
-
-## Current canonical state
-
-[
-oxed{
-	ext{Stage 1 PASS}
-ightarrow
-	ext{Stage 2 PASS}
-ightarrow
-	ext{Stage 3 PASS}
-ightarrow
-	ext{Stage 4 PASS}
-ightarrow
-	extbf{Stage 4A NEXT}
-}
-]
+\`main\` remains the stable project history. No theory-freeze claim is made before Stage 4A and later gates pass.
