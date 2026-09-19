@@ -1,8 +1,9 @@
 # Stage 12 — Initial Journal Requirements Ledger
 ## Primary target: Review of Industrial Organization
 
-Status: **INITIAL LEDGER — STAGE 12**  
+Status: **INITIAL LEDGER — STAGE 12 / RECHECKED IN v2.3 RE-AUDIT**  
 Access date: **2026-09-20**  
+Re-audit workflow commit: `9eb616bd31ea3a9ef3c29e288228ed962c44c9cf`  
 Journal: **Review of Industrial Organization (RIO)**  
 Publisher: Springer Nature  
 Journal URL: https://link.springer.com/journal/11151  
@@ -10,7 +11,7 @@ Aims/scope: https://link.springer.com/journal/11151/aims-and-scope
 Submission guidelines: https://link.springer.com/journal/11151/submission-guidelines  
 Publishing options: https://link.springer.com/journal/11151/how-to-publish-with-us
 
-This ledger is an initial Stage-12 snapshot. Stage 14 must re-open the live official pages and the authenticated submission portal before SUBMISSION QA PASS.
+This ledger is the initial Stage-12 requirements baseline. It was rechecked on 2026-09-20 during the v2.3 candidate-universe re-audit after RIO remained the selected primary journal. No public requirement discovered in that re-audit changed the Stage-13 packaging contract. Stage 14 must still re-open the live official pages and the authenticated submission portal before SUBMISSION QA PASS.
 
 ## 1. Article category / scope
 
