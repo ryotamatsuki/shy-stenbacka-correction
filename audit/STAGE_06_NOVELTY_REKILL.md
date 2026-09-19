@@ -1,3 +1,5 @@
+> **Independent-audit recheck (2026-09-20).** The novelty boundary remains source-specific after the all-active multiplicity finding. See `audit/STAGE_06_ABSORPTION_RECHECK_2026-09-20.md` for the controlling theorem-absorption recheck.
+
 # Stage 6 — Novelty Re-Kill
 
 > **2026-09-20 independent-audit recheck.** The original Stage-6 verdict remains historical provenance. The all-active multiplicity example and C7 cap-feasibility repair were rechecked against the strongest parent-theorem comparisons. The current novelty boundary remains source-specific; the revised mechanism wording below supersedes any implication that downstream exit is necessary for multiplicity.
