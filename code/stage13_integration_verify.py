@@ -39,6 +39,11 @@ assert all(re.fullmatch(r"[A-Z][0-9]{2}", x) for x in jels), jels
 assert "\\cite{Dai2026}" in ALL, "Dai 2026 not integrated into manuscript"
 assert "@article{Dai2026" in BIB, "Dai 2026 bibliography entry missing"
 assert "10.1007/s11151-026-10063-3" in BIB
+assert "\\bibliographystyle{apalike}" in MAIN
+doi_values = re.findall(r"^\s*doi\s*=\s*\{([^}]+)\}", BIB, re.M)
+for doi in doi_values:
+    doi = re.sub(r"^https?://doi\\.org/", "", doi.strip())
+    assert f"https://doi.org/{doi}" in BIB, f"full DOI link missing for {doi}"
 
 cite_keys = set()
 for match in re.finditer(r"\\cite\{([^}]+)\}", ALL):
