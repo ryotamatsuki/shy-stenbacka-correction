@@ -89,3 +89,56 @@ Stage 4 closes with **GO** for Candidate C — Complete Cournot correction, rout
 The unified Candidate E is rejected as the minimal canonical architecture because the source Hotelling price subgame has a continuum of valid off-path equilibria for sufficiently asymmetric costs. The Stage-1 Hotelling profitable-deviation result is therefore superseded as an unconditional rejection and retained instead as a continuation-selection diagnostic.
 
 Cournot construction results now frozen for Stage 4A include: global continuation uniqueness, global own-payoff concavity, corrected capped symmetric action, reversed Proposition-3 sign, complete duopoly global BR, and the complete pure duopoly equilibrium correspondence.
+
+
+---
+
+## 2026-09-19 — Stage-4 Hotelling re-open and final amendment
+
+### Trigger
+
+The previous Stage-4 architecture dropped Hotelling because the literal corner price subgame is multiple when \(|c_B-c_A|>3\tau\).
+
+A re-audit was required because the multiplicity relies on zero-demand high-cost firms choosing prices below marginal cost.
+
+### Mathematical finding
+
+For every \(p_j<c_j\),
+
+\[
+p_j=c_j
+\]
+
+weakly dominates \(p_j\) under the source Hotelling payoff.
+
+The literal Nash continuum therefore remains a valid source-game diagnosis, but all corner equilibria except the marginal-cost endpoint use weakly dominated prices.
+
+After one-round deletion of these below-cost prices:
+
+- the corner continuation is unique;
+- the refined Stage-I payoff is single-valued;
+- the source symmetric candidate fails exactly when
+  \[
+  27\tau/2<H^2n<18\tau
+  \]
+  and
+  \[
+  \phi>
+  Hn/2-\sqrt{2n(2H^2n-27\tau)}/6.
+  \]
+
+The Stage-1 example gives exact gain \(1/90\) under this refinement.
+
+### Architecture decision
+
+The prior Cournot-only routing is superseded.
+
+\[
+\boxed{\textbf{RESTORE Candidate E′}}
+\]
+
+Candidate E′ = complete Cournot correction + literal/refined Hotelling correction.
+
+Stage-4 verdict remains **GO → Stage 4A**.
+
+No trembling-hand/proper-equilibrium claim is made.
