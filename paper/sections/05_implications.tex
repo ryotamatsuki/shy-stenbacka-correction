@@ -72,7 +72,7 @@ The source's symmetric interior candidate is
 i_0=\frac{Hn}{6}.
 \label{eq:i0}
 \end{equation}
-For \(\phi>i_0\), define
+When \(H^2n\ge 27\tau/2\), define the real lower root
 \begin{equation}
 x_-=
 \frac{Hn}{2}
@@ -83,14 +83,16 @@ x_-=
 
 \begin{proposition}[Conditional no-loss failure region]
 \label{prop:no-loss}
-In the auxiliary pure-strategy game with \eqref{eq:no-loss} and \(\phi>i_0\), the symmetric candidate \((i_0,i_0)\) fails to be a Stage-I equilibrium if and only if
+In the auxiliary pure-strategy game with \eqref{eq:no-loss}, suppose \(\phi>i_0\) and maintain the strict source condition \(H^2n<18\tau\).  If \(H^2n\le27\tau/2\), the symmetric candidate \((i_0,i_0)\) has no strictly profitable pure deviation.  If
+\[
+\frac{27}{2}\tau<H^2n<18\tau,
+\]
+the candidate fails to be a Stage-I equilibrium if and only if
 \begin{equation}
-\frac{27}{2}\tau<H^2n<18\tau
-\qquad\text{and}\qquad
 \phi>x_-.
 \label{eq:no-loss-region}
 \end{equation}
-At \(\phi=x_-\), the nonlocal deviation ties.
+At \(\phi=x_-\), the best nonlocal deviation ties.  At \(H^2n=27\tau/2\), the vertex gain is zero, so there is no strict failure.
 \end{proposition}
 
 For the exact admissible values
