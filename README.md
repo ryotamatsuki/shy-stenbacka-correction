@@ -4,36 +4,52 @@ Reproducible adversarial equilibrium audit and correction project for Shy & Sten
 
 ## Project status
 
-**Canonical Stage 1 — Source & Mathematical Audit: PASS**
+**Canonical Stage 2 — Literature Frontier / Novelty Kill Gate: PASS**
 
 [
-oxed{	extbf{GO TO NOVELTY GATE}}
+oxed{	extbf{GO TO MECHANISM SEARCH}}
 ]
 
 Canonical workflow: `research-paper-workflow` **v2.2**, pinned at commit `42574d6c5931275ccff3ef7e8b4acc188077332a`.
 
-Stage-1 audit:
+Completed canonical audits:
 
 - `audit/STAGE_01_SOURCE_MATHEMATICAL_AUDIT.md`
+- `audit/STAGE_02_LITERATURE_NOVELTY_GATE.md`
 
-Exact verification:
+Literature evidence ledger:
+
+- `audit/stage02_literature_ledger.md`
+
+Exact Stage-1 verification:
 
 - `code/stage01_verify.py`
 
 Next canonical stage:
 
-- **Stage 2 — Literature Frontier / Novelty Kill Gate**
+- **Stage 3 — Candidate Mechanism Search**
 
-## Stage-1 certified source-model findings
+## Surviving contribution after Stage 2
 
-The audit currently certifies four material issues using the published model's own normalization:
+The project must be positioned as a **source-specific correction and global equilibrium re-characterization in a known model**.
 
-1. equation (14)'s Cournot comparative-static sign is reversed;
-2. the hard outsourcing bound (0le i_jlephi) is not enforced in the reported Cournot and Hotelling solutions;
-3. the Cournot all-active quantity continuation can fail after feasible asymmetric Stage-I histories;
-4. the Hotelling interior-market-share price continuation can fail after feasible Stage-I histories, and an exact profitable corner deviation overturns the reported symmetric candidate for a nonempty region satisfying the paper's local SOC.
+It must **not** claim novelty for the generic proposition that stronger competition can reduce outsourcing. König (2010) already obtains that direction in a closely related Cournot partial-outsourcing specification.
 
-These are Stage-1 mathematical findings, **not** yet a novelty certification.
+What survives the novelty kill gate is narrower:
+
+1. the published Shy–Stenbacka equation (14) has the wrong sign when differentiated from its own equation (13);
+2. the primitive outsourcing bound (0le i_jlephi) is omitted from the reported Cournot and Hotelling equilibrium formulas;
+3. the Cournot all-active continuation can fail after feasible asymmetric Stage-I histories;
+4. the Hotelling interior-market-share continuation can fail after feasible deviations, with an exact profitable corner deviation already certified at Stage 1;
+5. a complete constrained SPNE correspondence of the exact source game remains a potentially novel target, not yet a proved theorem.
+
+## Strongest prior-art threat
+
+**Jan König (2010), “Outsourcing motives, competitiveness and taxation.”**
+
+König explicitly adapts the Shy–Stenbacka framework and derives a negative competition effect in a close variant. But he treats Shy–Stenbacka's positive result as a genuine opposite result and attributes the difference to cost structure; he does not correct their equation (14) or the global-equilibrium defects.
+
+Therefore the eventual paper must cite and distinguish König prominently.
 
 ## Source-model discipline
 
@@ -49,16 +65,16 @@ This repository does **not** import a generalized (eta i_j^2) monitoring cost i
 
 - `main` is the stable project history.
 - Mathematical audit work is developed on dedicated branches.
-- No headline correction claim is treated as final until the relevant global-equilibrium and novelty gates have passed.
+- No headline correction claim is treated as final until global-equilibrium, adversarial, novelty re-kill, and formal-verification gates have passed.
 - Published expressions and corrected expressions are kept distinct.
 - Solver/branch failure is never interpreted as an unprofitable deviation.
-- Numerical or symbolic checks supplement, but do not replace, analytical proof.
+- Search failure is never treated as proof of novelty.
 - Copyrighted source PDFs are not committed unless redistribution is clearly permitted.
 
 ## Structure
 
 ```text
-audit/        canonical audits and theorem-impact tracking
+audit/        canonical audits, literature ledger, theorem-impact tracking
 derivations/  clean mathematical derivations
 paper/        manuscript material (not yet a frozen paper)
 code/         symbolic/numerical verification
@@ -70,7 +86,7 @@ docs/         workflow provenance and decisions
 
 `audit/full-equilibrium-correspondence`
 
-The branch name predates adoption of the canonical v2.2 routing. Work on it is currently at Stage 1 PASS; a complete corrected equilibrium correspondence remains a downstream task.
+The branch name predates canonical v2.2 routing. Current canonical state is Stage 2 PASS.
 
 ## Reproducibility principle
 
@@ -80,5 +96,6 @@ Every eventual correction claim must be recoverable from:
 2. explicit feasible sets and product-market continuation domains;
 3. valid continuation equilibria after every material unilateral deviation;
 4. exact parameter-region classification;
-5. independent symbolic/numerical checks where useful;
-6. later adversarial and formal-verification gates required by v2.2.
+5. model-level prior-art comparison;
+6. independent symbolic/numerical checks where useful;
+7. later adversarial and formal-verification gates required by v2.2.
