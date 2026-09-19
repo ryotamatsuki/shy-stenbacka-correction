@@ -6,8 +6,6 @@ Pinned workflow commit:
 
 `42574d6c5931275ccff3ef7e8b4acc188077332a`
 
-See `docs/WORKFLOW_PROVENANCE.md`.
-
 ## Current canonical state
 
 [
@@ -18,69 +16,62 @@ See `docs/WORKFLOW_PROVENANCE.md`.
 ightarrow
 	ext{Stage 3 PASS}
 ightarrow
-	extbf{Stage 4 NEXT}
+	ext{Stage 4 PASS}
+ightarrow
+	extbf{Stage 4A NEXT}
 }
 ]
 
 Stage-1 verdict: **GO TO NOVELTY GATE**.  
 Stage-2 verdict: **GO TO MECHANISM SEARCH**.  
-Stage-3 verdict: **GO TO MINIMAL MODEL**.
+Stage-3 verdict: **GO TO MINIMAL MODEL**.  
+Stage-4 verdict: **GO TO STAGE 4A**.
 
-## Stage-3 selected architecture
+## Canonical Stage-4 object
 
-Stage 4 tests **Candidate E — Unified regime-complete correction**.
+Stage 4 tested Candidate E and activated the Stage-3 authorized fallback.
 
-Core loop:
+The object passed to Stage 4A is:
 
-[
-	ext{outsourcing}
-	o
-	ext{cost vector}
-	o
-	ext{downstream regime}
-	o
-	ext{continuation payoff}
-	o
-	ext{global Stage-I best response}.
-]
+**Candidate C — Complete Cournot correction.**
 
-Cournot regime = active set.  
-Hotelling regime = interior/corner market share.
+It includes:
 
-No new source primitive is authorized.
+- exact Stage-II active-set continuation for every feasible sourcing history;
+- global strict concavity of own Stage-I payoff under the source SOC;
+- corrected constrained symmetric general-(N) equilibrium;
+- corrected competition and boundary comparative statics;
+- complete global duopoly best response;
+- complete source-duopoly pure Stage-I equilibrium correspondence.
 
-## Authorized fallback
+## Candidate E status
 
-If the Hotelling global price continuation cannot be completely characterized while Cournot closes cleanly, Stage 4 may return a conditional pivot to **Candidate C — Complete Cournot correction**.
+The unified Cournot + Hotelling architecture is not the canonical minimal paper.
 
-It may not silently drop unresolved Hotelling histories while retaining a global SPNE claim.
+The Hotelling price subgame has multiple pure continuations for sufficiently asymmetric costs, and the source has no equilibrium-selection rule. The finding is retained as an audit result but is not repaired by introducing a new refinement.
 
-## Stage-4 prohibitions
+## Stage-4A contract
 
-- no generalized monitoring-cost coefficient;
-- no fixed cost added to create thresholds;
-- no outside option added to Hotelling;
-- no dynamics, uncertainty, bargaining, or supplier market power;
-- no clipping of an invalid continuation formula as a substitute for solving the continuation game;
-- no use of FOC/SOC alone as a global equilibrium certificate.
+Stage 4A must independently attack the Cournot construction and may not silently repair it.
+
+It must test:
+
+1. all-active and reduced-active-set Cournot continuations;
+2. global concavity across regime boundaries;
+3. the cap correction;
+4. equation-(14) sign;
+5. the duopoly piecewise best response;
+6. the positive-slope regime;
+7. asymmetric equilibria;
+8. the (ho=2/3) continuum;
+9. regression artifacts.
+
+A Stage-4A failure returns the exact failed theorem; it does not authorize a new primitive.
 
 ## Important ordering note
 
-The repository was created before canonical Stage 9 for provenance. This does **not** constitute Stage 9 PASS.
+The repository exists before canonical Stage 9 only for provenance. This does **not** constitute Stage 9 PASS.
 
-## Fail-closed equilibrium rule
+## Fail-closed rule
 
-Any material continuation must be classified as one of:
-
-- `SOLVED_EQUILIBRIUM`
-- `SOLVED_NO_EQUILIBRIUM`
-- `MULTIPLE_EQUILIBRIA`
-- `UNRESOLVED`
-- `NUMERICAL_FAILURE`
-
-Material `UNRESOLVED` or `NUMERICAL_FAILURE` blocks a global SPNE theorem.
-
-## Branch policy
-
-- `main`: stable project history.
-- `audit/full-equilibrium-correspondence`: current staged audit.
+Material unresolved continuations or failed theorem certificates block later theory freeze.
