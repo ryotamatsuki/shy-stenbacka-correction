@@ -185,7 +185,6 @@ text = "\n".join(p.read_text(encoding="utf-8") for p in paper.rglob("*.tex"))
 
 for forbidden in (
     "unique general-N SPNE",
-    "outsourcing is globally a strategic complement",
     "undominated-price refinement",
     "formal verification of the complete Shy",
     "Proposition 6 is false in every literal-source SPNE",
@@ -195,6 +194,7 @@ for forbidden in (
 
 required = (
     "complete pure Stage-I re-characterization of its Cournot source-duopoly case",
+    "does not imply that outsourcing is globally a strategic complement",
     "not a new general theory of outsourcing",
     "complete mixed-strategy correspondence",
     "not formally mechanized",
