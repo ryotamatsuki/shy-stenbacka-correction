@@ -41,7 +41,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 11 — ROBUSTNESS / REFEREE ATTACK GATE}}
+\boxed{\textbf{STAGE 11 — PASS / ROBUSTNESS GATE CLOSED}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 12 — JOURNAL POSITIONING}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -295,3 +299,24 @@ Stage-10 substantive head `80f4523222e3f473786f3800ca8be0928de78fe2` passed:
 - manuscript build run `35444042793`.
 
 Figure 1 is generated from exact rational regression values before the LaTeX build. Table 1 reports the certified pure source-duopoly equilibrium regimes. No Stage-8 rollback trigger was activated.
+
+
+## Stage 11 robustness / referee attack
+
+Stage 11 closes with:
+
+\[
+\boxed{\textbf{CANONICAL STAGE 11 — PASS}}
+\]
+
+Canonical Stage-11 artifacts:
+
+- `audit/STAGE_11_ROBUSTNESS_REFEREE_ATTACK.md`
+- `audit/STAGE_11_KNOWN_MODEL_ATTACK.md`
+- `code/stage11_hostile_referee_verify.py`
+
+The hostile-referee layer independently attacked primitive-level Cournot deviations, active-set boundaries, the (ho=2/3) knife edge, the (phi=s) cap boundary, literal Hotelling corner selection, the auxiliary no-loss threshold, welfare selection, function-class scope, known-model absorption, citation completeness, and formal-verification scope.
+
+One **MINOR** prose-only scope inflation in Related Literature was found and repaired. No FATAL or MAJOR defect and no certification regression was found.
+
+Stage-11 verification head `89d04eb048257db3f930cd34f96209d34d1e3bc7` passed Python verification runs `35451023487` and `35451026809`. The manuscript containing the scope repair passed build run `35450876387`. The frozen Lean blobs remain unchanged.
