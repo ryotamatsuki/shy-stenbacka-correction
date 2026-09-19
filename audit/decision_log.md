@@ -27,9 +27,9 @@ All canonical Stage-1 symbolic identities and counterexamples were independently
 The material defects survive source-faithful reconstruction:
 
 - equation (14) sign reversal;
-- missing (ile\phi) bound in Cournot;
+- missing (ilephi) bound in Cournot;
 - Cournot active-set continuation failure;
-- missing (ile\phi) bound in Hotelling;
+- missing (ilephi) bound in Hotelling;
 - profitable Hotelling corner deviation.
 
 The generalized (eta)-model is retained only as noncanonical predecessor history.
@@ -44,10 +44,49 @@ Replace the bootstrap repository's custom Stage-0–8 labels with the canonical 
 
 ### Consequence
 
-Current state:
-
-[
-	ext{Stage 1 PASS} ightarrow 	ext{Stage 2 NEXT}.
-]
+Stage 1 closed with `GO TO NOVELTY GATE`.
 
 The fact that a GitHub repository already exists does not constitute canonical Stage 9 PASS.
+
+---
+
+## 2026-09-19 — Stage-2 novelty narrowing
+
+### Decision
+
+The project survives the Literature Frontier / Novelty Kill Gate, but the contribution is narrowed to a **source-specific correction and global equilibrium re-characterization**.
+
+### Strongest prior-art threat
+
+Jan König (2010), *Outsourcing motives, competitiveness and taxation*.
+
+König explicitly adapts the Shy–Stenbacka framework and, for a marginal-cost-saving outsourcing motive in a different constant-cost specification, obtains less outsourcing when the number of firms rises.
+
+### What is killed
+
+Do not claim novelty for:
+
+- “more competition can reduce outsourcing”;
+- strategic substitutability of outsourcing;
+- partial outsourcing;
+- continuum-input modeling;
+- Cournot/Hotelling sourcing analysis as such.
+
+### What survives
+
+No located prior paper was found to:
+
+- correct equation (14) within the published 2005 source model;
+- identify the omitted (ilephi) bound;
+- identify the Cournot active-set continuation defect;
+- identify the Hotelling corner-continuation profitable deviation.
+
+These claims remain `POTENTIALLY NOVEL`, not universally proven priority claims.
+
+### Routing
+
+[
+	ext{Stage 2 PASS} ightarrow 	ext{Stage 3 NEXT}.
+]
+
+Stage 3 must compare minimal correction architectures without modifying the source primitives merely for novelty.
