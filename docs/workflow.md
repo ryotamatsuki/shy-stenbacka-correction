@@ -26,49 +26,80 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 7.5 PASS}
 \rightarrow
-\textbf{Stage 7.5A NEXT}
+\text{Stage 7.5A PASS}
+\rightarrow
+\textbf{Stage 8 NEXT}
 }
 \]
 
 Stage 5 was not triggered.
 
-## Stage-7.5 value decision
+## Stage-7.5A verdict
 
 \[
-\boxed{\textbf{GO TO STAGE 7.5A GENERALITY / QUANTIFIER RED-TEAM}}
+\boxed{\textbf{GO — GENERALITY / QUANTIFIER CERTIFICATION PASS}}
 \]
 
-The branch is worth full-paper investment as a **compact source-specific correction paper / theory note**.
+Formal gate:
 
-It is not frozen as a general theory of outsourcing.
+\[
+\boxed{\textbf{FORMAL VERIFICATION PASS}}
+\]
 
-### Primary manuscript core
+## Frozen claim scopes entering Stage 8
 
-1. Proposition-3 sign reversal.
-2. Corrected constrained symmetric Cournot action and cap qualifications.
-3. Complete global source-duopoly BR.
-4. Proposition-5 global failure.
-5. Complete pure source-duopoly Stage-I equilibrium correspondence.
+### General-\(N\) Cournot
 
-### Secondary
+- unique pure downstream quantity continuation for every feasible sourcing history;
+- globally strictly concave own reduced sourcing payoff under source SOC;
+- unique **symmetric pure Stage-I action**;
+- competition comparative static stated over admissible integer market sizes satisfying the source restrictions.
 
-1. Literal Hotelling off-path price multiplicity.
-2. Explicit \(p\ge c\) no-loss robustness theorem.
-3. Welfare diagnostics and selection warnings.
+No general-\(N\) all-equilibrium uniqueness claim is authorized.
 
-## Stage-7.5A contract
+### Source duopoly
 
-Stage 7.5A must attack:
+- complete **pure Stage-I** global best response and equilibrium correspondence;
+- Proposition 5 false as a global strategic-substitutes claim;
+- positive-slope rival-exit branch does not imply global strategic complements.
 
-- every universal quantifier;
-- every equality / knife-edge;
-- pure-versus-mixed equilibrium wording;
-- integer-\(N\) versus continuous-\(N\) comparative-static language;
-- cap-binding cases;
-- baseline-functional-form versus general-mechanism wording;
-- literal Hotelling versus no-loss auxiliary-game wording;
-- planner / first-best terminology;
-- welfare selection qualifiers;
-- formal-verification target completeness.
+### Hotelling
 
-Stage 7.5A may narrow claims. It may not add extensions or modify primitives.
+- literal **pure-price** continuation: unique or exactly characterized multiple;
+- auxiliary \(p\ge c\) game: conditional no-loss robustness only;
+- no trembling-hand / proper / admissibility / mixed-equilibrium claim.
+
+### Welfare
+
+- exact accounting identities;
+- planner/benchmark labels frozen;
+- Cournot equilibrium welfare is selection-dependent where Stage-I multiplicity exists.
+
+### Generality
+
+Exact results remain baseline/source-functional-form theorems.
+
+A Stage-7.5A convex-monitoring counterexample blocks any generic promotion of C7/C8.
+
+## Formal verification boundary
+
+Lean 4.19.0 + pinned mathlib commit
+\`c44e0c8ee63ca166450922a373c7409c5d26b00b\`.
+
+Final green formal run:
+\`35439005968\`.
+
+The formal layer certifies selected proof-critical algebra/order statements, not the complete economic game.
+
+## Stage-8 contract
+
+Stage 8 must freeze:
+
+- canonical model;
+- theorem statements at Stage-7.5A scope;
+- solution concepts;
+- benchmark labels;
+- novelty and robustness boundaries;
+- formal-verification provenance.
+
+No theorem widening or new extension is permitted.
