@@ -61,7 +61,30 @@ Current routing:
 \rightarrow
 \text{Stage 9 PASS}
 \rightarrow
-\textbf{Stage 10 NEXT}.
+\text{Stage 10 PASS}
+\rightarrow
+\textbf{Stage 11 NEXT}.
 \]
 
 Any post-freeze theory change must route back to the earliest affected canonical gate rather than being patched only in manuscript prose or code.
+
+
+## Canonical Stage 10 closure
+
+Stage 10 converted the frozen theory into the working manuscript only after Stage 9 was reproducible.
+
+Canonical records:
+
+- `audit/STAGE_10_PAPER_CONSTRUCTION.md`
+- `audit/STAGE_10_FIGURE_TABLE_ARCHITECTURE.md`
+
+Substantive Stage-10 verification head:
+
+`80f4523222e3f473786f3800ca8be0928de78fe2`
+
+Green evidence:
+
+- Python verification run `35444042815`;
+- manuscript smoke-build run `35444042793`.
+
+The figure generator is `code/stage10_generate_figure.py`; the generated TikZ file is a build artifact. Stage 10 changed exposition and reproducibility infrastructure only within the Stage-8 frozen theory boundary.
