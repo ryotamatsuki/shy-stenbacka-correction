@@ -24,51 +24,51 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 7 PASS}
 \rightarrow
-\textbf{Stage 7.5 NEXT}
+\text{Stage 7.5 PASS}
+\rightarrow
+\textbf{Stage 7.5A NEXT}
 }
 \]
 
 Stage 5 was not triggered.
 
-## Stage-7 scope decision
+## Stage-7.5 value decision
 
-The project remains a source-specific correction paper.
-
-Welfare is supporting diagnostic only.
-
-### Certified welfare controls
-
-- exact Cournot and Hotelling CS / total-welfare identities;
-- explicit full planner problems;
-- restricted-instrument benchmark labels;
-- selection-dependent welfare in the corrected Cournot duopoly;
-- fixed-history welfare invariance across literal Hotelling corner price equilibria;
-- no policy recommendation.
-
-### Generality controls
-
-Exact thresholds and equilibrium correspondences remain baseline functional-form results.
-
-The rival-exit mechanism has restricted-class analytic support, but no broad global theorem is claimed.
-
-### Institutional controls
-
-The broad outsourcing trade-off
 \[
-\text{cost advantage}+\text{monitoring/coordination burden}
+\boxed{\textbf{GO TO STAGE 7.5A GENERALITY / QUANTIFIER RED-TEAM}}
 \]
-is empirically recognizable.
 
-The exact linear cost reduction, quadratic monitoring cost, and output-independent monitoring specification remain tractability assumptions.
+The branch is worth full-paper investment as a **compact source-specific correction paper / theory note**.
 
-## Stage-7.5 contract
+It is not frozen as a general theory of outsourcing.
 
-Stage 7.5 may not add extensions.
+### Primary manuscript core
 
-It must decide whether the certified S1–S5 correction package is strong enough to freeze, carrying forward:
+1. Proposition-3 sign reversal.
+2. Corrected constrained symmetric Cournot action and cap qualifications.
+3. Complete global source-duopoly BR.
+4. Proposition-5 global failure.
+5. Complete pure source-duopoly Stage-I equilibrium correspondence.
 
-- planner/benchmark register;
-- equilibrium-selection welfare qualifications;
-- baseline-vs-generality classification;
-- result-to-exposition triage;
-- formalization applicability.
+### Secondary
+
+1. Literal Hotelling off-path price multiplicity.
+2. Explicit \(p\ge c\) no-loss robustness theorem.
+3. Welfare diagnostics and selection warnings.
+
+## Stage-7.5A contract
+
+Stage 7.5A must attack:
+
+- every universal quantifier;
+- every equality / knife-edge;
+- pure-versus-mixed equilibrium wording;
+- integer-\(N\) versus continuous-\(N\) comparative-static language;
+- cap-binding cases;
+- baseline-functional-form versus general-mechanism wording;
+- literal Hotelling versus no-loss auxiliary-game wording;
+- planner / first-best terminology;
+- welfare selection qualifiers;
+- formal-verification target completeness.
+
+Stage 7.5A may narrow claims. It may not add extensions or modify primitives.
