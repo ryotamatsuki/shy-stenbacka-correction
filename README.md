@@ -17,7 +17,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 7 — WELFARE / GENERALITY}}
+\boxed{\textbf{STAGE 7 — PASS}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 7.5 — FULL-THEORY FREEZE DECISION}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -95,3 +99,26 @@ Canonical Stage-6 artifacts:
 - \`audit/stage06_search_log.md\`
 
 Generic “first to show competition reduces outsourcing,” “first asymmetric investment equilibrium,” and “new symmetry-breaking mechanism” language is prohibited.
+
+
+## Stage 7 welfare / generality result
+
+Stage 7 does **not** promote welfare to a new headline contribution.
+
+Key controls:
+
+- exact Cournot and Hotelling welfare identities derived;
+- unrestricted first-best problems explicitly defined;
+- restricted sourcing benchmarks are not called first best;
+- Cournot multiple equilibria have different welfare, so no selection-free global welfare claim is permitted;
+- literal Hotelling corner price multiplicity is welfare-invariant at a fixed sourcing history because prices are transfers and the allocation is unchanged;
+- the no-loss Hotelling result remains conditional on explicit \(p\ge c\);
+- exact functional-form results remain baseline-only unless separately proved more generally;
+- broad institutional trade-off is supported, but quadratic/output-independent monitoring cost is not empirically established.
+
+Canonical Stage-7 artifacts:
+
+- \`audit/STAGE_07_WELFARE_GENERALITY.md\`
+- \`audit/stage07_welfare_benchmarks.md\`
+- \`audit/stage07_generality_institutional.md\`
+- \`code/stage07_welfare_verify.py\`
