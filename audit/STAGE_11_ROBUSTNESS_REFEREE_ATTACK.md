@@ -1,3 +1,5 @@
+> **Independent-audit reopening notice (2026-09-20).** The historical `NO CERTIFICATION REGRESSION` finding was later falsified for the C7 quantifier/C8 proof record and multiplicity interpretation. The historical record is preserved; the controlling recertification is `audit/STAGE_11_RECERTIFICATION_2026-09-20.md` once closed.
+
 # Stage 11 — Robustness / Referee Attack Gate
 
 Status:
