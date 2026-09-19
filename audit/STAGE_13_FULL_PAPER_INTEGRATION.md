@@ -3,7 +3,7 @@
 Status:
 
 \[
-\boxed{\textbf{CONDITIONAL GO — FINAL MANUSCRIPT / RIO-BUNDLE BUILD PENDING}}
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
 \]
 
 Date: **2026-09-20**  
@@ -217,20 +217,56 @@ An earlier Stage-13 verifier run failed only because a lint assertion searched f
 
 An earlier flat-bundle build also found one packaging bug: the figure input path inside a copied section remained `generated/...`. The bundle generator was corrected to flatten that section-level path as well. This was a Stage-13 packaging defect, not a mathematical or manuscript-content regression.
 
-## 12. Remaining blocker before final Stage-13 PASS
+## 12. Final build evidence
 
-At the time this report was first written, the final manuscript workflow at head
-`8c3988ee7589fbcea49ef802555520af6e6784a2`
-was still running:
+Substantive Stage-13 integration head:
 
-- manuscript / flat RIO bundle PR run: `35473431036`.
+`72c2f233199bea82e67de9b93987a64fe2dae804`
 
-Stage 13 becomes PASS only when that run confirms successful compilation of both source layouts.
+Green evidence:
 
-## 13. Provisional verdict
+- Python verification push run `35473538351` — **PASS**;
+- Python verification PR run `35473541979` — **PASS**;
+- manuscript / flat-bundle push run `35473538163` — **PASS**.
+
+The manuscript workflow confirms both build paths:
+
+1. canonical modular manuscript — **PASS**;
+2. generated flat RIO bundle — **PASS**.
+
+Both converged to a 16-page PDF after bibliography/cross-reference passes. The flat-bundle log explicitly reports:
+
+`Stage-13 RIO flat-bundle build PASS`.
+
+Two Stage-13-only implementation defects were found and repaired before closure:
+
+- an integration-lint assertion searched for wording different from the actual RIO notes;
+- the first flat-bundle generator failed to rewrite the figure input path inside a copied section file.
+
+Neither defect changed manuscript mathematics, contribution scope, or the Stage-8/11 certification state.
+
+## 13. Remaining blockers
+
+**None for Stage 13.**
+
+Author-specific and authenticated-portal requirements listed in Section 10 remain intentionally unresolved and are part of the Stage-14 contract, not Stage-13 blockers.
+
+## 14. Canonical verdict
 
 \[
-\boxed{\textbf{CONDITIONAL GO — FINAL BUILD ONLY}}
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
 \]
 
-No substantive blocker remains. A build failure must be repaired as a Stage-13 packaging/integration defect unless it exposes a substantive inconsistency.
+No rollback is triggered.
+
+Next route:
+
+\[
+\boxed{\textbf{STAGE 14 — SUBMISSION QA}}
+\]
+
+## 15. Stage-14 contract
+
+Stage 14 must re-open the live RIO requirements, inspect the complete canonical and flat submission package, resolve or explicitly fail closed on material portal/author requirements, re-run verification/build checks, audit artwork/source-package compliance, resolve all citations/cross-references, and inspect the final PDF page by page.
+
+Stage 14 may repair formatting or packaging defects. It may not materially alter the frozen theory, contribution claims, equilibrium scope, welfare interpretation, or formal-verification scope without rollback to the earliest affected stage.
