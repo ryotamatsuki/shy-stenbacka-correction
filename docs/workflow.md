@@ -22,38 +22,62 @@ Pinned workflow commit:
 }
 \]
 
-## Stage-4 routing decision
+## Stage-4 final routing decision
 
-Stage 3 selected unified Candidate E with complete Cournot Candidate C as the authorized fallback.
+Stage 4 was partially reopened only for the Hotelling canonical judgment.
 
-Stage 4 proved:
+The re-audit proves:
 
-- Candidate C closes analytically and passes the construction gate.
-- Candidate E is not the minimal canonical architecture because the source Hotelling price continuation is multiple for sufficiently asymmetric costs and the source supplies no selection rule.
+- below-cost Hotelling prices are weakly dominated by marginal-cost pricing;
+- the literal source game has off-path corner multiplicity;
+- deleting only those weakly dominated prices yields a unique price continuation for every cost gap;
+- the source symmetric Hotelling outsourcing candidate then has an exact cap-aware global survival/failure condition.
 
-Therefore Stage 4A receives **Candidate C — Complete Cournot correction**.
+Therefore the canonical architecture is restored as:
+
+\[
+\boxed{\textbf{Candidate E′}}
+\]
+
+consisting of:
+
+1. the complete Cournot correction;
+2. the literal Hotelling continuation diagnosis;
+3. the undominated-price Hotelling refinement and exact Proposition-6 correction.
 
 ## Stage-4A frozen inputs
 
 Stage 4A must independently attack, without repair:
 
-1. the sorted-cost Cournot continuation;
-2. global strict concavity across active-set changes;
-3. the corrected symmetric action \(i_C^*\);
-4. the corrected competition comparative static;
-5. boundary comparative statics;
-6. the source-duopoly global BR;
-7. the complete pure duopoly equilibrium classification;
-8. the \(\rho=2/3\) continuum;
-9. the global failure of Proposition 5;
-10. all permanent regression cases.
+### Cournot
 
-The Hotelling Stage-4 finding is carried as a diagnostic/supersession record, not as the canonical paper architecture.
+1. sorted-cost continuation uniqueness;
+2. global strict concavity across active-set changes;
+3. corrected symmetric action \(i_C^*\);
+4. corrected competition comparative static;
+5. boundary comparative statics;
+6. source-duopoly global BR;
+7. complete pure duopoly equilibrium classification;
+8. \(\rho=2/3\) continuum;
+9. global failure of Proposition 5;
+10. all Cournot regressions.
+
+### Hotelling
+
+11. literal clipped-demand price correspondence;
+12. H-DOM weak-dominance theorem for \(p<c\);
+13. unique price correspondence after below-cost deletion;
+14. complete finite-candidate refined Stage-I BR characterization;
+15. exact cap-aware symmetric survival/failure region;
+16. Stage-1 exact \(1/90\) refined deviation regression;
+17. strict distinction between literal Nash, weak-dominance deletion, and stronger refinements.
+
+Stage 4A may not silently describe \(p\ge c\) as a source primitive or promote the result to trembling-hand/proper equilibrium.
 
 ## Fail-closed rule
 
-A material unresolved continuation, solver failure, invalid active set, or out-of-domain regular formula blocks an equilibrium claim. None remains in the retained Cournot construction.
+No material retained continuation is unresolved. Multiplicity in the literal Hotelling game is characterized exactly rather than treated as solver failure.
 
 ## Repository-ordering note
 
-The GitHub repository existed before canonical Stage 9 for provenance. This does not constitute Stage 9 PASS.
+Repository existence does not imply canonical Stage 9 PASS.
