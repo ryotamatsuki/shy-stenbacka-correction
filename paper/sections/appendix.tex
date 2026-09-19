@@ -1,0 +1,105 @@
+\appendix
+
+\section{Proof details}
+\label{app:proofs}
+
+\subsection{Proof of Lemmas \ref{lem:cournot-continuation} and \ref{lem:global-concavity}}
+
+For fixed marginal costs, the first derivative of firm \(j\)'s quantity payoff is
+\[
+\frac{\partial\pi_j}{\partial q_j}
+=
+a-c_j-bQ-bq_j.
+\]
+The potential \eqref{eq:potential} has the same gradient and Hessian
+\[
+\nabla^2\Phi=-b(I+\mathbf 1\mathbf 1^\top),
+\]
+which is negative definite for \(b>0\).  Maximization of \(\Phi\) over the convex set \(\mathbb R_+^N\) therefore has a unique KKT solution.  The KKT conditions yield \eqref{eq:pS}--\eqref{eq:active-set-q}, proving Lemma~\ref{lem:cournot-continuation}.
+
+Now fix rivals' sourcing and vary \(x=i_j\).  On a branch with \(m\) active firms including \(j\), \(z_j=p-c_j\) satisfies
+\[
+\frac{dz_j}{dx}=H\frac{m}{m+1}
+\]
+and operating profit is \(z_j^2/b\).  Hence \eqref{eq:branch-curvature}.  Since
+\[
+\frac{m}{m+1}\le\frac{N}{N+1},
+\]
+condition \eqref{eq:source-soc} makes every smooth branch strictly concave.  At own entry \(z_j=0\), so the derivative is continuous.  At a rival-exit threshold, the derivative falls by
+\[
+\frac{2Hz_j}{bm(m+1)}>0.
+\]
+Thus the derivative is strictly decreasing globally, proving Lemma~\ref{lem:global-concavity}.
+
+\subsection{Proof of Proposition \ref{prop:symmetric-cournot}}
+
+At a symmetric profile \(s\), each firm produces
+\[
+q(s)=\frac{D+Hs}{b(N+1)}.
+\]
+The derivative of reduced payoff with respect to a unilateral sourcing choice, evaluated at symmetry, is
+\[
+\frac{2HN(D+Hs)}{b(N+1)^2}-2s.
+\]
+Its unconstrained zero is \eqref{eq:iCbar}.  Lemma~\ref{lem:global-concavity} makes this condition globally sufficient, while \(D>0\) rules out the lower bound.  Projection onto \([0,\phi]\) gives \eqref{eq:iCstar}.  Differentiating the continuous extension gives \eqref{eq:dIdN}.  Since \(N\) is economically integer-valued, the theorem states the resulting monotonic ordering only across admissible integer values satisfying the maintained source restrictions.
+
+\subsection{Derivation of the source-duopoly response}
+
+Normalize as in \eqref{eq:normalized}.  Against rival action \(y\), the both-active stationary point, rival-exit threshold, and monopoly stationary point are \eqref{eq:BR-components}.  Their relevant joins solve
+\[
+A(y_A)=U(y_A),
+\qquad
+M=U(y_M),
+\]
+which gives \eqref{eq:yA-yM}.  Global own-payoff concavity implies that the global unconstrained maximizer moves through the branch sequence reported in \eqref{eq:R}; projection onto the primitive sourcing interval gives \eqref{eq:Bphi}.  On the exit branch \(U'(y)=2\), which proves Proposition~\ref{prop:prop5}.
+
+\subsection{Proof of Proposition \ref{prop:correspondence}}
+
+A pure Stage-I equilibrium solves
+\[
+x=B_\phi(y),\qquad y=B_\phi(x).
+\]
+If \(\rho>2/3\), the active branch has slope magnitude \(2/(9\rho-4)<1\), while cap and zero pieces have slope zero.  Hence
+\[
+T(x,y)=(B_\phi(y),B_\phi(x))
+\]
+is a contraction in the sup norm; its unique fixed point is symmetric and equals \((\min\{\phi,s\},\min\{\phi,s\})\).
+
+At \(\rho=2/3\),
+\[
+B_\phi(y)=\min\{\phi,\max\{0,\delta-y\}\}.
+\]
+If \(\phi<\delta/2\), both best responses bind at the cap and the unique fixed point is \((\phi,\phi)\).  If \(\phi\ge\delta/2\), mutual best response is equivalent to \(x+y=\delta\) with both actions in \([0,\phi]\), giving \eqref{eq:knife-continuum}.
+
+For \(4/9<\rho<2/3\), the symmetric fixed point is \(s\).  If \(\phi\le s\), the cap yields the unique fixed point \((\phi,\phi)\).  If \(\phi>s\), intersecting each flat, exit, active, zero, and cap segment of the complete graph with its transpose yields the symmetric point plus one ordered asymmetric pair.  Writing \(x_H=\min\{\phi,R(0)\}\) and \(x_L=R(x_H)\) gives \eqref{eq:three-eq}; no other branch intersection satisfies mutual best response.
+
+\subsection{Proof of Proposition \ref{prop:literal-hotelling}}
+
+Firm A's pure price payoff is
+\[
+n(p_A-c_A)s_A(p_A,p_B),
+\]
+with \(s_A\) given by \eqref{eq:clipped-share}.  The global best response consists of a zero-demand region, the interior quadratic maximizer, and the full-market boundary.  Solving mutual best responses gives the standard unique interior prices when \(|d|<3\tau\), the unique boundary point at equality, and \eqref{eq:literal-corner} when \(d>3\tau\).  In the latter case the high-cost firm receives zero demand for every \(z\in[c_A+3\tau,c_B]\); the low-cost firm's best response is \(z-\tau\).  The opposite cost ordering is symmetric.
+
+\subsection{Proof of Proposition \ref{prop:no-loss}}
+
+Under \eqref{eq:no-loss}, the corner continuation for \(d>3\tau\) is uniquely
+\[
+p_B=c_B,\qquad p_A=c_B-\tau,
+\]
+with the mirror image for \(d<-3\tau\).  Substitution into Stage-I payoffs gives \eqref{eq:no-loss-payoff}.  Against the symmetric interior candidate \(i_0=Hn/6\), the only potentially profitable nonlocal deviation is to the low-cost full-market branch.  Its gain is
+\begin{equation}
+\Delta(x)
+=
+-\frac{
+36x^2-36Hnx+5H^2n^2+54n\tau
+}{36}.
+\label{eq:delta-x}
+\end{equation}
+The unconstrained maximizer is \(x_M=Hn/2\), with
+\[
+\Delta(x_M)
+=
+\frac{n(2H^2n-27\tau)}{18}.
+\]
+Thus a positive-gain region requires \(H^2n>27\tau/2\).  Combined with the source SOC \(H^2n<18\tau\), the lower zero of \(\Delta\) is exactly \eqref{eq:xminus}; in this region it lies inside the correct full-market branch.  A feasible strictly profitable deviation exists if and only if \(\phi>x_-\).  Equality produces a tie.  This proves \eqref{eq:no-loss-region}.  Substituting \(H=n=1\), \(\tau=1/15\), and \(x=1/2\) into \eqref{eq:delta-x} yields the exact gain \(1/90\).
