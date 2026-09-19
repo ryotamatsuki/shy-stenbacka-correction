@@ -18,10 +18,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Reject proof placeholders
+      - name: Reject proof escapes
         run: |
           if grep -R -n -E '(^|[^[:alnum:]_])(sorry|admit)([^[:alnum:]_]|$)' ShyStenbackaFormal ShyStenbackaFormal.lean; then
             echo "Proof placeholder found."
+            exit 1
+          fi
+          if grep -R -n -E '^[[:space:]]*axiom[[:space:]]' ShyStenbackaFormal ShyStenbackaFormal.lean; then
+            echo "Project-specific axiom found."
             exit 1
           fi
 
