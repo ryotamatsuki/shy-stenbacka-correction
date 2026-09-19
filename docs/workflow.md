@@ -36,7 +36,9 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 11 PASS}
 \rightarrow
-\textbf{Stage 12 NEXT}
+\text{Stage 12 PASS}
+\rightarrow
+\textbf{Stage 13 NEXT}
 }
 \]
 
@@ -201,6 +203,30 @@ Green Stage-11 evidence:
 - PR run \`35451026809\` — success;
 - manuscript build run \`35450876387\` — success after the scope repair.
 
-## Stage-12 contract
+## Stage-12 verdict
 
-Stage 12 must select journals based on the surviving compact source-specific correction, current journal scope, recent comparable publications, likely desk-reject/referee risk, and contribution level. It may not enlarge theory or novelty to fit a preferred outlet.
+\[
+\boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+\]
+
+Primary target:
+
+\[
+\boxed{\textbf{Review of Industrial Organization}}
+\]
+
+Canonical positioning report:
+
+\`audit/STAGE_12_JOURNAL_POSITIONING.md\`
+
+Initial journal-requirements ledger:
+
+\`audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md\`
+
+Default ladder is RIO → Journal of Industry, Competition and Trade → Bulletin of Economic Research → Economics Bulletin. Canadian Journal of Economics is an optional stretch only.
+
+No frozen theorem, novelty statement, benchmark, equilibrium concept, or formal-verification scope was modified.
+
+## Stage-13 contract
+
+Stage 13 must integrate the paper for Review of Industrial Organization using the Stage-12 requirements ledger. It may adapt organization, title/abstract emphasis, current journal-specific literature positioning, keywords/JEL/declarations, figure packaging, and a flat Springer-compatible LaTeX bundle. It may not enlarge the frozen theory or novelty. All Stage-12 `UNVERIFIED` requirements must remain visible for the live Stage-14 re-check.
