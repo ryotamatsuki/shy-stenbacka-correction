@@ -99,3 +99,24 @@ Stage 10 will populate these files subject to the Stage-8 freeze.
 This manifest identifies evidence-bearing source objects. The final Stage-9 commit SHA pins the complete repository tree and supersedes the need to duplicate every file SHA here.
 
 No artifact in this manifest authorizes a theorem or interpretation broader than `audit/STAGE_08_CANONICAL_THEORY_FREEZE.md`.
+
+
+## Manuscript reproducibility blobs and CI
+
+| Artifact | Blob SHA |
+|---|---|
+| `.github/workflows/manuscript.yml` | `618c2e9a95f4c2b0f2c10f33c6c6ca6bdac73f05` |
+| `paper/manuscript.tex` | `ae4c226b9ea2c89d46ff6e064300f730e0eefeae` |
+| `paper/sections/01_introduction.tex` | `607ed84b793169e745088771576bc581e4abf411` |
+| `paper/sections/02_model.tex` | `abc0458937bca7e1de28d6a46a11e291a9136419` |
+| `paper/sections/03_best_responses.tex` | `c263b8f2efdc820484e4c6757f647b94f9316bee` |
+| `paper/sections/04_equilibrium.tex` | `b80f5817905de1d3dfe9c103ad8ae599cc86dea6` |
+| `paper/sections/05_implications.tex` | `8eab871175b6b8b46f80d8b616c0ca646d79845a` |
+| `paper/sections/06_conclusion.tex` | `f1b13de4141e27ed6df20fef9827f8fc8aa7ad01` |
+| `paper/README.md` | `7b592189389082dfaf16bb2b6d074fc3bdda5b2a` |
+
+Stage-9 manuscript smoke-build evidence:
+
+- run `35442682700`
+- conclusion: **success**
+- all steps passed, including `make paper`.
