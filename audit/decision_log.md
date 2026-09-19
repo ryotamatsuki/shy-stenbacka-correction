@@ -142,3 +142,20 @@ Candidate E′ = complete Cournot correction + literal/refined Hotelling correct
 Stage-4 verdict remains **GO → Stage 4A**.
 
 No trembling-hand/proper-equilibrium claim is made.
+
+
+---
+
+## 2026-09-19 — Stage-4A refinement kill test and Stage-4 amendment
+
+The independent Stage-4A attack found that the earlier “undominated-price refinement” label was not defensible.
+
+Although every \(p<c\) is weakly dominated by \(p=c\), the action \(p=c\) itself is weakly dominated by any fixed \(p=c+\varepsilon\). Therefore the corner equilibrium using \(p_{\rm high}=c_{\rm high}\) is not an undominated-strategy equilibrium and cannot be justified by symmetric elimination of all weakly dominated strategies.
+
+The mathematics under the restricted strategy set \(p\ge c\) remains correct. Stage 4 is therefore amended, not abandoned:
+
+- literal source game: corner multiplicity / incomplete backward induction;
+- auxiliary no-loss game \(p\ge c\): unique pure corner continuation and exact Proposition-6 failure region;
+- architecture: **HYBRID**, with Cournot as main theorem block and Hotelling as secondary source/robustness results.
+
+This amendment is explicit and precedes Stage-4A recertification.
