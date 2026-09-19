@@ -23,7 +23,12 @@ main = main.replace(r"\input{generated/duopoly_best_response.tex}", r"\input{duo
 (OUT / "manuscript.tex").write_text(main, encoding="utf-8")
 
 for src in sorted((PAPER / "sections").glob("*.tex")):
-    shutil.copy2(src, OUT / src.name)
+    section = src.read_text(encoding="utf-8")
+    section = section.replace(
+        r"\\input{generated/duopoly_best_response.tex}",
+        r"\\input{duopoly_best_response.tex}",
+    )
+    (OUT / src.name).write_text(section, encoding="utf-8")
 
 shutil.copy2(PAPER / "references.bib", OUT / "references.bib")
 
