@@ -65,7 +65,9 @@ Current routing:
 \rightarrow
 \text{Stage 11 PASS}
 \rightarrow
-\textbf{Stage 12 NEXT}.
+\text{Stage 12 PASS}
+\rightarrow
+\textbf{Stage 13 NEXT}.
 \]
 
 Any post-freeze theory change must route back to the earliest affected canonical gate rather than being patched only in manuscript prose or code.
@@ -116,3 +118,25 @@ Green evidence:
 - manuscript build run `35450876387` after the only prose scope repair.
 
 The certified Lean source/toolchain blobs remain byte-identical to the Stage-7.5A formal certificate. No certification regression or rollback was triggered.
+
+
+## Canonical Stage 12 closure
+
+Stage 12 used current official journal guidance and recent publications to position the frozen manuscript without changing theory.
+
+Primary target:
+
+`Review of Industrial Organization`
+
+Canonical records:
+
+- `audit/STAGE_12_JOURNAL_POSITIONING.md`
+- `audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
+
+Default submission ladder:
+
+`RIO → JICT → Bulletin of Economic Research → Economics Bulletin`
+
+Canadian Journal of Economics is retained only as an optional stretch.
+
+Stage 13 inherits the RIO requirements ledger; Stage 14 must refresh all live journal/portal rules before submission QA.
