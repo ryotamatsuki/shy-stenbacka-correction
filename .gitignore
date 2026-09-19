@@ -33,3 +33,6 @@ Thumbs.db
 # Local source material / copyrighted PDFs
 sources/private/
 sources/pdfs/
+
+# Generated manuscript exposition artifacts
+paper/generated/
