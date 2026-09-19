@@ -143,14 +143,14 @@ s = 2 * d / (9 * r - 2)
 yA = d * (2 - 3 * r) / (2 * (3 * r - 1))
 yM = d * (1 - 2 * r) / (4 * r - 1)
 
-assert sp.factor(A - z) == (2 * d - (9 * r - 2) * z) / (9 * r - 4)
-assert sp.factor(s - yA) == 3 * d * r * (9 * r - 4) / (2 * (3 * r - 1) * (9 * r - 2))
-assert sp.factor(d - s) == d * (9 * r - 4) / (9 * r - 2)
-assert sp.factor(yA - yM) == d * r / (2 * (3 * r - 1) * (4 * r - 1))
+assert sp.simplify((A - z) - (2 * d - (9 * r - 2) * z) / (9 * r - 4)) == 0
+assert sp.simplify((s - yA) - 3 * d * r * (9 * r - 4) / (2 * (3 * r - 1) * (9 * r - 2))) == 0
+assert sp.simplify((d - s) - d * (9 * r - 4) / (9 * r - 2)) == 0
+assert sp.simplify((yA - yM) - d * r / (2 * (3 * r - 1) * (4 * r - 1))) == 0
 
 Aph = 2 * (d - ph) / (9 * r - 4)
 AAph = sp.factor(2 * (d - Aph) / (9 * r - 4) - ph)
-assert AAph == 3 * (3 * r - 2) * (2 * d - (9 * r - 2) * ph) / (9 * r - 4) ** 2
+assert sp.simplify(AAph - 3 * (3 * r - 2) * (2 * d - (9 * r - 2) * ph) / (9 * r - 4) ** 2) == 0
 
 # Representative exact equilibria for all five theorem regimes/boundaries.
 assert is_eq(F(8, 19), F(8, 19), F(1), F(3, 4), F(2))
