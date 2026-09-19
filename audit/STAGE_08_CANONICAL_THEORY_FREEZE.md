@@ -1,5 +1,7 @@
 # Stage 8 — Canonical Theory Freeze
 
+> **2026-09-20 independent-audit freeze amendment.** The original Stage-8 checkpoint remains historical provenance. C7's cap quantifier, the C8 proof-completeness evidence, the multiplicity mechanism interpretation, Hotelling price-domain convention, no-loss root domain, and knife-edge welfare wording are superseded by this amended freeze and `audit/STAGE_08_INDEPENDENT_AUDIT_AMENDMENT_2026-09-20.md`.
+
 Status:
 
 \[
@@ -109,10 +111,11 @@ Nash continuation over `q_j >= 0` for every feasible sourcing history.
 
 1. firms choose sourcing `(i_A,i_B)`;
 2. induced marginal costs are realized;
-3. firms choose prices in the source full-coverage Hotelling market with fixed
-   endpoints and transport parameter `tau>0`.
+3. firms choose prices under the maintained full-coverage interpretation of the source Hotelling market with fixed endpoints and transport parameter `tau>0`.
 
-The literal-source result concerns **pure-price** equilibria. The auxiliary
+The source does not separately impose `p_j>=c_j`; the global audit uses the clipped full-coverage demand implied by consumer choice and pure prices on the unrestricted real line. Restricting only to nonnegative prices does not change the certified pure equilibrium set because source costs/equilibrium prices are positive. No result is claimed for an uncovered-demand model with finite reservation utility.
+
+The literal full-coverage result concerns **pure-price** equilibria. The auxiliary
 no-loss result changes the price strategy domain by imposing
 
 \[
@@ -226,11 +229,30 @@ For
 4/9<\rho<2/3,
 \]
 
-a feasible global-BR segment is `U(y)=delta+2y`, with slope `+2`.
+the **unconstrained** pure global response (R) contains the rival-exit piece
+(U(y)=\delta+2y), with slope (+2).  After applying the source cap
+(B_\phi(y)=\min\{\phi,R(y)\}), a positive-length increasing piece survives
+if and only if
 
-The frozen conclusion is:
+\[
+\phi>\delta
+\quad\text{for }\frac12\le\rho<\frac23,
+\]
 
-> Proposition 5 is false as a global strategic-substitutes claim.
+or
+
+\[
+\phi>M=\frac{\delta}{4\rho-1}
+\quad\text{for }\frac49<\rho<\frac12.
+\]
+
+At equality the feasible exit piece degenerates to a point.  Small caps can erase
+the increasing segment entirely.  The frozen conclusion is therefore
+existential rather than universal in the cap:
+
+> admissible source parameters exist for which the constrained pure global best
+> response is increasing on a nondegenerate interval, so Proposition 5 is false
+> as an unqualified global strategic-substitutes claim.
 
 The paper does not claim that outsourcing is globally a strategic complement.
 
@@ -285,6 +307,13 @@ has pure equilibria
 (10/17,10/17),\qquad(1,0),\qquad(0,1).
 \]
 
+Multiplicity does **not** require downstream exit.  At
+((\rho,\delta,\phi)=(3/5,1,3/4)), both firms remain active after every
+feasible sourcing history, yet the pure equilibria are
+((10/17,10/17)), ((3/4,5/14)), and ((5/14,3/4)).  Exit is the
+mechanism behind the positive-slope branch, not a necessary mechanism for
+multiplicity.
+
 ## 6. Frozen Hotelling theorem block
 
 Let
@@ -334,15 +363,19 @@ the pure price continuation is unique for every cost gap.
 Let
 
 \[
-i_0=\frac{Hn}{6},
-\qquad
+i_0=\frac{Hn}{6}.
+\]
+
+The real lower root
+
+\[
 x_-=
 \frac{Hn}{2}
 -
-\frac{\sqrt{2n(2H^2n-27\tau)}}{6}.
+\frac{\sqrt{2n(2H^2n-27\tau)}}{6}
 \]
 
-For `phi>i_0`, the published symmetric candidate fails exactly when
+is used only when (H^2n\ge27\tau/2). For `phi>i_0`, no strict nonlocal failure occurs when (H^2n\le27\tau/2); in the interior root region the published symmetric candidate fails exactly when
 
 \[
 \frac{27}{2}\tau<H^2n<18\tau
@@ -417,8 +450,7 @@ W(10/17,10/17)=20/17
 3/2=W(1,0)=W(0,1).
 \]
 
-At `rho=2/3`, welfare also varies across the certified pure equilibrium
-continuum. No selection-free welfare ranking is authorized.
+At `rho=2/3`, the equilibrium set is a singleton when `phi=delta/2` and a nondegenerate segment only when `phi>delta/2`; welfare varies along the latter. No selection-free welfare ranking is authorized in the multiplicity region.
 
 ## 8. Frozen generality and institutional scope
 
