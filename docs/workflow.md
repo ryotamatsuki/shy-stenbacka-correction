@@ -20,64 +20,46 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 4A PASS}
 \rightarrow
-\textbf{Stage 6 NEXT}
+\text{Stage 6 PASS}
+\rightarrow
+\textbf{Stage 7 NEXT}
 }
 \]
 
-## Stage-4A verdict
+Stage 5 was not triggered.
+
+## Canonical architecture
 
 \[
-\boxed{\textbf{GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS}}
+\boxed{\textbf{HYBRID}}
 \]
 
-Stage 4A initially found one material Hotelling solution-concept defect and correctly routed it back to Stage 4:
+- Cournot = main source-faithful correction.
+- Literal Hotelling = secondary source correction.
+- \(p\ge c\) Hotelling = secondary conditional robustness theorem.
 
-- \(p<c\) is weakly dominated by \(p=c\);
-- but \(p=c\) is itself weakly dominated by \(p=c+\varepsilon\);
-- therefore \(p\ge c\) cannot be described as “elimination of all weakly dominated strategies.”
+## Stage-6 surviving contribution set
 
-Stage 4 was amended to the HYBRID architecture and Stage 4A was repeated.
+Stage 6 explicitly kills broad novelty claims for:
 
-## Certified scope
+- generic negative competition effects on outsourcing;
+- generic endogenous investment asymmetry / exit;
+- generic piecewise/discontinuous best-response multiplicity;
+- generic asymmetric-cost Hotelling pricing;
+- generic no-loss pricing restrictions.
 
-### Cournot
+The surviving source-specific claims are:
 
-- unique Stage-II continuation for every feasible sourcing history;
-- global own-payoff strict concavity;
-- corrected symmetric general-\(N\) action;
-- Proposition-3 sign reversal;
-- exact source-duopoly global BR;
-- Proposition-5 global failure;
-- complete pure source-duopoly Stage-I equilibrium correspondence.
+- **S1:** equation-(14)/Proposition-3 sign reversal in the exact source model;
+- **S2:** Proposition-5 global failure in the exact source duopoly;
+- **S3:** complete pure source-duopoly equilibrium re-characterization;
+- **S4:** literal Hotelling off-path continuation incompleteness;
+- **S5:** exact no-loss Proposition-6 failure region as a conditional robustness result.
 
-### Hotelling
+## Stage-7 contract
 
-- literal pure-price equilibrium correspondence, including corner multiplicity;
-- exact dominance facts \(p<c\preceq c\) and \(c\preceq c+\varepsilon\);
-- conditional pure-price continuation under explicit \(p\ge c\);
-- complete finite-candidate pure Stage-I BR under that restriction;
-- exact cap-aware symmetric survival/failure region;
-- exact \(1/90\) regression.
+Stage 7 may interpret welfare, generality, and institutional relevance only for S1–S5.
 
-No mixed-equilibrium uniqueness, trembling-hand, proper-equilibrium, or complete asymmetric Hotelling Stage-I claim is certified.
+Killed novelty narratives remain dead.
 
-## Formal verification
-
-\[
-\boxed{\textbf{FORMALIZATION APPLICABLE}}
-\]
-
-Preliminary target map:
-\`audit/stage04a_formalization_target_map.md\`.
-
-Formal implementation is deferred to the required pre-freeze gate and is not counted as Stage-4A evidence.
-
-## Routing
-
-Stage 4A GO routes directly to:
-
-\[
-\boxed{\textbf{Stage 6 — Novelty Re-Kill}}
-\]
-
-Stage 5 is not triggered because no economic primitive repair was required.
+Formalization remains **APPLICABLE** and must close before theory freeze.
