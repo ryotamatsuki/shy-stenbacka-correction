@@ -13,7 +13,7 @@ This ledger states the maximum manuscript wording licensed by the frozen Stage-4
 | C1 | For every feasible source outsourcing history \(i\in[0,\phi]^N\), the downstream linear-Cournot game with nonnegative quantities has one pure Nash quantity vector | **unique pure Stage-II quantity equilibrium** | “the downstream pure quantity continuation is unique for every feasible sourcing history” | “the downstream game has a unique Nash equilibrium” if mixed strategies are intended |
 | C2 | For integer \(N\ge2\), source SOC, and every fixed rival sourcing profile, firm \(j\)'s reduced payoff under the certified pure Cournot continuation is globally strictly concave in \(i_j\in[0,\phi]\) | payoff property, not equilibrium uniqueness | “own reduced sourcing payoff is globally strictly concave” | “the Stage-I game has a unique equilibrium” |
 | C3 | Under the source restrictions, the unique **symmetric pure Stage-I action** is \(i_C^*=\min\{\phi,\bar i_C\}\) | uniqueness only within symmetric pure profiles | “the unique symmetric pure sourcing action is …” | “the general-\(N\) SPNE is unique” |
-| C4 | For the interior formula \(\bar i_C(N)\), the continuous extension has negative derivative for \(N>1\); for economically relevant integer \(N\), adjacent interior roots strictly fall with \(N\). The capped action is weakly decreasing | symmetric pure action only | “the corrected symmetric outsourcing level is weakly decreasing in the number of firms, and strictly decreasing whenever the relevant comparison is off the cap” | “outsourcing always strictly falls with competition” |
+| C4 | For the interior formula \(\bar i_C(N)\), the continuous extension has negative derivative for \(N>1\). For integer market sizes, adjacent corrected roots strictly fall whenever the source restrictions required for the equilibrium theorem hold at both compared market sizes. The capped action is weakly decreasing on any such admissible integer comparison set. | symmetric pure action only | “among market sizes satisfying the source restrictions, the corrected symmetric outsourcing level is weakly decreasing in the number of firms, and strictly decreasing when the compared actions are off the cap” | “outsourcing always strictly falls with competition” or any comparison to a market size outside the source theorem’s admissible domain |
 | C5 | On the source feasible domain \(D(\phi)>0\): outsourced number rises one-for-one on the cap branch and falls on the interior branch; outsourced fraction is weakly decreasing | symmetric pure action only | branch-qualified comparative statics | unqualified “outsourcing falls with \(\phi\)” |
 
 ## 2. Source-duopoly Cournot claims
@@ -139,7 +139,7 @@ Use:
 - “complete pure Stage-I equilibrium correspondence of the source duopoly,” not “complete equilibrium correspondence”;
 - “unique pure-price equilibrium,” not unqualified “unique price equilibrium,” where mixed-price objects are not certified;
 - “under the explicit no-loss restriction \(p\ge c\),” before every H3-NL–H6-NL claim;
-- “weakly decreasing in integer \(N\)” for the economic comparative static; a derivative may be reported only as the continuous-extension calculation;
+- “weakly decreasing across admissible integer market sizes satisfying the source restrictions” for the economic comparative static; a derivative may be reported only as the continuous-extension calculation;
 - “selection-dependent” for global welfare in the Cournot multiplicity regions.
 
 Do not use:
