@@ -25,7 +25,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 7.5A — GENERALITY / QUANTIFIER RED-TEAM}}
+\boxed{\textbf{STAGE 7.5A — PASS}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 8 — CANONICAL THEORY FREEZE}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -155,3 +159,41 @@ Canonical artifact:
 - \`audit/STAGE_075_FREEZE_DECISION.md\`
 
 Stage 7.5A may narrow claim scope but may not add extensions or silently alter the model.
+
+
+## Stage 7.5A generality / quantifier certification
+
+Stage 7.5A closes with:
+
+\[
+\boxed{\textbf{GO — GENERALITY / QUANTIFIER CERTIFICATION PASS}}
+\]
+
+Permanent scope controls include:
+
+- general-\(N\): unique **symmetric pure Stage-I action**, not unique SPNE;
+- source duopoly: complete **pure Stage-I** equilibrium correspondence;
+- Proposition-3 competition comparative static: economic wording only across admissible integer market sizes satisfying the source restrictions;
+- Hotelling uniqueness: **pure-price** scope;
+- \(p\ge c\): explicit auxiliary no-loss restriction only;
+- welfare in Cournot multiplicity regions: selection-dependent;
+- exact thresholds: baseline functional-form results.
+
+The Formal Verification Gate is also closed:
+
+\[
+\boxed{\textbf{FORMAL VERIFICATION PASS}}
+\]
+
+Lean 4.19.0 / pinned mathlib build passed with no \`sorry\`, \`admit\`, project-specific \`axiom\`, or \`sorryAx\` in certified theorems.
+
+Canonical Stage-7.5A artifacts:
+
+- \`audit/STAGE_075A_GENERALITY_QUANTIFIER_RED_TEAM.md\`
+- \`audit/stage075a_claim_scope_ledger.md\`
+- \`audit/stage075a_function_class_counterexamples.md\`
+- \`audit/stage075a_formal_statement_fidelity.md\`
+- \`audit/stage075a_formal_verification_certificate.md\`
+- \`ShyStenbackaFormal/Stage075A.lean\`
+
+Stage 8 may freeze only these scopes; it may not widen any theorem or solution concept.
