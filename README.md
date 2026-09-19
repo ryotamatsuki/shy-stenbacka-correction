@@ -21,7 +21,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 7.5 — FULL-THEORY FREEZE DECISION}}
+\boxed{\textbf{STAGE 7.5 — PASS}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 7.5A — GENERALITY / QUANTIFIER RED-TEAM}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -122,3 +126,32 @@ Canonical Stage-7 artifacts:
 - \`audit/stage07_welfare_benchmarks.md\`
 - \`audit/stage07_generality_institutional.md\`
 - \`code/stage07_welfare_verify.py\`
+
+
+## Stage 7.5 full-theory freeze decision
+
+Stage 7.5 concludes that the project merits full-paper investment **as a compact correction paper / theory note**.
+
+The mechanism can be stated without notation:
+
+> outsourcing lowers marginal cost; sufficiently large sourcing differences can change the downstream active set; once a rival is driven to zero output, the relevant continuation regime changes, so an interior best-response calculation need not describe the global strategic game.
+
+The paper is not positioned as a new general outsourcing theory. Its defensible value is the combination of:
+
+- a published comparative-static sign reversal;
+- a global Proposition-5 correction;
+- a complete pure source-duopoly equilibrium re-characterization;
+- a secondary literal Hotelling continuation correction;
+- a conditional no-loss Hotelling robustness theorem.
+
+Stage 7.5 therefore gives:
+
+\[
+\boxed{\textbf{GO TO STAGE 7.5A}}
+\]
+
+Canonical artifact:
+
+- \`audit/STAGE_075_FREEZE_DECISION.md\`
+
+Stage 7.5A may narrow claim scope but may not add extensions or silently alter the model.
