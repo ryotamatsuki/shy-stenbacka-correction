@@ -1,80 +1,67 @@
-# Workflow and Stage Gates
+# Canonical Workflow Routing
 
-The project uses stage gates so that manuscript language cannot outrun the mathematics.
+This repository follows `ryotamatsuki/research-paper-workflow` **v2.2**.
 
-## Stage 0 — Repository initialization
+Pinned workflow commit for the present audit:
 
-**PASS** when the reproducible project skeleton exists.
+`42574d6c5931275ccff3ef7e8b4acc188077332a`
 
-## Stage 1 — Source freeze
+See `docs/WORKFLOW_PROVENANCE.md`.
 
-Pass criteria:
+## Canonical stage sequence
 
-- final published version identified;
-- bibliographic identity fixed;
-- relevant equations/propositions transcribed with page-level provenance.
+1. Stage 0 — Idea / Motivation Intake
+2. **Stage 1 — Source & Mathematical Audit**
+3. **Stage 2 — Literature Frontier / Novelty Kill Gate**
+4. Stage 3 — Candidate Mechanism Search
+5. Stage 4 — Minimal Model Gate
+6. Stage 4A — Independent Mathematical Adversarial Certification Gate
+7. Stage 5 — Mechanism Hardening
+8. Stage 6 — Novelty Re-Kill
+9. Stage 7 — Welfare / Generality / Institutional Validation
+10. Stage 7.5 — Full-Theory Freeze Decision
+11. Stage 7.5A — Generality / Quantifier Red-Team Gate
+12. Stage 8 — Canonical Theory Freeze
+13. Stage 9 — Repository / Reproducibility Setup
+14. Stage 10 — Section-by-Section Paper Construction
+15. Stage 11 — Robustness / Referee Attack Gate
+16. Stage 12 — Journal Positioning
+17. Stage 13 — Full-Paper Integration
+18. Stage 14 — Submission QA
+19. Stage 15 — Submission Freeze
 
-## Stage 2 — Mathematical canonicalization
+## Current canonical state
 
-Pass criteria:
+[
+oxed{
+	ext{Stage 1 PASS}
+ightarrow
+	extbf{Stage 2 NEXT}
+}
+]
 
-- timing, objectives, feasible sets, and parameter restrictions are explicit;
-- published notation is mapped to canonical notation without changing assumptions.
+Stage-1 verdict: **GO TO NOVELTY GATE**.
 
-## Stage 3 — Constrained best-response correspondence
+The earlier custom “Stage 1 Source freeze / Stage 2 Mathematical canonicalization” scaffold is superseded. Both source freezing and first-principles mathematical reconstruction belong to canonical Stage 1.
 
-Pass criteria:
+## Important ordering note
 
-- all interior and boundary cases derived;
-- \(i=\phi\) handled explicitly;
-- ties represented as correspondences;
-- asymmetric unilateral deviations checked.
+This GitHub repository was bootstrapped before canonical Stage 9 for practical provenance reasons. That does **not** mean Stage 9 has passed. Formal Stage-9 certification remains downstream of theory freeze and must later satisfy the v2.2 Stage-9 gate.
 
-## Stage 4 — Complete equilibrium correspondence
+## Fail-closed equilibrium rule
 
-Pass criteria:
+Any later Nash/SPNE claim must provide valid product-market continuations after every economically material Stage-I deviation.
 
-- every admissible parameter region classified;
-- all candidate equilibria tested;
-- Hotelling consistency checked;
-- no result relies only on symmetric FOCs.
+The following may not be treated as evidence that a deviation is unprofitable:
 
-## Stage 5 — Proposition-level impact
-
-Pass criteria:
-
-- Proposition 3, Corollary 4, and Proposition 5 classified;
-- exact surviving, qualified, and invalid regions stated;
-- replacement propositions formulated.
-
-## Stage 6 — Independent replication
-
-Pass criteria:
-
-- algebra independently rechecked;
-- symbolic/numerical verification agrees with analytical claims;
-- counterexamples are reproducible.
-
-## Stage 7 — Correction manuscript
-
-Pass criteria:
-
-- claims are no stronger than Stage 5–6 results;
-- original result, defect, corrected result, and economic implication are separated cleanly;
-- references and attribution are complete.
-
-## Stage 8 — Submission audit
-
-Pass criteria:
-
-- notation consistency;
-- proof completeness;
-- citation verification;
-- reproducibility package check;
-- anonymous/submission version as required.
+- a negative “equilibrium” quantity produced by an interior formula;
+- a market share outside ([0,1]);
+- an invalid active set;
+- solver failure, NaN, exception, or nonconvergence;
+- an FOC/SOC certificate that applies only to one regular branch.
 
 ## Branch policy
 
-- `main`: stable history.
-- `audit/full-equilibrium-correspondence`: current mathematical audit.
-- Future manuscript branches should start only after the relevant mathematical stage has passed.
+- `main`: stable project history.
+- `audit/full-equilibrium-correspondence`: current audit branch.
+- Stage-specific mathematical/manuscript work may be split further as the canonical workflow requires.
