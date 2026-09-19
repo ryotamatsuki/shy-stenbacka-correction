@@ -4,51 +4,81 @@ Reproducible adversarial equilibrium audit and correction project for Shy & Sten
 
 ## Project status
 
-**Stage 0 — repository initialized.**
+**Canonical Stage 1 — Source & Mathematical Audit: PASS**
 
-The project begins from the published version of the original article and reconstructs the model before any correction claim is frozen.
+[
+oxed{	extbf{GO TO NOVELTY GATE}}
+]
 
-Primary audit targets:
+Canonical workflow: `research-paper-workflow` **v2.2**, pinned at commit `42574d6c5931275ccff3ef7e8b4acc188077332a`.
 
-- constrained best-response correspondences;
-- the full-outsourcing boundary case \(i=\phi\);
-- asymmetric deviations;
-- the Hotelling-side equilibrium conditions;
-- downstream effects on Proposition 3, Corollary 4, and Proposition 5;
-- exact separation of interior, boundary, and excluded parameter regions.
+Stage-1 audit:
+
+- `audit/STAGE_01_SOURCE_MATHEMATICAL_AUDIT.md`
+
+Exact verification:
+
+- `code/stage01_verify.py`
+
+Next canonical stage:
+
+- **Stage 2 — Literature Frontier / Novelty Kill Gate**
+
+## Stage-1 certified source-model findings
+
+The audit currently certifies four material issues using the published model's own normalization:
+
+1. equation (14)'s Cournot comparative-static sign is reversed;
+2. the hard outsourcing bound (0le i_jlephi) is not enforced in the reported Cournot and Hotelling solutions;
+3. the Cournot all-active quantity continuation can fail after feasible asymmetric Stage-I histories;
+4. the Hotelling interior-market-share price continuation can fail after feasible Stage-I histories, and an exact profitable corner deviation overturns the reported symmetric candidate for a nonempty region satisfying the paper's local SOC.
+
+These are Stage-1 mathematical findings, **not** yet a novelty certification.
+
+## Source-model discipline
+
+The published monitoring cost is
+
+[
+M(i_j)=i_j^2.
+]
+
+This repository does **not** import a generalized (eta i_j^2) monitoring cost into the canonical source model.
 
 ## Repository policy
 
 - `main` is the stable project history.
 - Mathematical audit work is developed on dedicated branches.
-- No headline correction claim is treated as final until the complete equilibrium correspondence has been checked.
-- Published-version equations and propositions must be traceable to their exact source locations.
+- No headline correction claim is treated as final until the relevant global-equilibrium and novelty gates have passed.
+- Published expressions and corrected expressions are kept distinct.
+- Solver/branch failure is never interpreted as an unprofitable deviation.
 - Numerical or symbolic checks supplement, but do not replace, analytical proof.
 - Copyrighted source PDFs are not committed unless redistribution is clearly permitted.
 
-## Planned structure
+## Structure
 
 ```text
-audit/        adversarial audit records and theorem-impact tracking
+audit/        canonical audits and theorem-impact tracking
 derivations/  clean mathematical derivations
-paper/        correction-note manuscript and bibliography
+paper/        manuscript material (not yet a frozen paper)
 code/         symbolic/numerical verification
 sources/      source manifest and provenance notes
-docs/         workflow, stage gates, and decisions
+docs/         workflow provenance and decisions
 ```
 
 ## Current branch
 
-Initial mathematical work proceeds on:
-
 `audit/full-equilibrium-correspondence`
+
+The branch name predates adoption of the canonical v2.2 routing. Work on it is currently at Stage 1 PASS; a complete corrected equilibrium correspondence remains a downstream task.
 
 ## Reproducibility principle
 
-Every correction claim should be recoverable from:
+Every eventual correction claim must be recoverable from:
 
-1. the published model as transcribed and canonicalized;
-2. explicit feasible sets and boundary conditions;
-3. complete unilateral-deviation checks;
-4. a proposition-level impact map;
-5. independently reproducible algebra/code where useful.
+1. the published source model;
+2. explicit feasible sets and product-market continuation domains;
+3. valid continuation equilibria after every material unilateral deviation;
+4. exact parameter-region classification;
+5. independent symbolic/numerical checks where useful;
+6. later adversarial and formal-verification gates required by v2.2.
