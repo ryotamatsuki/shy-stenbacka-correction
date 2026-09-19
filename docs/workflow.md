@@ -22,44 +22,53 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 6 PASS}
 \rightarrow
-\textbf{Stage 7 NEXT}
+\text{Stage 7 PASS}
+\rightarrow
+\textbf{Stage 7.5 NEXT}
 }
 \]
 
 Stage 5 was not triggered.
 
-## Canonical architecture
+## Stage-7 scope decision
 
+The project remains a source-specific correction paper.
+
+Welfare is supporting diagnostic only.
+
+### Certified welfare controls
+
+- exact Cournot and Hotelling CS / total-welfare identities;
+- explicit full planner problems;
+- restricted-instrument benchmark labels;
+- selection-dependent welfare in the corrected Cournot duopoly;
+- fixed-history welfare invariance across literal Hotelling corner price equilibria;
+- no policy recommendation.
+
+### Generality controls
+
+Exact thresholds and equilibrium correspondences remain baseline functional-form results.
+
+The rival-exit mechanism has restricted-class analytic support, but no broad global theorem is claimed.
+
+### Institutional controls
+
+The broad outsourcing trade-off
 \[
-\boxed{\textbf{HYBRID}}
+\text{cost advantage}+\text{monitoring/coordination burden}
 \]
+is empirically recognizable.
 
-- Cournot = main source-faithful correction.
-- Literal Hotelling = secondary source correction.
-- \(p\ge c\) Hotelling = secondary conditional robustness theorem.
+The exact linear cost reduction, quadratic monitoring cost, and output-independent monitoring specification remain tractability assumptions.
 
-## Stage-6 surviving contribution set
+## Stage-7.5 contract
 
-Stage 6 explicitly kills broad novelty claims for:
+Stage 7.5 may not add extensions.
 
-- generic negative competition effects on outsourcing;
-- generic endogenous investment asymmetry / exit;
-- generic piecewise/discontinuous best-response multiplicity;
-- generic asymmetric-cost Hotelling pricing;
-- generic no-loss pricing restrictions.
+It must decide whether the certified S1–S5 correction package is strong enough to freeze, carrying forward:
 
-The surviving source-specific claims are:
-
-- **S1:** equation-(14)/Proposition-3 sign reversal in the exact source model;
-- **S2:** Proposition-5 global failure in the exact source duopoly;
-- **S3:** complete pure source-duopoly equilibrium re-characterization;
-- **S4:** literal Hotelling off-path continuation incompleteness;
-- **S5:** exact no-loss Proposition-6 failure region as a conditional robustness result.
-
-## Stage-7 contract
-
-Stage 7 may interpret welfare, generality, and institutional relevance only for S1–S5.
-
-Killed novelty narratives remain dead.
-
-Formalization remains **APPLICABLE** and must close before theory freeze.
+- planner/benchmark register;
+- equilibrium-selection welfare qualifications;
+- baseline-vs-generality classification;
+- result-to-exposition triage;
+- formalization applicability.
