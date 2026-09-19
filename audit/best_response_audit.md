@@ -1,42 +1,128 @@
 # Constrained Best-Response Audit
 
-Status: **OPEN**
+Status: **COURNOT COMPLETE AT STAGE 4 — STAGE 4A PENDING**
 
-Central question: what are the exact constrained best-response correspondences once all feasible-set boundaries are respected?
+## 1. General-(N) Cournot continuation
 
-## Required derivation
+Every feasible outsourcing profile (iin[0,phi]^N) induces a cost vector
 
-For each player \(i\):
+[
+c_j=C_0-Hi_j.
+]
 
-1. write the objective as a function of the player's own strategic variable;
-2. state the feasible set explicitly;
-3. derive interior stationary points;
-4. test second-order / global optimality conditions;
-5. compare every interior candidate with every relevant boundary;
-6. record ties as correspondences rather than forcing a single-valued best response.
+The downstream linear Cournot game with (q_jge0) has a unique active-set equilibrium. It is solved by sorting costs and applying the KKT conditions. No feasible history is discarded.
 
-## Full-outsourcing boundary
+## 2. Own-payoff global concavity
 
-The case \(i=\phi\) must be analyzed separately.
+On a branch with (m) active firms including firm (j),
 
-- [ ] Is \(i=\phi\) feasible?
-- [ ] Does the published derivation exclude it implicitly?
-- [ ] Does the derivative/FOC remain valid at the boundary?
-- [ ] Can \(i=\phi\) be a global best response?
-- [ ] For which rival strategies and parameter values?
-- [ ] Are there knife-edge ties?
-- [ ] Does this create additional Nash equilibria?
+[
+rac{d^2Pi_j}{di_j^2}
+=
+2rac{H^2m^2}{b(m+1)^2}-2<0
+]
 
-## Asymmetric deviations
+under the source restriction
 
-At every symmetric candidate equilibrium:
+[
+b>left(rac{HN}{N+1}ight)^2.
+]
 
-- [ ] check unilateral deviations toward lower outsourcing;
-- [ ] check unilateral deviations toward higher outsourcing;
-- [ ] check jumps directly to the full-outsourcing boundary;
-- [ ] check any other feasible-set boundary;
-- [ ] do not infer Nash equilibrium from symmetric FOCs alone.
+At own entry the derivative is continuous. When a rival exits, the derivative jumps downward. Hence own reduced payoff is globally strictly concave over ([0,phi]).
 
-## Output
+Consequences:
 
-The canonical result must be a piecewise best-response correspondence with explicit weak/strict inequalities at all boundaries.
+- every constrained own best response is single-valued;
+- finite deviations, active-set changes, and (i=phi) are covered;
+- the published local SOC can be upgraded to a global own-optimality result only after the missing continuations are supplied.
+
+## 3. Full-outsourcing boundary
+
+The full-outsourcing boundary is feasible by the primitive input set.
+
+For the symmetric general-(N) game,
+
+[
+ar i_C=
+rac{HND}{b(N+1)^2-H^2N}.
+]
+
+Therefore
+
+[
+oxed{i_C^*=min{phi,ar i_C}}.
+]
+
+- If (ar i_C<phi): interior symmetric BR.
+- If (ar i_C=phi): boundary stationary point.
+- If (ar i_C>phi): (i=phi) is the unique constrained symmetric BR.
+
+The Stage-1 cap witness is retained as a regression test.
+
+## 4. Asymmetric deviations
+
+All unilateral deviations from the symmetric candidate are covered because the exact downstream active set is re-solved after the deviation.
+
+For symmetric rivals (y), own continuation passes through:
+
+1. own-inactive regime;
+2. all-(N)-active regime;
+3. own-monopoly regime.
+
+The reduced payoff remains globally strictly concave across both switches.
+
+Thus no asymmetric unilateral deviation defeats (i_C^*).
+
+## 5. Source duopoly global BR
+
+Normalize
+
+[
+delta=D/H,qquad ho=b/H^2>4/9.
+]
+
+The cap-free BR (R(y)) is the exact piecewise function recorded in
+`audit/STAGE_04_MINIMAL_MODEL_GATE.md`.
+
+The constrained BR is
+
+[
+oxed{B_phi(y)=min{phi,R(y)}}.
+]
+
+Material branch slopes are:
+
+- monopoly stationary branch: (0);
+- rival-exit kink branch: (+2);
+- both-active branch: (-2/(9ho-4));
+- own-inactive branch: (0).
+
+Therefore Proposition 5 is not globally a strategic-substitutes result over the entire source parameter domain.
+
+## 6. Hotelling diagnostic
+
+The source Hotelling reduced payoff is not globally single-valued once feasible outsourcing can create
+
+[
+|c_B-c_A|>3	au.
+]
+
+The price continuation is then a continuum. The earlier Stage-1 corner-deviation witness is selection-dependent.
+
+No new equilibrium-selection refinement is imposed.
+
+## 7. Audit completion
+
+- [x] Complete source strategy set used.
+- [x] (i=phi) treated explicitly.
+- [x] Interior stationary points checked.
+- [x] Active-set/corner continuations re-solved.
+- [x] Finite asymmetric unilateral deviations covered for the symmetric Cournot theorem.
+- [x] Duopoly global BR derived piecewise.
+- [x] Alternative duopoly equilibria searched and classified.
+- [x] Stage-1 counterexamples retained as regression tests.
+- [x] Hotelling continuation multiplicity recorded rather than hidden.
+
+Canonical verification artifact:
+
+`code/stage04_verify.py`
