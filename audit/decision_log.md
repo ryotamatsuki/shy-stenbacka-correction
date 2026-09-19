@@ -190,3 +190,47 @@ Next stage:
 \]
 
 Formalization is applicable; target map recorded for the later pre-freeze formal-verification gate.
+
+
+---
+
+## 2026-09-19 — Stage-6 novelty re-kill
+
+### Parent-class attack
+
+The Stage-4A results were stripped of outsourcing language and searched against standard parent classes.
+
+Strong prior-art threats include:
+
+- König (2010): negative competition–outsourcing effects in a close specification;
+- Amir (2000): asymmetric R&D and endogenous exit in symmetric Cournot;
+- Amir, Garcia & Knauff (2010): general symmetry-breaking classes;
+- Amir, Halmenschlager & Jin (2011): R&D polarization / shake-outs;
+- Buehler & Schmutzler (2008): investment asymmetry in successive oligopoly;
+- Eckert, Klumpp & Su (2017): multiple asymmetric investment equilibria before Cournot;
+- Lamantia, Pezzino & Tramontana (2018): discontinuous/piecewise innovation BRs and multiple equilibria;
+- heterogeneous-cost spatial pricing and no-loss-price literature.
+
+### Killed novelty narratives
+
+The project may not claim novelty for generic negative competition effects, endogenous asymmetry, rival exit, piecewise-BR multiplicity, or no-loss Hotelling pricing.
+
+### Surviving novelty
+
+No located parent theorem directly absorbs the exact source correction package.
+
+The key Cournot distinction is that the certified source reduced payoff is globally strictly concave in own sourcing under the paper's SOC, yet the downstream active-set kink makes the global outsourcing BR non-monotone and can produce coexistence of the symmetric equilibrium with an asymmetric pair.
+
+The contribution remains a **new source-specific correction/result in a known model**, not a new general game-theory mechanism.
+
+### Verdict
+
+\[
+\boxed{\textbf{STAGE 6 — GO}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{Stage 7 — Welfare / Generality / Institutional Validation}}
+\]
