@@ -44,3 +44,28 @@ This deterministic search is **not** used as proof. The proof remains the analyt
 ## Verification semantics
 
 No failed solver call or invalid branch is counted as an unprofitable deviation. No material retained Cournot continuation remains unresolved.
+
+
+## Hotelling re-audit verification
+
+\`code/stage04_hotelling_refinement_verify.py\` was independently re-executed after the Stage-4 reopening.
+
+Result:
+
+\`\`\`text
+PASS: Stage-4 Hotelling undominated-price re-audit
+\`\`\`
+
+Exact checks include:
+
+- branch continuity at both Hotelling market-share thresholds;
+- source interior stationary response;
+- full-market stationary response \(Hn/2\);
+- deviation-gain quadratic;
+- \(\Delta\Pi_{\max}=n(2H^2n-27\tau)/18\);
+- exact roots \(x_\pm\);
+- proof ingredient \(x_->i_0+3\tau/H\) on \(27/2<H^2n/\tau<18\);
+- Stage-1 regression gain \(1/90\);
+- exact critical-cap value in that regression.
+
+No numerical approximation is used as proof.
