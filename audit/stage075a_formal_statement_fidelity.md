@@ -1,6 +1,6 @@
 # Stage 7.5A Formal Statement-Fidelity Map
 
-Status: **AWAITING FINAL GREEN BUILD**
+Status: **PASS — FINAL GREEN BUILD VERIFIED**
 
 ## Formal boundary
 
@@ -70,3 +70,16 @@ The following remain certified analytically by Stage 4A rather than formally in 
 - all economic interpretation and literature/novelty claims.
 
 The paper and repository must not describe this targeted formalization as “formal verification of the whole Shy–Stenbacka model.”
+
+
+## Final build state
+
+The final targeted formal source built successfully in GitHub Actions run `35439005968` at certified formal-source commit `8c575f99daecacd85077ee2db3568dbd362c2004`.
+
+The formal source blob used by the current branch is unchanged from that green build.
+
+Final state:
+
+[
+oxed{	extbf{FORMAL VERIFICATION PASS}}
+]
