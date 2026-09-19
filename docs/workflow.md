@@ -34,7 +34,9 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 10 PASS}
 \rightarrow
-\textbf{Stage 11 NEXT}
+\text{Stage 11 PASS}
+\rightarrow
+\textbf{Stage 12 NEXT}
 }
 \]
 
@@ -172,6 +174,33 @@ Green Stage-10 evidence at substantive head \`80f4523222e3f473786f3800ca8be0928d
 
 No theory, quantifier, equilibrium-concept, benchmark, novelty, or formal-scope change relative to Stage 8 was introduced.
 
-## Stage-11 contract
+## Stage-11 verdict
 
-Stage 11 must attack the completed manuscript as a hostile referee. It must repeat the known-model-in-disguise/theorem-absorption attack, challenge all global/boundary/continuation claims, inspect theorem quantifiers and benchmark wording against the frozen certificates, and verify that manuscript claims do not inflate the scope of the Lean proof-critical core. A material failure routes back to the earliest affected stage.
+\[
+\boxed{\textbf{CANONICAL STAGE 11 — PASS}}
+\]
+
+Canonical hostile-referee report:
+
+\`audit/STAGE_11_ROBUSTNESS_REFEREE_ATTACK.md\`
+
+Known-model-in-disguise record:
+
+\`audit/STAGE_11_KNOWN_MODEL_ATTACK.md\`
+
+Independent verifier:
+
+\`code/stage11_hostile_referee_verify.py\`
+
+Stage 11 found one MINOR prose-only scope inflation and repaired it. No FATAL or MAJOR defect, no theorem failure, no novelty-certification regression, no welfare/benchmark regression, and no formal-verification scope regression remains.
+
+Green Stage-11 evidence:
+
+- Python verification head \`89d04eb048257db3f930cd34f96209d34d1e3bc7\`;
+- push run \`35451023487\` — success;
+- PR run \`35451026809\` — success;
+- manuscript build run \`35450876387\` — success after the scope repair.
+
+## Stage-12 contract
+
+Stage 12 must select journals based on the surviving compact source-specific correction, current journal scope, recent comparable publications, likely desk-reject/referee risk, and contribution level. It may not enlarge theory or novelty to fit a preferred outlet.
