@@ -38,10 +38,8 @@ theorem C4_step_negative
     (hd1 : 0 < b * (N + 2)^2 - H^2 * (N + 1)) :
     cournotInterior H D b (N + 1) < cournotInterior H D b N := by
   unfold cournotInterior
-  change
-    H * (N + 1) * D / (b * (N + 2)^2 - H^2 * (N + 1))
-      <
-    H * N * D / (b * (N + 1)^2 - H^2 * N)
+  have hsum : N + 1 + 1 = N + 2 := by ring
+  rw [hsum]
   rw [div_lt_div_iff₀ hd1 hd0]
   have hp : 0 < N^2 + N - 1 := by
     nlinarith [sq_nonneg N]
