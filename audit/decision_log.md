@@ -400,3 +400,44 @@ Route:
 \[
 \boxed{\textbf{Stage 9 — Repository / Reproducibility Setup}}
 \]
+
+
+---
+
+## 2026-09-19 — Stage-9 repository / reproducibility setup
+
+### Repository hardening
+
+The existing repository was not treated as an automatic Stage-9 PASS. After the Stage-8 theory freeze it was explicitly converted into a production/reproducibility layout.
+
+Stage 9 added:
+
+- pinned Python runtime and dependency path;
+- repository-level `Makefile` verification/build targets;
+- complete Python verification CI;
+- clean-environment manuscript smoke-build CI;
+- modular `paper/sections/` structure;
+- `REPRODUCIBILITY.md`;
+- theorem-certificate and formal-source indexes;
+- permanent counterexample/regression register;
+- content-addressed artifact manifest.
+
+### Green evidence
+
+- Python verification: run `35442666402` — **success**;
+- Lean formal verification: run `35439005968` — **success**;
+- manuscript smoke build: run `35442682700` — **success**.
+
+The Stage-7.5A Lean source/toolchain blobs were unchanged. The Stage-9 manuscript restructuring added no substantive theory.
+
+### Verdict
+
+\[
+\boxed{\textbf{CANONICAL STAGE 9 — PASS}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{Stage 10 — Section-by-Section Paper Construction}}
+\]
