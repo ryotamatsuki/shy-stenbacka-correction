@@ -21,7 +21,7 @@ C3 proves the unique **symmetric action**, not uniqueness of the general-\(N\) t
 
 C8 is complete for pure Stage-I equilibria of the **source duopoly**.
 
-H1/H2 diagnose the source Hotelling game but are not part of the Candidate-C paper architecture routed to Stage 4A.
+H1–H6 are part of restored Candidate E′. H1 concerns the literal source game; H2–H6 concern an explicitly labeled undominated-price refinement. No trembling-hand/proper-equilibrium claim is made.
 
 ## Prohibited manuscript wording
 
