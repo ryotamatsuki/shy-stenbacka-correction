@@ -33,7 +33,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 9 — REPOSITORY / REPRODUCIBILITY SETUP}}
+\boxed{\textbf{STAGE 9 — PASS / REPRODUCIBILITY SETUP COMPLETE}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 10 — SECTION-BY-SECTION PAPER CONSTRUCTION}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -233,3 +237,32 @@ The freeze binds manuscript construction to the Stage-7.5A scopes. In particular
 Any theory, equilibrium-concept, quantifier, benchmark, or formal-statement change after this point requires explicit rollback under the Stage-8 change-control rules.
 
 Stage 9 may reorganize and harden reproducibility infrastructure, but it may not alter the frozen theory.
+
+
+## Stage 9 repository / reproducibility setup
+
+Stage 9 closes with:
+
+\[
+\boxed{\textbf{CANONICAL STAGE 9 — PASS}}
+\]
+
+The existing repository has now been converted into the canonical production/reproducibility layout required by workflow v2.2.
+
+Canonical Stage-9 artifacts:
+
+- `audit/STAGE_09_REPOSITORY_REPRODUCIBILITY.md`
+- `audit/stage09_artifact_manifest.md`
+- `REPRODUCIBILITY.md`
+- `Makefile`
+- `theorem_certificates/README.md`
+- `formal/README.md`
+- `audit/counterexample_regression_register.md`
+
+Reproducibility gates are green:
+
+- Python verification: run `35442666402` — **success**;
+- Lean formal verification: run `35439005968` — **success**;
+- manuscript smoke build: run `35442682700` — **success**.
+
+The manuscript has been modularized into `paper/sections/` without adding substantive theory. Stage 10 may now construct the paper section by section, but remains bound by the Stage-8 theory freeze.
