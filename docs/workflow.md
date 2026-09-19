@@ -44,7 +44,9 @@ This Stage-12 refinement does not alter the Stage-8 theory freeze or Stage-11 ce
 \rightarrow
 \text{Stage 12 PASS}
 \rightarrow
-\textbf{Stage 13 NEXT}
+\text{Stage 13 PASS}
+\rightarrow
+\textbf{Stage 14 NEXT}
 }
 \]
 
@@ -258,6 +260,39 @@ JIE, JEMS and CJE were explicitly evaluated as higher-risk stretches. Other obvi
 No frozen theorem, novelty statement, benchmark, equilibrium concept, welfare claim, or formal-verification scope was modified.
 
 
-## Stage-13 contract
+## Stage-13 verdict
 
-Stage 13 must integrate the paper for Review of Industrial Organization using the Stage-12 requirements ledger. It may adapt organization, title/abstract emphasis, current journal-specific literature positioning, keywords/JEL/declarations, figure packaging, and a flat Springer-compatible LaTeX bundle. It may not enlarge the frozen theory or novelty. All Stage-12 `UNVERIFIED` requirements must remain visible for the live Stage-14 re-check.
+\[
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
+\]
+
+Canonical report:
+
+`audit/STAGE_13_FULL_PAPER_INTEGRATION.md`
+
+Substantive integration head:
+
+`72c2f233199bea82e67de9b93987a64fe2dae804`
+
+Implemented for RIO:
+
+- abstract / keywords / JEL integration;
+- Dai (2026) current make-or-buy positioning without novelty inflation;
+- reproducibility, data, code, and generative-AI disclosure;
+- retained Stage-10 figure/table architecture with strengthened table scope caption;
+- flat no-subfolder LaTeX package generator;
+- canonical and flat package CI builds;
+- dedicated integration lint for citations, references, cross-references, indexing metadata, scope controls, and placeholders.
+
+Green evidence:
+
+- Python verification: `35473538351` and `35473541979`;
+- canonical + flat RIO manuscript build: `35473538163`.
+
+No theory or certification rollback was triggered.
+
+## Stage-14 contract
+
+Stage 14 must refresh current RIO journal/portal requirements, resolve all material author- and portal-specific unknowns or fail closed, rebuild the full submission package, verify artwork/source/declarations, resolve all citations and cross-references, confirm formal-verification claim fidelity, and inspect the final PDF page by page.
+
+Stage 14 may repair formatting/package defects but may not enlarge the frozen theory or contribution.
