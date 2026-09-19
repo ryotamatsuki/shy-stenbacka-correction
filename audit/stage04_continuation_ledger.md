@@ -34,3 +34,22 @@ Reduced-game verdict: **not single-valued without a source selection rule**.
 ## Fail-closed semantics
 
 No invalid interior formula, negative quantity, out-of-range market share, NaN, solver failure, or absent branch is treated as evidence that a deviation is unprofitable.
+
+
+## Hotelling undominated-price refinement
+
+Deleting only prices (p_j<c_j), each of which is weakly dominated by (p_j=c_j), gives:
+
+| Cost-gap class | Undominated-price continuation | Outcome | Multiplicity |
+|---|---|---|---|
+| (|d_c|<3\tau) | source interior formula | `SOLVED_EQUILIBRIUM` | unique |
+| (|d_c|=3\tau) | zero-share boundary | `SOLVED_EQUILIBRIUM` | unique |
+| (d_c>3\tau) | (p_B=c_B, p_A=c_B-\tau) | `SOLVED_EQUILIBRIUM` | unique |
+| (d_c<-3\tau) | mirror image | `SOLVED_EQUILIBRIUM` | unique |
+
+Unresolved refined price subgames: **0**  
+Numerical failures: **0**
+
+The refined Stage-I payoff is therefore single-valued. Exact symmetric survival/failure conditions are recorded in `audit/STAGE_04_HOTELLING_REAUDIT.md`.
+
+Important: the literal-game multiplicity table above remains valid. The refined table does not rewrite the source strategy space; it reports a one-round weak-dominance refinement.
