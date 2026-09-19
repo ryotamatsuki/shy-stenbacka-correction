@@ -8,14 +8,6 @@ on:
   push:
     branches:
       - audit/full-equilibrium-correspondence
-  pull_request:
-    paths:
-      - 'ShyStenbackaFormal/**'
-      - 'ShyStenbackaFormal.lean'
-      - 'lakefile.toml'
-      - 'lean-toolchain'
-      - '.github/workflows/lean.yml'
-
 jobs:
   formal:
     runs-on: ubuntu-latest
