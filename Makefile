@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: verify verify-python verify-formal figures paper clean
+.PHONY: verify verify-python verify-formal figures paper rio-bundle clean
 
 verify: verify-python verify-formal
 
@@ -23,6 +23,10 @@ figures:
 paper: figures
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error manuscript.tex
 
+rio-bundle: figures
+	$(PYTHON) code/stage13_build_rio_bundle.py
+	cd paper/rio_submission && latexmk -pdf -interaction=nonstopmode -halt-on-error manuscript.tex
+
 clean:
 	cd paper && latexmk -C || true
-	rm -rf paper/generated
+	rm -rf paper/generated paper/rio_submission
