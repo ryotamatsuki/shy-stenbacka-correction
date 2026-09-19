@@ -28,7 +28,9 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 7.5A PASS}
 \rightarrow
-\textbf{Stage 8 NEXT}
+\text{Stage 8 PASS}
+\rightarrow
+\textbf{Stage 9 NEXT}
 }
 \]
 
@@ -91,15 +93,34 @@ Final green formal run:
 
 The formal layer certifies selected proof-critical algebra/order statements, not the complete economic game.
 
-## Stage-8 contract
+## Stage-8 verdict
 
-Stage 8 must freeze:
+\[
+\boxed{\textbf{CANONICAL STAGE 8 — PASS}}
+\]
 
-- canonical model;
-- theorem statements at Stage-7.5A scope;
-- solution concepts;
-- benchmark labels;
-- novelty and robustness boundaries;
-- formal-verification provenance.
+\[
+\boxed{\textbf{THEORY FROZEN}}
+\]
 
-No theorem widening or new extension is permitted.
+Canonical freeze artifact:
+
+\`audit/STAGE_08_CANONICAL_THEORY_FREEZE.md\`
+
+Stage 8 freezes:
+
+- canonical source model and strategy domains;
+- theorem statements at the Stage-7.5A certified quantifiers;
+- pure-strategy / pure-price solution-concept boundaries;
+- welfare benchmark labels and selection dependence;
+- source-specific novelty boundary;
+- baseline-only generality boundary;
+- formal-verification scope, toolchain, dependency, CI, and axiom/placeholder provenance;
+- explicit claims not made;
+- rollback rules for every post-freeze theory change.
+
+No theorem widening or new extension is authorized after the freeze without rollback to the earliest affected gate.
+
+## Stage-9 contract
+
+Stage 9 must now convert the existing research repository into the production reproducibility layout required by workflow v2.2 without changing the frozen theory.
