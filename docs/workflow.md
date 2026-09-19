@@ -8,28 +8,6 @@ Pinned workflow commit:
 
 See `docs/WORKFLOW_PROVENANCE.md`.
 
-## Canonical stage sequence
-
-1. Stage 0 — Idea / Motivation Intake
-2. Stage 1 — Source & Mathematical Audit
-3. **Stage 2 — Literature Frontier / Novelty Kill Gate**
-4. **Stage 3 — Candidate Mechanism Search**
-5. Stage 4 — Minimal Model Gate
-6. Stage 4A — Independent Mathematical Adversarial Certification Gate
-7. Stage 5 — Mechanism Hardening
-8. Stage 6 — Novelty Re-Kill
-9. Stage 7 — Welfare / Generality / Institutional Validation
-10. Stage 7.5 — Full-Theory Freeze Decision
-11. Stage 7.5A — Generality / Quantifier Red-Team Gate
-12. Stage 8 — Canonical Theory Freeze
-13. Stage 9 — Repository / Reproducibility Setup
-14. Stage 10 — Section-by-Section Paper Construction
-15. Stage 11 — Robustness / Referee Attack Gate
-16. Stage 12 — Journal Positioning
-17. Stage 13 — Full-Paper Integration
-18. Stage 14 — Submission QA
-19. Stage 15 — Submission Freeze
-
 ## Current canonical state
 
 [
@@ -38,45 +16,71 @@ See `docs/WORKFLOW_PROVENANCE.md`.
 ightarrow
 	ext{Stage 2 PASS}
 ightarrow
-	extbf{Stage 3 NEXT}
+	ext{Stage 3 PASS}
+ightarrow
+	extbf{Stage 4 NEXT}
 }
 ]
 
 Stage-1 verdict: **GO TO NOVELTY GATE**.  
-Stage-2 verdict: **GO TO MECHANISM SEARCH**.
+Stage-2 verdict: **GO TO MECHANISM SEARCH**.  
+Stage-3 verdict: **GO TO MINIMAL MODEL**.
 
-## Stage-2 contribution constraint
+## Stage-3 selected architecture
 
-The following claims are killed as novelty claims:
+Stage 4 tests **Candidate E — Unified regime-complete correction**.
 
-- partial outsourcing as a concept;
-- strategic outsourcing;
-- strategic-substitute outsourcing decisions;
-- the generic statement that competition affects outsourcing;
-- the generic statement that more Cournot competitors can reduce outsourcing.
+Core loop:
 
-The surviving route is source-specific correction/global re-characterization.
+[
+	ext{outsourcing}
+	o
+	ext{cost vector}
+	o
+	ext{downstream regime}
+	o
+	ext{continuation payoff}
+	o
+	ext{global Stage-I best response}.
+]
 
-Stage 3 may compare correction architectures, but **may not introduce new primitives or mechanisms merely to create novelty**. The source model remains frozen.
+Cournot regime = active set.  
+Hotelling regime = interior/corner market share.
+
+No new source primitive is authorized.
+
+## Authorized fallback
+
+If the Hotelling global price continuation cannot be completely characterized while Cournot closes cleanly, Stage 4 may return a conditional pivot to **Candidate C — Complete Cournot correction**.
+
+It may not silently drop unresolved Hotelling histories while retaining a global SPNE claim.
+
+## Stage-4 prohibitions
+
+- no generalized monitoring-cost coefficient;
+- no fixed cost added to create thresholds;
+- no outside option added to Hotelling;
+- no dynamics, uncertainty, bargaining, or supplier market power;
+- no clipping of an invalid continuation formula as a substitute for solving the continuation game;
+- no use of FOC/SOC alone as a global equilibrium certificate.
 
 ## Important ordering note
 
-This GitHub repository was bootstrapped before canonical Stage 9 for provenance. That does **not** mean Stage 9 has passed. Formal Stage-9 certification remains downstream of theory freeze.
+The repository was created before canonical Stage 9 for provenance. This does **not** constitute Stage 9 PASS.
 
 ## Fail-closed equilibrium rule
 
-Any later Nash/SPNE claim must provide valid product-market continuations after every economically material Stage-I deviation.
+Any material continuation must be classified as one of:
 
-The following may not be treated as evidence that a deviation is unprofitable:
+- `SOLVED_EQUILIBRIUM`
+- `SOLVED_NO_EQUILIBRIUM`
+- `MULTIPLE_EQUILIBRIA`
+- `UNRESOLVED`
+- `NUMERICAL_FAILURE`
 
-- a negative “equilibrium” quantity produced by an interior formula;
-- a market share outside ([0,1]);
-- an invalid active set;
-- solver failure, NaN, exception, or nonconvergence;
-- an FOC/SOC certificate that applies only to one regular branch.
+Material `UNRESOLVED` or `NUMERICAL_FAILURE` blocks a global SPNE theorem.
 
 ## Branch policy
 
 - `main`: stable project history.
-- `audit/full-equilibrium-correspondence`: current audit branch.
-- Stage-specific mathematical/manuscript work may be split further as the canonical workflow requires.
+- `audit/full-equilibrium-correspondence`: current staged audit.
