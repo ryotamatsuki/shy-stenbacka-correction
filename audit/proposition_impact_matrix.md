@@ -1,93 +1,63 @@
 # Proposition Impact Matrix
 
-Status: **STAGE-4 CONSTRUCTION COMPLETE — STAGE 4A CERTIFICATION PENDING**
+Status: **STAGE-4 CONSTRUCTION RESULTS FROZEN; STAGE 4A CERTIFICATION NEXT**
 
-Stage 4 supersedes the earlier Stage-1 classifications where noted.
+| Published result | Stage-4 classification | Corrected result |
+|---|---|---|
+| Proposition 3 | **INCORRECT** | \(i_C^*=\min\{\phi,\bar i_C\}\) is weakly decreasing in \(N\), strictly decreasing on the interior branch for \(N>1\). |
+| Corollary 4 | **PARTLY SURVIVES WITH BOUNDARY QUALIFICATION** | Interior signs survive. For the outsourced fraction, effects become weak when the cap binds. The number outsourced rises one-for-one with \(\phi\) on the full-outsourcing branch and falls with \(\phi\) on the interior branch. |
+| Proposition 5 | **FALSE AS A GLOBAL CLAIM** | The all-active BR is decreasing, but for \(4/9<b/H^2<2/3\) the global duopoly BR contains a slope-\(+2\) rival-exit segment. Asymmetric equilibria can arise. |
+| Proposition 6 / Eq. (25) | **SOURCE PROOF INCOMPLETE; STAGE-1 “GLOBALLY FALSE” LABEL SUPERSEDED** | The cap \(i\le\phi\) is omitted. Off-path Hotelling price equilibria are multiple when \(|c_B-c_A|>3\tau\); the same sourcing deviation can be profitable or unprofitable depending on the valid continuation. |
 
-| Published result | Stage-4 classification | Corrected result / impact | Certificate |
-|---|---|---|---|
-| Proposition 3 | **INCORRECT** | Eq. (13) is the unconstrained symmetric stationary point, but the feasible symmetric SPNE is (i_C^*=min{phi,ar i_C}). Eq. (14) has the wrong sign: outsourcing is weakly decreasing in (N), strictly decreasing on the interior branch for (N>1). | C3, C4 |
-| Corollary 4 | **QUALIFY** | The outsourced **fraction** is weakly increasing in (a) and weakly decreasing in (gamma) and (phi); all are strict on the interior branch. Binding (i=phi) creates flat fraction effects. The outsourced **number** rises one-for-one with (phi) on the cap branch, so a global strict-number claim would be false. | C5 |
-| Proposition 5 | **CORRECT LOCALLY, FALSE GLOBALLY ON PART OF SOURCE DOMAIN** | Eq. (15) is the both-active branch and has negative slope. But for (4/9<b/H^2<2/3), the global duopoly BR contains a rival-exit branch with slope (+2). Asymmetric equilibria arise; at (b/H^2=2/3) a continuum can arise. | C6–C8 |
-| Proposition 6 | **STAGE-1 “GLOBALLY FALSE” CLASSIFICATION SUPERSEDED** | Eq. (19) is unique only for (|c_B-c_A|le3	au). For larger cost gaps the source price game has a continuum of pure equilibria with different low-cost continuation profits. The source provides no selection rule. Eq. (25) also omits (ilephi). The earlier single corner-deviation rejection is selection-dependent, not selection-free. | H1, H2 |
+## Cournot replacement formulas
 
-## Proposition 3 replacement
-
-Let
-
-[
-D=a-Hphi-rac{gammaphi^2}{2}>0,
-qquad
-ar i_C=
-rac{HND}{b(N+1)^2-H^2N}.
-]
-
-Under the source condition
-
-[
-b>left(rac{HN}{N+1}ight)^2,
-]
-
-the corrected symmetric Cournot SPNE outsourcing level is
-
-[
-oxed{i_C^*=min{phi,ar i_C}}.
-]
-
-On the interior branch,
-
-[
-rac{partial ar i_C}{partial N}
+\[
+\bar i_C
 =
--rac{HDb(N^2-1)}
-{left[b(N+1)^2-H^2Night]^2}<0
-qquad(N>1).
-]
+\frac{HND}{b(N+1)^2-H^2N},
+\qquad
+i_C^*=\min\{\phi,\bar i_C\}.
+\]
 
-Hence (i_C^*) is weakly decreasing in (N), with strict decrease whenever the cap does not bind.
+For \(N>1\),
 
-## Proposition 5 replacement logic
+\[
+\frac{\partial\bar i_C}{\partial N}
+=
+-
+\frac{HDb(N^2-1)}
+{[b(N+1)^2-H^2N]^2}<0.
+\]
 
-For source duopoly define
+## Proposition 5 mechanism
 
-[
-delta=rac DH,
-qquad
-ho=rac b{H^2}>rac49.
-]
+With
 
-The complete global BR is piecewise affine after exact Cournot continuation.
+\[
+\delta=D/H,\qquad \rho=b/H^2,
+\]
 
-- On the regular both-active branch its slope is
-  [
-  -rac{2}{9ho-4}<0.
-  ]
-- For (4/9<ho<2/3), another optimal branch is the rival-exit threshold
-  [
-  R(y)=delta+2y,
-  ]
-  with slope (+2).
+the rival-exit kink is
 
-Therefore the source condition (8) is insufficient for a global strategic-substitutes theorem.
+\[
+U(y)=\delta+2y.
+\]
 
-## Proposition 6 audit correction
+For \(4/9<\rho<2/3\), this kink is part of the global BR on a nonempty interval, so
 
-For the source full-coverage Hotelling price game:
+\[
+U'(y)=2>0.
+\]
 
-- (|c_B-c_A|<3	au): unique interior equilibrium;
-- (|c_B-c_A|=3	au): unique zero-share boundary equilibrium;
-- (|c_B-c_A|>3	au): continuum of corner price equilibria.
+## Hotelling supersession
 
-The low-cost continuation profit varies across that continuum. No no-below-cost restriction or refinement is stated in the source.
+The Stage-1 profitable-deviation example remains a permanent regression but its interpretation changes:
 
-Therefore:
+- under one valid corner price equilibrium, the deviation is profitable;
+- under another valid corner price equilibrium, it is unprofitable.
 
-1. the Stage-1 profitable corner deviation is a valid **selection-sensitivity** witness;
-2. it is not a selection-free proof that the published symmetric outsourcing candidate cannot be embedded in any SPNE;
-3. Hotelling is retained as an audit finding but is not part of the Stage-4A canonical Cournot correction architecture.
+Therefore it proves **continuation-selection dependence**, not unconditional failure of all symmetric SPNE support.
 
-## Scope discipline
+## Scope
 
-- C3 uniqueness is uniqueness of the **symmetric** general-(N) equilibrium, not uniqueness of every asymmetric SPNE.
-- C8 gives the complete pure Stage-I correspondence only for the source **duopoly**.
-- All Stage-4 certificates remain construction-level until Stage 4A independently attacks them.
+Stage 4A receives the Cournot Candidate-C correction as the canonical paper architecture. The Hotelling result remains a diagnostic/secondary correction unless a later stage explicitly reopens it.
