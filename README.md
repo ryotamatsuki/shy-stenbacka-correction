@@ -52,7 +52,7 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \boxed{\textbf{NEXT: STAGE 13 — FULL-PAPER INTEGRATION FOR RIO}}
 \]
 
-Workflow: \`research-paper-workflow\` v2.2.
+Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited under the backward-compatible v2.3 candidate-universe refinement at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
 
 ## Canonical architecture
 
@@ -326,12 +326,26 @@ One **MINOR** prose-only scope inflation in Related Literature was found and rep
 Stage-11 verification head `89d04eb048257db3f930cd34f96209d34d1e3bc7` passed Python verification runs `35451023487` and `35451026809`. The manuscript containing the scope repair passed build run `35450876387`. The frozen Lean blobs remain unchanged.
 
 
-## Stage 12 journal positioning
+## Stage 12 journal positioning — v2.3 completeness re-audit
 
-Stage 12 closes with:
+Stage 12 was reopened because the original v2.2 comparison had a **candidate-set omission**: IJIO and several other obvious/repeated IO venues had not been explicitly evaluated before the ranking was closed.
+
+The v2.3 re-audit closes with:
 
 \[
 \boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+\]
+
+Candidate-universe gate:
+
+\[
+\boxed{\textbf{CANDIDATE-UNIVERSE COMPLETENESS AUDIT — PASS}}
+\]
+
+The earlier omission is recorded as:
+
+\[
+\boxed{\textbf{JOURNAL-POSITIONING COMPLETENESS REGRESSION — REPAIRED}}
 \]
 
 Primary target:
@@ -340,18 +354,34 @@ Primary target:
 \boxed{\textbf{Review of Industrial Organization}}
 \]
 
+Best stretch:
+
+\[
+\boxed{\textbf{International Journal of Industrial Organization}}
+\]
+
 Canonical Stage-12 artifacts:
 
+- `audit/STAGE_12_CANDIDATE_UNIVERSE_LEDGER.md`
 - `audit/STAGE_12_JOURNAL_POSITIONING.md`
 - `audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
 
-Default submission ladder:
+Default fit-first submission ladder:
 
 1. Review of Industrial Organization — **Primary**
-2. Journal of Industry, Competition and Trade — **Realistic fallback**
-3. Bulletin of Economic Research — **Alternative fallback**
-4. Economics Bulletin — **Safety net**
+2. Journal of Institutional and Theoretical Economics — **Realistic fallback 1**
+3. Journal of Economics — **Realistic fallback 2**
+4. Journal of Industry, Competition and Trade — **Realistic fallback 3**
+5. Bulletin of Economic Research — **Alternative fallback**
+6. Economics Bulletin — **Safety net**
 
-Canadian Journal of Economics is retained as an optional **Stretch** because it published the original Shy–Stenbacka article, but its current general-interest scope creates a material narrowness risk.
+Optional one-shot stretch:
 
-No theory or novelty was enlarged to obtain the journal fit. Stage 13 may only integrate and package the frozen manuscript for RIO.
+`IJIO → RIO → JITE → …`
+
+The Journal of Industrial Economics, Journal of Economics & Management Strategy, and Canadian Journal of Economics were explicitly evaluated as higher-risk stretches but are not preferred to IJIO as the single pre-RIO attempt. RAND Journal of Economics, Journal of Economic Theory, Economic Theory, JEBO, Southern Economic Journal, and JEDC were explicitly excluded with reasons in the candidate-universe ledger.
+
+RIO remains primary **after** the expanded comparison because its explicit accommodation of shorter notes/commentaries matches the certified source-specific correction/re-characterization better than the stronger new-mechanism orientation of the stretch outlets.
+
+No theory, novelty, welfare, equilibrium, or formal-verification claim was changed. Stage 13 may only integrate and package the frozen manuscript for RIO.
+
