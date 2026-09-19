@@ -32,7 +32,9 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 9 PASS}
 \rightarrow
-\textbf{Stage 10 NEXT}
+\text{Stage 10 PASS}
+\rightarrow
+\textbf{Stage 11 NEXT}
 }
 \]
 
@@ -147,6 +149,29 @@ Green reproducibility evidence:
 
 Stage 9 established a modular manuscript layout, pinned Python/Lean dependencies, repository-level Make targets, CI for Python/formal/manuscript layers, theorem/formal indexes, and a permanent counterexample/regression register without changing the Stage-8 frozen theory.
 
-## Stage-10 contract
+## Stage-10 verdict
 
-Stage 10 must construct the manuscript section by section in dependency order and implement the figure/table architecture while remaining exactly within the Stage-8 theorem, solution-concept, welfare, novelty, and formal-verification boundaries.
+\[
+\boxed{\textbf{CANONICAL STAGE 10 — PASS}}
+\]
+
+Canonical construction report:
+
+\`audit/STAGE_10_PAPER_CONSTRUCTION.md\`
+
+Figure/Table Architecture Gate:
+
+\`audit/STAGE_10_FIGURE_TABLE_ARCHITECTURE.md\`
+
+The integrated manuscript now contains the model, global Cournot continuation and best responses, complete pure source-duopoly correspondence, literal and auxiliary Hotelling blocks, welfare/robustness/scope discussion, literature positioning, introduction, conclusion, and proof appendix.
+
+Green Stage-10 evidence at substantive head \`80f4523222e3f473786f3800ca8be0928de78fe2\`:
+
+- Python verification run \`35444042815\`;
+- manuscript build run \`35444042793\`.
+
+No theory, quantifier, equilibrium-concept, benchmark, novelty, or formal-scope change relative to Stage 8 was introduced.
+
+## Stage-11 contract
+
+Stage 11 must attack the completed manuscript as a hostile referee. It must repeat the known-model-in-disguise/theorem-absorption attack, challenge all global/boundary/continuation claims, inspect theorem quantifiers and benchmark wording against the frozen certificates, and verify that manuscript claims do not inflate the scope of the Lean proof-critical core. A material failure routes back to the earliest affected stage.
