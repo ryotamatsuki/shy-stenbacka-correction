@@ -159,3 +159,34 @@ The mathematics under the restricted strategy set \(p\ge c\) remains correct. St
 - architecture: **HYBRID**, with Cournot as main theorem block and Hotelling as secondary source/robustness results.
 
 This amendment is explicit and precedes Stage-4A recertification.
+
+
+---
+
+## 2026-09-19 — Stage-4A final certification
+
+The amended Stage-4 HYBRID architecture was independently reconstructed and attacked.
+
+### Independent result
+
+- Cournot continuation uniqueness independently follows from a strictly concave exact potential with Hessian \(-b(I+\mathbf1\mathbf1^\top)\).
+- Global Cournot own-payoff concavity survives active-set changes.
+- The source-duopoly BR, Proposition-5 counterexample, asymmetric equilibria, and \(\rho=2/3\) continuum survive.
+- Literal Hotelling corner multiplicity survives.
+- The Stage-4A weak-dominance counterexample \(p=c\preceq c+\varepsilon\) is permanently retained.
+- Under explicit \(p\ge c\), the pure Hotelling price continuation and exact Proposition-6 failure threshold survive.
+- No material continuation remains unresolved.
+
+### Verdict
+
+\[
+\boxed{\textbf{GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS}}
+\]
+
+Next stage:
+
+\[
+\boxed{\textbf{Stage 6 — Novelty Re-Kill}}
+\]
+
+Formalization is applicable; target map recorded for the later pre-freeze formal-verification gate.
