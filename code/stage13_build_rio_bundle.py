@@ -25,8 +25,8 @@ main = main.replace(r"\input{generated/duopoly_best_response.tex}", r"\input{duo
 for src in sorted((PAPER / "sections").glob("*.tex")):
     section = src.read_text(encoding="utf-8")
     section = section.replace(
-        r"\\input{generated/duopoly_best_response.tex}",
-        r"\\input{duopoly_best_response.tex}",
+        r"\input{generated/duopoly_best_response.tex}",
+        r"\input{duopoly_best_response.tex}",
     )
     (OUT / src.name).write_text(section, encoding="utf-8")
 
