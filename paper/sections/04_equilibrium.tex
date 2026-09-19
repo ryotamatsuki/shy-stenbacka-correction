@@ -40,7 +40,7 @@ x_L=R(x_H).
 \end{enumerate}
 \end{proposition}
 
-Table~\ref{tab:eq-regimes} assigns the equilibrium correspondence its primary exposition vehicle.  It is intentionally limited to pure Stage-I equilibria of the source duopoly; no mixed-strategy completeness claim is made.
+Table~\ref{tab:eq-regimes} summarizes the pure Stage-I equilibrium regimes of the source duopoly.  No mixed-strategy completeness claim is made.
 
 \begin{table}[t]
 \centering
@@ -52,7 +52,8 @@ Parameter region & Cap condition & Pure equilibrium set\\
 \midrule
 \(\rho>2/3\) & any \(\phi\) & unique symmetric\\
 \(\rho=2/3\) & \(\phi<\delta/2\) & unique \((\phi,\phi)\)\\
-\(\rho=2/3\) & \(\phi\ge\delta/2\) & continuum \(x+y=\delta\)\\
+\(\rho=2/3\) & \(\phi=\delta/2\) & singleton \((\delta/2,\delta/2)\)\\
+\(\rho=2/3\) & \(\phi>\delta/2\) & nondegenerate segment \(x+y=\delta\)\\
 \(4/9<\rho<2/3\) & \(\phi\le s\) & unique \((\phi,\phi)\)\\
 \(4/9<\rho<2/3\) & \(\phi>s\) & symmetric \(+\) asymmetric pair\\
 \bottomrule
@@ -73,10 +74,18 @@ the three equilibria are
 (0,1).
 \label{eq:regression-eq}
 \end{equation}
-The coexistence of a symmetric equilibrium and an asymmetric pair occurs even though each player's reduced payoff is globally strictly concave in its own sourcing action.  The source of multiplicity is therefore not own-payoff nonconcavity; it is the change in downstream participation that alters the global best-response geometry.
+The coexistence of a symmetric equilibrium and an asymmetric pair occurs even though each player's reduced payoff is globally strictly concave in its own sourcing action.  Own-payoff concavity therefore does not imply equilibrium uniqueness for the Stage-I game.  Downstream exit generates the positive-slope branch identified in Proposition~\ref{prop:prop5}, but exit is not necessary for multiplicity: with \((\rho,\delta,\phi)=(3/5,1,3/4)\), both firms remain active after every feasible sourcing history, yet the pure equilibria are
+\[
+\left(\frac{10}{17},\frac{10}{17}\right),
+\qquad
+\left(\frac34,\frac5{14}\right),
+\qquad
+\left(\frac5{14},\frac34\right).
+\]
+In that all-active example, the steep decreasing regular best response together with the sourcing cap produces the asymmetric pair.
 
 For \(\rho>2/3\), the active branch has slope magnitude
 \[
 \left|\frac{-2}{9\rho-4}\right|<1,
 \]
-and the capped/zero pieces have slope zero, so the two-player best-response operator is a contraction.  At \(\rho=2/3\), the response becomes \(B_\phi(y)=\min\{\phi,\max\{0,\delta-y\}\}\), which yields the exact continuum \eqref{eq:knife-continuum}.  For \(4/9<\rho<2/3\), a branch-by-branch intersection of the complete response graph with its transpose yields exactly the three fixed points in \eqref{eq:three-eq} whenever the cap lies above the symmetric action.
+and the capped/zero pieces have slope zero, so the two-player best-response operator is a contraction.  At \(\rho=2/3\), the response becomes \(B_\phi(y)=\min\{\phi,\max\{0,\delta-y\}\}\).  Equation~\eqref{eq:knife-continuum} is a singleton at \(\phi=\delta/2\) and a nondegenerate segment only when \(\phi>\delta/2\).  For \(4/9<\rho<2/3\), the complete branch-exclusion argument for the unique ordered asymmetric pair is given in Appendix~\ref{app:proofs}; it is not inferred from a numerical intersection plot.
