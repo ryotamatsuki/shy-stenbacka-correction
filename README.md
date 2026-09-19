@@ -49,10 +49,14 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 13 — FULL-PAPER INTEGRATION FOR RIO}}
+\boxed{\textbf{STAGE 13 — PASS / INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
 \]
 
-Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited under the backward-compatible v2.3 candidate-universe refinement at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
+\[
+\boxed{\textbf{NEXT: STAGE 14 — SUBMISSION QA}}
+\]
+
+Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited and Stage 13 integrated under the backward-compatible v2.3 workflow state at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
 
 ## Canonical architecture
 
@@ -385,3 +389,41 @@ RIO remains primary **after** the expanded comparison because its explicit accom
 
 No theory, novelty, welfare, equilibrium, or formal-verification claim was changed. Stage 13 may only integrate and package the frozen manuscript for RIO.
 
+
+
+## Stage 13 full-paper integration for RIO
+
+Stage 13 closes with:
+
+\[
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
+\]
+
+Canonical report:
+
+- `audit/STAGE_13_FULL_PAPER_INTEGRATION.md`
+
+Stage-13 integration added:
+
+- RIO-compliant abstract indexing metadata: 5 keywords and JEL codes `L13; L23; L24`;
+- current RIO make-or-buy literature positioning via Dai (2026);
+- data/code availability and substantive generative-AI disclosure;
+- a self-contained scope caption for the pure-equilibrium table;
+- `code/stage13_integration_verify.py`;
+- `code/stage13_build_rio_bundle.py`;
+- `make rio-bundle`, which generates and compiles a no-subfolder flat LaTeX submission bundle;
+- `paper/RIO_SUBMISSION_NOTES.md`, preserving authenticated-portal and author-specific unknowns for Stage 14.
+
+Substantive Stage-13 integration head:
+
+`72c2f233199bea82e67de9b93987a64fe2dae804`
+
+Green evidence:
+
+- Python push run `35473538351` — **success**;
+- Python PR run `35473541979` — **success**;
+- canonical + flat RIO manuscript build run `35473538163` — **success**.
+
+Both canonical and flat package builds converge to a 16-page PDF. No Stage-8/11 theory, novelty, welfare, equilibrium, or formal-verification scope was changed.
+
+Stage 14 must refresh live RIO requirements, resolve portal/author inputs, audit final source/artwork/declarations, and inspect the submission PDF page by page.
