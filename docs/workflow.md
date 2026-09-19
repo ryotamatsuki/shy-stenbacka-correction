@@ -2,7 +2,7 @@
 
 This repository follows `ryotamatsuki/research-paper-workflow` **v2.2**.
 
-Pinned workflow commit for the present audit:
+Pinned workflow commit:
 
 `42574d6c5931275ccff3ef7e8b4acc188077332a`
 
@@ -11,9 +11,9 @@ See `docs/WORKFLOW_PROVENANCE.md`.
 ## Canonical stage sequence
 
 1. Stage 0 — Idea / Motivation Intake
-2. **Stage 1 — Source & Mathematical Audit**
+2. Stage 1 — Source & Mathematical Audit
 3. **Stage 2 — Literature Frontier / Novelty Kill Gate**
-4. Stage 3 — Candidate Mechanism Search
+4. **Stage 3 — Candidate Mechanism Search**
 5. Stage 4 — Minimal Model Gate
 6. Stage 4A — Independent Mathematical Adversarial Certification Gate
 7. Stage 5 — Mechanism Hardening
@@ -36,17 +36,32 @@ See `docs/WORKFLOW_PROVENANCE.md`.
 oxed{
 	ext{Stage 1 PASS}
 ightarrow
-	extbf{Stage 2 NEXT}
+	ext{Stage 2 PASS}
+ightarrow
+	extbf{Stage 3 NEXT}
 }
 ]
 
-Stage-1 verdict: **GO TO NOVELTY GATE**.
+Stage-1 verdict: **GO TO NOVELTY GATE**.  
+Stage-2 verdict: **GO TO MECHANISM SEARCH**.
 
-The earlier custom “Stage 1 Source freeze / Stage 2 Mathematical canonicalization” scaffold is superseded. Both source freezing and first-principles mathematical reconstruction belong to canonical Stage 1.
+## Stage-2 contribution constraint
+
+The following claims are killed as novelty claims:
+
+- partial outsourcing as a concept;
+- strategic outsourcing;
+- strategic-substitute outsourcing decisions;
+- the generic statement that competition affects outsourcing;
+- the generic statement that more Cournot competitors can reduce outsourcing.
+
+The surviving route is source-specific correction/global re-characterization.
+
+Stage 3 may compare correction architectures, but **may not introduce new primitives or mechanisms merely to create novelty**. The source model remains frozen.
 
 ## Important ordering note
 
-This GitHub repository was bootstrapped before canonical Stage 9 for practical provenance reasons. That does **not** mean Stage 9 has passed. Formal Stage-9 certification remains downstream of theory freeze and must later satisfy the v2.2 Stage-9 gate.
+This GitHub repository was bootstrapped before canonical Stage 9 for provenance. That does **not** mean Stage 9 has passed. Formal Stage-9 certification remains downstream of theory freeze.
 
 ## Fail-closed equilibrium rule
 
