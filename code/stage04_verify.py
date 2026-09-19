@@ -44,12 +44,17 @@ D_source = a - H * phi - gamma * phi**2 / 2
 i_source = sp.factor(H * N * D_source / B)
 f_source = sp.factor(i_source / phi)
 
-assert sp.factor(sp.diff(i_source, a)) == H * N / B
-assert sp.factor(sp.diff(i_source, gamma)) == -H * N * phi**2 / (2 * B)
-assert sp.factor(sp.diff(i_source, phi)) == -H * N * (H + gamma * phi) / B
-assert sp.factor(sp.diff(f_source, phi)) == (
-    -H * N * (2 * a + gamma * phi**2) / (2 * phi**2 * B)
-)
+assert sp.simplify(sp.diff(i_source, a) - H * N / B) == 0
+assert sp.simplify(
+    sp.diff(i_source, gamma) + H * N * phi**2 / (2 * B)
+) == 0
+assert sp.simplify(
+    sp.diff(i_source, phi) + H * N * (H + gamma * phi) / B
+) == 0
+assert sp.simplify(
+    sp.diff(f_source, phi)
+    + H * N * (2 * a + gamma * phi**2) / (2 * phi**2 * B)
+) == 0
 
 cap_gap = sp.factor(sp.together(i_source - phi))
 cap_gap_num = sp.factor(cap_gap.as_numer_denom()[0])
@@ -201,8 +206,8 @@ assert sp.simplify((M - U).subs(y, y_M)) == 0
 
 s_duo = sp.factor(2 * delta / (9 * rho - 2))
 assert sp.simplify(A.subs(y, s_duo) - s_duo) == 0
-assert sp.diff(A, y) == -2 / (9 * rho - 4)
-assert sp.diff(U, y) == 2
+assert sp.simplify(sp.diff(A, y) + 2 / (9 * rho - 4)) == 0
+assert sp.simplify(sp.diff(U, y) - 2) == 0
 
 
 def R_uncon(y_: Fraction, d_: Fraction, r_: Fraction) -> Fraction:
