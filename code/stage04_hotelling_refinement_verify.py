@@ -1,7 +1,8 @@
-"""Stage-4 Hotelling re-audit: undominated-price refinement.
+"""Stage-4 Hotelling re-audit: explicit no-loss price restriction.
 
-Source primitives only.  The refinement deletes prices p<c after proving
-that p=c weakly dominates each such pure price.
+Source primitives only.  The auxiliary robustness game imposes p>=c. The source-payoff dominance fact
+that p=c weakly dominates each p<c is verified separately; this is not
+claimed to be elimination of all weakly dominated strategies.
 
 Requires sympy==1.14.0.
 """
@@ -92,7 +93,7 @@ assert sp.Rational(1,2)>xminus0
 # for p<c, (p-c)*share <= 0 for every share in [0,1],
 # whereas p=c gives exactly zero operating profit.
 
-print("PASS: Stage-4 Hotelling undominated-price re-audit")
+print("PASS: Stage-4 Hotelling no-loss-restriction re-audit")
 print("interior stationary response =",u)
 print("corner stationary response =",m)
 print("max corner deviation gain =",max_gain)
