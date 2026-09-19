@@ -78,3 +78,14 @@ Stage-4 verdict:
 [
 oxed{	ext{GO TO STAGE 4A}}.
 ]
+
+
+---
+
+## 2026-09-19 — Stage-4 construction decision
+
+Stage 4 closes with **GO** for Candidate C — Complete Cournot correction, routed to Stage 4A.
+
+The unified Candidate E is rejected as the minimal canonical architecture because the source Hotelling price subgame has a continuum of valid off-path equilibria for sufficiently asymmetric costs. The Stage-1 Hotelling profitable-deviation result is therefore superseded as an unconditional rejection and retained instead as a continuation-selection diagnostic.
+
+Cournot construction results now frozen for Stage 4A include: global continuation uniqueness, global own-payoff concavity, corrected capped symmetric action, reversed Proposition-3 sign, complete duopoly global BR, and the complete pure duopoly equilibrium correspondence.
