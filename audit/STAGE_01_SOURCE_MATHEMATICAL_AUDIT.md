@@ -1,3 +1,5 @@
+> **Stage-4 supersession notice (2026-09-19).** Stage 1 was a source-audit gate, not the final equilibrium theorem. Its Cournot sign/cap findings survive, but two provisional interpretations are superseded by Stage 4: (i) the feasible symmetric Cournot interior candidate is globally optimal under the source SOC once the correct active-set continuation is solved; and (ii) the Stage-1 Hotelling corner example proves continuation-selection dependence, not unconditional nonexistence of a symmetric SPNE. The canonical mathematical conclusions are now in `audit/STAGE_04_MINIMAL_MODEL_GATE.md`.
+
 # Stage 1 — Source & Mathematical Audit
 
 Status: **PASS — GO TO NOVELTY GATE**
