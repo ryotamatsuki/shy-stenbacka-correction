@@ -1,3 +1,5 @@
+> **Independent-audit reopening notice (2026-09-20).** The historical Stage-13 PASS at checkpoint `5bdf156347da4267167513d96b5ef53456cd3f9a` was reopened after a clean-room audit found a C7 quantifier defect, a C8 proof-completeness defect, and an overstatement of the multiplicity mechanism. The historical record below is preserved. The controlling repair record is `audit/STAGE_13_INDEPENDENT_AUDIT_REINTEGRATION_2026-09-20.md`; Stage 14 is not authorized until that record is closed.
+
 # Stage 13 — Full-Paper Integration for Review of Industrial Organization
 
 Status:
