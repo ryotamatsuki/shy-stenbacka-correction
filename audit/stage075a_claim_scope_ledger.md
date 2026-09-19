@@ -1,6 +1,6 @@
 # Stage 7.5A Claim-Scope Ledger
 
-Status: **SCOPE AUDIT COMPLETE — FORMAL VERIFICATION GATE PENDING**
+Status: **PASS — SCOPE AUDIT COMPLETE / FORMAL VERIFICATION PASS**
 
 Date: 2026-09-19
 
@@ -159,4 +159,4 @@ Do not use:
 - benchmark register: \`audit/stage07_welfare_benchmarks.md\`
 - targeted Lean source: \`ShyStenbackaFormal/Stage075A.lean\`
 
-Formal-verification state is recorded separately and must be PASS before Stage 7.5A can close.
+Formal-verification state: **FORMAL VERIFICATION PASS**. See `audit/stage075a_formal_verification_certificate.md`.
