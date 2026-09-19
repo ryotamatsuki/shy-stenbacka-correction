@@ -12,7 +12,6 @@ on:
       - 'paper/**'
       - 'code/stage10_generate_figure.py'
       - 'code/stage13_build_rio_bundle.py'
-      - 'code/stage13_build_rio_bundle.py'
       - '.python-version'
       - 'Makefile'
       - '.github/workflows/manuscript.yml'
@@ -20,6 +19,7 @@ on:
     paths:
       - 'paper/**'
       - 'code/stage10_generate_figure.py'
+      - 'code/stage13_build_rio_bundle.py'
       - '.python-version'
       - 'Makefile'
       - '.github/workflows/manuscript.yml'
