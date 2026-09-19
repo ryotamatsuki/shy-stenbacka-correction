@@ -1,10 +1,16 @@
 # Canonical Workflow Routing
 
-This repository follows \`ryotamatsuki/research-paper-workflow\` v2.2.
+Stages 0–11 follow \`ryotamatsuki/research-paper-workflow\` v2.2.
 
-Pinned workflow commit:
+Original pinned workflow commit:
 
 \`42574d6c5931275ccff3ef7e8b4acc188077332a\`
+
+Stage 12 was subsequently re-audited under the backward-compatible v2.3 candidate-universe refinement:
+
+\`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`
+
+This Stage-12 refinement does not alter the Stage-8 theory freeze or Stage-11 certification.
 
 ## Current state
 
@@ -203,7 +209,19 @@ Green Stage-11 evidence:
 - PR run \`35451026809\` — success;
 - manuscript build run \`35450876387\` — success after the scope repair.
 
-## Stage-12 verdict
+## Stage-12 verdict — recertified under v2.3
+
+The original Stage-12 shortlist was incomplete. The v2.3 candidate-universe audit identified the omission, enlarged the candidate set, and reran positioning without altering theory.
+
+\[
+\boxed{\textbf{CANDIDATE-UNIVERSE COMPLETENESS AUDIT — PASS}}
+\]
+
+\[
+\boxed{\textbf{JOURNAL-POSITIONING COMPLETENESS REGRESSION — REPAIRED}}
+\]
+
+Final Stage-12 verdict:
 
 \[
 \boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
@@ -215,17 +233,30 @@ Primary target:
 \boxed{\textbf{Review of Industrial Organization}}
 \]
 
-Canonical positioning report:
+Best stretch:
 
-\`audit/STAGE_12_JOURNAL_POSITIONING.md\`
+\[
+\boxed{\textbf{International Journal of Industrial Organization}}
+\]
 
-Initial journal-requirements ledger:
+Canonical records:
 
-\`audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md\`
+- `audit/STAGE_12_CANDIDATE_UNIVERSE_LEDGER.md`
+- `audit/STAGE_12_JOURNAL_POSITIONING.md`
+- `audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
 
-Default ladder is RIO → Journal of Industry, Competition and Trade → Bulletin of Economic Research → Economics Bulletin. Canadian Journal of Economics is an optional stretch only.
+Default fit-first ladder:
 
-No frozen theorem, novelty statement, benchmark, equilibrium concept, or formal-verification scope was modified.
+`RIO → JITE → Journal of Economics → JICT → Bulletin of Economic Research → Economics Bulletin`.
+
+Optional one-shot stretch:
+
+`IJIO → RIO → JITE → …`.
+
+JIE, JEMS and CJE were explicitly evaluated as higher-risk stretches. Other obvious/closest-literature venues are explicitly excluded in the candidate-universe ledger rather than silently omitted.
+
+No frozen theorem, novelty statement, benchmark, equilibrium concept, welfare claim, or formal-verification scope was modified.
+
 
 ## Stage-13 contract
 
