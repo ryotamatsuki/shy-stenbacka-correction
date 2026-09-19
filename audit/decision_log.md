@@ -632,3 +632,89 @@ Route:
 [
 \boxed{\textbf{Stage 13 — Full-Paper Integration for RIO}}
 ]
+
+
+---
+
+## 2026-09-20 — Stage-12 v2.3 candidate-universe re-audit
+
+### Trigger
+
+After the original Stage-12 closure, the reusable workflow was strengthened so that journal ranking must be preceded by a contribution-first candidate-universe construction and completeness audit.
+
+Applying that rule exposed a genuine Stage-12 process defect: **International Journal of Industrial Organization** and other obvious/repeated IO venues had not all been explicitly evaluated before RIO was selected.
+
+This is classified as:
+
+\[
+\boxed{\textbf{JOURNAL-POSITIONING COMPLETENESS REGRESSION}}
+\]
+
+It is not a Stage-6 novelty regression, Stage-8 theory regression, or Stage-11 certification regression.
+
+### Repair
+
+A new candidate-universe ledger was created:
+
+`audit/STAGE_12_CANDIDATE_UNIVERSE_LEDGER.md`.
+
+The expanded serious-candidate set explicitly evaluates IJIO, RIO, JIE, JEMS, CJE, JITE, Journal of Economics, JICT, BER, and Economics Bulletin, while RAND, JET, Economic Theory, JEBO, SEJ, and JEDC receive explicit exclusion reasons.
+
+Key ranking changes relative to the old Stage 12:
+
+- **IJIO** becomes the **best stretch**;
+- **RIO** remains **primary** after direct comparison;
+- **JITE** becomes realistic fallback 1;
+- **Journal of Economics** becomes realistic fallback 2;
+- **JICT** moves to fallback 3.
+
+Default route:
+
+\[
+\text{RIO}
+\rightarrow
+\text{JITE}
+\rightarrow
+\text{Journal of Economics}
+\rightarrow
+\text{JICT}
+\rightarrow
+\text{BER}
+\rightarrow
+\text{Economics Bulletin}.
+\]
+
+Optional one-shot stretch:
+
+\[
+\text{IJIO}
+\rightarrow
+\text{RIO}
+\rightarrow
+\text{JITE}
+\rightarrow\cdots
+\]
+
+### Verdict
+
+\[
+\boxed{\textbf{CANDIDATE-UNIVERSE COMPLETENESS AUDIT — PASS}}
+\]
+
+\[
+\boxed{\textbf{JOURNAL-POSITIONING COMPLETENESS REGRESSION — REPAIRED}}
+\]
+
+\[
+\boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+\]
+
+Primary remains **Review of Industrial Organization**; best stretch is **International Journal of Industrial Organization**.
+
+No theory, theorem scope, novelty boundary, welfare claim, equilibrium concept, or formal-verification certificate changed.
+
+Route remains:
+
+\[
+\boxed{\textbf{Stage 13 — Full-Paper Integration for RIO}}
+\]
