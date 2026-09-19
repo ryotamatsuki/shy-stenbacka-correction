@@ -562,3 +562,73 @@ Route:
 [
 \boxed{\textbf{Stage 12 — Journal Positioning}}
 ]
+
+
+---
+
+## 2026-09-20 — Stage-12 journal positioning
+
+### Current contribution level
+
+The Stage-11-surviving paper is positioned as a compact source-specific industrial-organization correction / theory note. No new generic outsourcing, investment, symmetry-breaking, or spatial-pricing theorem is claimed.
+
+### Live journal comparison
+
+Current official scopes and recent publications were checked for Review of Industrial Organization, Canadian Journal of Economics, Journal of Industry, Competition and Trade, Bulletin of Economic Research, and Economics Bulletin.
+
+The strongest fit is **Review of Industrial Organization** because:
+
+- its scope is directly industrial organization;
+- it explicitly accepts theory;
+- it explicitly welcomes shorter notes and commentaries;
+- its August 2026 issue contains compact formal IO papers and a current make-or-buy theory paper;
+- the present 15-page manuscript fits the observed scale without needing a new mechanism.
+
+Canadian Journal of Economics remains an optional stretch because it published the source paper, but its current general-interest scope explicitly screens against very narrow specialist papers.
+
+### Primary target
+
+[
+\boxed{\textbf{Review of Industrial Organization}}
+]
+
+Default submission ladder:
+
+[
+\text{RIO}
+\rightarrow
+\text{JICT}
+\rightarrow
+\text{BER}
+\rightarrow
+\text{Economics Bulletin}.
+]
+
+### RIO submission baseline
+
+A current public requirements ledger was created. Key requirements include:
+
+- editable source files at every submission/revision;
+- LaTeX permitted;
+- no LaTeX subfolders;
+- 150–250 word abstract;
+- 4–6 keywords and JEL codes;
+- Data Availability Statement;
+- declarations for competing interests/funding as applicable;
+- author-contribution information in the submission interface;
+- disclosure of substantive LLM use;
+- hybrid publishing, with no APC under subscription publishing.
+
+Portal-only and author-specific facts remain explicitly UNVERIFIED for Stage 14.
+
+### Verdict
+
+[
+\boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+]
+
+Route:
+
+[
+\boxed{\textbf{Stage 13 — Full-Paper Integration for RIO}}
+]
