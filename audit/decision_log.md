@@ -277,3 +277,42 @@ Welfare remains appendix/prose material. Main text remains focused on S1–S3, w
 \[
 \boxed{\textbf{STAGE 7 — GO TO STAGE 7.5}}
 \]
+
+
+---
+
+## 2026-09-19 — Stage-7.5 full-theory freeze decision
+
+### Value assessment
+
+The project is not a new general theory of outsourcing, and Stage 6 has already killed that positioning.
+
+It nevertheless merits full-paper investment because the exact published model requires more than an algebraic corrigendum:
+
+- Proposition 3 reverses sign;
+- the all-active downstream formula is not globally valid;
+- Proposition 5 fails globally;
+- the source duopoly pure equilibrium set is qualitatively different from the published interpretation;
+- the Hotelling section has a separate off-path continuation defect.
+
+### Mechanism
+
+Outsourcing lowers marginal cost. When a sourcing difference becomes large enough to change downstream participation, the continuation regime changes. That active-set switch changes the global sourcing best-response geometry and can generate equilibrium multiplicity/asymmetry even though own reduced sourcing payoff is globally strictly concave.
+
+### Scope
+
+The exact theorems remain source-model / baseline-functional-form results.
+
+The manuscript should be a compact correction paper / theory note, not an extension-heavy general-theory paper.
+
+### Verdict
+
+\[
+\boxed{\textbf{STAGE 7.5 — GO}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{Stage 7.5A — Generality / Quantifier Red-Team}}
+\]
