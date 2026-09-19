@@ -1,7 +1,7 @@
 name: Manuscript smoke build
 
 concurrency:
-  group: manuscript-${{ github.ref }}
+  group: manuscript-\${{ github.ref }}
   cancel-in-progress: true
 
 on:
@@ -10,11 +10,15 @@ on:
       - audit/full-equilibrium-correspondence
     paths:
       - 'paper/**'
+      - 'code/stage10_generate_figure.py'
+      - '.python-version'
       - 'Makefile'
       - '.github/workflows/manuscript.yml'
   pull_request:
     paths:
       - 'paper/**'
+      - 'code/stage10_generate_figure.py'
+      - '.python-version'
       - 'Makefile'
       - '.github/workflows/manuscript.yml'
   workflow_dispatch:
@@ -25,10 +29,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+
       - name: Install TeX build tools
         run: |
           sudo apt-get update
-          sudo apt-get install -y latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+          sudo apt-get install -y latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-pictures
 
-      - name: Build manuscript skeleton
+      - name: Generate figures and build manuscript
         run: make paper
