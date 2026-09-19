@@ -46,3 +46,12 @@ jobs:
 
       - name: Build flat RIO submission bundle
         run: make rio-bundle
+
+      - name: Upload Stage 13 review PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage13-review-pdfs
+          path: |
+            paper/manuscript.pdf
+            paper/rio_submission/manuscript.pdf
+          if-no-files-found: error
