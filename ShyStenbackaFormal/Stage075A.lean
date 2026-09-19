@@ -21,17 +21,13 @@ correspondence, mixed equilibria, or the derivation of the economic primitives.
 def cournotInterior (H D b N : ℝ) : ℝ :=
   H * N * D / (b * (N + 1)^2 - H^2 * N)
 
-theorem C4_step_identity
-    (H D b N : ℝ)
-    (h0 : b * (N + 1)^2 - H^2 * N ≠ 0)
-    (h1 : b * (N + 2)^2 - H^2 * (N + 1) ≠ 0) :
-    cournotInterior H D b (N + 1) - cournotInterior H D b N
+theorem C4_cross_identity
+    (H D b N : ℝ) :
+    H * (N + 1) * D * (b * (N + 1)^2 - H^2 * N)
+      -
+    H * N * D * (b * (N + 2)^2 - H^2 * (N + 1))
       =
-    -(D * H * b * (N^2 + N - 1)) /
-      ((b * (N + 1)^2 - H^2 * N) *
-       (b * (N + 2)^2 - H^2 * (N + 1))) := by
-  unfold cournotInterior
-  field_simp [h0, h1]
+    -(D * H * b * (N^2 + N - 1)) := by
   ring
 
 theorem C4_step_negative
@@ -41,16 +37,14 @@ theorem C4_step_negative
     (hd0 : 0 < b * (N + 1)^2 - H^2 * N)
     (hd1 : 0 < b * (N + 2)^2 - H^2 * (N + 1)) :
     cournotInterior H D b (N + 1) < cournotInterior H D b N := by
-  rw [sub_lt_zero.symm]
-  rw [C4_step_identity H D b N (ne_of_gt hd0) (ne_of_gt hd1)]
-  have hp : 0 < N^2 + N - 1 := by nlinarith [sq_nonneg N]
-  have hn : 0 < D * H * b * (N^2 + N - 1) := by positivity
-  have hden :
-      0 <
-      (b * (N + 1)^2 - H^2 * N) *
-      (b * (N + 2)^2 - H^2 * (N + 1)) := by
-    exact mul_pos hd0 hd1
-  exact div_neg_of_neg_of_pos (neg_neg_of_pos hn) hden
+  unfold cournotInterior
+  rw [div_lt_div_iff₀ hd1 hd0]
+  have hp : 0 < N^2 + N - 1 := by
+    nlinarith [sq_nonneg N]
+  have hn : 0 < D * H * b * (N^2 + N - 1) := by
+    exact mul_pos (mul_pos (mul_pos hD hH) hb) hp
+  have hcross := C4_cross_identity H D b N
+  nlinarith
 
 -- C6/C7: exact join identities in the normalized source-duopoly BR.
 def exitBR (δ y : ℝ) : ℝ := δ + 2 * y
@@ -125,7 +119,9 @@ theorem H5_vertex_gain_positive
     (hcond : 27 * τ < 2 * H^2 * n) :
     0 < hotellingGain H n τ (H * n / 2) := by
   rw [H5_vertex_gain_identity]
-  positivity
+  have hgap : 0 < 2 * H^2 * n - 27 * τ := by
+    nlinarith
+  exact div_pos (mul_pos hn hgap) (by norm_num)
 
 theorem H6_exact_regression :
     hotellingGain 1 1 (1 / 15 : ℝ) (1 / 2 : ℝ) = 1 / 90 := by
@@ -135,7 +131,7 @@ theorem H6_exact_regression :
 theorem W_three_eq_symmetric_value :
     (20 / 17 : ℝ) < 3 / 2 := by norm_num
 
-#print axioms C4_step_identity
+#print axioms C4_cross_identity
 #print axioms C4_step_negative
 #print axioms C7_active_exit_join
 #print axioms C7_monopoly_exit_join
