@@ -718,3 +718,57 @@ Route remains:
 \[
 \boxed{\textbf{Stage 13 — Full-Paper Integration for RIO}}
 \]
+
+
+---
+
+## 2026-09-20 — Stage-13 full-paper integration for RIO
+
+The Stage-12-selected primary route was integrated without changing the frozen economics.
+
+### Manuscript integration
+
+- abstract remains within RIO's 150--250 word public requirement;
+- five keywords and JEL codes `L13; L23; L24` added;
+- Dai (2026), *A New Strategic Element to the Make-or-Buy Decision*, added and explicitly distinguished from the source-specific correction;
+- data/code availability and substantive LLM-use disclosures added;
+- Table 1 caption now states its pure Stage-I scope explicitly;
+- Stage-10 Figure 1 remains generated from the exact certified regression.
+
+### Package integration
+
+A flat RIO LaTeX package is now generated from the canonical modular manuscript by:
+
+`code/stage13_build_rio_bundle.py`.
+
+`make rio-bundle` regenerates the verified figure, creates `paper/rio_submission/` with no nested source directories, rewrites only path prefixes, and compiles the package.
+
+### Verification
+
+Substantive Stage-13 head:
+
+`72c2f233199bea82e67de9b93987a64fe2dae804`
+
+Green runs:
+
+- `35473538351` — Python verification push;
+- `35473541979` — Python verification PR;
+- `35473538163` — canonical + flat RIO manuscript build.
+
+The build confirms both layouts and a final 16-page PDF.
+
+Two packaging/lint defects found during Stage 13 were repaired before closure. Neither affected the paper's mathematics or claim scope.
+
+### Verdict
+
+\[
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
+\]
+
+No rollback is triggered.
+
+Route:
+
+\[
+\boxed{\textbf{Stage 14 — Submission QA}}
+\]
