@@ -13,6 +13,7 @@ verify-python:
 	$(PYTHON) code/stage075a_scope_counterexamples.py
 	$(PYTHON) code/stage10_generate_figure.py
 	$(PYTHON) code/stage11_hostile_referee_verify.py
+	$(PYTHON) code/independent_audit_repair_verify.py
 	$(PYTHON) code/stage13_integration_verify.py
 
 verify-formal:
