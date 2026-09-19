@@ -203,9 +203,14 @@ required = (
     "not a new general theory of outsourcing",
     "complete mixed-strategy correspondence",
     "not formally mechanized",
+    "positive-length increasing piece survives",
+    "exit is not necessary for multiplicity",
 )
 for phrase in required:
     assert phrase in text, phrase
+
+assert "source of multiplicity is therefore not own-payoff nonconcavity; it is the change in downstream participation" not in text
+assert "For \\(4/9<\\rho<2/3\\), the pure global sourcing best response contains a feasible rival-exit segment" not in text
 
 # Every manuscript citation key must exist in the bibliography.
 import re
