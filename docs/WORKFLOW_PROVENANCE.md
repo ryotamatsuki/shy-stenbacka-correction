@@ -154,3 +154,43 @@ The RIO requirements ledger was rechecked on the same date and remains the Stage
 No theory, novelty, welfare, equilibrium, or formal-verification rollback was triggered.
 
 Stage 13 inherits both the candidate-universe ledger and RIO requirements ledger. Stage 14 must refresh current live journal/portal rules before submission QA.
+
+
+## Canonical Stage 13 closure
+
+Stage 13 integrated the Stage-8-frozen / Stage-11-certified manuscript for the Stage-12-selected primary journal, **Review of Industrial Organization**.
+
+Canonical record:
+
+- `audit/STAGE_13_FULL_PAPER_INTEGRATION.md`
+
+Substantive integration head:
+
+`72c2f233199bea82e67de9b93987a64fe2dae804`
+
+New reproducibility/package artifacts:
+
+- `code/stage13_integration_verify.py`
+- `code/stage13_build_rio_bundle.py`
+- `paper/sections/07_reproducibility.tex`
+- `paper/RIO_SUBMISSION_NOTES.md`
+
+Green evidence:
+
+- Python push run `35473538351`;
+- Python PR run `35473541979`;
+- canonical plus flat RIO manuscript build `35473538163`.
+
+The generated flat package is derived from the canonical modular source and is not an independent manuscript authority.
+
+Stage 13 introduced no new economic theorem, mechanism, equilibrium concept, welfare result, or formal-verification claim. The Stage-8 theory freeze and Stage-11 certification remain valid.
+
+Current route:
+
+\[
+\text{Stage 12 PASS}
+\rightarrow
+\text{Stage 13 PASS}
+\rightarrow
+\textbf{Stage 14 NEXT}.
+\]
