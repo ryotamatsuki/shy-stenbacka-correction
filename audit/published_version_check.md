@@ -1,30 +1,73 @@
 # Published-Version Verification
 
-Status: **OPEN**
+Status: **PASS — SOURCE IDENTITY FROZEN**
 
-This gate must close before any correction claim is treated as canonical.
+Audit date: 2026-09-19.
 
 ## Bibliographic identity
 
 - Authors: Oz Shy and Rune Stenbacka
 - Year: 2005
-- Exact title: TO VERIFY
-- Journal / volume / issue / pages: TO VERIFY
-- DOI: TO VERIFY
-- Publisher landing page: TO VERIFY
-- Version used for audit: TO VERIFY
+- Title: **Partial outsourcing, monitoring cost, and market structure**
+- Journal: *Canadian Journal of Economics / Revue canadienne d'économique*
+- Volume / issue: **38(4)**
+- Pages: **1173–1190**
+- First published online: **27 October 2005**
+- Issue date: **November 2005**
+- DOI: **10.1111/j.0008-4085.2005.00320.x**
+- Publisher landing page: https://doi.org/10.1111/j.0008-4085.2005.00320.x
+- JSTOR stable record: https://www.jstor.org/stable/3696079
 
-## Required checks
+## Evidence layers
 
-- [ ] Confirm the final published version, not a working paper or preprint.
-- [ ] Record the exact equation numbering.
-- [ ] Record the exact statements of Proposition 3, Corollary 4, and Proposition 5.
-- [ ] Identify every definition needed for outsourcing choice, feasible sets, prices, locations, and Hotelling demand.
-- [ ] Record all parameter restrictions stated by the authors.
-- [ ] Check appendices, footnotes, errata, corrigenda, and supplementary material.
-- [ ] Check whether later versions or author-hosted copies silently modify the relevant algebra.
-- [ ] Record page-level provenance for every transcribed equation used in the audit.
+### A. Fresh publisher / bibliographic identity check
+
+Wiley's current article page and volume/issue contents were rechecked on 2026-09-19. They identify the title, authors, volume, issue, pages, DOI, and first-publication date above. JSTOR independently places the article at pp. 1173–1190 in volume 38(4).
+
+### B. Equation/proposition transcription
+
+A publicly accessible full-text transcription was cross-checked for the source model and equation/proposition numbering. It contains the published sequence through equations (1)–(26), including:
+
+- equation (5): marginal cost under constant outsourcing advantage;
+- equation (6): monitoring cost (i_j^2);
+- equations (8)–(15): Cournot restrictions, solution, comparative static, and duopoly best response;
+- Proposition 3, Corollary 4, Proposition 5;
+- equations (16)–(26): Hotelling demand, prices, Stage-I payoff, best response, SOC, symmetric solution, and fraction;
+- Proposition 6.
+
+### C. Archived Version-of-Record check
+
+The predecessor audit repository `ryotamatsuki/ozshypapers` records a direct check of the final typeset published article and specifically confirms that equations (13), (14), Proposition 3, and equations (17)–(26) occur in the Version of Record in the audited form.
+
+This project treats that record as provenance evidence, while keeping the new mathematical audit independent of the predecessor's generalized notation.
+
+## Important source-model correction to predecessor audit notation
+
+The published monitoring-cost specification is
+
+[
+M(i_j)=i_j^2.
+]
+
+The paper does **not** contain a free monitoring-cost coefficient (eta). Earlier scratch/generalized audit work sometimes used (eta i_j^2). That generalization is not part of the frozen source model and must not enter a source-faithful correction proof.
+
+## Erratum / corrigendum check
+
+Targeted current searches on 2026-09-19 for the article title/DOI together with `erratum`, `corrigendum`, `correction`, and `comment` did not surface a publisher-issued correction.
+
+This is only a source-version check. It is **not** a Stage-2 novelty finding and is not evidence that no prior scholarly discussion exists.
+
+## Completed checks
+
+- [x] Final published bibliographic identity fixed.
+- [x] Exact title, journal, volume, issue, pages, DOI, and publication date recorded.
+- [x] Relevant equation numbering recorded and cross-checked.
+- [x] Proposition 3, Corollary 4, Proposition 5, and Proposition 6 identified.
+- [x] Outsourcing strategy domain (0le i_jlephi) recovered from (I=[0,phi]).
+- [x] Cournot and Hotelling product-market objects needed for Stage 1 reconstructed.
+- [x] Current targeted erratum/corrigendum search performed.
+- [x] No publisher PDF committed to the repository.
 
 ## Version-control rule
 
-No downstream audit file may silently replace a published expression with a repaired one. Published expressions and corrected expressions must be displayed separately and labeled explicitly.
+No downstream audit file may silently replace a published expression with a repaired one. Source expressions, local-domain interpretations, and corrected/global results must be labeled separately.
