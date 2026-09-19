@@ -29,7 +29,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 8 — CANONICAL THEORY FREEZE}}
+\boxed{\textbf{STAGE 8 — PASS / THEORY FROZEN}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 9 — REPOSITORY / REPRODUCIBILITY SETUP}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -197,3 +201,35 @@ Canonical Stage-7.5A artifacts:
 - \`ShyStenbackaFormal/Stage075A.lean\`
 
 Stage 8 may freeze only these scopes; it may not widen any theorem or solution concept.
+
+
+## Stage 8 canonical theory freeze
+
+Stage 8 closes with:
+
+\[
+\boxed{\textbf{CANONICAL STAGE 8 — PASS}}
+\]
+
+\[
+\boxed{\textbf{THEORY FROZEN}}
+\]
+
+The canonical theory boundary is now recorded in:
+
+- `audit/STAGE_08_CANONICAL_THEORY_FREEZE.md`
+
+The freeze binds manuscript construction to the Stage-7.5A scopes. In particular:
+
+- general-`N` Cournot: unique **symmetric pure Stage-I action**, not unique SPNE;
+- source duopoly: complete **pure Stage-I** equilibrium correspondence;
+- Proposition-3 comparative static: admissible integer market sizes satisfying source restrictions;
+- Hotelling: literal **pure-price** continuation plus a separate conditional no-loss game;
+- `p_j\ge c_j`: auxiliary strategy restriction only;
+- Cournot welfare under multiplicity: selection-dependent;
+- exact C7/C8 thresholds: baseline source-functional-form results;
+- formal verification: targeted **proof-critical core**, not the complete economic model.
+
+Any theory, equilibrium-concept, quantifier, benchmark, or formal-statement change after this point requires explicit rollback under the Stage-8 change-control rules.
+
+Stage 9 may reorganize and harden reproducibility infrastructure, but it may not alter the frozen theory.
