@@ -441,3 +441,60 @@ Route:
 \[
 \boxed{\textbf{Stage 10 — Section-by-Section Paper Construction}}
 \]
+
+
+---
+
+## 2026-09-19 — Stage-10 manuscript construction
+
+### Construction
+
+The Stage-8 frozen theory was implemented section by section after Stage-9 reproducibility setup.
+
+The manuscript now includes:
+
+- exact source model and strategy domains;
+- global nonnegative-quantity Cournot continuation;
+- global own-payoff concavity;
+- corrected Proposition-3 comparative static;
+- complete source-duopoly pure global best response;
+- complete pure Stage-I equilibrium correspondence;
+- literal Hotelling pure-price continuation;
+- explicit auxiliary no-loss Hotelling robustness theorem;
+- welfare-selection and benchmark-scope discussion;
+- robustness/generality and institutional limits;
+- literature/theorem-absorption positioning;
+- technical proof appendix.
+
+### Exposition architecture
+
+The Figure/Table Architecture Gate passed.
+
+- Figure 1 is generated from the exact ((\rho,\delta,\phi)=(3/5,1,2)) regression and displays the positive-slope rival-exit branch and three exact pure equilibria.
+- Table 1 reports the five certified pure source-duopoly equilibrium regimes.
+- welfare and Hotelling threshold results remain equations/prose rather than unnecessary graphics.
+
+### Verification
+
+At substantive head `80f4523222e3f473786f3800ca8be0928de78fe2`:
+
+- Python verification run `35444042815` — **success**;
+- manuscript smoke-build run `35444042793` — **success**.
+
+No manuscript placeholder or Stage-9 skeletal marker remains.
+
+### Freeze integrity
+
+No Stage-8 rollback trigger was activated. In particular, there is no unique general-(N) SPNE claim, mixed-equilibrium completeness claim, global strategic-complements claim, generic convex-monitoring theorem, selection-free Cournot welfare claim, or full-model formal-verification claim.
+
+### Verdict
+
+\[
+\boxed{\textbf{CANONICAL STAGE 10 — PASS}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{Stage 11 — Robustness / Referee Attack Gate}}
+\]
