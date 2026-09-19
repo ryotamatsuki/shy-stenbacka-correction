@@ -316,3 +316,50 @@ Route:
 \[
 \boxed{\textbf{Stage 7.5A — Generality / Quantifier Red-Team}}
 \]
+
+
+---
+
+## 2026-09-19 — Stage-7.5A generality / quantifier certification
+
+### Quantifier result
+
+The headline correction package survives independent scope attack after explicit narrowing.
+
+Permanent wording controls:
+
+- general-\(N\) Stage I: unique **symmetric pure action**, not unique equilibrium;
+- source duopoly: complete **pure Stage-I** correspondence;
+- Hotelling: pure-price equilibrium scope;
+- \(N\)-comparative static: admissible integer market sizes satisfying source restrictions;
+- no-loss Hotelling: auxiliary \(p\ge c\) game only;
+- welfare: selection-dependent in Cournot multiplicity regions.
+
+### Generality kill test
+
+Replacing source monitoring \(x^2\) by the still-convex \(10x^2\) preserves the rival-exit boundary at the exact regression but makes the exit-inducing action strictly worse than no investment.
+
+Thus the active-set intuition has broader interpretive value, but the positive-slope global BR and equilibrium multiplicity remain baseline functional-form theorems.
+
+### Formal verification
+
+Targeted Lean 4 formalization passed.
+
+- Lean 4.19.0;
+- mathlib pinned to \`c44e0c8ee63ca166450922a373c7409c5d26b00b\`;
+- green run \`35439005968\`;
+- no proof placeholders;
+- no project-specific axiom;
+- no \`sorryAx\` in certified theorem axiom output.
+
+### Verdict
+
+\[
+\boxed{\textbf{STAGE 7.5A — PASS}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{Stage 8 — Canonical Theory Freeze}}
+\]
