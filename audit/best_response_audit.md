@@ -1,71 +1,68 @@
 # Constrained Best-Response Audit
 
-Status: **STAGE-4 COMPLETE — STAGE 4A NEXT**
+Status: **STAGE-4 AMENDED; STAGE 4A RECERTIFICATION REQUIRED**
 
 ## Cournot
 
-The general-\(N\) symmetric action and complete source-duopoly global BR are recorded in \`audit/STAGE_04_MINIMAL_MODEL_GATE.md\`.
-
-For duopoly,
-
-\[
-B_\phi(y)=\min\{\phi,R(y)\},
-\]
-
-where \(R(y)\) is the exact inactive / all-active / rival-exit / monopoly piecewise response derived at Stage 4. For \(4/9<b/H^2<2/3\), a feasible segment has slope \(+2\).
+The general-\(N\) symmetric action and complete source-duopoly global BR remain as in \`audit/STAGE_04_MINIMAL_MODEL_GATE.md\`.
 
 ## Hotelling — literal source game
 
-The interior BR derived by the source is branch-local. When \(|H(i_A-i_B)|>3\tau\), the literal price subgame can be multiple, so there is no single global reduced Stage-I payoff without continuation selection.
+The source interior BR is branch-local. For \(|H(i_A-i_B)|>3\tau\), the literal pure price continuation is multiple, so no single reduced Stage-I payoff exists without selection.
 
-## Hotelling — undominated-price refinement
+## Hotelling — explicit no-loss price restriction
 
-Every \(p<c\) is weakly dominated by \(p=c\). After deleting such prices, the Stage-I payoff is
+Impose
 
 \[
-V_y(x)=
+p_j\ge c_j
+\]
+
+as an auxiliary robustness restriction.
+
+Then A's reduced payoff against \(y=i_B\) is
+
+\[
+V_y^{NL}(x)=
 \begin{cases}
--x^2, & x-y\le-3\tau/H,\\[4pt]
+-x^2,&x-y\le-3\tau/H,\\[4pt]
 \dfrac{n[3\tau+H(x-y)]^2}{18\tau}-x^2,
-& |x-y|\le3\tau/H,\\[8pt]
+&|x-y|\le3\tau/H,\\[8pt]
 n[H(x-y)-\tau]-x^2,
-& x-y\ge3\tau/H.
+&x-y\ge3\tau/H.
 \end{cases}
 \]
+
+Under the source SOC every branch is strictly concave.
 
 Let
 
 \[
-I_y=
-[\max\{0,y-3\tau/H\},\min\{\phi,y+3\tau/H\}],
+I_y=[\max\{0,y-3\tau/H\},\min\{\phi,y+3\tau/H\}],
 \]
 
 \[
-u(y)=
-\frac{Hn(3\tau-Hy)}
-{18\tau-H^2n},
+u(y)=\frac{Hn(3\tau-Hy)}{18\tau-H^2n},
 \]
 
-and let \(x_I(y)\) be the projection of \(u(y)\) onto \(I_y\).
+and \(x_I(y)=\operatorname{proj}_{I_y}u(y)\).
 
-If \(y+3\tau/H\le\phi\), define
+If \(y+3\tau/H\le\phi\), let
 
 \[
-C_y=[y+3\tau/H,\phi],
-\qquad
 x_C(y)=
-\operatorname{proj}_{C_y}(Hn/2).
+\operatorname{proj}_{[y+3\tau/H,\phi]}\left(\frac{Hn}{2}\right).
 \]
 
-Then
+Then the exact pure best-response correspondence is
 
 \[
-BR_A(y)
+BR_A^{NL}(y)
 =
-\arg\max_{x\in K_y}V_y(x),
+\arg\max_{x\in K_y}V_y^{NL}(x),
 \]
 
-with
+where
 
 \[
 K_y=
@@ -74,37 +71,8 @@ K_y=
 \{x_C(y):y+3\tau/H\le\phi\}.
 \]
 
-This finite-candidate representation is complete because every branch is strictly concave under the source SOC. Ties are retained.
+Ties are retained.
 
-## Symmetric refined equilibrium
+## Refinement warning
 
-If
-
-\[
-\phi\le Hn/6,
-\]
-
-the corrected symmetric action is \(\phi\).
-
-If
-
-\[
-\phi>Hn/6,
-\]
-
-the source candidate \(Hn/6\) survives iff the exact condition in \`audit/STAGE_04_HOTELLING_REAUDIT.md\` holds. It fails exactly when
-
-\[
-27\tau/2<H^2n<18\tau
-\]
-
-and
-
-\[
-\phi>
-\frac{Hn}{2}
--
-\frac{\sqrt{2n(2H^2n-27\tau)}}{6}.
-\]
-
-Unresolved BR regions: **0** for the retained characterization.
+The no-loss restriction is not called an undominated-strategy refinement. The selected corner action \(p_{\rm high}=c_{\rm high}\) is itself weakly dominated by strictly above-cost prices in the unrestricted game.
