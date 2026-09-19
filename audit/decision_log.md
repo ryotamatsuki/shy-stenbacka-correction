@@ -498,3 +498,67 @@ Route:
 \[
 \boxed{\textbf{Stage 11 — Robustness / Referee Attack Gate}}
 \]
+
+
+---
+
+## 2026-09-20 — Stage-11 robustness / hostile-referee gate
+
+### Attack result
+
+The completed Stage-10 manuscript was attacked independently for:
+
+- known-model-in-disguise / theorem absorption;
+- finite/global sourcing deviations and active-set switches;
+- (ho=2/3), (ho=1/2), and (phi=s) boundaries;
+- literal Hotelling corner-continuation multiplicity;
+- the no-loss (1/90) deviation and (x_-) tie boundary;
+- welfare selection;
+- alternative monitoring curvature;
+- theorem-quantifier and benchmark-language inflation;
+- citation completeness;
+- formal-verification scope inflation and stale formal blobs.
+
+### Finding
+
+No mathematical, novelty, welfare, or formal certificate was invalidated.
+
+One **MINOR** exposition defect was found: Related Literature said “complete pure-strategy re-characterization of a specific published model,” which could overstate the certified completeness scope. It was narrowed to “complete pure Stage-I re-characterization of its Cournot source-duopoly case.”
+
+The first new CI lint attempt also failed because it falsely matched a protective negative sentence about global strategic complementarity. This was a verifier bug, not a manuscript/theory failure, and was corrected.
+
+### Independent verification
+
+Stage-11 verifier:
+
+`code/stage11_hostile_referee_verify.py`
+
+Final verification head:
+
+`89d04eb048257db3f930cd34f96209d34d1e3bc7`
+
+Green runs:
+
+- `35451023487` — Python verification push;
+- `35451026809` — Python verification PR;
+- `35450876387` — manuscript build containing the prose repair.
+
+### Certification regression
+
+[
+\boxed{\textbf{NO CERTIFICATION REGRESSION}}
+]
+
+No earlier stage is reopened.
+
+### Verdict
+
+[
+\boxed{\textbf{CANONICAL STAGE 11 — PASS}}
+]
+
+Route:
+
+[
+\boxed{\textbf{Stage 12 — Journal Positioning}}
+]
