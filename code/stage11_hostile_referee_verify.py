@@ -72,6 +72,46 @@ assert welfare(s, s) == F(20, 17)
 assert welfare(F(1), F(0)) == F(3, 2)
 assert welfare(F(0), F(1)) == F(3, 2)
 
+# Knife-edge / boundary attacks on the pure correspondence.
+def r_response(y: F, rho: F, delta: F = F(1)) -> F:
+    if y >= delta:
+        return F(0)
+    if rho >= F(2, 3):
+        return 2 * (delta - y) / (9 * rho - 4)
+    y_a = delta * (2 - 3 * rho) / (2 * (3 * rho - 1))
+    if rho >= F(1, 2):
+        return delta + 2 * y if y <= y_a else 2 * (delta - y) / (9 * rho - 4)
+    y_m = delta * (1 - 2 * rho) / (4 * rho - 1)
+    if y <= y_m:
+        return delta / (4 * rho - 1)
+    if y <= y_a:
+        return delta + 2 * y
+    return 2 * (delta - y) / (9 * rho - 4)
+
+
+# rho=2/3 continuum: x+y=delta when the cap permits.
+rho_edge = F(2, 3)
+assert r_response(F(7, 10), rho_edge) == F(3, 10)
+assert r_response(F(3, 10), rho_edge) == F(7, 10)
+
+# phi=s equality belongs to the unique capped-symmetric regime.
+rho_three = F(3, 5)
+s_three = F(10, 17)
+assert min(s_three, r_response(s_three, rho_three)) == s_three
+
+# Internal BR partition is continuous at rho=1/2.
+rho_half = F(1, 2)
+y_a_half = F(1, 2)
+assert r_response(F(0), rho_half) == F(1)
+assert r_response(y_a_half, rho_half) == F(2)
+
+# Stronger convex monitoring destroys the source global-BR conclusion.
+# At y=0, rho=3/5, delta=1: x=0 gives 5/27, while x=1 gives
+# monopoly operating profit 5/3 minus monitoring cost 10.
+assert payoff_a(F(0), F(0)) == F(5, 27)
+assert F(5, 3) - 10 == F(-25, 3)
+assert F(-25, 3) < F(5, 27)
+
 # ---------------------------------------------------------------------------
 # 2. Literal Hotelling corner-continuation reconstruction
 # ---------------------------------------------------------------------------
@@ -123,8 +163,21 @@ assert v_no_loss(F(1, 6)) == F(1, 180)
 assert v_no_loss(F(1, 2)) == F(1, 60)
 assert v_no_loss(F(1, 2)) - v_no_loss(F(1, 6)) == F(1, 90)
 
+# Exact H5 boundary tie with a rational square root:
+# H=n=1, tau=5/72 gives x_-=5/12.
+tau_tie = F(5, 72)
+x_minus = F(5, 12)
+delta_tie = -(
+    36 * x_minus * x_minus
+    - 36 * x_minus
+    + 5
+    + 54 * tau_tie
+) / 36
+assert delta_tie == 0
+assert F(27, 2) * tau_tie < 1 < 18 * tau_tie
+
 # ---------------------------------------------------------------------------
-# 4. Manuscript scope-lint for Stage-11 claim inflation
+# 4. Manuscript scope / citation lint for Stage-11 claim inflation
 # ---------------------------------------------------------------------------
 
 paper = Path("paper")
@@ -149,9 +202,20 @@ required = (
 for phrase in required:
     assert phrase in text, phrase
 
+# Every manuscript citation key must exist in the bibliography.
+import re
+bib = (paper / "references.bib").read_text(encoding="utf-8")
+bib_keys = set(re.findall(r"@[A-Za-z]+\\{([^,]+),", bib))
+cite_keys = set()
+for match in re.findall(r"\\cite\\{([^}]+)\\}", text):
+    cite_keys.update(k.strip() for k in match.split(","))
+missing = cite_keys - bib_keys
+assert not missing, sorted(missing)
+
 print("Stage-11 hostile-referee regression PASS")
 print("Cournot finite-deviation / active-set attack: PASS")
 print("Literal Hotelling corner-selection attack: PASS")
 print("No-loss exact 1/90 deviation: PASS")
 print("Welfare-selection regression: PASS")
-print("Manuscript scope lint: PASS")
+print("Knife-edge / cap / function-class attacks: PASS")
+print("Manuscript scope and citation lint: PASS")
