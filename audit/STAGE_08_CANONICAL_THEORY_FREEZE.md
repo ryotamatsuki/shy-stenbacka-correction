@@ -1,3 +1,5 @@
+> **Independent-audit freeze amendment (2026-09-20).** This historical freeze is controlling except where superseded by `audit/STAGE_08_THEORY_FREEZE_AMENDMENT_2026-09-20.md`, chiefly the C7 cap quantifier and the interpretation of C8 multiplicity.
+
 # Stage 8 — Canonical Theory Freeze
 
 > **2026-09-20 independent-audit freeze amendment.** The original Stage-8 checkpoint remains historical provenance. C7's cap quantifier, the C8 proof-completeness evidence, the multiplicity mechanism interpretation, Hotelling price-domain convention, no-loss root domain, and knife-edge welfare wording are superseded by this amended freeze and `audit/STAGE_08_INDEPENDENT_AUDIT_AMENDMENT_2026-09-20.md`.
