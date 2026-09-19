@@ -10,7 +10,7 @@ Stage-3 frozen input: \`ce32829fad98439cf97654e88d027d57756735d1\`
 
 Stage 3 selected Candidate E (unified Cournot + Hotelling correction), with Candidate C (complete Cournot correction) as the authorized fallback.
 
-Stage 4 finds that Candidate E is **not** the minimal canonical paper architecture because the source Hotelling price subgame becomes multiple off path. Candidate C closes completely and is the object routed forward.
+Stage 4 was partially reopened after identifying an economically material refinement issue in the Hotelling subgame. The re-audit proves that every below-marginal-cost price is weakly dominated by marginal-cost pricing. The literal source game still has off-path corner multiplicity, but after one-round elimination of these weakly dominated prices the Hotelling continuation is unique and Proposition 6 fails on an exact nonempty source-admissible region. The canonical architecture is therefore amended to **Candidate E′ — complete Cournot correction plus a two-layer Hotelling correction**.
 
 \[
 \boxed{\textbf{STAGE 4 — GO}}
@@ -41,7 +41,7 @@ The central construction results are:
    \]
 4. Equation (14) and Proposition 3 have the wrong sign: the corrected symmetric outsourcing level is weakly decreasing in \(N\), strictly decreasing on the interior branch for \(N>1\).
 5. Proposition 5 is false as a global statement. In the source duopoly, the global best response can contain a slope-\(+2\) regime and asymmetric equilibria.
-6. The Hotelling corner-deviation claim from Stage 1 is superseded: for \(|c_B-c_A|>3\tau\), the price subgame has a continuum of pure equilibria. The same sourcing deviation can be profitable under one valid continuation and unprofitable under another. This is a continuation-selection problem, not an unconditional proof that Proposition 6 has no SPNE support.
+6. Hotelling has a two-layer correction. In the literal source game, \(|c_B-c_A|>3\tau\) generates a continuum of corner price equilibria. Every member of that continuum except the marginal-cost endpoint uses a weakly dominated below-cost price by the zero-demand high-cost firm. Under the undominated-price refinement the corner continuation is unique, and the source symmetric outsourcing candidate fails exactly when the conditions in audit/STAGE_04_HOTELLING_REAUDIT.md hold.
 
 No new primitive is introduced.
 
@@ -742,9 +742,9 @@ The source Hotelling analysis omits:
 2. the corner price-equilibrium correspondence;
 3. the off-path continuation-selection issue.
 
-Stage 4 does **not** impose a no-below-cost refinement or any new selection rule.
+The literal-game multiplicity remains part of the audit. Separately, the re-audit proves from the source payoff that every \(p_j<c_j\) is weakly dominated by \(p_j=c_j\). Deleting only those dominated prices yields a unique corner continuation. This is reported explicitly as an **undominated-price refinement**, not as a hidden source primitive and not as a trembling-hand/proper-equilibrium theorem.
 
-Candidate E is therefore rejected as the minimal canonical paper architecture. The Hotelling result is retained as a diagnostic/secondary correction, while Candidate C proceeds to Stage 4A.
+The exact refined Stage-I survival/failure region is derived in audit/STAGE_04_HOTELLING_REAUDIT.md. This strengthens rather than removes the Hotelling correction, so Candidate E′ is restored.
 
 ---
 
@@ -791,8 +791,8 @@ The Stage-4 verification assertions were also rechecked independently after repl
 | CP2: corrected symmetric Cournot action | **PROVED** |
 | CP3: exhaustive general-\(N\) asymmetric correspondence | **NOT RETAINED**; overbroad relative to correction need |
 | CP4: complete Hotelling price continuation | **PROVED** |
-| CP5: Hotelling symmetric candidate is globally defeated | **REJECTED AS SELECTION-FREE CLAIM** |
-| CP6: one unified single-valued reduced game | **REJECTED AS CANONICAL ARCHITECTURE** |
+| CP5: Hotelling symmetric candidate is globally defeated | **LITERAL GAME: selection-dependent; UNDOMINATED REFINEMENT: PROVED false on exact nonempty region** |
+| CP6: one unified correction architecture | **RESTORED AS E′** — literal multiplicity + undominated-price refinement are stated separately |
 | CP7: Proposition 5 needs global correction | **PROVED in stronger form** |
 
 ---
@@ -850,8 +850,12 @@ The retained Stage-4 claims are:
 - **C6:** exact source-duopoly global BR — PROVED.
 - **C7:** positive-slope BR region for \(4/9<\rho<2/3\) — PROVED.
 - **C8:** complete pure Stage-I duopoly equilibrium correspondence — PROVED.
-- **H1:** complete Hotelling price-equilibrium correspondence — PROVED diagnostic.
-- **H2:** Stage-1 Hotelling rejection is selection-dependent — PROVED diagnostic.
+- **H1:** complete literal Hotelling price-equilibrium correspondence — PROVED.
+- **H2:** below-cost prices are weakly dominated by marginal-cost pricing — PROVED.
+- **H3:** undominated-price Hotelling continuation is unique for every cost gap — PROVED.
+- **H4:** refined Stage-I BR has the finite-candidate characterization in the Hotelling re-audit — PROVED.
+- **H5:** exact cap-aware symmetric survival/failure region — PROVED.
+- **H6:** Stage-1 rational corner deviation is restored as a refined-game counterexample — PROVED.
 
 All are construction-level certificates only. Stage 4A must independently attack them.
 
@@ -859,16 +863,16 @@ All are construction-level certificates only. Stage 4A must independently attack
 
 ## 18. Canonical verdict and route
 
-For Candidate C:
+Canonical architecture after the Hotelling re-audit:
+
+\[
+\boxed{\textbf{Candidate E′ — RESTORED}}
+\]
+
+Stage verdict:
 
 \[
 \boxed{\textbf{GO}}
-\]
-
-For the originally preferred unified Candidate E:
-
-\[
-\boxed{\textbf{REJECTED AS THE MINIMAL CANONICAL ARCHITECTURE}}
 \]
 
 Route:
@@ -877,4 +881,4 @@ Route:
 \boxed{\textbf{Stage 4A — Independent Mathematical Adversarial Certification Gate}}
 \]
 
-Stage 4A receives Candidate C, the exact duopoly correspondence, the Hotelling supersession note, all verification artifacts, and all permanent regression cases unchanged. It may attack them but may not silently repair the theory.
+Stage 4A receives all frozen Cournot claims plus the Hotelling literal/refined theorem package in audit/STAGE_04_HOTELLING_REAUDIT.md. It must attack both layers independently and may not silently promote the refinement into a source primitive or into a trembling-hand/proper-equilibrium claim.
