@@ -1,106 +1,110 @@
 # Constrained Best-Response Audit
 
-Status: **COURNOT DUOPOLY COMPLETE — STAGE 4A NEXT**
+Status: **STAGE-4 COMPLETE — STAGE 4A NEXT**
 
-## General-\(N\) Cournot
+## Cournot
 
-For every rivals' sourcing profile, the source SOC implies global strict concavity of own reduced payoff over \(i_j\in[0,\phi]\). Hence each Cournot Stage-I best response is single-valued.
+The general-\(N\) symmetric action and complete source-duopoly global BR are recorded in \`audit/STAGE_04_MINIMAL_MODEL_GATE.md\`.
 
-At a symmetric profile the unique symmetric action is
+For duopoly,
 
 \[
-i_C^*
+B_\phi(y)=\min\{\phi,R(y)\},
+\]
+
+where \(R(y)\) is the exact inactive / all-active / rival-exit / monopoly piecewise response derived at Stage 4. For \(4/9<b/H^2<2/3\), a feasible segment has slope \(+2\).
+
+## Hotelling — literal source game
+
+The interior BR derived by the source is branch-local. When \(|H(i_A-i_B)|>3\tau\), the literal price subgame can be multiple, so there is no single global reduced Stage-I payoff without continuation selection.
+
+## Hotelling — undominated-price refinement
+
+Every \(p<c\) is weakly dominated by \(p=c\). After deleting such prices, the Stage-I payoff is
+
+\[
+V_y(x)=
+\begin{cases}
+-x^2, & x-y\le-3\tau/H,\\[4pt]
+\dfrac{n[3\tau+H(x-y)]^2}{18\tau}-x^2,
+& |x-y|\le3\tau/H,\\[8pt]
+n[H(x-y)-\tau]-x^2,
+& x-y\ge3\tau/H.
+\end{cases}
+\]
+
+Let
+
+\[
+I_y=
+[\max\{0,y-3\tau/H\},\min\{\phi,y+3\tau/H\}],
+\]
+
+\[
+u(y)=
+\frac{Hn(3\tau-Hy)}
+{18\tau-H^2n},
+\]
+
+and let \(x_I(y)\) be the projection of \(u(y)\) onto \(I_y\).
+
+If \(y+3\tau/H\le\phi\), define
+
+\[
+C_y=[y+3\tau/H,\phi],
+\qquad
+x_C(y)=
+\operatorname{proj}_{C_y}(Hn/2).
+\]
+
+Then
+
+\[
+BR_A(y)
 =
-\min\left\{
-\phi,\,
-\frac{HND}{b(N+1)^2-H^2N}
-\right\}.
+\arg\max_{x\in K_y}V_y(x),
 \]
 
-## Source duopoly
-
-Normalize
+with
 
 \[
-\delta=D/H,\qquad
-\rho=b/H^2>4/9.
+K_y=
+\{0,x_I(y)\}
+\cup
+\{x_C(y):y+3\tau/H\le\phi\}.
 \]
 
-Let \(y\) be rival outsourcing.
+This finite-candidate representation is complete because every branch is strictly concave under the source SOC. Ties are retained.
 
-Define
+## Symmetric refined equilibrium
+
+If
 
 \[
-A(y)=\frac{2(\delta-y)}{9\rho-4},
-\qquad
-U(y)=\delta+2y,
-\qquad
-M=\frac{\delta}{4\rho-1}.
+\phi\le Hn/6,
 \]
 
-For \(y\ge\delta\), \(R(y)=0\).
+the corrected symmetric action is \(\phi\).
 
-For \(0\le y<\delta\):
-
-- if \(\rho\ge2/3\), \(R(y)=A(y)\);
-- if \(1/2\le\rho<2/3\), with
-  \[
-  y_A=\frac{\delta(2-3\rho)}{2(3\rho-1)},
-  \]
-  \[
-  R(y)=
-  \begin{cases}
-  U(y),&0\le y\le y_A,\\
-  A(y),&y_A\le y<\delta;
-  \end{cases}
-  \]
-- if \(4/9<\rho<1/2\), additionally define
-  \[
-  y_M=\frac{\delta(1-2\rho)}{4\rho-1},
-  \]
-  and
-  \[
-  R(y)=
-  \begin{cases}
-  M,&0\le y\le y_M,\\
-  U(y),&y_M\le y\le y_A,\\
-  A(y),&y_A\le y<\delta.
-  \end{cases}
-  \]
-
-The actual source-domain BR is
+If
 
 \[
-\boxed{B_\phi(y)=\min\{\phi,R(y)\}.}
+\phi>Hn/6,
 \]
 
-## Full-outsourcing boundary
-
-The cap is explicitly part of the BR. If the unconstrained maximizer exceeds \(\phi\), full outsourcing is the unique best response.
-
-## Strategic effect
-
-On the all-active branch,
+the source candidate \(Hn/6\) survives iff the exact condition in \`audit/STAGE_04_HOTELLING_REAUDIT.md\` holds. It fails exactly when
 
 \[
-A'(y)<0.
+27\tau/2<H^2n<18\tau
 \]
 
-On the rival-exit kink,
+and
 
 \[
-U'(y)=2>0.
+\phi>
+\frac{Hn}{2}
+-
+\frac{\sqrt{2n(2H^2n-27\tau)}}{6}.
 \]
 
-Thus Proposition 5 is not globally valid.
-
-## Verification status
-
-- lower boundary: checked;
-- full-outsourcing boundary: checked;
-- own inactivity: checked;
-- both-active regime: checked;
-- rival exit / own monopoly: checked;
-- branch joins: checked;
-- exact rational counterexamples: retained;
-- unresolved Cournot BR region: **0**.
+Unresolved BR regions: **0** for the retained characterization.
