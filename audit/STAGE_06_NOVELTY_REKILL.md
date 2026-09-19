@@ -1,5 +1,7 @@
 # Stage 6 — Novelty Re-Kill
 
+> **2026-09-20 independent-audit recheck.** The original Stage-6 verdict remains historical provenance. The all-active multiplicity example and C7 cap-feasibility repair were rechecked against the strongest parent-theorem comparisons. The current novelty boundary remains source-specific; the revised mechanism wording below supersedes any implication that downstream exit is necessary for multiplicity.
+
 Status: **GO — GO TO WELFARE / GENERALITY**
 
 Audit date: 2026-09-19  
@@ -71,13 +73,15 @@ For source duopoly, with
 \rho=b/H^2>\frac49,
 \]
 
-the exact pure global BR contains a rival-exit branch
+the exact **unconstrained** pure global BR contains a rival-exit branch
 
 \[
 U(y)=\delta+2y
 \]
 
-for a nonempty parameter region \(4/9<\rho<2/3\).
+for (4/9<\rho<2/3).  After the source cap is imposed, a positive-length
+piece survives only for sufficiently large caps; small-cap cases may erase it
+entirely.
 
 The complete pure Stage-I duopoly correspondence is:
 
@@ -154,7 +158,10 @@ A symmetric two-stage linear Cournot R&D game can have one firm fully innovate w
 - generic claim that symmetric primitives can produce asymmetric investment and exit — **ABSORBED**;
 - exact Shy–Stenbacka continuous outsourcing BR and equilibrium thresholds — **NOT ABSORBED**.
 
-The mechanism differs materially: Amir's polar outcomes are associated with the return structure of R&D rather than the active-set kink inside the globally concave source sourcing problem.
+The mechanism differs materially: Amir's polar outcomes are associated with the
+return structure of R&D.  The corrected source game retains globally strictly
+concave own sourcing payoffs and a symmetric equilibrium; moreover, its
+multiplicity need not involve a downstream active-set change.
 
 ### 4.3 Amir, Garcia & Knauff (2010): general symmetry-breaking parent theorem
 
@@ -169,9 +176,14 @@ The source-duopoly sourcing game at Stage 4A instead satisfies:
 - globally strictly concave own payoff under the source SOC;
 - a symmetric pure equilibrium always remains in the certified correspondence;
 - in the multiplicity region, the asymmetric pair coexists with that symmetric equilibrium;
-- the critical global BR segment is upward-sloping because the rival exits downstream.
+- the all-active witness ((\rho,\delta,\phi)=(3/5,1,3/4)) has the same
+  symmetric-plus-asymmetric multiplicity even though both downstream firms remain
+  active throughout the feasible sourcing box.
 
-Therefore the Stage-4A game fails the key nonconcavity/no-symmetric-equilibrium architecture used by this strongest general parent theorem.
+Therefore the Stage-4A game fails the key nonconcavity/no-symmetric-equilibrium
+architecture used by this strongest general parent theorem.  Exit remains
+important for the positive-slope C7 branch, but the non-absorption of C8 does not
+depend on exit being necessary for multiplicity.
 
 **Verdict:** **NOT DIRECTLY ABSORBED**.
 
