@@ -71,3 +71,12 @@ This is only a source-version check. It is **not** a Stage-2 novelty finding and
 ## Version-control rule
 
 No downstream audit file may silently replace a published expression with a repaired one. Source expressions, local-domain interpretations, and corrected/global results must be labeled separately.
+
+
+## Stage-4 Hotelling strategy-space recheck
+
+The final published Hotelling section defines \(p_A,p_B\), the indifferent consumer, and the price maximization problem but does not state a formal lower price bound \(p_j\ge c_j\), a no-loss-pricing convention, or a corner-equilibrium refinement.
+
+Appendix C explicitly derives prices under the qualification “as long as both firms produce.” The regular formula therefore cannot itself be read as a complete corner-price strategy-domain statement.
+
+This source fact is distinct from the later Stage-4 theorem that \(p_j<c_j\) is weakly dominated by \(p_j=c_j\).
