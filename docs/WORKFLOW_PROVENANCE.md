@@ -63,7 +63,9 @@ Current routing:
 \rightarrow
 \text{Stage 10 PASS}
 \rightarrow
-\textbf{Stage 11 NEXT}.
+\text{Stage 11 PASS}
+\rightarrow
+\textbf{Stage 12 NEXT}.
 \]
 
 Any post-freeze theory change must route back to the earliest affected canonical gate rather than being patched only in manuscript prose or code.
@@ -88,3 +90,29 @@ Green evidence:
 - manuscript smoke-build run `35444042793`.
 
 The figure generator is `code/stage10_generate_figure.py`; the generated TikZ file is a build artifact. Stage 10 changed exposition and reproducibility infrastructure only within the Stage-8 frozen theory boundary.
+
+
+## Canonical Stage 11 closure
+
+Stage 11 independently attacked the completed manuscript and repeated the known-model/theorem-absorption check.
+
+Canonical records:
+
+- `audit/STAGE_11_ROBUSTNESS_REFEREE_ATTACK.md`
+- `audit/STAGE_11_KNOWN_MODEL_ATTACK.md`
+
+Independent verifier:
+
+- `code/stage11_hostile_referee_verify.py`
+
+Final Stage-11 verification head:
+
+`89d04eb048257db3f930cd34f96209d34d1e3bc7`
+
+Green evidence:
+
+- Python push run `35451023487`;
+- Python PR run `35451026809`;
+- manuscript build run `35450876387` after the only prose scope repair.
+
+The certified Lean source/toolchain blobs remain byte-identical to the Stage-7.5A formal certificate. No certification regression or rollback was triggered.
