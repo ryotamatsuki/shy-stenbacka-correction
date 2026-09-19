@@ -234,3 +234,46 @@ Route:
 \[
 \boxed{\textbf{Stage 7 — Welfare / Generality / Institutional Validation}}
 \]
+
+
+---
+
+## 2026-09-19 — Stage-7 welfare, generality, and institutional validation
+
+### Welfare
+
+Exact Cournot and Hotelling welfare identities were derived.
+
+The unrestricted planner problems were written explicitly. Restricted sourcing benchmarks are labeled as restricted-instrument or fixed-allocation benchmarks and are not called first best.
+
+The corrected Cournot duopoly is welfare-selection dependent. At the exact three-equilibrium regression
+
+\[
+(\rho,\delta,\phi)=(3/5,1,2),
+\]
+
+the symmetric equilibrium has welfare \(20/17\), while each asymmetric equilibrium has welfare \(3/2\).
+
+At \(\rho=2/3\), welfare varies across the certified equilibrium continuum.
+
+Therefore no selection-free global welfare claim is authorized.
+
+### Generality
+
+The exact sign, threshold, best-response, and equilibrium-correspondence results remain baseline functional-form results.
+
+A wider decreasing-cost class supports the direction of the rival-exit threshold, but no general equilibrium theorem is promoted.
+
+### Institutional validation
+
+Empirical evidence supports production fragmentation and active monitoring/auditing of outsourced manufacturers. It does not validate the exact quadratic/output-independent monitoring technology.
+
+### Exposition decision
+
+Welfare remains appendix/prose material. Main text remains focused on S1–S3, with S4–S5 secondary.
+
+### Verdict
+
+\[
+\boxed{\textbf{STAGE 7 — GO TO STAGE 7.5}}
+\]
