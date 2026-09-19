@@ -1,77 +1,59 @@
 # Canonical Workflow Routing
 
-This repository follows `ryotamatsuki/research-paper-workflow` **v2.2**.
+This repository follows \`ryotamatsuki/research-paper-workflow\` v2.2.
 
 Pinned workflow commit:
 
-`42574d6c5931275ccff3ef7e8b4acc188077332a`
+\`42574d6c5931275ccff3ef7e8b4acc188077332a\`
 
-## Current canonical state
+## Current state
 
-[
-oxed{
-	ext{Stage 1 PASS}
-ightarrow
-	ext{Stage 2 PASS}
-ightarrow
-	ext{Stage 3 PASS}
-ightarrow
-	ext{Stage 4 PASS}
-ightarrow
-	extbf{Stage 4A NEXT}
+\[
+\boxed{
+\text{Stage 1 PASS}
+\rightarrow
+\text{Stage 2 PASS}
+\rightarrow
+\text{Stage 3 PASS}
+\rightarrow
+\text{Stage 4 PASS}
+\rightarrow
+\textbf{Stage 4A NEXT}
 }
-]
+\]
 
-Stage-1 verdict: **GO TO NOVELTY GATE**.  
-Stage-2 verdict: **GO TO MECHANISM SEARCH**.  
-Stage-3 verdict: **GO TO MINIMAL MODEL**.  
-Stage-4 verdict: **GO TO STAGE 4A**.
+## Stage-4 routing decision
 
-## Canonical Stage-4 object
+Stage 3 selected unified Candidate E with complete Cournot Candidate C as the authorized fallback.
 
-Stage 4 tested Candidate E and activated the Stage-3 authorized fallback.
+Stage 4 proved:
 
-The object passed to Stage 4A is:
+- Candidate C closes analytically and passes the construction gate.
+- Candidate E is not the minimal canonical architecture because the source Hotelling price continuation is multiple for sufficiently asymmetric costs and the source supplies no selection rule.
 
-**Candidate C — Complete Cournot correction.**
+Therefore Stage 4A receives **Candidate C — Complete Cournot correction**.
 
-It includes:
+## Stage-4A frozen inputs
 
-- exact Stage-II active-set continuation for every feasible sourcing history;
-- global strict concavity of own Stage-I payoff under the source SOC;
-- corrected constrained symmetric general-(N) equilibrium;
-- corrected competition and boundary comparative statics;
-- complete global duopoly best response;
-- complete source-duopoly pure Stage-I equilibrium correspondence.
+Stage 4A must independently attack, without repair:
 
-## Candidate E status
+1. the sorted-cost Cournot continuation;
+2. global strict concavity across active-set changes;
+3. the corrected symmetric action \(i_C^*\);
+4. the corrected competition comparative static;
+5. boundary comparative statics;
+6. the source-duopoly global BR;
+7. the complete pure duopoly equilibrium classification;
+8. the \(\rho=2/3\) continuum;
+9. the global failure of Proposition 5;
+10. all permanent regression cases.
 
-The unified Cournot + Hotelling architecture is not the canonical minimal paper.
-
-The Hotelling price subgame has multiple pure continuations for sufficiently asymmetric costs, and the source has no equilibrium-selection rule. The finding is retained as an audit result but is not repaired by introducing a new refinement.
-
-## Stage-4A contract
-
-Stage 4A must independently attack the Cournot construction and may not silently repair it.
-
-It must test:
-
-1. all-active and reduced-active-set Cournot continuations;
-2. global concavity across regime boundaries;
-3. the cap correction;
-4. equation-(14) sign;
-5. the duopoly piecewise best response;
-6. the positive-slope regime;
-7. asymmetric equilibria;
-8. the (ho=2/3) continuum;
-9. regression artifacts.
-
-A Stage-4A failure returns the exact failed theorem; it does not authorize a new primitive.
-
-## Important ordering note
-
-The repository exists before canonical Stage 9 only for provenance. This does **not** constitute Stage 9 PASS.
+The Hotelling Stage-4 finding is carried as a diagnostic/supersession record, not as the canonical paper architecture.
 
 ## Fail-closed rule
 
-Material unresolved continuations or failed theorem certificates block later theory freeze.
+A material unresolved continuation, solver failure, invalid active set, or out-of-domain regular formula blocks an equilibrium claim. None remains in the retained Cournot construction.
+
+## Repository-ordering note
+
+The GitHub repository existed before canonical Stage 9 for provenance. This does not constitute Stage 9 PASS.
