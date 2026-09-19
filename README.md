@@ -4,99 +4,117 @@ Reproducible adversarial equilibrium audit and correction project for Shy & Sten
 
 ## Project status
 
-**Canonical Stage 3 — Candidate Mechanism Search: PASS**
+**Canonical Stage 4 — Minimal Model Gate: PASS**
 
 [
-oxed{	extbf{GO TO MINIMAL MODEL}}
+oxed{	extbf{GO TO STAGE 4A}}
 ]
 
 Canonical workflow: `research-paper-workflow` **v2.2**, pinned at commit `42574d6c5931275ccff3ef7e8b4acc188077332a`.
 
-Completed canonical stages:
-
-- Stage 1 — Source & Mathematical Audit
-- Stage 2 — Literature Frontier / Novelty Kill Gate
-- Stage 3 — Candidate Mechanism Search
-
-Canonical reports:
+Completed reports:
 
 - `audit/STAGE_01_SOURCE_MATHEMATICAL_AUDIT.md`
 - `audit/STAGE_02_LITERATURE_NOVELTY_GATE.md`
 - `audit/STAGE_03_MECHANISM_SEARCH.md`
+- `audit/STAGE_04_MINIMAL_MODEL_GATE.md`
+
+Stage-4 supporting artifacts:
+
+- `audit/stage04_continuation_ledger.md`
+- `audit/stage04_theorem_certificates.md`
+- `code/stage04_verify.py`
 
 Next canonical stage:
 
-- **Stage 4 — Minimal Model Gate**
+- **Stage 4A — Independent Mathematical Adversarial Certification Gate**
 
-## Selected Stage-4 architecture
+## Stage-4 architecture decision
 
-**Candidate E — Unified regime-complete correction.**
+The Stage-3 preferred unified Cournot + Hotelling architecture was tested and **not retained** as the canonical minimal paper.
 
-The source model is not extended. The correction is organized around one common sequential-game mechanism:
+Reason: outside the Hotelling interior-share region, the source price subgame has multiple valid pure equilibria with different continuation profits. The source specifies no selection/refinement rule, so the reduced Stage-I payoff is not single-valued.
+
+The pre-authorized fallback therefore activates:
 
 [
-	ext{outsourcing}
-ightarrow
-	ext{marginal-cost vector}
-ightarrow
-	ext{Stage-II regime}
-ightarrow
-	ext{continuation profit}
-ightarrow
-	ext{global Stage-I best response}.
+oxed{	extbf{Candidate C — Complete Cournot correction}}
 ]
 
-The relevant Stage-II regime is:
+## Corrected Cournot core
 
-- Cournot: the active producer set;
-- Hotelling: interior versus corner market shares.
+Let
 
-Stage 4 must solve both continuation games globally and then reconstruct the constrained SPNE correspondence.
+[
+D=a-Hphi-rac{gammaphi^2}{2}>0.
+]
 
-## Fallback architecture
+The corrected symmetric outsourcing equilibrium is
 
-**Candidate C — Complete Cournot correction** is the only authorized fallback if Hotelling cannot be completely solved without disproportionate complexity.
+[
+oxed{
+i_C^*
+=
+minleft{
+phi,,
+rac{HND}{b(N+1)^2-H^2N}
+ight}.
+}
+]
 
-A sign-only note and a clipping-only correction are not acceptable Stage-4 fallbacks.
+The competition comparative static is weakly negative and strictly negative on the interior branch for (N>1).
 
-## Contribution discipline
+The source equation-(14) sign is therefore reversed.
 
-The project is a **source-specific correction and global equilibrium re-characterization in a known model**.
+## New Stage-4 duopoly finding
 
-Do not claim novelty for:
+The published strategic-substitutes result is only a regular both-active-branch result.
 
-- partial outsourcing;
-- strategic outsourcing;
-- strategic substitutes;
-- “competition affects outsourcing”;
-- “competition can reduce outsourcing” generically.
+With
 
-The strongest prior-art threat remains König (2010).
+[
+ho=rac b{H^2},
+]
+
+the source permits
+
+[
+rac49<ho<rac23,
+]
+
+and in this region the **global** outsourcing best response contains a regime with
+
+[
+rac{dBR}{di_k}=2>0.
+]
+
+The mechanism is downstream rival exit: a firm outsources just enough to make the rival's Cournot quantity zero.
+
+Consequences include asymmetric Stage-I equilibria and, at (ho=2/3), a continuum of equilibria.
+
+## Hotelling correction to the audit record
+
+The earlier Stage-1 claim that one corner deviation unconditionally overturns the reported Hotelling candidate is superseded.
+
+Correct Stage-4 finding:
+
+- (|c_B-c_A|le3	au): unique source price equilibrium;
+- (|c_B-c_A|>3	au): continuum of corner price equilibria;
+- the same Stage-I outsourcing deviation can be profitable under one valid price continuation and unprofitable under another.
+
+Thus the source has an off-path equilibrium-selection problem. No selection refinement is added.
 
 ## Source-model discipline
 
-The published monitoring cost is
+The published monitoring cost remains
 
 [
 M(i_j)=i_j^2.
 ]
 
-No generalized (eta i_j^2), fixed cost, outside option, uncertainty, bargaining stage, supplier market power, or other new primitive is authorized for the Stage-4 core.
+No generalized (eta i_j^2), new fixed cost, outside option, bargaining stage, uncertainty, or supplier market power is introduced.
 
-## Repository policy
-
-- `main` is the stable project history.
-- Mathematical audit work is developed on dedicated branches.
-- No headline correction claim is final before global-equilibrium, adversarial, novelty re-kill, and formal-verification gates pass.
-- Solver/branch failure is never interpreted as an unprofitable deviation.
-- Search failure is never treated as proof of novelty.
-- Copyrighted source PDFs are not committed unless redistribution is clearly permitted.
-
-## Current branch
-
-`audit/full-equilibrium-correspondence`
-
-Current canonical state:
+## Current canonical state
 
 [
 oxed{
@@ -106,6 +124,8 @@ Current canonical state:
 ightarrow
 	ext{Stage 3 PASS}
 ightarrow
-	extbf{Stage 4 NEXT}
+	ext{Stage 4 PASS}
+ightarrow
+	extbf{Stage 4A NEXT}
 }
 ]
