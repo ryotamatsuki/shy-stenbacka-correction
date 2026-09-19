@@ -45,7 +45,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 12 — JOURNAL POSITIONING}}
+\boxed{\textbf{STAGE 12 — PASS / PRIMARY JOURNAL SELECTED}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 13 — FULL-PAPER INTEGRATION FOR RIO}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -320,3 +324,34 @@ The hostile-referee layer independently attacked primitive-level Cournot deviati
 One **MINOR** prose-only scope inflation in Related Literature was found and repaired. No FATAL or MAJOR defect and no certification regression was found.
 
 Stage-11 verification head `89d04eb048257db3f930cd34f96209d34d1e3bc7` passed Python verification runs `35451023487` and `35451026809`. The manuscript containing the scope repair passed build run `35450876387`. The frozen Lean blobs remain unchanged.
+
+
+## Stage 12 journal positioning
+
+Stage 12 closes with:
+
+\[
+\boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+\]
+
+Primary target:
+
+\[
+\boxed{\textbf{Review of Industrial Organization}}
+\]
+
+Canonical Stage-12 artifacts:
+
+- `audit/STAGE_12_JOURNAL_POSITIONING.md`
+- `audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
+
+Default submission ladder:
+
+1. Review of Industrial Organization — **Primary**
+2. Journal of Industry, Competition and Trade — **Realistic fallback**
+3. Bulletin of Economic Research — **Alternative fallback**
+4. Economics Bulletin — **Safety net**
+
+Canadian Journal of Economics is retained as an optional **Stretch** because it published the original Shy–Stenbacka article, but its current general-interest scope creates a material narrowness risk.
+
+No theory or novelty was enlarged to obtain the journal fit. Stage 13 may only integrate and package the frozen manuscript for RIO.
