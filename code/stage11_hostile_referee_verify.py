@@ -15,13 +15,18 @@ D = F(1)
 H = F(1)
 B = F(3, 5)  # rho = b / H^2 = 3/5
 PHI = F(2)
+GAMMA = F(1, 2)
+C0 = H * PHI + GAMMA * PHI * PHI / 2
+A = C0 + D
+assert C0 == F(3)
+assert A == F(4)
 
 
 def downstream_quantities(x: F, y: F) -> tuple[F, F]:
-    """Unique nonnegative Cournot continuation for a=1,c_A=-x,c_B=-y."""
-    a = D
-    c_a = -x
-    c_b = -y
+    """Unique nonnegative Cournot continuation from source-feasible primitives."""
+    a = A
+    c_a = C0 - H * x
+    c_b = C0 - H * y
 
     q_a = (a - 2 * c_a + c_b) / (3 * B)
     q_b = (a - 2 * c_b + c_a) / (3 * B)
@@ -37,8 +42,8 @@ def downstream_quantities(x: F, y: F) -> tuple[F, F]:
 
 def payoff_a(x: F, y: F) -> F:
     q_a, q_b = downstream_quantities(x, y)
-    p = D - B * (q_a + q_b)
-    c_a = -x
+    p = A - B * (q_a + q_b)
+    c_a = C0 - H * x
     return (p - c_a) * q_a - x * x
 
 
