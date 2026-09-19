@@ -94,3 +94,23 @@ source-specific C7/C8 results to an arbitrary convex monitoring-cost class.
 the full `make verify-python` suite using the pinned dependency file.
 
 The Stage-8 theory freeze controls interpretation of all script output.
+
+
+## Stage 10 — figure architecture regression
+
+\`\`\`bash
+python code/stage10_generate_figure.py
+\`\`\`
+
+The generator uses exact rational arithmetic to certify the exposition witness
+
+\[
+(\rho,\delta,\phi)=(3/5,1,2),
+\]
+
+including \(y_A=1/8\), \(s=10/17\), the positive-slope best-response point
+\(B(1/20)=11/10\), and the three pure equilibria. It then writes the TikZ source
+used by the manuscript figure.
+
+The generated figure is an exposition object, not a substitute for the analytic
+proof or the Stage-4A theorem certificate.
