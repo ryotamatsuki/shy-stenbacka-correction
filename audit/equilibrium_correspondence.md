@@ -1,8 +1,10 @@
 # Equilibrium Correspondence
 
-Status: **SOURCE DUOPOLY COMPLETE; GENERAL-\(N\) SYMMETRIC ACTION COMPLETE**
+Status: **STAGE-4 CONSTRUCTION COMPLETE; STAGE 4A NEXT**
 
-## General-\(N\) symmetric Cournot equilibrium
+## Cournot
+
+### General-\(N\) symmetric action
 
 \[
 i_C^*
@@ -13,101 +15,87 @@ i_C^*
 \right\}.
 \]
 
-This is the unique **symmetric** Stage-I action under the source restrictions. No claim of global uniqueness across arbitrary general-\(N\) asymmetric profiles is made.
+This is the unique symmetric action under the source restrictions. No general-\(N\) asymmetric uniqueness claim is made.
 
-## Complete pure Stage-I correspondence for the source duopoly
+### Source duopoly
+
+The complete pure Stage-I correspondence is the three-case classification in \`audit/STAGE_04_MINIMAL_MODEL_GATE.md\`, including:
+
+- unique symmetric equilibrium for \(\rho>2/3\);
+- a continuum at \(\rho=2/3\) when the cap is sufficiently large;
+- exactly three pure equilibria for \(4/9<\rho<2/3\) and \(\phi>s\).
+
+## Hotelling — literal source game
+
+For \(|c_B-c_A|>3\tau\), the price continuation is a continuum. Hence the literal source game requires an off-path equilibrium-selection rule to define a single reduced Stage-I payoff.
+
+## Hotelling — undominated-price refinement
+
+After deleting below-cost weakly dominated prices, the Stage-II continuation is unique.
 
 Let
 
 \[
-\delta=D/H,\qquad
-\rho=b/H^2>4/9,
-\qquad
-s=\frac{2\delta}{9\rho-2}.
+i_0=Hn/6.
 \]
 
-### \(\rho>2/3\)
+### Cap-binding
 
-Unique pure equilibrium:
+If
 
 \[
-(\min\{\phi,s\},\min\{\phi,s\}).
+\phi\le i_0,
 \]
-
-### \(\rho=2/3\)
-
-If \(\phi<\delta/2\), the unique equilibrium is
 
 \[
-(\phi,\phi).
+(\phi,\phi)
 \]
 
-If \(\phi\ge\delta/2\),
+is the corrected symmetric refined SPNE action profile.
+
+### Interior candidate
+
+If
 
 \[
-\mathcal E
-=
-\left\{
-(x,\delta-x):
-x\in[\max\{0,\delta-\phi\},\min\{\phi,\delta\}]
-\right\}.
+\phi>i_0,
 \]
-
-### \(4/9<\rho<2/3\)
-
-If \(\phi\le s\), the unique equilibrium is
 
 \[
-(\phi,\phi).
+(i_0,i_0)
 \]
 
-If \(\phi>s\), there are exactly three pure equilibria. Define
+is a refined SPNE iff
 
 \[
-h=R(0),\qquad
-x_H=\min\{\phi,h\},\qquad
-x_L=R(x_H).
+H^2n\le27\tau/2,
 \]
 
-Then
+or, when \(H^2n>27\tau/2\),
 
 \[
-(s,s),\qquad
-(x_H,x_L),\qquad
-(x_L,x_H)
+\phi\le
+\frac{Hn}{2}
+-
+\frac{\sqrt{2n(2H^2n-27\tau)}}{6}.
 \]
 
-are exactly the pure equilibria.
-
-## Regression example
-
-For
+It fails exactly when
 
 \[
-\rho=3/5,\qquad
-\delta=1,\qquad
-\phi=2,
+\frac{27}{2}\tau<H^2n<18\tau
 \]
 
-the exact equilibria are
+and the strict reverse cap inequality holds.
 
-\[
-(10/17,10/17),\qquad
-(1,0),\qquad
-(0,1).
-\]
-
-## Hotelling diagnostic
-
-The Stage-II price game is unique for \(|c_B-c_A|\le3\tau\) and multiple for larger cost gaps. Therefore the source does not induce a unique reduced Stage-I payoff off path without a selection rule.
-
-Stage 4 does not claim a complete Hotelling Stage-I SPNE correspondence.
+No complete asymmetric refined-Hotelling Stage-I equilibrium correspondence is claimed.
 
 ## Classification vocabulary
 
-- **NASH / SPNE:** all relevant unilateral deviations resolved under the stated continuation.
-- **MULTIPLE:** more than one equilibrium is explicitly characterized.
-- **SELECTION-DEPENDENT:** downstream equilibrium multiplicity changes upstream continuation payoffs.
+- **SPNE / NASH:** all relevant unilateral deviations resolved under the stated continuation concept.
+- **MULTIPLE:** more than one continuation/equilibrium explicitly characterized.
+- **REFINED:** result after explicit deletion of weakly dominated below-cost prices.
+- **SELECTION-DEPENDENT:** literal downstream multiplicity changes upstream payoffs.
 - **UNRESOLVED:** proof incomplete.
 
-Current unresolved Cournot continuation count: **0**.
+Material unresolved continuation count in the retained Stage-4 theorem package: **0**.
