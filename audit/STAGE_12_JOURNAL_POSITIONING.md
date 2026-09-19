@@ -1,309 +1,306 @@
-# Stage 12 — Journal Positioning
+# Stage 12 — Journal Positioning (v2.3 Re-audit)
 
 Status:
 
 [
-\boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+oxed{	extbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
 ]
 
 Date: **2026-09-20**  
-Workflow: `research-paper-workflow` v2.2  
-Pinned workflow commit: `42574d6c5931275ccff3ef7e8b4acc188077332a`  
+Original Stage-12 close: v2.2 at checkpoint `884ca99b4dfc7d8ef194775fd37aa30fa84593d5`  
+Re-audit rule set: `research-paper-workflow` v2.3 candidate-universe refinement  
+Workflow commit for re-audit: `9eb616bd31ea3a9ef3c29e288228ed962c44c9cf`  
 Stage-11 checkpoint: `fe2d03f42c4ee89ef831cffc758541e30dde435a`  
 Theory authority: Stage-8 freeze `2fbcf47ff18ea3650d307d90cbdeab78ddb63256`
 
-## 1. Actual surviving contribution
+## 1. Why Stage 12 was reopened
 
-Stage 12 positions the paper that survived Stage 11; it does not upgrade the contribution to chase prestige.
+The original Stage-12 comparison was detailed but its candidate universe was incomplete. IJIO, JIE, JEMS and JITE were not all explicitly evaluated before RIO was selected.
 
-The manuscript is a **compact source-specific industrial-organization correction / theory note** with five linked results:
+Under the v2.3 rule, this is a **journal-positioning completeness regression**, not a theory or novelty regression.
 
-1. the competition comparative static in Shy--Stenbacka (2005), equation (14)/Proposition 3, has the opposite sign when differentiated correctly and the sourcing cap is respected;
-2. the all-active Cournot formula is not a globally valid continuation after arbitrary sourcing histories;
-3. the source duopoly's pure global sourcing best response can contain a positive-slope rival-exit segment, so Proposition 5 is not globally a strategic-substitutes theorem;
-4. the complete **pure Stage-I Cournot source-duopoly** correspondence contains a unique symmetric region, a knife-edge continuum, and a symmetric-plus-asymmetric-pair region;
-5. the literal Hotelling continuation can be multiple; under a separate explicit (p\ge c) no-loss game, the published symmetric candidate fails on an exact region.
+Canonical repair artifact:
 
-The paper does **not** claim a new generic theory of outsourcing, investment, symmetry breaking, or spatial pricing.
+`audit/STAGE_12_CANDIDATE_UNIVERSE_LEDGER.md`
 
-Current compiled length after the Stage-11 prose repair: approximately **15 pages** including appendix and references.
+The candidate universe has now been rebuilt from the actual Stage-11-surviving contribution and cross-checked against obvious IO journals and Stage-6/11 closest-literature venues.
 
-## 2. Candidate set and current evidence
+## 2. Surviving contribution
 
-### A. Review of Industrial Organization — PRIMARY
+The manuscript remains a compact source-specific industrial-organization correction / theory note. Its defensible contribution is not a new generic outsourcing mechanism.
 
-Official scope:
-https://link.springer.com/journal/11151/aims-and-scope
+Primary results remain:
 
-Current journal page:
-https://link.springer.com/journal/11151
+1. Shy--Stenbacka (2005) equation (14) / Proposition 3 has the wrong sign in the source Cournot model;
+2. the all-active Cournot continuation is not global over the primitive sourcing domain;
+3. Proposition 5 is branch-specific rather than a global strategic-substitutes theorem;
+4. the source duopoly has a complete pure Stage-I correspondence with a symmetric region, a knife-edge continuum, and a symmetric-plus-asymmetric-pair region;
+5. the literal Hotelling game has corner-continuation multiplicity, while the separately labeled no-loss game yields an exact failure region for the published symmetric candidate.
 
-Submission rules:
-https://link.springer.com/journal/11151/submission-guidelines
+Current manuscript length remains approximately 15 pages.
 
-Evidence:
+## 3. Re-audited ranking
 
-- RIO covers industrial organization broadly, with competition, monopoly, efficiency, innovation, and internal organization explicitly central.
-- It explicitly accepts papers advancing significant theories of industrial organization and policy.
-- It explicitly welcomes **shorter notes and commentaries**.
-- The August 2026 issue contains:
-  - John Vickers, “A Classical IO Triangle: Cournot, Edgeworth, and Ramsey,” pp. 1–12;
-  - Chifeng Dai, “A New Strategic Element to the Make-or-Buy Decision,” pp. 41–61;
-  - Bruno D. Badia, “Cost Uncertainty and Process Innovation in Bertrand Duopoly,” pp. 83–99;
-  - Changwoo Hwangbo and Jihong Lee, “Horizontal Mergers and Innovation with Knowledge Spillovers,” pp. 101–115.
-- The journal reports a current median of 5 days to first decision.
+### Best stretch — International Journal of Industrial Organization
 
-Fit assessment:
+IJIO is the strongest omitted candidate from the original Stage 12.
 
-**Strongest fit.** The paper is squarely IO; the correction concerns outsourcing, Cournot/Hotelling competition, strategic sourcing, active-set exit, and equilibrium multiplicity. RIO currently publishes compact formal IO papers and, unusually usefully for this project, a 2026 make-or-buy paper is in the latest issue.
+Its official scope explicitly covers theoretical industrial organization, strategic behavior, market structure, technological change, and internal organization of firms. In January 2026 it published *Outsourcing without cost advantages*, a pure theory paper on strategic outsourcing, common suppliers and endogenous asymmetry.
 
-Main editorial risk:
+IJIO is therefore a genuine topical fit.
 
-- an editor/referee may regard correction of a 2005 paper as too narrow unless the manuscript leads with the global equilibrium consequences rather than the algebraic sign error;
-- the contribution must remain a correction/re-characterization rather than claim a generic investment-game mechanism;
-- the auxiliary Hotelling no-loss model may be viewed as secondary and should stay secondary.
+Why it is **stretch rather than primary**:
+
+- the current manuscript's certified novelty is a source-specific correction/re-characterization;
+- the recent IJIO outsourcing paper leads with a new contracting mechanism (two-part tariffs plus sequential contracting);
+- Stage 6/11 deliberately killed any attempt to sell the present paper as a new generic outsourcing/asymmetry mechanism;
+- IJIO has historical substantive corrigendum/re-characterization precedents, so the contribution type is not alien, but current public scope does not expressly provide the note/commentary accommodation that RIO does.
+
+Subjective desk/referee risk: **high but defensible**.
+
+No theory should be added to improve IJIO fit.
+
+### Primary — Review of Industrial Organization
+
+RIO remains the best contribution-to-format match after the complete candidate audit.
+
+Its current official scope:
+
+- covers industrial organization broadly;
+- seeks papers advancing significant IO theory;
+- explicitly welcomes **shorter notes and commentaries**.
+
+The August 2026 issue contains compact formal IO papers and Chifeng Dai's *A New Strategic Element to the Make-or-Buy Decision*, directly confirming a live audience for strategic sourcing/investment. The same issue is largely 12--21 page formal IO work.
+
+RIO's advantage over IJIO is not that IJIO is out of scope. It is that RIO's declared article ecology better accommodates a compact correction/re-characterization without forcing the manuscript to pretend to be a new general IO mechanism.
 
 Subjective desk/referee risk: **moderate**.
 
-Stage-13 presentation action:
-- keep Cournot correction and complete source-duopoly pure correspondence as the main block;
-- cite and distinguish Dai (2026) because it is directly relevant to RIO's current make-or-buy audience;
-- keep Hotelling as a secondary source-continuation/robustness result;
-- prepare a flat Springer-compatible LaTeX bundle and declarations.
+### High-risk stretch — The Journal of Industrial Economics
 
-### B. Canadian Journal of Economics — STRETCH
+JIE has excellent topic fit: applied oligopoly theory, firm organization, technical change and internal organization are explicit. It publishes compact theory, including a 2026 18-page vertical-integration paper.
 
-Official scope:
-https://www.economics.ca/cje-home
+However, its current author guidance states that theoretical papers should highlight implications for policy and/or empirical analysis. The present correction has only limited interpretive implications; manufacturing stronger policy claims would violate the Stage-8/11 scope discipline.
 
-Current author instructions:
-https://www.economics.ca/cje-authors
+Classification: **high-risk stretch, not default route**.
 
-Evidence:
+### High-risk stretch — Journal of Economics & Management Strategy
 
-- CJE is a general-interest economics journal and welcomes theoretical and empirical papers.
-- It explicitly excludes **very narrow papers addressed to small specialist audiences**.
-- The original Shy--Stenbacka paper appeared in CJE, so the correction addresses the journal's own archival literature.
-- In August 2026 CJE published Tan and Wong, “A re-examination of the competitive effects of exclusive dealing,” revisiting a classic model and fully re-characterizing equilibrium and welfare objects.
-- Initial submission currently requires at least one CEA member plus a non-refundable CAD 85 submission fee; PDF first submissions have no maximum page limit.
+JEMS explicitly publishes theoretical IO, applied game theory and management strategy. It published *Insourcing versus outsourcing in a vertical structure* in 2024 and further vertical-integration theory in 2026.
 
-Fit assessment:
+The mismatch is contribution type: these papers introduce new organizational/contracting mechanisms. The present paper corrects and globally re-characterizes a known model. Rebranding it as a management-strategy mechanism would distort the paper.
 
-Intellectually relevant, but the current paper is much narrower than a typical general-interest CJE contribution. The original-paper connection is a genuine advantage, and the recent Tan--Wong re-examination shows that CJE will publish model re-examinations, but that paper provides a broader characterization and empirical recoverability.
+Classification: **high-risk stretch, not default route**.
 
-Subjective desk risk: **moderate-high to high**.
+### Source-venue stretch — Canadian Journal of Economics
 
-Classification: **Stretch**, not the default first submission.
+CJE must be evaluated because the target paper appeared there.
 
-No theory should be added merely to make the paper look general-interest enough.
+The archival continuity is real, and CJE published Tan and Wong's *A re-examination of the competitive effects of exclusive dealing* in August 2026.
 
-### C. Journal of Industry, Competition and Trade — REALISTIC FALLBACK
+But CJE currently describes itself as a general-interest journal and explicitly excludes very narrow papers addressed to small specialist audiences. That creates a genuine screen for this 15-page source-specific correction. Initial submission also requires CEA membership by at least one author and an CAD 85 fee.
 
-Official scope:
-https://link.springer.com/journal/10842/aims-and-scope
+Classification: **source-venue stretch, not default route**.
 
-Recent close paper:
-Häckner and Herzing (2026), “Cost-Reducing Technology Provision and Adoption – An Equilibrium Approach,”
-https://doi.org/10.1007/s10842-026-00475-y
+### Realistic fallback 1 — Journal of Institutional and Theoretical Economics
 
-Evidence:
+JITE is promoted relative to the original Stage 12.
 
-- JICT covers firm strategy, competition, innovation/new technologies, trade, and policy.
-- It welcomes applied theoretical papers.
-- It explicitly requires applied theory to **clearly highlight implications for empirical analysis and economic policy**.
-- The 2026 Häckner--Herzing paper is structurally close at the broad level: symmetric firms, Cournot, marginal-cost-reducing technology, endogenous asymmetric adoption, and competition effects.
+On 11 September 2026 it published online-first *Sourcing Strategy and Endogenous Stackelberg Leadership in a Cournot Duopoly*, a 25-page theory paper with sourcing, Cournot interaction and asymmetric equilibrium. This is unusually direct audience evidence.
 
-Fit assessment:
+The current manuscript's source-specific correction is narrower, but JITE's theory audience is a natural fit and no mandatory empirical/policy framing was located.
 
-The IO content fits, but the present correction is not primarily applied/policy. It can state modest empirical/policy interpretive implications without changing the model, but JICT's explicit applied-theory requirement makes it less natural than RIO.
+Classification: **realistic fallback 1**.
 
-Subjective desk/referee risk: **moderate-high** unless the introduction/discussion clearly explains what empirical or policy inference changes when the original comparative static/global equilibrium characterization is corrected.
+### Realistic fallback 2 — Journal of Economics
 
-Classification: **Realistic fallback**.
+Journal of Economics explicitly publishes across economics with frequent theoretical/mathematical microeconomics. It regularly publishes oligopoly, investment and procurement theory.
 
-### D. Bulletin of Economic Research — ALTERNATIVE FALLBACK
+It has less direct IO/correction identity than RIO/JITE but does not impose JICT's explicit empirical/policy-implication requirement.
 
-Official scope:
-https://onlinelibrary.wiley.com/page/journal/14678586/homepage/productinformation.html
+Classification: **realistic fallback 2**.
 
-Evidence:
+### Realistic fallback 3 — Journal of Industry, Competition and Trade
 
-- accepts theoretical, applied, and empirical work across economics;
-- publishes shorter refereed articles, notes, and comments;
-- requires an original and substantial contribution of broad interest;
-- current Wiley page reports a **6% acceptance rate** and 64-day median first decision.
+JICT clearly covers firm strategy, competition, innovation and applied theory. Its 2026 articles include cost-reducing technology adoption and vertical-integration theory.
 
-Fit assessment:
+However, its official scope explicitly says applied theoretical papers must clearly highlight implications for empirical analysis and economic policy.
 
-The notes/comments format is compatible with a correction, but the broad-interest/substantial-contribution standard is a less natural fit than a field IO journal. The reported overall acceptance rate is low; it should not be interpreted as a paper-specific probability.
+Classification: **realistic fallback 3**.
 
-Subjective risk: **high**.
+### Alternative fallback — Bulletin of Economic Research
 
-Classification: **Alternative fallback**, not preferred over JICT.
+BER accepts theoretical work and explicitly publishes shorter refereed articles, notes and comments. The drawback is its broad-interest/substantial-contribution requirement.
 
-### E. Economics Bulletin — SAFETY NET
+Classification: **alternative fallback**.
 
-Current submission portal:
-https://www.accessecon.com/pubs/eb/default.aspx?page=Newsubmission
+### Safety net — Economics Bulletin
 
-Mission statement:
-https://accessecon.com/pubs/EB/default.aspx?linkID=763&menu=2&page=content
+Economics Bulletin explicitly publishes peer-reviewed Notes and Comments of specialist interest. This is an excellent contribution-type match, but current rules cap Notes/Comments at seven printed pages excluding tables, figures and references.
 
-Evidence:
+Classification: **safety net after major compression**.
 
-- peer-reviewed Notes, Comments, and Preliminary Results;
-- specialist-interest work is within the mission;
-- current portal limits these submissions to **seven printed pages or fewer excluding tables, figures, and references**;
-- PDF, English, 12pt font, single spacing, one-inch margins;
-- portal states that published papers cannot later be corrected and asks authors not to seek status updates for at least four months.
+## 4. Explicitly excluded obvious venues
 
-Fit assessment:
+The completeness ledger records explicit exclusions rather than silently dropping them.
 
-Conceptually excellent for a correction/technical note, but the current 15-page paper would need a major **presentation compression**, not a theory change. Proofs and robustness material would have to move to appendix/supplement consistent with the live rule then in force.
+- **RAND Journal of Economics:** topic fit yes, contribution-level fit no; the source-specific correction does not justify treating this as a new leading applied-micro mechanism.
+- **Journal of Economic Theory:** generic theory novelty was expressly killed at Stages 6/11.
+- **Economic Theory:** same issue; source-specific IO correction rather than a general theorem.
+- **JEBO:** no behavioral/cognitive/institutional mechanism central to the paper.
+- **Southern Economic Journal:** no format/audience advantage over the retained general/fallback candidates.
+- **JEDC:** the closest cited paper is dynamic; the present manuscript is not.
 
-Subjective fit risk: **low-moderate** once compressed; formatting burden is **high**.
+## 5. Comparison table
 
-Classification: **Safety net**.
+| Journal | Role | Topic fit | Contribution-type fit | Main risk |
+|---|---|---:|---:|---|
+| IJIO | **Best stretch** | Very high | Medium | source-specific correction may be judged too narrow for current research-article bar |
+| RIO | **Primary** | Very high | **Very high** | old-paper correction may still be judged too narrow |
+| JIE | High-risk stretch | Very high | Medium-low | theory expected to expose policy/empirical implications |
+| JEMS | High-risk stretch | High | Medium-low | management/new-mechanism orientation |
+| CJE | Source-venue stretch | Medium-high | Medium | general-interest narrowness screen |
+| JITE | **Fallback 1** | High | High | contribution may still look incremental relative to new sourcing models |
+| Journal of Economics | **Fallback 2** | Medium-high | High | broad journal, less specific correction audience |
+| JICT | **Fallback 3** | High | Medium | explicit applied/policy implication requirement |
+| BER | Alternative fallback | Medium | High | broad-interest/substantial-contribution screen |
+| Economics Bulletin | **Safety net** | High | Very high | seven-page compression |
 
-## 3. Comparison table
-
-| Journal | Role | Fit with actual contribution | Main reason to submit | Main rejection risk | Required substantive change |
-|---|---|---|---|---|---|
-| Review of Industrial Organization | **Primary** | High | Exact IO audience; theory + shorter notes welcomed; recent make-or-buy and compact theory papers | “old-paper correction too narrow” | **None** |
-| Canadian Journal of Economics | Stretch | Medium | Original paper appeared there; recent re-examination paper | General-interest / narrow-specialist screen | **None permitted** |
-| Journal of Industry, Competition and Trade | Realistic fallback | Medium-high | Strong market-structure/cost-reduction fit | Explicit empirical/policy implications expectation | None; presentation only |
-| Bulletin of Economic Research | Alternative fallback | Medium | Notes/comments accepted | Broad-interest/substantial-contribution screen; low reported acceptance | None |
-| Economics Bulletin | Safety net | High topic-format fit after compression | Correction/technical-note mission; specialist interest acceptable | Seven-page constraint | None; major compression only |
-
-## 4. Primary target decision
+## 6. Primary target decision after completeness repair
 
 [
-\boxed{\textbf{PRIMARY: REVIEW OF INDUSTRIAL ORGANIZATION}}
+oxed{	extbf{PRIMARY: REVIEW OF INDUSTRIAL ORGANIZATION}}
 ]
 
-This decision is based on contribution-to-audience fit, not prestige.
+This is now a recertified decision rather than an incomplete-shortlist decision.
 
-The paper's strongest defensible contribution is an IO correction that changes the global strategic interpretation and the pure source-duopoly equilibrium correspondence. RIO has the right audience and explicitly accommodates theory plus shorter notes/commentaries. Its current issue confirms that concise formal IO papers and make-or-buy theory remain within the live editorial set.
-
-CJE is deliberately not selected as primary despite hosting the original 2005 article, because its current general-interest scope explicitly screens out very narrow specialist papers. A CJE attempt is defensible only as an optional stretch.
-
-## 5. Referee objections to pre-answer at RIO
-
-Stage 13 should make the paper pre-answer these objections without enlarging theory:
-
-1. **“This is only a derivative/sign correction.”**  
-   Response architecture: the sign error is one result; the main economic correction is that global continuation changes Proposition 5 and the pure source-duopoly equilibrium correspondence.
-
-2. **“Asymmetric investment/exit is already known.”**  
-   Response architecture: agree; Stage-6 literature already kills that generic novelty. The contribution is the exact correction inside the published Shy--Stenbacka model.
-
-3. **“Why is the Hotelling (p\ge c) result relevant if it is not a refinement?”**  
-   Response architecture: lead with literal source-game continuation multiplicity; label the no-loss game only as a transparent robustness exercise.
-
-4. **“Does own strict concavity contradict multiplicity?”**  
-   Response architecture: explicitly explain that own concavity does not imply game-level uniqueness; the active-set switch changes the slope/cross-effect structure.
-
-5. **“Why should a 2005 model still matter?”**  
-   Response architecture: connect the correction to current make-or-buy/process-innovation theory in RIO, especially Dai (2026), while avoiding anachronistic claims of generic novelty.
-
-## 6. Required presentation changes for Stage 13 only
-
-No theory or theorem changes are authorized.
-
-Stage 13 should:
-
-- adapt the Introduction to RIO's IO audience rather than a general-economics audience;
-- add the current RIO make-or-buy citation (Dai 2026) with a precise non-overlap sentence;
-- ensure the abstract is 150–250 words;
-- add 4–6 keywords and JEL codes;
-- prepare title/author/declaration metadata outside the anonymous research core as required by the final review model;
-- create a **flat** RIO LaTeX submission bundle because the public instructions prohibit subfolders;
-- prepare a Data Availability / Code Availability statement consistent with a theory paper and the GitHub verification repository;
-- prepare Funding, Competing Interests, Author Contributions, and LLM-use declarations, with author-specific facts left for author confirmation;
-- preserve Figure 1 only if it materially helps; make its source compatible with the submission package and accessibility rules;
-- leave the proof appendix in place unless RIO-specific integration makes an Online Resource cleaner;
-- preserve every Stage-8/11 scope qualifier.
-
-## 7. Initial RIO requirements ledger
-
-Canonical Stage-12 ledger:
-
-`audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
-
-Key verified public requirements:
-
-- editable source files at each submission/revision;
-- LaTeX permitted for mathematical papers;
-- no LaTeX subfolders;
-- abstract 150–250 words;
-- 4–6 keywords;
-- JEL codes;
-- title-page author/affiliation/corresponding-author information;
-- Data Availability Statement for original research;
-- competing-interest disclosure;
-- author-contribution and competing-interest information in the submission interface;
-- LLM use beyond copyediting must be documented;
-- hybrid publication, with subscription route carrying no APC; current optional OA APC is £2390 / US$3290 / €2690 plus applicable tax.
-
-Material items left explicitly **UNVERIFIED** for Stage 14 include exact portal article category, single/double-anonymized review, mandatory reviewer count, cover-letter field, portal-specific file handling beyond public guidance, and any submission fee not stated publicly.
-
-## 8. Recommended submission sequence
-
-Default sequence:
+The decisive distinction is:
 
 [
-\boxed{
-\text{RIO}
-\rightarrow
-\text{JICT}
-\rightarrow
-\text{BER}
-\rightarrow
-\text{Economics Bulletin}
+	ext{IJIO has excellent topical fit}
+quad
+eqquad
+	ext{IJIO has the best contribution-type fit}.
+]
+
+RIO's explicit acceptance of shorter notes/commentaries makes it the cleanest home for a mathematically substantial but source-specific correction. IJIO is the strongest rational stretch if the author prefers to spend one higher-risk submission before RIO.
+
+## 7. Submission routes
+
+### Default fit-first route
+
+[
+oxed{
+	ext{RIO}
+ightarrow
+	ext{JITE}
+ightarrow
+	ext{Journal of Economics}
+ightarrow
+	ext{JICT}
+ightarrow
+	ext{BER}
+ightarrow
+	ext{Economics Bulletin}
 }
 ]
 
-CJE is an **optional stretch before RIO only if the author deliberately prefers a higher-risk general-interest attempt** and accepts the CEA-membership/submission-fee requirement. It is not the default workflow route.
+### Optional one-shot stretch
 
-The default route maximizes fit and avoids distorting the contribution.
-
-## 9. Kill tests
-
-- No candidate requires a substantive new mechanism for the default route.
-- RIO does not require empirical analysis as a condition for all theoretical papers.
-- JICT would require stronger empirical/policy implications in presentation, which is why it is not primary.
-- CJE's general-interest standard creates a genuine narrowness risk.
-- Economics Bulletin is feasible only after strong compression.
-
-No journal-selection fact discovered at Stage 12 invalidates Stage 11 or requires a theory rollback.
-
-## 10. Canonical verdict
+If the author deliberately accepts higher desk risk:
 
 [
-\boxed{\textbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+oxed{
+	ext{IJIO}
+ightarrow
+	ext{RIO}
+ightarrow
+	ext{JITE}
+ightarrow
+cdots
+}
 ]
 
-Primary journal:
+JIE, JEMS and CJE are documented stretches but are not preferred to IJIO as the single pre-RIO attempt.
+
+## 8. RIO requirements ledger
+
+Because the primary target remains RIO, the existing initial requirements ledger remains the relevant Stage-12 operational baseline:
+
+`audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
+
+It was rechecked during this re-audit against the current official RIO pages. No requirement discovered in the candidate-universe repair changes the Stage-13 packaging contract.
+
+Portal-only and author-specific items remain explicitly UNVERIFIED for Stage 14.
+
+## 9. Presentation changes authorized for Stage 13
+
+No theory change is authorized.
+
+Stage 13 may:
+
+- adapt Introduction/abstract emphasis to RIO;
+- add current RIO and cross-journal sourcing literature needed for positioning;
+- include keywords/JEL/declarations/data-code statement;
+- produce the flat Springer-compatible LaTeX package;
+- preserve the verified figure only if it reduces exposition cost.
+
+Stage 13 may not:
+
+- add a mechanism merely to chase IJIO/JIE/JEMS;
+- claim generic novelty for asymmetric sourcing/exit/multiplicity;
+- enlarge the Hotelling refinement claim;
+- strengthen welfare or formal-verification scope.
+
+## 10. Completeness regression status
+
+Original Stage-12 candidate omission:
 
 [
-\boxed{\textbf{Review of Industrial Organization}}
+oxed{	extbf{REGRESSION FOUND}}
+]
+
+After v2.3 re-audit:
+
+[
+oxed{	extbf{REGRESSION REPAIRED}}
+]
+
+No obvious IO field outlet or repeatedly represented relevant closest-literature venue remains silently omitted.
+
+No theory, novelty, welfare, or formal-verification rollback is triggered.
+
+## 11. Canonical verdict
+
+[
+oxed{	extbf{PRIMARY JOURNAL SELECTED — GO TO INTEGRATION}}
+]
+
+Primary:
+
+[
+oxed{	extbf{Review of Industrial Organization}}
+]
+
+Best stretch:
+
+[
+oxed{	extbf{International Journal of Industrial Organization}}
 ]
 
 Next route:
 
 [
-\boxed{\textbf{STAGE 13 — FULL-PAPER INTEGRATION FOR RIO}}
+oxed{	extbf{STAGE 13 — FULL-PAPER INTEGRATION FOR RIO}}
 ]
 
-## 11. Stage-13 contract
+## 12. Stage-13 contract
 
-Stage 13 may change only presentation, organization, journal-specific metadata, citations needed for positioning, and submission packaging.
+Stage 13 inherits:
 
-It may **not**:
-- enlarge theorem scope;
-- add a new mechanism to improve journal fit;
-- claim generic novelty already killed at Stage 6;
-- strengthen Hotelling refinement language;
-- overstate formal verification.
+- `audit/STAGE_12_CANDIDATE_UNIVERSE_LEDGER.md`;
+- `audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`;
+- the Stage-8 frozen theory;
+- the Stage-11 claim-scope repairs.
 
-Stage 13 must inherit the RIO Requirements Ledger and carry all `UNVERIFIED` items to Stage 14 for live re-check.
+Any later discovery of a materially omitted journal reopens Stage 12. It does not silently change the target ladder.
