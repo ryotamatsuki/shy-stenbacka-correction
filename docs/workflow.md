@@ -30,7 +30,9 @@ Pinned workflow commit:
 \rightarrow
 \text{Stage 8 PASS}
 \rightarrow
-\textbf{Stage 9 NEXT}
+\text{Stage 9 PASS}
+\rightarrow
+\textbf{Stage 10 NEXT}
 }
 \]
 
@@ -121,6 +123,30 @@ Stage 8 freezes:
 
 No theorem widening or new extension is authorized after the freeze without rollback to the earliest affected gate.
 
-## Stage-9 contract
+## Stage-9 verdict
 
-Stage 9 must now convert the existing research repository into the production reproducibility layout required by workflow v2.2 without changing the frozen theory.
+\[
+\boxed{\textbf{CANONICAL STAGE 9 — PASS}}
+\]
+
+Production/reproducibility setup is complete.
+
+Canonical report:
+
+\`audit/STAGE_09_REPOSITORY_REPRODUCIBILITY.md\`
+
+Canonical evidence manifest:
+
+\`audit/stage09_artifact_manifest.md\`
+
+Green reproducibility evidence:
+
+- Python verification run \`35442666402\`;
+- Lean formal run \`35439005968\`;
+- manuscript smoke-build run \`35442682700\`.
+
+Stage 9 established a modular manuscript layout, pinned Python/Lean dependencies, repository-level Make targets, CI for Python/formal/manuscript layers, theorem/formal indexes, and a permanent counterexample/regression register without changing the Stage-8 frozen theory.
+
+## Stage-10 contract
+
+Stage 10 must construct the manuscript section by section in dependency order and implement the figure/table architecture while remaining exactly within the Stage-8 theorem, solution-concept, welfare, novelty, and formal-verification boundaries.
