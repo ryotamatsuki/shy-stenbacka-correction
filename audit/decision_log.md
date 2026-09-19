@@ -363,3 +363,40 @@ Route:
 \[
 \boxed{\textbf{Stage 8 — Canonical Theory Freeze}}
 \]
+
+
+---
+
+## 2026-09-19 — Stage-8 canonical theory freeze
+
+### Entry gate
+
+All pre-freeze requirements are green:
+
+- Stage 4A: **GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS**;
+- Stage 7.5A: **GO — GENERALITY / QUANTIFIER CERTIFICATION PASS**;
+- Formal Verification Gate: **FORMAL VERIFICATION PASS**.
+
+### Freeze
+
+The canonical model, exact theorem quantifiers, solution concepts, source-duopoly pure equilibrium correspondence, literal and no-loss Hotelling scopes, welfare benchmark labels, novelty boundary, baseline-only generality boundary, formal-verification provenance, explicit non-claims, and rollback rules are frozen in:
+
+`audit/STAGE_08_CANONICAL_THEORY_FREEZE.md`.
+
+No new extension or theorem widening was introduced at Stage 8.
+
+### Verdict
+
+\[
+\boxed{\textbf{CANONICAL STAGE 8 — PASS}}
+\]
+
+\[
+\boxed{\textbf{THEORY FROZEN}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{Stage 9 — Repository / Reproducibility Setup}}
+\]
