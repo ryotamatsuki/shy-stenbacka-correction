@@ -1,44 +1,40 @@
 # Stage 4 Preliminary Theorem Certificates
 
-These are construction-level certificates. Stage 4A must certify them independently.
+These certificates are construction-level. Stage 4A must attack them independently.
 
-| ID | Exact claim | Attack performed | Evidence artifact | Result | Limitation | State |
-|---|---|---|---|---|---|---|
-| C1 | Every feasible Cournot sourcing history has a unique quantity equilibrium given by the sorted-cost active-set formula | KKT/active-set derivation; negative-quantity regression | `STAGE_04_MINIMAL_MODEL_GATE.md`; `code/stage04_verify.py` | survives | linear demand / source model only | **PROVED** |
-| C2 | Under source SOC, own reduced Cournot payoff is globally strictly concave on ([0,phi]) | branch Hessian + derivative-jump audit at entry/exit | Stage-4 report §4 | survives | source quadratic monitoring cost | **PROVED** |
-| C3 | Unique symmetric constrained Cournot SPNE is (i_C^*=min{phi,HND/[b(N+1)^2-H^2N]}) | finite-deviation/global-concavity attack; cap regression | report §§4–5; code | survives | uniqueness is **symmetric**, not global across all (N)-firm asymmetric profiles | **PROVED** |
-| C4 | (i_C^*) is weakly decreasing in (N), strictly on interior for (N>1) | exact symbolic differentiation + cap branch | report §6; code | survives | (N) derivative follows source's continuous-(N) comparative-static convention | **PROVED** |
-| C5 | Outsourced number is increasing in (phi) on cap branch and decreasing interior; fraction is weakly decreasing | KKT/cap branch + symbolic derivative | report §6; code | survives | statement concerns source parameter domain (D>0) | **PROVED** |
-| C6 | Source duopoly global BR is the stated piecewise (B_phi(y)) | enumerate inactive/all-active/monopoly continuations; kink comparisons | report §7; code | survives | pure strategies, source game | **PROVED** |
-| C7 | For (4/9<ho<2/3), the global BR contains slope (+2) | explicit kink branch; exact rational witness | report §8; code | survives | cap can flatten the branch if too small | **PROVED** |
-| C8 | Duopoly pure equilibrium correspondence has the three stated (ho)-cases | solve piecewise BR fixed points; adversarial parameter search | report §9; code | survives | source duopoly only | **PROVED** |
-| H1 | Hotelling price equilibrium is unique for (|d_c|le3	au) and a continuum for (|d_c|>3	au) | complete clipped-demand BR derivation | report §10; code | survives | no additional no-loss refinement | **PROVED** |
-| H2 | Earlier Stage-1 Hotelling corner-deviation rejection is selection-dependent | same deviation evaluated under two exact continuation equilibria | report §10; code | opposite profitability obtained | does not characterize all Stage-I SPNE | **PROVED** |
+| ID | Exact claim | Attack performed | Evidence | State |
+|---|---|---|---|---|
+| C1 | Every feasible Cournot sourcing history has a unique quantity equilibrium from the sorted-cost active-set formula | KKT/active-set derivation; negative-quantity regression | Stage-4 report; \`code/stage04_verify.py\` | **PROVED** |
+| C2 | Under the source SOC, own reduced Cournot payoff is globally strictly concave on \([0,\phi]\) | branch curvature + derivative-jump audit at entry/exit | Stage-4 report §4 | **PROVED** |
+| C3 | Unique symmetric constrained Cournot action is \(i_C^*=\min\{\phi,HND/[b(N+1)^2-H^2N]\}\) | global concavity + KKT + cap regression | Stage-4 report §§4–5 | **PROVED** |
+| C4 | \(i_C^*\) is weakly decreasing in \(N\), strictly on the interior branch for \(N>1\) | exact differentiation + cap branch | Stage-4 report §6; code | **PROVED** |
+| C5 | The outsourced fraction is weakly decreasing in \(\phi\); the outsourced number rises on the cap branch and falls on the interior branch | exact derivatives + KKT | Stage-4 report §6 | **PROVED** |
+| C6 | The source-duopoly global BR is the piecewise \(B_\phi(y)\) in Stage 4 | inactive / both-active / monopoly regimes; kink comparison | Stage-4 report §7; code | **PROVED** |
+| C7 | For \(4/9<\rho<2/3\), the global BR can contain slope \(+2\) | exact kink branch + rational witness | Stage-4 report §8; code | **PROVED** |
+| C8 | The source-duopoly pure Stage-I equilibrium correspondence has the three \(\rho\)-cases in Stage 4 | fixed points of complete BR; broad deterministic adversarial check | Stage-4 report §9; code | **PROVED** |
+| H1 | Hotelling price equilibrium is unique for \(|d_c|\le3\tau\) and a continuum for \(|d_c|>3\tau\) | complete clipped-demand BR derivation | Stage-4 report §10; code | **PROVED — DIAGNOSTIC** |
+| H2 | The Stage-1 Hotelling corner-deviation rejection is selection-dependent | same deviation evaluated under two exact price equilibria | Stage-4 report §11; code | **PROVED — DIAGNOSTIC** |
 
-## Quantifier notes
+## Quantifier cautions
 
-### C3
+C3 proves the unique **symmetric action**, not uniqueness of the general-\(N\) two-stage equilibrium.
 
-Maximum defensible prose:
+C8 is complete for pure Stage-I equilibria of the **source duopoly**.
 
-> Under the source parameter restrictions, the corrected **symmetric** Cournot SPNE outsourcing level is the constrained expression (i_C^*).
+H1/H2 diagnose the source Hotelling game but are not part of the Candidate-C paper architecture routed to Stage 4A.
 
-Prohibited prose:
+## Prohibited manuscript wording
 
-> The Cournot game has a unique SPNE for general (N).
+Do not write:
 
-The latter is not proved and is false already in the source duopoly for some parameters.
+- “the general-\(N\) Cournot game has a unique SPNE”;
+- “Proposition 6 is false” without the continuation-selection qualification;
+- “the Hotelling outsourcing equilibrium does not exist”;
+- “outsourcing is globally a strategic substitute”;
+- “all general-\(N\) asymmetric equilibria are characterized.”
 
-### C8
-
-This is a complete pure-strategy equilibrium characterization for the **source duopoly Stage-I game** after exact Cournot continuation.
-
-### H1/H2
-
-These are diagnostic results, not part of the Stage-4A canonical Cournot paper architecture unless later workflow stages explicitly reopen Hotelling.
+Maximum defensible wording is the exact certificate scope above.
 
 ## Evidence maturity
 
-All listed claims are construction-level `PROVED` subject to independent Stage-4A attack.
-
-No claim is promoted to theory freeze at Stage 4.
+All claims are construction-level \`PROVED\` only. None is theory-frozen before Stage 4A.
