@@ -1,0 +1,31 @@
+name: Lean formal verification
+
+on:
+  push:
+    branches:
+      - audit/full-equilibrium-correspondence
+  pull_request:
+    paths:
+      - 'ShyStenbackaFormal/**'
+      - 'ShyStenbackaFormal.lean'
+      - 'lakefile.toml'
+      - 'lean-toolchain'
+      - '.github/workflows/lean.yml'
+
+jobs:
+  formal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reject proof placeholders
+        run: |
+          if grep -R -n -E '(^|[^[:alnum:]_])(sorry|admit)([^[:alnum:]_]|$)' ShyStenbackaFormal ShyStenbackaFormal.lean; then
+            echo "Proof placeholder found."
+            exit 1
+          fi
+
+      - name: Build Lean proofs
+        uses: leanprover/lean-action@v1
+        with:
+          build: true
