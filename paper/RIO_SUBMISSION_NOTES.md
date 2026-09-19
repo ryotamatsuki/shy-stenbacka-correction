@@ -37,3 +37,24 @@ The canonical manuscript therefore does not invent author-specific declarations 
 Official pages used for Stage-13 integration:
 - https://link.springer.com/journal/11151/aims-and-scope
 - https://link.springer.com/journal/11151/submission-guidelines
+
+
+## 2026-09-20 independent-audit repair recheck
+
+The live RIO public instructions were re-opened after the independent audit.
+
+Verified public requirements relevant to the repaired package:
+
+- mathematical manuscripts may be submitted in LaTeX;
+- LaTeX submissions should not use subfolders;
+- text citations use author name and year;
+- the reference list is alphabetical by first-author surname;
+- available DOIs should be supplied as full DOI links;
+- the abstract is 150–250 words;
+- 4–6 keywords and JEL codes are requested;
+- substantive LLM use must be documented with human accountability.
+
+The canonical manuscript now uses an author-year bibliography style (`apalike`), and DOI-bearing bibliography entries include a printable full `https://doi.org/...` link. The flat RIO bundle is regenerated from these canonical sources.
+
+Official source rechecked:
+https://link.springer.com/journal/11151/submission-guidelines
