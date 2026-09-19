@@ -50,7 +50,7 @@ The compact contribution package is:
    rival-exit branch;
 4. the complete **pure Stage-I** source-duopoly equilibrium correspondence can
    contain asymmetric equilibria and, at the knife edge, a continuum;
-5. the literal Hotelling source game has off-path pure-price multiplicity for
+5. the maintained literal full-coverage Hotelling interpretation has off-path pure-price multiplicity for
    sufficiently asymmetric costs;
 6. under the explicit auxiliary no-loss restriction `p_j >= c_j`, the pure
    price continuation becomes unique and the published symmetric Hotelling
@@ -322,7 +322,7 @@ Let
 d=c_B-c_A.
 \]
 
-### H1 — literal source pure-price continuation
+### H1 — literal full-coverage pure-price continuation
 
 - `|d|<3tau`: unique pure interior price equilibrium;
 - `|d|=3tau`: unique pure boundary price equilibrium;
@@ -340,7 +340,7 @@ z\in[c_A+3\tau,c_B],
 
 with the mirrored case when B is the low-cost firm.
 
-Therefore the literal Stage-I reduced payoff is selection-dependent off path.
+Therefore the Stage-I reduced payoff under this maintained full-coverage interpretation is selection-dependent off path.
 No mixed-price characterization is frozen.
 
 ### H2/H2b — dominance facts
