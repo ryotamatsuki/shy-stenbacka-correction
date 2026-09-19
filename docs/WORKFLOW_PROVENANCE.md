@@ -4,15 +4,17 @@
 
 This project follows `ryotamatsuki/research-paper-workflow`:
 
-- version: **v2.2**
-- canonical workflow commit: `42574d6c5931275ccff3ef7e8b4acc188077332a`
+- Stages 0–11 canonical version: **v2.2**
+- Stages 0–11 workflow commit: `42574d6c5931275ccff3ef7e8b4acc188077332a`
+- Stage-12 re-audit rule set: **v2.3 candidate-universe refinement**
+- Stage-12 re-audit workflow commit: `9eb616bd31ea3a9ef3c29e288228ed962c44c9cf`
 - canonical hierarchy:
   1. `GOVERNANCE.md`
   2. `THEORY_PAPER_RESEARCH_PIPELINE.md`
   3. stage templates
   4. checklists / examples as subordinate materials
 
-The project does not silently upgrade to a later workflow version during a frozen stage.
+The project does not silently upgrade frozen mathematical stages. The later v2.3 change is a backward-compatible Stage-12 journal-positioning refinement only; it was applied explicitly by reopening and recertifying Stage 12. It does not alter the Stage-8 theory freeze or Stage-11 certification.
 
 ## Historical routing rule
 
@@ -120,23 +122,35 @@ Green evidence:
 The certified Lean source/toolchain blobs remain byte-identical to the Stage-7.5A formal certificate. No certification regression or rollback was triggered.
 
 
-## Canonical Stage 12 closure
+## Canonical Stage 12 closure — v2.3 recertification
 
-Stage 12 used current official journal guidance and recent publications to position the frozen manuscript without changing theory.
+Stage 12 was first closed under v2.2 at checkpoint `884ca99b4dfc7d8ef194775fd37aa30fa84593d5`.
 
-Primary target:
+A later reusable-workflow improvement exposed a **candidate-universe completeness defect** in that close: several plausible IO venues, most importantly IJIO, had not been explicitly evaluated before journal ranking.
 
-`Review of Industrial Organization`
+Stage 12 was therefore reopened under workflow commit:
 
-Canonical records:
+`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf`.
 
+Canonical recertification records:
+
+- `audit/STAGE_12_CANDIDATE_UNIVERSE_LEDGER.md`
 - `audit/STAGE_12_JOURNAL_POSITIONING.md`
 - `audit/STAGE_12_RIO_REQUIREMENTS_LEDGER.md`
 
-Default submission ladder:
+Recertified outcome:
 
-`RIO → JICT → Bulletin of Economic Research → Economics Bulletin`
+- candidate-universe completeness audit: **PASS**;
+- journal-positioning completeness regression: **REPAIRED**;
+- primary: **Review of Industrial Organization**;
+- best stretch: **International Journal of Industrial Organization**;
+- default ladder: `RIO → JITE → Journal of Economics → JICT → Bulletin of Economic Research → Economics Bulletin`;
+- optional one-shot stretch: `IJIO → RIO → JITE → …`.
 
-Canadian Journal of Economics is retained only as an optional stretch.
+RIO remained primary only after the enlarged candidate set was compared. The reason is contribution-type fit: RIO explicitly accommodates shorter notes/commentaries, while IJIO is an excellent topical fit but a higher-risk venue for a source-specific correction rather than a new general IO mechanism.
 
-Stage 13 inherits the RIO requirements ledger; Stage 14 must refresh all live journal/portal rules before submission QA.
+The RIO requirements ledger was rechecked on the same date and remains the Stage-13 operational baseline.
+
+No theory, novelty, welfare, equilibrium, or formal-verification rollback was triggered.
+
+Stage 13 inherits both the candidate-universe ledger and RIO requirements ledger. Stage 14 must refresh current live journal/portal rules before submission QA.
