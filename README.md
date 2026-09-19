@@ -37,7 +37,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 10 — SECTION-BY-SECTION PAPER CONSTRUCTION}}
+\boxed{\textbf{STAGE 10 — PASS / MANUSCRIPT CONSTRUCTION COMPLETE}}
+\]
+
+\[
+\boxed{\textbf{NEXT: STAGE 11 — ROBUSTNESS / REFEREE ATTACK GATE}}
 \]
 
 Workflow: \`research-paper-workflow\` v2.2.
@@ -266,3 +270,28 @@ Reproducibility gates are green:
 - manuscript smoke build: run `35442682700` — **success**.
 
 The manuscript has been modularized into `paper/sections/` without adding substantive theory. Stage 10 may now construct the paper section by section, but remains bound by the Stage-8 theory freeze.
+
+
+## Stage 10 paper construction
+
+Stage 10 closes with:
+
+\[
+\boxed{\textbf{CANONICAL STAGE 10 — PASS}}
+\]
+
+The frozen theory is now implemented as an integrated manuscript with model, global Cournot continuation, corrected comparative statics, source-duopoly equilibrium correspondence, literal and no-loss Hotelling blocks, welfare/scope discussion, related literature, conclusion, and proof appendix.
+
+Canonical Stage-10 artifacts:
+
+- `audit/STAGE_10_PAPER_CONSTRUCTION.md`
+- `audit/STAGE_10_FIGURE_TABLE_ARCHITECTURE.md`
+- `paper/manuscript.tex`
+- `code/stage10_generate_figure.py`
+
+Stage-10 substantive head `80f4523222e3f473786f3800ca8be0928de78fe2` passed:
+
+- Python verification run `35444042815`;
+- manuscript build run `35444042793`.
+
+Figure 1 is generated from exact rational regression values before the LaTeX build. Table 1 reports the certified pure source-duopoly equilibrium regimes. No Stage-8 rollback trigger was activated.
