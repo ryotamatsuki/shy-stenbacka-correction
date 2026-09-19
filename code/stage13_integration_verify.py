@@ -69,7 +69,7 @@ assert "not formally mechanized" in ALL
 
 notes = (PAPER / "RIO_SUBMISSION_NOTES.md").read_text(encoding="utf-8")
 assert "Stage-14 author/portal items still unresolved" in notes
-assert "do not invent author-specific declarations" in notes
+assert "does not invent author-specific declarations" in notes
 
 print("Stage-13 integration verification PASS")
 print(f"abstract_words={len(abstract_words)}")
