@@ -1,3 +1,5 @@
+> **Independent-audit recertification (2026-09-20).** The historical PASS remains provenance, but its C7 cap-feasibility quantifier and C8 proof-completeness certification are superseded by `audit/STAGE_04A_RECERTIFICATION_2026-09-20.md`.
+
 # Stage 4A — Independent Mathematical Adversarial Certification Gate
 
 Status: **GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS**
