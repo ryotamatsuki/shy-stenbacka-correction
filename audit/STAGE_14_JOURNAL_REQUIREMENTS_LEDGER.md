@@ -15,12 +15,12 @@ Evidence hierarchy follows `research-paper-workflow` Stage 14. Public journal-sp
 | Submission system | public journal page links to Springer Nature submission portal | portal | **PASS — portal identity; authenticated preflight pending** |
 | Exact article type | recent RIO research articles are published as ordinary research papers, but exact selectable portal label is not stated on public instructions | portal | **UNVERIFIED — PORTAL ONLY** |
 | Review/anonymity model | public instructions do not unambiguously identify single- vs double-anonymous handling | manuscript/title page/portal | **UNVERIFIED — PORTAL ONLY** |
-| Title page content | title; author names; affiliations with city/state/country; corresponding-author active email; ORCID if available | title page | **RULE VERIFIED / AUTHOR INPUT REQUIRED** |
+| Title page content | title; author names; affiliations with city/state/country; corresponding-author active email; ORCID if available | title page | **PASS — populated from prior approved submission record** |
 | Separate title-page file | public instructions require title-page information but do not establish portal file designation | portal/package | **UNVERIFIED — PORTAL ONLY** |
-| Acknowledgments | separate section on title page; funder names in full | title page | **RULE VERIFIED / AUTHOR INPUT REQUIRED** |
-| Author contributions | submission interface requires contribution information; publisher recommends contribution statement on separate title page | title page/portal | **RULE VERIFIED / AUTHOR INPUT REQUIRED** |
-| Competing interests | required disclosure; information must also be supplied in interface | declarations/portal | **RULE VERIFIED / AUTHOR INPUT REQUIRED** |
-| Funding | funding status must be disclosed; truthful no-funding wording allowed | declarations/title page/portal | **RULE VERIFIED / AUTHOR INPUT REQUIRED** |
+| Acknowledgments | separate section on title page; funder names in full | title page | **PASS — None** |
+| Author contributions | submission interface requires contribution information; publisher recommends contribution statement on separate title page | title page/portal | **PASS LOCALLY — sole-author CRediT populated; portal field preflight pending** |
+| Competing interests | required disclosure; information must also be supplied in interface | declarations/portal | **PASS LOCALLY — no competing interests; portal field preflight pending** |
+| Funding | funding status must be disclosed; truthful no-funding wording allowed | declarations/title page/portal | **PASS LOCALLY — No external funding; portal field preflight pending** |
 | Ethics/consent | applicable only where humans/animals are involved; current paper is theoretical and reports no such research | declarations | **NOT APPLICABLE on current manuscript facts; portal field still to confirm** |
 | Source files | all relevant editable source files required at every submission/revision | flat LaTeX package | **PASS** |
 | LaTeX | allowed for mathematical manuscripts; Springer template recommended, not stated as mandatory | source package | **PASS** |
@@ -46,7 +46,7 @@ Evidence hierarchy follows `research-paper-workflow` Stage 14. Public journal-sp
 | Code availability | source/code should support claims; repository disclosed | declarations | **PASS** |
 | Generative AI | substantive LLM use must be documented in suitable manuscript section; human accountability required | declarations | **PASS** |
 | AI authorship | prohibited | authorship | **PASS** |
-| Prior publication / simultaneous submission | work must not be previously published in conflicting form or under consideration elsewhere | author attestation/portal | **RULE VERIFIED / AUTHOR INPUT REQUIRED** |
+| Prior publication / simultaneous submission | work must not be previously published in conflicting form or under consideration elsewhere | author attestation/portal | **PASS LOCALLY — sole-author attestation recorded; portal confirmation pending** |
 | Reviewer suggestions | optional/welcome; if suggested, independence and institutional email/identity evidence required | portal/cover letter | **PASS RULE / exact portal fields unverified** |
 | Number of reviewer suggestions | not stated publicly | portal | **UNVERIFIED — PORTAL ONLY** |
 | Cover letter | public page mentions cover-letter transparency in some circumstances but does not establish a mandatory file for every submission | portal | **UNVERIFIED — PORTAL ONLY** |
@@ -58,11 +58,19 @@ Evidence hierarchy follows `research-paper-workflow` Stage 14. Public journal-sp
 
 ## Package status
 
-The canonical manuscript intentionally still contains `\author{}` because author identity and review-model handling have not been supplied/confirmed. The required author facts are listed in:
+Author identity and declarations are now resolved from the author's previously approved and submitted correction-paper package.
+
+The populated separate title-page artifact is:
+
+`paper/RIO_TITLE_PAGE.tex`.
+
+The canonical manuscript intentionally still contains `\author{}` only because the authenticated portal has not yet established the review/anonymity model. This preserves double-anonymous compatibility while keeping the required author metadata available as a separate title-page artifact.
+
+The resolved metadata/declaration record is:
 
 `paper/RIO_AUTHOR_INPUT_REQUIRED.md`.
 
-No author name, affiliation, email, funding status, competing-interest status, contribution statement, or originality/prior-publication attestation is inferred from repository metadata or memory.
+No remaining author-specific fact is being inferred from repository metadata.
 
 ## Stage-14 ledger verdict
 
@@ -76,11 +84,8 @@ Final technical evidence:
 
 All currently testable non-author, non-portal journal rules are implemented or covered by automated/package/visual QA.
 
-Material blockers remaining:
+Material blocker remaining:
 
-1. author/title-page metadata;
-2. funding / competing interests / contribution and relevant acknowledgment facts;
-3. originality/prior-publication attestation;
-4. authenticated portal article type, review model, file designations, reviewer/cover-letter fields, any submission fee, and portal-generated PDF.
+1. authenticated portal article type, review model, file designations, reviewer/cover-letter fields, any submission fee/portal attestations, and the portal-generated PDF.
 
-Therefore this ledger does **not** support a full `SUBMISSION QA PASS`.
+The former author/title-page/declaration blocker is resolved. This ledger remains a **CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED** until the live portal is inspected and its generated PDF is approved.
