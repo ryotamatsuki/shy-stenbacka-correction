@@ -333,4 +333,45 @@ Current state:
 \boxed{\textbf{STAGE 13 — REPAIRED AND RECERTIFIED}}
 \]
 
-Stage 14 remains **not started**.
+Stage 14 is now **CONDITIONAL PASS — AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED**. Stage 15 is blocked.
+
+
+## Stage-14 verdict
+
+Fresh RIO public requirements were rechecked and the full repository-resolvable submission package was audited.
+
+\[
+\boxed{\textbf{CONDITIONAL PASS — AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+Completed:
+
+- current public journal-rule ledger;
+- canonical and flat no-subfolder source builds;
+- source-only upload-package inventory;
+- citation/reference/DOI integrity;
+- figure/table/artwork checks;
+- declaration-heading / Data / Code / AI checks;
+- PDF font embedding;
+- 22-page page-by-page visual inspection;
+- formal-verification claim-fidelity check.
+
+Final technical evidence:
+
+- \`446ce7bdf7eff1d2363a315c905c28572c91861a\`;
+- Python \`35478726461\` — PASS;
+- manuscript/package QA \`35478726453\` — PASS.
+
+Material non-substantive blockers:
+
+1. author/title-page facts and author-specific declarations;
+2. author approval / prior-publication / simultaneous-submission attestation;
+3. authenticated portal preflight, including review model/article type/file designations and portal-generated PDF.
+
+Therefore:
+
+\[
+\boxed{\textbf{STAGE 15 — BLOCKED / NOT STARTED}}
+\]
+
+No mathematical rollback is triggered.
