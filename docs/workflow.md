@@ -24,29 +24,29 @@ This Stage-12 refinement does not alter the Stage-8 theory freeze or Stage-11 ce
 \rightarrow
 \text{Stage 4 PASS (AMENDED)}
 \rightarrow
-\text{Stage 4A PASS}
+\text{Stage 4A PASS (AMENDED/RECERTIFIED)}
 \rightarrow
-\text{Stage 6 PASS}
+\text{Stage 6 PASS (RECHECKED)}
 \rightarrow
 \text{Stage 7 PASS}
 \rightarrow
 \text{Stage 7.5 PASS}
 \rightarrow
-\text{Stage 7.5A PASS}
+\text{Stage 7.5A PASS (RECONCILED)}
 \rightarrow
-\text{Stage 8 PASS}
+\text{Stage 8 PASS (AMENDED)}
 \rightarrow
 \text{Stage 9 PASS}
 \rightarrow
 \text{Stage 10 PASS}
 \rightarrow
-\text{Stage 11 PASS}
+\text{Stage 11 PASS (RECERTIFIED)}
 \rightarrow
 \text{Stage 12 PASS}
 \rightarrow
-\text{Stage 13 PASS}
+\text{Stage 13 PASS (REPAIRED/RECERTIFIED)}
 \rightarrow
-\textbf{Stage 14 NEXT}
+\textbf{Stage 14 NOT STARTED}
 }
 \]
 
@@ -202,7 +202,7 @@ Independent verifier:
 
 \`code/stage11_hostile_referee_verify.py\`
 
-Stage 11 found one MINOR prose-only scope inflation and repaired it. No FATAL or MAJOR defect, no theorem failure, no novelty-certification regression, no welfare/benchmark regression, and no formal-verification scope regression remains.
+The historical Stage-11 close missed a real certification regression. A later independent clean-room audit found the C7 cap-quantifier defect, an incomplete C8 completeness proof record, and an overstatement of the multiplicity mechanism. Those findings were routed back to Stage 4A/8 as required, repaired, and Stage 11 was re-run. The controlling record is `audit/STAGE_11_RECERTIFICATION_2026-09-20.md`; no unresolved FATAL or MAJOR finding remains.
 
 Green Stage-11 evidence:
 
@@ -296,3 +296,41 @@ No theory or certification rollback was triggered.
 Stage 14 must refresh current RIO journal/portal requirements, resolve all material author- and portal-specific unknowns or fail closed, rebuild the full submission package, verify artwork/source/declarations, resolve all citations and cross-references, confirm formal-verification claim fidelity, and inspect the final PDF page by page.
 
 Stage 14 may repair formatting/package defects but may not enlarge the frozen theory or contribution.
+
+
+## Independent-audit repair route — 2026-09-20
+
+The Stage-13 manuscript at checkpoint \`5bdf156347da4267167513d96b5ef53456cd3f9a\` was independently audited and did **not** remain valid as-is.
+
+Reopening route actually executed:
+
+\[
+\text{Stage 4A partial reopen}
+\rightarrow
+\text{Stage 7.5A reconciliation}
+\rightarrow
+\text{Stage 8 amended freeze}
+\rightarrow
+\text{Stage 6 absorption recheck}
+\rightarrow
+\text{Stage 11 recertification}
+\rightarrow
+\text{Stage 13 reintegration}.
+\]
+
+The Stage-7.5A claim-scope ledger itself was not the source of the C7 error; it already used a feasibility qualifier.  The regression arose when that qualifier was not preserved consistently in Stage-4A/8/manuscript wording.
+
+Final technical evidence before closure-only documentation:
+
+- branch head \`0bd82c56703655f0a72784b4ef8f964520875cdc\`;
+- Python verification \`35477505973\`: **success**;
+- canonical + flat RIO build \`35477505977\`: **success**;
+- final 22-page PDF visual inspection: **PASS**.
+
+Current state:
+
+\[
+\boxed{\textbf{STAGE 13 — REPAIRED AND RECERTIFIED}}
+\]
+
+Stage 14 remains **not started**.
