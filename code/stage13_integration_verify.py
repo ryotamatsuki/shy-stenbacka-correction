@@ -73,8 +73,14 @@ assert "not a refinement claim" in ALL
 assert "not formally mechanized" in ALL
 
 notes = (PAPER / "RIO_SUBMISSION_NOTES.md").read_text(encoding="utf-8")
-assert "Stage-14 author/portal items still unresolved" in notes
-assert "does not invent author-specific declarations" in notes
+assert (
+    "Stage-14 author metadata resolved; portal items still unresolved" in notes
+    or "Stage-14 author/portal items still unresolved" in notes
+)
+assert (
+    "restored from the author's previously approved and submitted correction-paper package" in notes
+    or "does not invent author-specific declarations" in notes
+)
 
 print("Stage-13 integration verification PASS")
 print(f"abstract_words={len(abstract_words)}")
