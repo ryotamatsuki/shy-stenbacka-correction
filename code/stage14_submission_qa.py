@@ -1,8 +1,8 @@
 """Stage-14 non-portal submission QA for Review of Industrial Organization.
 
-This verifier checks only facts available from the repository/public journal
-requirements. It deliberately does not invent author metadata or authenticated
-portal fields. Those remain explicit Stage-14 blockers.
+This verifier checks repository/public journal requirements, including the
+resolved author metadata and declarations. Authenticated portal-only fields
+remain outside the scope of this local verifier.
 """
 
 from pathlib import Path
@@ -18,6 +18,8 @@ SECTIONS = "\n".join(
 )
 BIB = (PAPER / "references.bib").read_text(encoding="utf-8")
 ALL = MAIN + "\n" + SECTIONS
+TITLE_PAGE = (PAPER / "RIO_TITLE_PAGE.tex").read_text(encoding="utf-8")
+AUTHOR_RECORD = (PAPER / "RIO_AUTHOR_INPUT_REQUIRED.md").read_text(encoding="utf-8")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--require-bundle", action="store_true")
@@ -43,11 +45,32 @@ assert jels and all(re.fullmatch(r"[A-Z][0-9]{2}", x) for x in jels)
 assert "\\bibliographystyle{apalike}" in MAIN
 assert "\\section*{Statements and Declarations}" in ALL
 for required in (
+    "\\paragraph{Funding.}",
+    "\\paragraph{Competing interests.}",
+    "\\paragraph{Author contributions.}",
+    "\\paragraph{Acknowledgments.}",
     "\\paragraph{Data availability.}",
     "\\paragraph{Code availability.}",
     "\\paragraph{Use of generative AI.}",
 ):
     assert required in ALL, required
+
+# Resolved title-page metadata from the prior approved submission record.
+for required in (
+    "Ryota Matsuki",
+    "Independent Researcher",
+    "790-0853 Matsuyama, Ehime, Japan",
+    "ryota.matsuki@gmail.com",
+    "0009-0005-2329-531X",
+    "No external funding.",
+    "The author declares no competing interests.",
+    "Conceptualization, Methodology, Formal analysis, Software, Validation, Visualization",
+):
+    assert required in TITLE_PAGE, required
+assert "AUTHOR INPUT RESOLVED" in AUTHOR_RECORD
+assert "\\author{}" in MAIN, (
+    "main-manuscript author block changed; re-audit review-model/anonymity handling"
+)
 
 # Figure formatting / accessibility controls.
 assert "\\captionsetup[figure]{name=Fig.,labelfont=bf,labelsep=space}" in MAIN
@@ -75,11 +98,6 @@ for entry in re.split(r"(?=@\w+\{)", BIB):
 for token in ("TODO", "FIXME", "TBD", "PLACEHOLDER"):
     assert token not in ALL, token
 assert "assigns the equilibrium correspondence its primary exposition vehicle" not in ALL
-
-# Author-specific data are intentionally not fabricated; blocker file must exist.
-author_req = (PAPER / "RIO_AUTHOR_INPUT_REQUIRED.md").read_text(encoding="utf-8")
-assert "AUTHOR INPUT REQUIRED" in author_req
-assert "\\author{}" in MAIN, "unexpected author metadata change; re-audit title-page handling"
 
 # Exact flat upload layout.
 out = PAPER / "rio_submission"
@@ -123,4 +141,4 @@ print(f"abstract_words={len(abstract_words)}")
 print(f"keywords={len(keywords)}")
 print(f"jel_codes={len(jels)}")
 print(f"citations={len(cite_keys)}")
-print("known_blocker=author metadata/declarations + authenticated portal preflight")
+print("known_blocker=authenticated portal preflight only")
