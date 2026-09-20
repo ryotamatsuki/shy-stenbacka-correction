@@ -53,7 +53,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{STAGE 14 — NOT STARTED; NEXT ONLY WHEN AUTHORIZED}}
+\boxed{\textbf{STAGE 14 — CONDITIONAL PASS / AUTHOR INPUT + PORTAL PREFLIGHT REQUIRED}}
+\]
+
+\[
+\boxed{\textbf{STAGE 15 — BLOCKED / NOT STARTED}}
 \]
 
 Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited and Stage 13 integrated under the backward-compatible v2.3 workflow state at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
@@ -465,4 +469,39 @@ Latest integrated green evidence before closure-record-only commits:
 - final hyperlink-clean PDF build \`35477441567\` — success;
 - final 22-page PDF rendered and visually inspected page by page — PASS.
 
-Stage 14 has not been started.
+Stage 14 has now completed all repository-resolvable and public-rule-resolvable QA. It is conditionally closed pending authoritative author/title-page/declaration input and authenticated RIO portal preflight.
+
+
+## Stage 14 submission QA
+
+Stage 14 closes conditionally:
+
+\[
+\boxed{\textbf{CONDITIONAL PASS — AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+Canonical Stage-14 artifacts:
+
+- \`audit/STAGE_14_SUBMISSION_QA.md\`
+- \`audit/STAGE_14_JOURNAL_REQUIREMENTS_LEDGER.md\`
+- \`audit/STAGE_14_PACKAGE_INVENTORY.md\`
+- \`audit/STAGE_14_PDF_VISUAL_QA.md\`
+- \`paper/RIO_AUTHOR_INPUT_REQUIRED.md\`
+- \`code/stage14_submission_qa.py\`
+
+Stage 14 found and repaired real submission defects: uncited bibliography entries, contamination of the flat upload source with build artifacts, malformed DOI URL rendering, a faulty font-embedding check, and journal-specific declaration/caption formatting.
+
+Final technical head:
+
+\`446ce7bdf7eff1d2363a315c905c28572c91861a\`
+
+Green evidence:
+
+- Python verification \`35478726461\` — PASS;
+- canonical + flat-source isolated build / package QA \`35478726453\` — PASS;
+- all fonts embedded;
+- canonical and flat build PDFs: 22 pages;
+- all 22 pages visually inspected — PASS;
+- final-head render comparison — 0 changed pages.
+
+Full Stage-14 PASS is blocked only by factual author/declaration inputs and authenticated portal-only requirements. Stage 15 is not started.
