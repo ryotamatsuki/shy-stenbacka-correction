@@ -58,3 +58,26 @@ The canonical manuscript now uses an author-year bibliography style (`apalike`),
 
 Official source rechecked:
 https://link.springer.com/journal/11151/submission-guidelines
+
+
+## Stage 14 live compliance refresh
+
+The public RIO instructions were re-opened on 2026-09-20.
+
+Current implementation:
+
+- editable LaTeX source: implemented;
+- flat source-only upload candidate: `paper/rio_submission/`;
+- isolated test-build output: `paper/rio_submission_build/`;
+- abstract / keywords / JEL: implemented;
+- author-year references: implemented;
+- known Data / Code / AI disclosures: now under `Statements and Declarations`;
+- Figure 1: in-body vector TikZ/PGF, black solid/dashed encoding, journal-style `Fig. 1` caption label;
+- author-specific metadata/declarations: intentionally not guessed, tracked in `paper/RIO_AUTHOR_INPUT_REQUIRED.md`;
+- authenticated portal preflight: still required.
+
+The source-only upload candidate must not include local `.aux`, `.log`, `.bbl`,
+PDF, or other build products. Stage-14 CI enforces this separation.
+
+Current Stage-14 ledger:
+`audit/STAGE_14_JOURNAL_REQUIREMENTS_LEDGER.md`.
