@@ -74,18 +74,40 @@ No remaining author-specific fact is being inferred from repository metadata.
 
 ## Stage-14 ledger verdict
 
-Final technical evidence:
+Final manuscript-content evidence:
 
-- technical head: `446ce7bdf7eff1d2363a315c905c28572c91861a`;
-- Python verification `35478726461` — PASS;
-- manuscript / flat package / font / page-count QA `35478726453` — PASS;
-- 22-page final PDF visual QA — PASS;
-- final-head render comparison against the inspected DOI-fixed PDF — 0 changed pages.
+- manuscript-content head: `e08ea10c9ed50ba2b3be862806a41fbebf96128f`;
+- closure verification head: `d0ad03dd1c8c7da53405e6e27e3ea01c9c5fa731`;
+- Python verification `35484784083` — **PASS**;
+- manuscript / flat package / font / page-count QA `35484784094` — **PASS**;
+- canonical PDF: **23 pages**;
+- flat-package PDF: **23 pages**;
+- 23/23-page final-content visual QA — **PASS**;
+- all fonts embedded in both PDFs.
 
-All currently testable non-author, non-portal journal rules are implemented or covered by automated/package/visual QA.
+The Introduction/literature update after the earlier Stage-14 snapshot was
+rechecked against the journal rules and does not alter any mathematical theorem,
+proof, equilibrium scope, welfare claim, or formal artifact.
 
-Material blocker remaining:
+All currently testable non-portal journal rules and all author/declaration inputs
+are implemented or covered by automated/package/visual QA.
 
-1. authenticated portal article type, review model, file designations, reviewer/cover-letter fields, any submission fee/portal attestations, and the portal-generated PDF.
+Portal-only items remaining:
 
-The former author/title-page/declaration blocker is resolved. This ledger remains a **CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED** until the live portal is inspected and its generated PDF is approved.
+1. authenticated portal article type;
+2. review/anonymity model;
+3. title-page and source/figure file designations;
+4. reviewer/cover-letter fields;
+5. any portal-only fee/attestation fields;
+6. the portal-generated PDF and author approval.
+
+Under the canonical `research-paper-workflow` v2.2, these items permit Stage 14
+to close as a documented portal-only conditional state. They do not permit a full
+`SUBMISSION QA PASS` by assumption.
+
+\[
+\boxed{\textbf{STAGE 14 — CLOSED / CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+Stage 15 may now be entered solely to resolve those authenticated portal items
+before any final submit action.
