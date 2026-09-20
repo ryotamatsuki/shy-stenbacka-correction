@@ -940,3 +940,78 @@ Qualifier:
 \]
 
 Stage 15 remains blocked until the portal-only checks are completed.
+
+
+---
+
+## 2026-09-20 — Stage-14 final closure after literature-positioning refresh
+
+### Trigger
+
+After the author-metadata blocker had been resolved, the Introduction was
+minimally repositioned to reflect the mixed / condition-dependent
+competition--firm-boundary literature. Four published references were added and
+bibliographically reverified. The change did not alter any frozen theorem,
+proof, parameter restriction, equilibrium classification, welfare statement, or
+formal-verification artifact.
+
+### Final journal-rule refresh
+
+The current Review of Industrial Organization public submission instructions
+were re-opened again on 2026-09-20. The locally testable package remains compliant
+with the public requirements for editable source, LaTeX/no-subfolder packaging,
+title-page information, abstract length, keywords, JEL codes, declarations,
+author-year references, DOI links, artwork/source completeness, and data
+availability.
+
+The only unresolved requirements are authenticated-portal-specific: article
+type, review/anonymity model, file designations, reviewer/cover-letter fields,
+portal-only attestations/fees if any, and the portal-generated PDF.
+
+### Final verification
+
+Final manuscript-content head:
+
+`e08ea10c9ed50ba2b3be862806a41fbebf96128f`.
+
+Closure verification head:
+
+`d0ad03dd1c8c7da53405e6e27e3ea01c9c5fa731`.
+
+Green evidence:
+
+- Python verification `35484784083` — PASS;
+- manuscript / flat RIO source / Stage-14 package QA `35484784094` — PASS;
+- canonical PDF: 23 pages;
+- flat-package PDF: 23 pages;
+- all fonts embedded;
+- final-content page-by-page visual QA: 23/23 PASS.
+
+The earlier 22-page record is retained as historical evidence; the revised
+Introduction increased the final manuscript to 23 pages.
+
+### Workflow interpretation
+
+The canonical `research-paper-workflow` v2.2 explicitly permits Stage 14 to
+close as `CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED` when all
+non-portal requirements pass and the sole remaining uncertainty requires
+authenticated portal access. Stage 15 is the designated stage for that live
+portal reconciliation and portal-generated PDF inspection.
+
+### Final Stage-14 verdict
+
+\[
+\boxed{\textbf{STAGE 14 — CLOSED}}
+\]
+
+\[
+\boxed{\textbf{CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+Route:
+
+\[
+\boxed{\textbf{STAGE 15 — READY FOR AUTHENTICATED PORTAL PREFLIGHT}}
+\]
+
+No final submission action has been taken.
