@@ -843,3 +843,57 @@ Latest substantive green evidence before closure-only documentation:
 \]
 
 Stage 14 is not started.
+
+
+---
+
+## 2026-09-20 — Stage-14 submission QA
+
+### Live requirements
+
+The current RIO public instructions were re-opened rather than inherited from Stage 12. They require editable source, title-page author information, 150--250 word abstract, 4--6 keywords, JEL codes, relevant Statements and Declarations, author-year references, complete DOI links where available, and no LaTeX subfolders.
+
+### QA findings
+
+Stage 14 found and repaired:
+
+- three uncited references;
+- flat-source contamination by build artifacts;
+- visibly malformed DOI URLs caused by doubled LaTeX escapes;
+- a false-negative font-embedding CI parser;
+- RIO declaration/caption formatting;
+- a citation-dense typesetting overflow.
+
+The final flat upload candidate is source-only. Build products are isolated in a separate QA directory.
+
+### Verification
+
+Technical head:
+
+\`446ce7bdf7eff1d2363a315c905c28572c91861a\`.
+
+- Python \`35478726461\`: PASS;
+- manuscript/package/font/page-count \`35478726453\`: PASS;
+- canonical PDF: 22 pages;
+- flat build PDF: 22 pages;
+- final visual QA: 22/22 pages PASS.
+
+### Remaining blocker
+
+The repository does not contain authoritative current values for author identity/order, affiliations, corresponding-author email/ORCID, funding, competing interests, contributions, acknowledgments, or author approval/prior-publication attestations. The authenticated RIO portal also remains unavailable for article-type/review-model/upload-field/generated-PDF preflight.
+
+These facts are not guessed.
+
+### Verdict
+
+\[
+\boxed{\textbf{STAGE 14 — CONDITIONAL PASS}}
+\]
+
+Qualifier:
+
+\[
+\boxed{\textbf{AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+Stage 15 is blocked and not started.
