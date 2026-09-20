@@ -772,3 +772,74 @@ Route:
 \[
 \boxed{\textbf{Stage 14 — Submission QA}}
 \]
+
+
+---
+
+## 2026-09-20 — Independent-audit repair and Stage-13 re-certification
+
+### Trigger
+
+A clean-room external audit of Stage-13 checkpoint
+\`5bdf156347da4267167513d96b5ef53456cd3f9a\` found:
+
+- a genuine C7 cap-quantifier error;
+- a material C8 proof-completeness omission;
+- an overstatement that tied multiplicity generally to downstream exit.
+
+These findings were independently rechecked and accepted.
+
+### Mathematical decision
+
+The central theorem package survives with amendments.
+
+- Proposition 2/C7 is narrowed: the uncapped response contains the \(+2\) exit branch, but a positive-length constrained branch survives only for the exact large-cap conditions.
+- Proposition 3/C8 keeps the same five-case pure equilibrium correspondence; the Appendix now proves completeness analytically.
+- Exit is retained as the source of the positive-slope branch but rejected as a necessary cause of multiplicity.
+- The permanent all-active multiplicity witness is \((\rho,\delta,\phi)=(3/5,1,3/4)\).
+
+Cournot sign reversal, Hotelling pure-price correspondence under the maintained clipped full-coverage interpretation, no-loss failure region, and the \(1/90\) counterexample remain intact.
+
+### Workflow decision
+
+This is classified as a **certification regression found and repaired**.
+
+The project reopened the earliest affected theorem gate instead of treating the defects as Stage-13 style edits:
+
+\[
+\text{Stage 4A}
+\rightarrow
+\text{Stage 7.5A reconciliation}
+\rightarrow
+\text{Stage 8 amendment}
+\rightarrow
+\text{Stage 6 recheck}
+\rightarrow
+\text{Stage 11 recertification}
+\rightarrow
+\text{Stage 13 reintegration}.
+\]
+
+Historical PASS records remain in the repository and are superseded by explicit amendment records rather than deleted.
+
+### Verification
+
+Latest substantive green evidence before closure-only documentation:
+
+- branch head: \`0bd82c56703655f0a72784b4ef8f964520875cdc\`;
+- Python verification: \`35477505973\` — PASS;
+- canonical + flat RIO manuscript build: \`35477505977\` — PASS;
+- hyperlink-clean build: \`35477441567\` — PASS;
+- final PDF: 22 pages, rendered and visually inspected page by page — PASS.
+
+### Verdict
+
+\[
+\boxed{\textbf{REPAIRED AND RECERTIFIED}}
+\]
+
+\[
+\boxed{\textbf{STAGE 13 — PASS}}
+\]
+
+Stage 14 is not started.
