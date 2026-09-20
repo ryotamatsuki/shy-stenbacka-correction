@@ -66,7 +66,15 @@ No author name, affiliation, email, funding status, competing-interest status, c
 
 ## Stage-14 ledger verdict
 
-All currently testable non-author, non-portal journal rules are either implemented or covered by automated package QA.
+Final technical evidence:
+
+- technical head: `446ce7bdf7eff1d2363a315c905c28572c91861a`;
+- Python verification `35478726461` — PASS;
+- manuscript / flat package / font / page-count QA `35478726453` — PASS;
+- 22-page final PDF visual QA — PASS;
+- final-head render comparison against the inspected DOI-fixed PDF — 0 changed pages.
+
+All currently testable non-author, non-portal journal rules are implemented or covered by automated/package/visual QA.
 
 Material blockers remaining:
 
