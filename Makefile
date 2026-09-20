@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: verify verify-python verify-formal figures paper rio-bundle clean
+.PHONY: verify verify-python verify-formal figures paper rio-bundle submission-qa clean
 
 verify: verify-python verify-formal
 
@@ -15,6 +15,7 @@ verify-python:
 	$(PYTHON) code/stage11_hostile_referee_verify.py
 	$(PYTHON) code/independent_audit_repair_verify.py
 	$(PYTHON) code/stage13_integration_verify.py
+	$(PYTHON) code/stage14_submission_qa.py
 
 verify-formal:
 	lake build
@@ -28,6 +29,9 @@ paper: figures
 rio-bundle: figures
 	$(PYTHON) code/stage13_build_rio_bundle.py
 	cd paper/rio_submission && latexmk -pdf -interaction=nonstopmode -halt-on-error manuscript.tex
+
+submission-qa: rio-bundle
+	$(PYTHON) code/stage14_submission_qa.py --require-bundle
 
 clean:
 	cd paper && latexmk -C || true
