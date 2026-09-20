@@ -3,7 +3,7 @@
 Date: **2026-09-20**  
 Target: **Review of Industrial Organization**  
 Entry state: Stage 13 repaired and recertified  
-Stage 14 status: **CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED**
+Stage 14 status: **CLOSED — CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED**
 
 ## 1. Live requirements refresh
 
@@ -167,7 +167,7 @@ Result:
 
 The final-head PDF from \`446ce7b...\` was render-compared against the visually inspected DOI-fixed PDF. The comparison reports **22/22 pages identical, changed_pages = 0**.
 
-## 11. Material blockers that prevent full Stage-14 PASS
+## 11. Portal-only items preventing full Stage-14 PASS
 
 ### Author/title-page/declaration input — resolved
 
@@ -202,15 +202,63 @@ This is a non-substantive submission-administration block. No rollback to the ma
 
 ## 13. Stage-15 routing
 
+The canonical `research-paper-workflow` v2.2 explicitly permits a Stage-14
+`CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED` to enter Stage 15
+for the sole purpose of resolving authenticated portal-only items. Full Stage-14
+PASS is not claimed by assumption.
+
 \[
-\boxed{\textbf{STAGE 15 — BLOCKED / NOT STARTED}}
+\boxed{\textbf{STAGE 14 — CLOSED / CONDITIONAL PASS}}
 \]
 
-Stage 15 may begin only after:
+\[
+\boxed{\textbf{STAGE 15 — READY FOR AUTHENTICATED PORTAL PREFLIGHT / NOT STARTED}}
+\]
 
-1. the authenticated RIO portal is preflighted;
-2. the portal review/anonymity model and file designations are reconciled with the populated title page and anonymous main-manuscript option;
-3. the portal-generated PDF is inspected;
-4. the Stage-14 ledger is promoted from conditional to full PASS.
+Stage 15 must:
 
-No submission action has been taken.
+1. open the authenticated RIO submission record;
+2. confirm article type, review/anonymity model, and file designations;
+3. reconcile title-page/main-manuscript identification;
+4. reconcile portal declarations and attestations;
+5. inspect and approve the portal-generated PDF page by page;
+6. rerun any affected Stage-14 checks if the portal reveals a conflicting requirement.
+
+Final submission remains prohibited until those steps are complete. No submission action has been taken.
+
+
+## 14. Final closure refresh after Introduction / bibliography repositioning
+
+After the Stage-14 package was first conditionally certified, the Introduction was
+minimally repositioned within the competition--firm-boundary literature and four
+published references were added and independently rechecked. No theorem, proof,
+parameter restriction, equilibrium classification, welfare statement, or formal
+artifact changed.
+
+Verified added references:
+
+- Aghion, Griffith, and Howitt (2006), *International Journal of Economic Theory* 2(3--4), 351--363, DOI 10.1111/j.1742-7363.2006.0040.x;
+- de Bettignies (2006), *Canadian Journal of Economics* 39(3), 948--970, DOI 10.1111/j.1540-5982.2006.00377.x;
+- McGowan (2017), *The Journal of Industrial Economics* 65(4), 683--718, DOI 10.1111/joie.12157;
+- Stiebale and Vencappa (2022), *Journal of Development Economics* 155, 102790, DOI 10.1016/j.jdeveco.2021.102790.
+
+A stale Stage-13 regression assertion that still expected unresolved author metadata
+was repaired; this was a verifier-state defect, not a manuscript or theory defect.
+
+The current public RIO instructions were re-opened again on 2026-09-20. They still
+require editable source, permit LaTeX for mathematical manuscripts, prohibit
+LaTeX subfolders, require title-page author information, 150--250 abstract words,
+4--6 keywords, JEL codes, relevant declarations, author-year references, full DOI
+links where available, and a Data Availability Statement. The public page also
+states that uploaded LaTeX source is compiled into a PDF that the author approves
+during submission. The journal remains hybrid, with subscription publication
+available without APC and optional OA charged only after acceptance.
+
+Accordingly, the Stage-14 closure remains:
+
+\[
+\boxed{\textbf{CLOSED — CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+This is the strongest verdict permitted by the canonical workflow without live
+authenticated portal access and is therefore the final Stage-14 state.
