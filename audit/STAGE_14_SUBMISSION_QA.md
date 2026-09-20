@@ -3,7 +3,7 @@
 Date: **2026-09-20**  
 Target: **Review of Industrial Organization**  
 Entry state: Stage 13 repaired and recertified  
-Stage 14 status: **CONDITIONAL PASS — AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED**
+Stage 14 status: **CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED**
 
 ## 1. Live requirements refresh
 
@@ -26,7 +26,7 @@ Bounded package/format changes only:
 - known Data / Code / AI statements moved under the required `Statements and Declarations` heading;
 - figure caption label configured as `Fig. 1` without a punctuation separator;
 - terminal caption punctuation removed;
-- author-specific facts isolated in `paper/RIO_AUTHOR_INPUT_REQUIRED.md` rather than guessed;
+- author-specific facts restored from the prior approved submission record, with a populated separate title page and synchronized declarations;
 - Stage-14 automated source/package/font QA added.
 
 No theory, proof, result, literature interpretation, or journal-positioning claim changed.
@@ -48,7 +48,7 @@ It checks:
 - all citation keys and no uncited bibliography entries;
 - DOI-bearing BibTeX records include full `https://doi.org/...` URLs;
 - no manuscript placeholders;
-- explicit author-input blocker remains visible;
+- populated title-page metadata and resolved author/declaration record are present;
 - exact flat bundle contains no subdirectories or stale `sections/` / `generated/` paths;
 - flat bundle includes all manuscript sections, bibliography, figure source, and compiled PDF.
 
@@ -74,22 +74,28 @@ The formal blobs remain those reconciled at Stage 7.5A. The current manuscript s
 
 The most recent clean formal build remains the frozen formal-verification run `35439005968`; because the formal source is byte-identical, Stage 14 does not manufacture a new formal certificate by changing the formal files merely to trigger CI.
 
-## 6. Author/declaration blocker
+## 6. Author/declaration input — RESOLVED
 
-The public RIO instructions require author names, affiliations, corresponding-author email, and disclosure facts. The repository has no authoritative current values for these facts.
+The author-specific inputs were recovered from the author's previously approved and submitted correction-paper package rather than inferred from repository metadata.
 
-Therefore Stage 14 will not insert guessed:
+Resolved and integrated:
 
-- author identity/order;
-- affiliation;
-- email/ORCID;
-- funding;
-- competing interests;
-- author contributions;
-- acknowledgments;
-- prior-publication/simultaneous-submission attestation.
+- sole author: **Ryota Matsuki**;
+- affiliation: **Independent Researcher, 790-0853, Matsuyama, Ehime, Japan**;
+- corresponding author: **Ryota Matsuki**;
+- email: **ryota.matsuki@gmail.com**;
+- ORCID: **0009-0005-2329-531X**;
+- acknowledgments: **None**;
+- funding: **No external funding**;
+- competing interests: **The author declares no competing interests**;
+- CRediT: **Conceptualization, Methodology, Formal analysis, Software, Validation, Visualization, Writing – original draft, Writing – review & editing**;
+- sole-author approval;
+- originality / no conflicting prior publication / no simultaneous consideration attestation;
+- the fuller previously approved generative-AI disclosure with explicit human verification and responsibility.
 
-These inputs are listed in `paper/RIO_AUTHOR_INPUT_REQUIRED.md`.
+The populated separate title page is `paper/RIO_TITLE_PAGE.tex`. The main manuscript deliberately retains `\\author{}` until the authenticated portal establishes the review/anonymity model.
+
+The historical blocker record `paper/RIO_AUTHOR_INPUT_REQUIRED.md` is now marked **AUTHOR INPUT RESOLVED**.
 
 ## 7. Authenticated portal blocker
 
@@ -163,15 +169,11 @@ The final-head PDF from \`446ce7b...\` was render-compared against the visually 
 
 ## 11. Material blockers that prevent full Stage-14 PASS
 
-### Author/title-page/declaration input
+### Author/title-page/declaration input — resolved
 
-The current source intentionally retains \`\\author{}\`. RIO's current public instructions require the author name(s), affiliation(s), city/state/country, corresponding-author active email, and ORCID if available. Funding, competing interests, contribution information, acknowledgments where applicable, author approval, and prior-publication/simultaneous-submission facts also require authoritative human input.
+The required author and declaration facts are now populated from the prior approved submission record. They are present in the separate title page, the manuscript's Statements and Declarations, and the resolved author record.
 
-These facts are enumerated in:
-
-\`paper/RIO_AUTHOR_INPUT_REQUIRED.md\`.
-
-They are not inferred from repository metadata, account information, or memory.
+The main manuscript remains anonymous only as a reversible review-model precaution. This is no longer an author-input blocker.
 
 ### Authenticated portal preflight
 
@@ -190,10 +192,10 @@ If the portal uses double-anonymous review, the author block and the public repo
 
 ## 12. Stage-14 verdict
 
-All repository-resolvable and public-rule-resolvable Stage-14 checks are green. Full \`SUBMISSION QA PASS\` is nevertheless prohibited because material author facts and authenticated portal fields remain unresolved.
+All repository-resolvable, author-input, and public-rule-resolvable Stage-14 checks are now green. Full \`SUBMISSION QA PASS\` is nevertheless prohibited because authenticated portal fields and the portal-generated PDF remain unresolved.
 
 \[
-\boxed{\textbf{CONDITIONAL PASS — AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\boxed{\textbf{CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
 \]
 
 This is a non-substantive submission-administration block. No rollback to the mathematical stages is triggered.
@@ -206,10 +208,9 @@ This is a non-substantive submission-administration block. No rollback to the ma
 
 Stage 15 may begin only after:
 
-1. authoritative author/title-page and declaration facts are supplied;
-2. those facts are integrated without contradicting the review model;
-3. the authenticated RIO portal is preflighted;
-4. the portal-generated PDF is inspected;
-5. the Stage-14 ledger is promoted from conditional to full PASS.
+1. the authenticated RIO portal is preflighted;
+2. the portal review/anonymity model and file designations are reconciled with the populated title page and anonymous main-manuscript option;
+3. the portal-generated PDF is inspected;
+4. the Stage-14 ledger is promoted from conditional to full PASS.
 
 No submission action has been taken.
