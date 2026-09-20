@@ -897,3 +897,46 @@ Qualifier:
 \]
 
 Stage 15 is blocked and not started.
+
+
+---
+
+## 2026-09-20 — Stage-14 author metadata recovery
+
+The author-input blocker was re-opened against the author's prior approved and submitted correction-paper record rather than filled by inference.
+
+Recovered and integrated:
+
+- Ryota Matsuki, sole author;
+- Independent Researcher, 790-0853, Matsuyama, Ehime, Japan;
+- corresponding author Ryota Matsuki;
+- ryota.matsuki@gmail.com;
+- ORCID 0009-0005-2329-531X;
+- Acknowledgments: None;
+- Funding: No external funding;
+- Competing interests: none;
+- sole-author CRediT roles: Conceptualization, Methodology, Formal analysis, Software, Validation, Visualization, Writing – original draft, Writing – review & editing;
+- sole-author approval and originality / no-conflicting-publication / no-simultaneous-consideration attestation;
+- the fuller previously approved ChatGPT disclosure with explicit human rechecking and responsibility.
+
+A populated separate title page now exists at `paper/RIO_TITLE_PAGE.tex`. The canonical main manuscript remains anonymous at the author block solely to preserve compatibility with a possible double-anonymous portal configuration.
+
+### Revised blocker
+
+The author/title-page/declaration blocker is closed.
+
+The only material Stage-14 blocker is the authenticated RIO portal preflight: article type, review model, file designations, portal attestations/fees if any, and inspection/approval of the portal-generated PDF.
+
+### Revised verdict
+
+\[
+\boxed{\textbf{STAGE 14 — CONDITIONAL PASS}}
+\]
+
+Qualifier:
+
+\[
+\boxed{\textbf{AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+Stage 15 remains blocked until the portal-only checks are completed.
