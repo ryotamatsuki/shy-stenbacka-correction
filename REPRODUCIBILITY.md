@@ -40,14 +40,10 @@ Run the full Python verification suite:
 make verify-python
 ```
 
-This executes, in order:
-
-1. `code/stage01_verify.py`
-2. `code/stage04_verify.py`
-3. `code/stage04_hotelling_refinement_verify.py`
-4. `code/stage04a_independent_verify.py`
-5. `code/stage07_welfare_verify.py`
-6. `code/stage075a_scope_counterexamples.py`
+This executes the complete current Python verification chain, including the
+Stage-11 hostile-referee checks, the independent-audit repair regressions, the
+Stage-13 integration verifier, and the Stage-14 non-portal submission QA verifier.
+The `Makefile` is the canonical ordered list.
 
 The scripts are algebraic/regression evidence. They do not replace the analytic theorem certificates.
 
@@ -99,22 +95,39 @@ GitHub Actions separately run:
 The Python workflow compiles all verification scripts before running the frozen suite.
 The Lean workflow rejects `sorry`, `admit`, and project-specific `axiom` declarations before `lake build`.
 
-## 4. Manuscript build
+## 4. Manuscript and RIO submission-package build
 
-The current Stage-9 manuscript is intentionally skeletal; substantive paper construction begins at Stage 10.
-
-When a TeX environment with `latexmk` is installed:
+Canonical manuscript:
 
 ```bash
 make paper
 ```
 
-Canonical manuscript inputs:
+Flat RIO source package plus isolated clean build:
 
-- `paper/manuscript.tex`
-- `paper/references.bib`
+```bash
+make rio-bundle
+```
 
-Stage 10 may modularize the manuscript, but it may not change frozen theory without rollback under the Stage-8 change-control rules.
+Stage-14 package QA:
+
+```bash
+make submission-qa
+```
+
+`paper/rio_submission/` is the flat **source-only upload candidate**.  Build
+artifacts are written separately to `paper/rio_submission_build/` so the upload
+candidate is not contaminated with `.aux`, `.log`, `.bbl`, PDF, or other
+local build products.
+
+Canonical manuscript inputs include:
+
+- `paper/manuscript.tex`;
+- `paper/sections/*.tex`;
+- `paper/references.bib`;
+- generated Figure 1 source from `code/stage10_generate_figure.py`.
+
+The generated flat package is derivative packaging, not an independent manuscript authority.
 
 ## 5. Certification and audit artifacts
 
