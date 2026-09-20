@@ -9,11 +9,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{STAGE 4A — PASS}}
+\boxed{\textbf{STAGE 4A — PASS (AMENDED / RECERTIFIED)}}
 \]
 
 \[
-\boxed{\textbf{STAGE 6 — PASS}}
+\boxed{\textbf{STAGE 6 — PASS (RECHECKED)}}
 \]
 
 \[
@@ -25,11 +25,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{STAGE 7.5A — PASS}}
+\boxed{\textbf{STAGE 7.5A — PASS (RECONCILED)}}
 \]
 
 \[
-\boxed{\textbf{STAGE 8 — PASS / THEORY FROZEN}}
+\boxed{\textbf{STAGE 8 — PASS / THEORY FROZEN AS AMENDED}}
 \]
 
 \[
@@ -41,7 +41,7 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{STAGE 11 — PASS / ROBUSTNESS GATE CLOSED}}
+\boxed{\textbf{STAGE 11 — PASS / RECERTIFIED ROBUSTNESS GATE CLOSED}}
 \]
 
 \[
@@ -49,11 +49,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{STAGE 13 — PASS / INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
+\boxed{\textbf{STAGE 13 — PASS / REPAIRED AND RECERTIFIED}}
 \]
 
 \[
-\boxed{\textbf{NEXT: STAGE 14 — SUBMISSION QA}}
+\boxed{\textbf{STAGE 14 — NOT STARTED; NEXT ONLY WHEN AUTHORIZED}}
 \]
 
 Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited and Stage 13 integrated under the backward-compatible v2.3 workflow state at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
@@ -75,7 +75,7 @@ Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\
 
 ### Secondary Hotelling block
 
-**Literal source game:** sufficiently asymmetric costs generate multiple pure corner price continuations, so the published interior backward induction is incomplete off path.
+**Maintained literal full-coverage interpretation:** sufficiently asymmetric costs generate multiple pure corner price continuations, so the published interior backward induction is incomplete off path under the clipped full-coverage continuation.
 
 **No-loss robustness model:** under the explicit auxiliary strategy restriction
 
@@ -427,3 +427,42 @@ Green evidence:
 Both canonical and flat package builds converge to a 16-page PDF. No Stage-8/11 theory, novelty, welfare, equilibrium, or formal-verification scope was changed.
 
 Stage 14 must refresh live RIO requirements, resolve portal/author inputs, audit final source/artwork/declarations, and inspect the submission PDF page by page.
+
+
+## 2026-09-20 independent-audit repair / re-certification
+
+A later independent clean-room audit found a real certification regression in the Stage-4A/8/11/13 chain:
+
+- C7 over-quantified the feasibility of the positive-slope constrained best-response segment;
+- C8's five-case equilibrium statement survived, but its completeness proof was under-documented;
+- downstream exit was overstated as necessary for multiplicity.
+
+The defects were independently rechecked, repaired, and permanently regression-tested.
+
+Current controlling records:
+
+- \`audit/INDEPENDENT_AUDIT_REPAIR_LEDGER_2026-09-20.md\`;
+- \`audit/STAGE_04A_INDEPENDENT_AUDIT_RECERTIFICATION_2026-09-20.md\`;
+- \`audit/STAGE_075A_INDEPENDENT_AUDIT_RECONCILIATION_2026-09-20.md\`;
+- \`audit/STAGE_08_INDEPENDENT_AUDIT_AMENDMENT_2026-09-20.md\`;
+- \`audit/STAGE_06_INDEPENDENT_AUDIT_RECHECK_2026-09-20.md\`;
+- \`audit/STAGE_11_RECERTIFICATION_2026-09-20.md\`;
+- \`audit/STAGE_13_INDEPENDENT_AUDIT_REINTEGRATION_2026-09-20.md\`;
+- \`code/independent_audit_repair_verify.py\`.
+
+Key repaired theory scope:
+
+- the uncapped response has the \(+2\) exit branch for \(4/9<\rho<2/3\), but a positive-length **capped** segment survives only for sufficiently large \(\phi\);
+- the complete five-case pure Stage-I source-duopoly equilibrium correspondence is unchanged and now has an explicit analytic exclusion proof;
+- downstream exit creates the positive-slope branch but is **not necessary** for multiplicity; the all-active witness \((\rho,\delta,\phi)=(3/5,1,3/4)\) has the symmetric equilibrium plus an asymmetric pair;
+- the literal Hotelling result is explicitly tied to the maintained clipped full-coverage continuation, not to an uncovered-demand extension;
+- \(x_-\), welfare knife-edge language, and proof-globality conditions are now domain-complete.
+
+Latest integrated green evidence before closure-record-only commits:
+
+- Python verification run \`35477505973\` — success;
+- canonical + flat RIO build run \`35477505977\` — success;
+- final hyperlink-clean PDF build \`35477441567\` — success;
+- final 22-page PDF rendered and visually inspected page by page — PASS.
+
+Stage 14 has not been started.
