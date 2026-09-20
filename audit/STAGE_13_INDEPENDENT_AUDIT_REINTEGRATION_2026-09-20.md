@@ -59,23 +59,44 @@ The independent repair verifier reconstructs primitive Cournot continuations rat
 
 No formal source is changed.  C7's Lean proof remains a certificate of algebraic joins and slope positivity only; it does not certify cap feasibility.  C8 remains analytically certified.  The manuscript continues to state that the complete economic model/global equilibrium construction is not formally mechanized.
 
-## 6. Current Stage-13 status
+## 6. Final verification and visual inspection
 
-Final closure additionally requires:
+The repaired manuscript passed the final integrated checks.
 
-- latest-head Python verification: PASS;
-- latest-head canonical + flat RIO build: PASS;
-- final generated PDF page-by-page visual inspection: PASS;
-- workflow/status/provenance synchronization.
+Latest substantive verification head before closure-record-only commits:
 
-Until those checks are recorded, this document must not be read as authorizing Stage 14.
+\`0bd82c56703655f0a72784b4ef8f964520875cdc\`.
 
-Current routing:
+Green evidence:
 
-[
-oxed{	extbf{STAGE 13 REINTEGRATION — FINAL QA PENDING}}
-]
+- Python verification PR run \`35477505973\` — **success**;
+- canonical manuscript + flat RIO bundle build PR run \`35477505977\` — **success**;
+- hyperlink-clean PDF build push run \`35477441567\` — **success**.
 
-[
-oxed{	extbf{DO NOT ADVANCE TO STAGE 14}}
-]
+The generated canonical PDF was downloaded from the CI artifact, rendered to PNG at 140 dpi, and visually inspected page by page. The final manuscript is **22 pages**. No clipped text, overlaps, broken glyphs, missing figure/table content, or visible hyperlink boxes were found. The flat RIO PDF is built from the same canonical content through the Stage-13 bundle generator.
+
+The visual pass also triggered one local presentation repair: \`hyperref\` was changed to \`hidelinks\` so colored link boxes do not appear in the submission PDF.
+
+## 7. Finding disposition
+
+- F01 C7 cap quantifier — **RESOLVED**.
+- F02 C8 completeness proof — **RESOLVED**.
+- F03 exit/multiplicity mechanism — **RESOLVED**.
+- F04--F10 proof/boundary/notation/interpretation findings — **RESOLVED**.
+- F11 bibliography/style-record inconsistency — **RESOLVED**.
+- literature verification finding — **RESOLVED WITH EXPLICIT EVIDENCE LIMITATION**; no inaccessible source was silently promoted to fresh full-text verification.
+- formal-verification scope — **RECONCILED; no Lean theorem or source change required**.
+
+## 8. Final Stage-13 verdict
+
+\[
+\boxed{\textbf{REPAIRED AND RECERTIFIED}}
+\]
+
+\[
+\boxed{\textbf{STAGE 13 — PASS / INTEGRATED MANUSCRIPT RECERTIFIED}}
+\]
+
+The original Stage-13 checkpoint remains historical provenance; this repair record is the controlling closure.
+
+Stage 14 was **not started**. The next canonical stage is Stage 14 only when separately authorized.
