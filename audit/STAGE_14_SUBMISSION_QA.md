@@ -127,45 +127,63 @@ These are packaging/presentation repairs only. No mathematical statement, proof,
 
 ## 9. Final non-portal verification evidence
 
-Final technical head:
+Final manuscript-content head:
 
-\`446ce7bdf7eff1d2363a315c905c28572c91861a\`.
+`e08ea10c9ed50ba2b3be862806a41fbebf96128f`.
 
-Green runs:
+Stage-14 closure verification head:
 
-- Python verification PR run \`35478726461\` — **PASS**;
-- Python verification push run \`35478726286\` — **PASS**;
-- manuscript / flat-package / Stage-14 QA run \`35478726453\` — **PASS**.
+`d0ad03dd1c8c7da53405e6e27e3ea01c9c5fa731`.
+
+The commits between these heads repair a stale Stage-13 verifier assertion and
+update workflow/audit documentation only; they do not change manuscript,
+bibliography, figure, or bundle-generator content.
+
+Green closure-head runs:
+
+- Python verification run `35484784083` — **PASS**;
+- manuscript / flat-package / Stage-14 QA run `35484784094` — **PASS**.
 
 The manuscript workflow records:
 
 - canonical manuscript build — PASS;
 - flat RIO source build in an isolated output directory — PASS;
-- \`Stage-14 non-portal submission QA PASS\`;
+- `Stage-14 non-portal submission QA PASS`;
 - source-only flat bundle with 13 expected files, no subdirectories and no build artifacts;
 - all fonts embedded in both canonical and flat-package PDFs;
-- canonical PDF pages: **22**;
-- flat-package PDF pages: **22**.
+- canonical PDF pages: **23**;
+- flat-package PDF pages: **23**.
 
-The final-head artifact is \`stage14-review-pdfs\` from run \`35478726453\`.
+The final-content review artifact was generated from run `35484453523`;
+the closure-head run independently rebuilt the same 23-page manuscript content.
 
 ## 10. PDF visual QA
 
-The DOI-fixed final manuscript was rendered page by page and all **22 pages** were visually inspected.
+The final manuscript content, including the revised Introduction and four newly
+added literature references, was rendered page by page and all **23 pages** were
+visually inspected.
 
 Result:
 
+- first-page revised Introduction is within margins and legible;
 - no clipped text;
 - no overlapping text or equations;
 - no broken glyphs or black squares;
 - Figure 1 present and legible;
 - Table 1 present and legible;
-- no visible hyperlink boxes;
+- no visibly intrusive hyperlink boxes;
 - Statements and Declarations appear immediately before the references;
-- DOI links display as \`https://doi.org/...\`, not \`urlhttps://...\`;
-- no visually material margin overflow despite residual non-fatal TeX box warnings.
+- DOI links display as `https://doi.org/...`, not `urlhttps://...`;
+- bibliography continues correctly through the final page;
+- no visually material margin overflow.
 
-The final-head PDF from \`446ce7b...\` was render-compared against the visually inspected DOI-fixed PDF. The comparison reports **22/22 pages identical, changed_pages = 0**.
+The Introduction/literature repositioning increased the manuscript from the
+previous 22-page build to **23 pages**. The closure-head CI independently confirms
+23 pages in both canonical and flat-package PDFs, with all fonts embedded.
+
+Canonical visual-QA record:
+
+`audit/STAGE_14_PDF_VISUAL_QA.md`.
 
 ## 11. Portal-only items preventing full Stage-14 PASS
 
