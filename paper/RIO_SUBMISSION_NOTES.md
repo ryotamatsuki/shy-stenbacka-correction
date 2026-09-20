@@ -16,23 +16,36 @@ Output directory (generated; not canonical source):
 
 The bundle contains all LaTeX section files, bibliography, and generated figure input in one directory and rewrites the canonical path prefixes accordingly.
 
-## Stage-14 author/portal items still unresolved
+## Stage-14 author metadata resolved; portal items still unresolved
 
-These are deliberately **not guessed** at Stage 13:
+Author-specific facts have been restored from the author's previously approved and submitted correction-paper package rather than inferred from repository metadata.
+
+Resolved:
+
+- sole author: Ryota Matsuki;
+- affiliation: Independent Researcher, 790-0853, Matsuyama, Ehime, Japan;
+- corresponding author: Ryota Matsuki;
+- corresponding email: ryota.matsuki@gmail.com;
+- ORCID: 0009-0005-2329-531X;
+- acknowledgments: None;
+- funding: No external funding;
+- competing interests: none;
+- sole-author CRediT statement;
+- sole-author approval and originality / no-simultaneous-submission attestation;
+- full previously approved generative-AI disclosure.
+
+The populated separate title page is `paper/RIO_TITLE_PAGE.tex`. The canonical manuscript intentionally keeps `\\author{}` until the authenticated portal establishes the review/anonymity model.
+
+Still unresolved because they are portal-only:
 
 - exact article-type/category label in the authenticated portal;
 - single- vs double-anonymized review model;
 - whether a separate cover letter is mandatory;
 - required reviewer-suggestion count;
-- author name(s), affiliation(s), corresponding-author email, and ORCID;
-- funding declaration;
-- competing-interest declaration;
-- author-contribution wording;
-- exact portal placement/wording of the generative-AI disclosure;
-- portal-only file naming and source-archive behavior;
-- any submission fee not stated on the public journal pages.
-
-The canonical manuscript therefore does not invent author-specific declarations or a review-anonymity configuration. Stage 14 must resolve those items against the live portal/current instructions.
+- exact portal placement/file designation for the title page and source archive;
+- portal-only file naming and upload behavior;
+- any submission fee or attestation field not stated on the public journal pages;
+- portal-generated PDF approval.
 
 Official pages used for Stage-13 integration:
 - https://link.springer.com/journal/11151/aims-and-scope
@@ -73,7 +86,7 @@ Current implementation:
 - author-year references: implemented;
 - known Data / Code / AI disclosures: now under `Statements and Declarations`;
 - Figure 1: in-body vector TikZ/PGF, black solid/dashed encoding, journal-style `Fig. 1` caption label;
-- author-specific metadata/declarations: intentionally not guessed, tracked in `paper/RIO_AUTHOR_INPUT_REQUIRED.md`;
+- author-specific metadata/declarations: resolved from the prior approved submission record and stored in `paper/RIO_TITLE_PAGE.tex` plus the manuscript declarations;
 - authenticated portal preflight: still required.
 
 The source-only upload candidate must not include local `.aux`, `.log`, `.bbl`,
