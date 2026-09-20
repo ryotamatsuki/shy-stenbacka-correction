@@ -100,7 +100,6 @@ if args.require_bundle:
         "06_conclusion.tex",
         "07_reproducibility.tex",
         "appendix.tex",
-        "manuscript.pdf",
     }
     missing = sorted(required - set(files))
     assert not missing, f"missing flat-bundle files: {missing}"
@@ -108,10 +107,14 @@ if args.require_bundle:
         txt = p.read_text(encoding="utf-8")
         assert "sections/" not in txt, p.name
         assert "generated/" not in txt, p.name
+    forbidden_suffixes = {".aux", ".bbl", ".blg", ".fdb_latexmk", ".fls", ".log", ".out", ".pdf"}
+    assert not any(Path(name).suffix.lower() in forbidden_suffixes for name in files), files
     assert not any(
         name.lower().startswith(("audit", "readme", ".env", "secret"))
         for name in files
     ), files
+    build_pdf = PAPER / "rio_submission_build" / "manuscript.pdf"
+    assert build_pdf.is_file(), "flat-source clean build PDF missing"
     print("flat_bundle_files=" + ",".join(files))
 
 print("Stage-14 non-portal submission QA PASS")
