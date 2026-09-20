@@ -34,6 +34,12 @@ Expected source files:
 
 There must be **no subdirectories** and no local build artifacts.
 
+## Separate title-page candidate
+
+`paper/RIO_TITLE_PAGE.tex`
+
+This file contains the resolved sole-author metadata and author-specific declarations restored from the author's prior approved submission record. It is intentionally kept outside the flat anonymous-manuscript source set until the authenticated portal establishes the review/anonymity model and title-page file designation.
+
 ## Isolated build output
 
 `paper/rio_submission_build/`
@@ -53,7 +59,7 @@ This directory is for QA only and is **not** part of the source upload candidate
 - CI configuration;
 - local PDF/log/auxiliary build outputs;
 - internal README/workflow notes;
-- author-input blocker notes.
+- the internal resolved author-metadata record (`paper/RIO_AUTHOR_INPUT_REQUIRED.md`).
 
 The public RIO page requires complete editable manuscript source, not the internal research/audit repository. Code/formal provenance remains publicly linked from the manuscript's Code availability statement.
 
