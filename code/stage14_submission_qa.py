@@ -64,6 +64,7 @@ assert cite_keys <= bib_keys, sorted(cite_keys - bib_keys)
 assert bib_keys <= cite_keys, f"uncited bibliography entries: {sorted(bib_keys - cite_keys)}"
 
 # DOI entries must carry printable full DOI URLs.
+assert r"\\url{" not in BIB, "doubled LaTeX \\url escape would print 'urlhttps...'"
 for entry in re.split(r"(?=@\w+\{)", BIB):
     if "doi" in entry.lower() and re.search(r"\bdoi\s*=", entry, re.I):
         doi = re.search(r"\bdoi\s*=\s*\{([^}]+)\}", entry, re.I)
