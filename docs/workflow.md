@@ -293,7 +293,7 @@ No theory or certification rollback was triggered.
 
 ## Stage-14 contract
 
-Stage 14 must refresh current RIO journal/portal requirements, resolve all material author- and portal-specific unknowns or fail closed, rebuild the full submission package, verify artwork/source/declarations, resolve all citations and cross-references, confirm formal-verification claim fidelity, and inspect the final PDF page by page.
+Stage 14 must refresh current RIO journal requirements, resolve all material non-portal and author-specific unknowns or fail closed, rebuild the full submission package, verify artwork/source/declarations, resolve all citations and cross-references, confirm formal-verification claim fidelity, and inspect the final local PDF page by page. If authenticated portal access is the sole remaining uncertainty, Stage 14 may close only as `CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED`, with those portal-only items routed explicitly to Stage 15.
 
 Stage 14 may repair formatting/package defects but may not enlarge the frozen theory or contribution.
 
@@ -333,7 +333,7 @@ Current state:
 \boxed{\textbf{STAGE 13 — REPAIRED AND RECERTIFIED}}
 \]
 
-Stage 14 is now **CONDITIONAL PASS — AUTHOR INPUT + AUTHENTICATED PORTAL PREFLIGHT REQUIRED**. Stage 15 is blocked.
+Stage 14 is now **CLOSED — CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED**. Author input is resolved. Under the canonical v2.2 Stage-14/15 contract, Stage 15 may now begin solely to reconcile authenticated portal-only fields and inspect the portal-generated PDF before any final submit action.
 
 
 ## Stage-14 verdict
