@@ -28,11 +28,13 @@ paper: figures
 
 rio-bundle: figures
 	$(PYTHON) code/stage13_build_rio_bundle.py
-	cd paper/rio_submission && latexmk -pdf -interaction=nonstopmode -halt-on-error manuscript.tex
+	rm -rf paper/rio_submission_build
+	mkdir -p paper/rio_submission_build
+	cd paper/rio_submission && latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../rio_submission_build manuscript.tex
 
 submission-qa: rio-bundle
 	$(PYTHON) code/stage14_submission_qa.py --require-bundle
 
 clean:
 	cd paper && latexmk -C || true
-	rm -rf paper/generated paper/rio_submission
+	rm -rf paper/generated paper/rio_submission paper/rio_submission_build
