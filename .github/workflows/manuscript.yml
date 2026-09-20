@@ -55,7 +55,7 @@ jobs:
           for pdf in paper/manuscript.pdf paper/rio_submission_build/manuscript.pdf; do
             echo "Checking $pdf"
             pdffonts "$pdf"
-            if pdffonts "$pdf" | awk 'NR > 2 && $4 != "yes" { bad=1 } END { exit bad }'; then
+            if pdffonts "$pdf" | awk 'NR > 2 && $(NF-4) != "yes" { bad=1 } END { exit bad }'; then
               echo "All fonts embedded in $pdf"
             else
               echo "Unembedded font detected in $pdf"
