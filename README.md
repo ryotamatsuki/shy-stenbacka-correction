@@ -53,11 +53,11 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 \]
 
 \[
-\boxed{\textbf{STAGE 14 — CONDITIONAL PASS / AUTHOR INPUT + PORTAL PREFLIGHT REQUIRED}}
+\boxed{\textbf{STAGE 14 — CLOSED / CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
 \]
 
 \[
-\boxed{\textbf{STAGE 15 — BLOCKED / NOT STARTED}}
+\boxed{\textbf{STAGE 15 — READY FOR AUTHENTICATED PORTAL PREFLIGHT / NOT STARTED}}
 \]
 
 Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited and Stage 13 integrated under the backward-compatible v2.3 workflow state at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
