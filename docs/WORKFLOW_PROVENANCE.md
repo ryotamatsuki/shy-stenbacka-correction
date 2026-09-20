@@ -194,3 +194,51 @@ Current route:
 \rightarrow
 \textbf{Stage 14 NEXT}.
 \]
+
+
+## Independent-audit certification regression and repair — 2026-09-20
+
+After the original Stage-13 close, a clean-room audit of checkpoint
+\`5bdf156347da4267167513d96b5ef53456cd3f9a\` found three material issues:
+
+1. C7's feasible positive-slope branch was over-quantified with respect to the sourcing cap;
+2. C8's five-case equilibrium statement survived, but the internal proof/certificate did not explicitly establish branch completeness;
+3. downstream exit had been overstated as necessary for multiplicity.
+
+This invalidated the historical Stage-11 conclusion that no certification regression had occurred.
+
+The project therefore used the workflow rollback rule rather than patching only the manuscript:
+
+- Stage 4A partially reopened for C7/C8;
+- Stage 7.5A reconciled because its scope ledger had already contained the correct feasibility qualifier;
+- Stage 8 freeze amended;
+- Stage 6 absorption/novelty rechecked;
+- Stage 11 reopened and recertified;
+- Stage 13 reintegrated and rebuilt.
+
+Controlling repair artifacts:
+
+- \`audit/INDEPENDENT_AUDIT_REPAIR_LEDGER_2026-09-20.md\`;
+- \`audit/STAGE_04A_INDEPENDENT_AUDIT_RECERTIFICATION_2026-09-20.md\`;
+- \`audit/STAGE_075A_INDEPENDENT_AUDIT_RECONCILIATION_2026-09-20.md\`;
+- \`audit/STAGE_08_INDEPENDENT_AUDIT_AMENDMENT_2026-09-20.md\`;
+- \`audit/STAGE_06_INDEPENDENT_AUDIT_RECHECK_2026-09-20.md\`;
+- \`audit/STAGE_11_RECERTIFICATION_2026-09-20.md\`;
+- \`audit/STAGE_13_INDEPENDENT_AUDIT_REINTEGRATION_2026-09-20.md\`.
+
+The Lean source remained byte-identical to the prior formal certificate; the repair narrows the interpretation of C7 formal coverage rather than changing a Lean theorem.
+
+Latest substantive green evidence before documentation-only closure commits:
+
+- \`0bd82c56703655f0a72784b4ef8f964520875cdc\`;
+- Python run \`35477505973\` — success;
+- canonical + flat manuscript build run \`35477505977\` — success;
+- final 22-page canonical PDF rendered and visually inspected page by page — PASS.
+
+Current route:
+
+\[
+\text{Stage 13 PASS — repaired and recertified}
+\]
+
+Stage 14 is **not started**.
