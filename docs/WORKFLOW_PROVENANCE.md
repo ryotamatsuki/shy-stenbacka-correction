@@ -275,3 +275,11 @@ Current route:
 \[
 \boxed{\textbf{STAGE 15 BLOCKED / NOT STARTED}}
 \]
+
+## v2.5 exposition-streamlining adoption — 2026-09-24
+
+The project adopts `research-paper-workflow` v2.5 @ `46d17bc4c1036955103224a5c0358a70edd2cb90` for the exposition lifecycle only. The new refinement is backward-compatible and does not silently upgrade or reopen frozen mathematical stages.
+
+Retrofit evidence: `audit/EXPOSITION_STREAMLINING_V2_5_RETROFIT.md`.
+
+Verdict: `PASS — no manuscript content change required`. Existing Stage-14 conditional blockers remain author-input / authenticated-portal items only.
