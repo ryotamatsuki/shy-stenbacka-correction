@@ -1,0 +1,181 @@
+# Stage 11 — Known-Model-in-Disguise / Theorem-Absorption Attack
+
+> **2026-09-20 independent-audit recheck.** The original attack is preserved as provenance. The C7 cap-feasibility quantifier and the interpretation of multiplicity were re-audited after an external clean-room finding. The current conclusions below distinguish the unconstrained response (R) from the capped response (B_\phi) and do not treat downstream exit as necessary for multiplicity.
+
+Status: **PASS — NO HEADLINE CLAIM DIRECTLY ABSORBED BEYOND ALREADY-DISCLOSED COMPONENTS**
+
+Date: 2026-09-20  
+Workflow: `research-paper-workflow` v2.2  
+Manuscript authority: completed Stage-10 manuscript  
+Prior-art authority: Stage-6 verified literature/theorem-absorption ledger
+
+## 1. Attack question
+
+A hostile referee should ask whether the manuscript is merely a familiar investment or outsourcing model with relabeled variables, and whether the stated results are direct specializations of a known theorem once the model is recentered, normalized, or written in KKT/potential form.
+
+The attack is performed on the application-neutral source-duopoly object:
+
+- two symmetric players;
+- continuous actions (x,y\in[0,\phi]);
+- linear cost reduction;
+- quadratic own monitoring cost;
+- nonnegative downstream Cournot quantities;
+- continuous piecewise-quadratic reduced payoffs;
+- global strict concavity in own action under the source SOC;
+- endogenous downstream active-set changes.
+
+## 2. Standard Cournot / concave-potential reduction
+
+For fixed sourcing, the downstream quantity game is an exact concave-potential problem with Hessian
+
+[
+-b(I+\mathbf 1\mathbf 1^\top).
+]
+
+This directly absorbs the existence/uniqueness logic for the Stage-II pure quantity continuation.
+
+**Attack result:** C1 is not a novelty claim and the manuscript does not present it as one.
+
+The potential representation does not solve the induced Stage-I sourcing game because sourcing changes the downstream active set and therefore the reduced payoff branch.
+
+## 3. Rosen-type concave-game attack
+
+Under the source SOC, each player's reduced Stage-I payoff is globally strictly concave in its own action.  A hostile reduction is therefore to a standard concave game.
+
+That parent class can support existence and best-response regularity, but own concavity alone does not imply a unique Nash equilibrium.  The exact source regression
+
+[
+(\rho,\delta,\phi)=(3/5,1,2)
+]
+
+has the three pure equilibria
+
+[
+(10/17,10/17),\qquad(1,0),\qquad(0,1).
+]
+
+Hence any uniqueness theorem requiring stronger diagonal-strict-concavity / contraction conditions fails in the parameter region where the manuscript reports multiplicity.
+
+**Attack result:** standard concave-game theory does not absorb C7/C8.
+
+## 4. Strategic-substitutes / supermodular-game attack
+
+On the both-active branch,
+
+[
+A'(y)=-\frac{2}{9\rho-4}<0.
+]
+
+However, for (4/9<\rho<2/3), the global response contains
+
+[
+U(y)=\delta+2y,
+qquad U'(y)=2>0.
+]
+
+Other pieces are flat or decreasing.
+
+Thus the complete response is not globally monotone in one direction.  The game is not globally captured by a standard strategic-substitutes or strategic-complements ordering that would mechanically imply the manuscript's complete correspondence.
+
+**Attack result:** no global monotone-BR parent theorem absorbs C7/C8.
+
+The manuscript is correspondingly careful not to infer global complementarity from the positive-slope exit branch.
+
+## 5. Potential-game attack at Stage I
+
+Within smooth active-set cells, the symmetric cross derivatives of the reduced duopoly payoff make a local potential representation plausible; monopoly/inactive cells are separable.  Even if the complete piecewise game is represented as a potential game after suitable gluing, generic potential-game theory would at most reorganize equilibrium search as critical/local-maximization conditions.  It does not by itself yield:
+
+- the source-specific branch thresholds (y_M,y_A);
+- the exact (\rho=2/3) continuum;
+- the cap threshold (\phi=s);
+- the exact symmetric-plus-asymmetric-pair classification.
+
+**Attack result:** potential-game structure, where available, does not turn C7/C8 into a direct prior theorem specialization.
+
+No novelty is claimed for the potential concept itself.
+
+## 6. Symmetry-breaking theorem attack
+
+The strongest Stage-6 candidate is Amir, Garcia, and Knauff (2010).
+
+Their headline symmetry-breaking class uses diagonal nonconcavity together with strategic-substitute structure.  The source correction instead has:
+
+- global strict concavity in own sourcing;
+- a surviving symmetric equilibrium;
+- coexistence of the symmetric equilibrium with an asymmetric pair.
+
+The repaired all-active regression ((\rho,\delta,\phi)=(3/5,1,3/4)) shows
+that this multiplicity can occur even when no downstream firm ever exits on the
+feasible sourcing box.  Hence the non-absorption argument does not rely on exit:
+the own-concavity and surviving-symmetric-equilibrium features already separate
+the source correspondence from the cited headline symmetry-breaking class.
+
+Mapping the manuscript's C8 result into that headline theorem would therefore
+violate its defining hypotheses.
+
+**Attack result:** generic symmetry breaking is prior art, but C8 is not a direct specialization of that theorem.
+
+## 7. R&D / investment / exit attack
+
+Amir (2000), Amir--Halmenschlager--Jin (2011), Buehler--Schmutzler (2008), Eckert--Klumpp--Su (2017), and Lamantia--Pezzino--Tramontana (2018) absorb broad narratives involving:
+
+- cost-reducing investment before Cournot competition;
+- endogenous asymmetry;
+- rival exit;
+- multiple asymmetric investment equilibria;
+- piecewise or discontinuous best responses.
+
+Those generic narratives are not manuscript novelty claims.
+
+The source-specific distinction remains that the published Shy--Stenbacka sourcing game, with its own primitive box and monitoring technology, produces the corrected branch geometry and exact pure equilibrium correspondence once the nonnegative-output continuation is solved globally.
+
+**Attack result:** broad mechanism novelty is absorbed; the manuscript already downgrades the contribution accordingly.
+
+## 8. Outsourcing comparative-static attack
+
+König (2010) already obtains a negative relationship between competition and outsourcing in a related outsourcing specification and treats Shy--Stenbacka's positive comparative static as a contrast.
+
+Therefore the statement
+
+> competition can reduce outsourcing
+
+is not a novel theorem.
+
+The manuscript instead states the narrower source-specific correction:
+
+> differentiating the published Shy--Stenbacka expression gives the opposite sign from their equation (14) / Proposition 3.
+
+**Attack result:** generic sign novelty is absorbed; source-equation correction is not.
+
+## 9. Spatial-pricing / Hotelling attack
+
+Heterogeneous-cost spatial pricing and no-loss price restrictions are standard objects.  They absorb any attempted broad novelty claim that corner price equilibria or (p\ge MC) restrictions are new.
+
+The manuscript's literal-source claim is narrower: feasible sourcing histories in the published two-stage model can reach cost gaps for which the interior price formulas no longer give a single continuation.  The auxiliary (p_j\ge c_j) theorem is explicitly labeled as a conditional robustness model.
+
+**Attack result:** generic spatial-pricing novelty is absorbed; the exact source continuation defect and cap-aware H5-NL threshold are not presented as general innovations.
+
+## 10. Known-model-in-disguise verdict
+
+The strongest reductions absorb pieces of the paper:
+
+- downstream Cournot uniqueness;
+- generic negative competition effects in related outsourcing models;
+- generic investment asymmetry/exit/multiplicity;
+- generic spatial-price corner behavior.
+
+They do **not** turn the manuscript's surviving source-specific claims into direct corollaries of one known theorem.
+
+The defensible contribution remains exactly the Stage-6 boundary:
+
+[
+\boxed{
+\text{source-specific correction / global re-characterization of Shy--Stenbacka (2005)}
+}
+]
+
+and not a new general theory of investment or outsourcing.
+
+[
+\boxed{\textbf{KNOWN-MODEL-IN-DISGUISE ATTACK — PASS}}
+]

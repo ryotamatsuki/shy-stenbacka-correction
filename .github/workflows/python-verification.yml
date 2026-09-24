@@ -1,0 +1,45 @@
+name: Python verification
+
+concurrency:
+  group: python-verification-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - audit/full-equilibrium-correspondence
+    paths:
+      - 'code/**'
+      - 'requirements.txt'
+      - '.python-version'
+      - 'Makefile'
+      - '.github/workflows/python-verification.yml'
+  pull_request:
+    paths:
+      - 'code/**'
+      - 'requirements.txt'
+      - '.python-version'
+      - 'Makefile'
+      - '.github/workflows/python-verification.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+          cache: 'pip'
+
+      - name: Install pinned dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+
+      - name: Compile verification scripts
+        run: python -m compileall -q code
+
+      - name: Run frozen verification suite
+        run: make verify-python

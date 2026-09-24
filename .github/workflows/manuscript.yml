@@ -1,0 +1,78 @@
+name: Manuscript smoke build
+
+concurrency:
+  group: manuscript-\${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - audit/full-equilibrium-correspondence
+    paths:
+      - 'paper/**'
+      - 'code/stage10_generate_figure.py'
+      - 'code/stage13_build_rio_bundle.py'
+      - '.python-version'
+      - 'Makefile'
+      - '.github/workflows/manuscript.yml'
+  pull_request:
+    paths:
+      - 'paper/**'
+      - 'code/stage10_generate_figure.py'
+      - 'code/stage13_build_rio_bundle.py'
+      - '.python-version'
+      - 'Makefile'
+      - '.github/workflows/manuscript.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+
+      - name: Install TeX build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra texlive-pictures poppler-utils
+
+      - name: Generate figures and build canonical manuscript
+        run: make paper
+
+      - name: Build flat RIO submission bundle
+        run: make rio-bundle
+
+      - name: Run Stage 14 non-portal package QA
+        run: make submission-qa
+
+      - name: Verify PDF fonts are embedded
+        run: |
+          for pdf in paper/manuscript.pdf paper/rio_submission_build/manuscript.pdf; do
+            echo "Checking $pdf"
+            pdffonts "$pdf"
+            if pdffonts "$pdf" | awk 'NR > 2 && $(NF-4) != "yes" { bad=1 } END { exit bad }'; then
+              echo "All fonts embedded in $pdf"
+            else
+              echo "Unembedded font detected in $pdf"
+              exit 1
+            fi
+          done
+
+      - name: Record PDF page counts
+        run: |
+          pdfinfo paper/manuscript.pdf | grep '^Pages:'
+          pdfinfo paper/rio_submission_build/manuscript.pdf | grep '^Pages:'
+
+      - name: Upload Stage 14 review PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage14-review-pdfs
+          path: |
+            paper/manuscript.pdf
+            paper/rio_submission_build/manuscript.pdf
+          if-no-files-found: error

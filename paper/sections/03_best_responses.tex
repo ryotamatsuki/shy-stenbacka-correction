@@ -1,0 +1,228 @@
+\section{Global Cournot continuation and best responses}
+\label{sec:bestresponses}
+
+The central issue is globality.  The all-active Cournot formula is valid only while every implied quantity is nonnegative.  Once a sourcing deviation changes the downstream active set, the reduced Stage-I payoff changes branch.
+
+\subsection{The Stage-II continuation}
+
+For a fixed sourcing profile, let \(c_{(1)}\le\cdots\le c_{(N)}\) denote the ordered marginal costs.  For any candidate active set \(S\), define
+\begin{equation}
+p_S=\frac{a+\sum_{j\in S}c_j}{|S|+1}.
+\label{eq:pS}
+\end{equation}
+
+\begin{lemma}[Global Cournot continuation]
+\label{lem:cournot-continuation}
+For every feasible sourcing history, the Stage-II Cournot game has a unique pure quantity equilibrium.  Its active set \(S\) satisfies
+\[
+c_j<p_S\quad(j\in S),
+\qquad
+c_j\ge p_S\quad(j\notin S),
+\]
+and
+\begin{equation}
+q_j=
+\begin{cases}
+(p_S-c_j)/b,&j\in S,\\
+0,&j\notin S.
+\end{cases}
+\label{eq:active-set-q}
+\end{equation}
+\end{lemma}
+
+The result can be seen from the strictly concave exact potential
+\begin{equation}
+\Phi(q)=
+\sum_j(a-c_j)q_j
+-\frac b2Q^2
+-\frac b2\sum_jq_j^2,
+\label{eq:potential}
+\end{equation}
+whose Hessian is \(-b(I+\mathbf 1\mathbf 1^\top)\).  Thus the continuation is well defined even after sourcing deviations that invalidate the published all-active expression.
+
+\subsection{Global concavity in own sourcing}
+
+Fix rivals' sourcing choices and vary \(x=i_j\).  On a branch with \(m\) active firms including \(j\), let \(z_j=p-c_j>0\).  Then
+\[
+\frac{dz_j}{dx}=H\frac{m}{m+1}
+\]
+and
+\begin{equation}
+\Pi_j''(x)=
+2\frac{H^2m^2}{b(m+1)^2}-2<0
+\label{eq:branch-curvature}
+\end{equation}
+under \eqref{eq:source-soc}.  At own entry, \(z_j=0\), so the first derivative joins continuously.  At a rival-exit threshold, the marginal operating benefit drops because \(m/(m+1)>(m-1)/m\).  Hence the derivative has a downward jump.
+
+\begin{lemma}[Global own-payoff concavity]
+\label{lem:global-concavity}
+Under \eqref{eq:source-soc}, each firm's reduced Cournot payoff is globally strictly concave in its own sourcing action on \([0,\phi]\), for every fixed rivals' sourcing profile.
+\end{lemma}
+
+Global concavity makes the constrained first-order/KKT condition sufficient for a best response, but it does not imply uniqueness of the complete Stage-I game.
+
+\subsection{Corrected symmetric action and competition comparative static}
+
+At a symmetric profile \(i_j=s\), all firms are active and
+\[
+q(s)=\frac{D+Hs}{b(N+1)}.
+\]
+The unconstrained stationary root is
+\begin{equation}
+\bar i_C
+=
+\frac{HND}{b(N+1)^2-H^2N}.
+\label{eq:iCbar}
+\end{equation}
+The denominator is strictly positive under \eqref{eq:source-soc}.  The first-order condition here is the derivative of a unilateral sourcing deviation evaluated at a symmetric profile; Lemma~\ref{lem:global-concavity} makes that condition sufficient for the firm's constrained best response.
+
+\begin{proposition}[Corrected symmetric Cournot action]
+\label{prop:symmetric-cournot}
+Under \eqref{eq:source-soc}, the unique symmetric pure Stage-I action is
+\begin{equation}
+i_C^*
+=
+\min\left\{
+\phi,\,
+\frac{HND}{b(N+1)^2-H^2N}
+\right\}.
+\label{eq:iCstar}
+\end{equation}
+Among admissible integer market sizes that satisfy the source restrictions at the compared values, \(i_C^*\) is weakly decreasing in \(N\), and is strictly decreasing when both compared actions are off the sourcing cap.
+\end{proposition}
+
+For the continuous extension of the interior root, holding the source primitives
+\(a,H,\gamma,\phi,b\) fixed (and hence holding \(D\) fixed),
+\begin{equation}
+\frac{\partial\bar i_C}{\partial N}
+=
+-
+\frac{HDb(N^2-1)}
+{\left[b(N+1)^2-H^2N\right]^2}
+<0
+\qquad(N>1).
+\label{eq:dIdN}
+\end{equation}
+Equation \eqref{eq:dIdN} reverses the sign reported in equation (14) and Proposition 3 of \cite{ShyStenbacka2005}.  The derivative is used only as a sign calculation; the economic comparison is across admissible integer values of \(N\).  This is uniqueness of the symmetric pure action, not uniqueness of the full general-\(N\) Stage-I equilibrium set.
+
+The cap also matters for Corollary 4.  When \(\phi\) changes, so does
+\(D=a-H\phi-\gamma\phi^2/2\).  On the cap branch \(i_C^*=\phi\), the outsourced number rises one-for-one with \(\phi\).  On the interior branch, \(\bar i_C\) falls with \(\phi\), and the outsourced fraction \(i_C^*/\phi\) is weakly decreasing after the cap and interior branches are combined.  Thus outsourced numbers and outsourced fractions must be distinguished.
+
+\subsection{Source-duopoly global best response}
+
+For \(N=2\), normalize
+\begin{equation}
+\delta=\frac{D}{H}>0,
+\qquad
+\rho=\frac{b}{H^2}>\frac49 .
+\label{eq:normalized}
+\end{equation}
+Let \(y\) be rival sourcing and \(x\) own sourcing.  Define
+\begin{equation}
+U(y)=\delta+2y,\qquad
+A(y)=\frac{2(\delta-y)}{9\rho-4},\qquad
+M=\frac{\delta}{4\rho-1}.
+\label{eq:BR-components}
+\end{equation}
+The first expression is the sourcing level at which the rival is just driven to zero downstream output; \(A(y)\) is the both-active stationary point; and \(M\) is the monopoly-branch stationary point.
+
+For \(y\ge\delta\), let \(R(y)=0\).  For \(0\le y<\delta\), the unconstrained global response is
+\begin{equation}
+R(y)=
+\begin{cases}
+A(y),
+& \rho\ge 2/3,\\[3pt]
+U(y),
+& 1/2\le\rho<2/3,\quad 0\le y\le y_A,\\
+A(y),
+& 1/2\le\rho<2/3,\quad y_A\le y<\delta,\\[3pt]
+M,
+& 4/9<\rho<1/2,\quad 0\le y\le y_M,\\
+U(y),
+& 4/9<\rho<1/2,\quad y_M\le y\le y_A,\\
+A(y),
+& 4/9<\rho<1/2,\quad y_A\le y<\delta,
+\end{cases}
+\label{eq:R}
+\end{equation}
+where
+\begin{equation}
+y_A=
+\frac{\delta(2-3\rho)}{2(3\rho-1)},
+\qquad
+y_M=
+\frac{\delta(1-2\rho)}{4\rho-1}.
+\label{eq:yA-yM}
+\end{equation}
+The \(y_M\) branch is relevant only when \(\rho<1/2\).  The source-domain best response is
+\begin{equation}
+B_\phi(y)=\min\{\phi,R(y)\}.
+\label{eq:Bphi}
+\end{equation}
+
+For \(4/9<\rho<2/3\), define
+\[
+\ell=
+\begin{cases}
+0,&1/2\le\rho<2/3,\\
+y_M,&4/9<\rho<1/2,
+\end{cases}
+\qquad
+J_\phi=
+\left\{
+y\in[0,\phi]:
+\ell\le y\le y_A,\;
+\delta+2y\le\phi
+\right\}.
+\]
+On \(J_\phi\), the source-domain response equals the rival-exit response,
+\[
+B_\phi(y)=U(y)=\delta+2y.
+\]
+The set \(J_\phi\) has positive length if and only if
+\begin{equation}
+\begin{cases}
+\phi>\delta,&1/2\le\rho<2/3,\\[2pt]
+\phi>M=\delta/(4\rho-1),&4/9<\rho<1/2.
+\end{cases}
+\label{eq:exit-segment-feasibility}
+\end{equation}
+At equality the feasible exit piece degenerates to a single point.
+
+\begin{proposition}[Global failure of strategic substitutability]
+\label{prop:prop5}
+For \(4/9<\rho<2/3\), the unconstrained pure global response \(R\) contains the rival-exit piece
+\[
+R(y)=U(y)=\delta+2y
+\]
+with slope \(+2\).  After imposing the source cap, a positive-length increasing piece survives in \(B_\phi\) exactly under \eqref{eq:exit-segment-feasibility}.  Consequently the source model admits parameter values for which the pure global sourcing best response is not decreasing, so Proposition 5 of \cite{ShyStenbacka2005} is false as an unqualified global strategic-substitutes claim.
+\end{proposition}
+
+The feasibility condition matters.  For example, at
+\((\rho,\delta,\phi)=(3/5,1,1/10)\), the unconstrained response starts with
+\(R(y)=1+2y\), but \(R(y)>\phi\) throughout the feasible rival-action
+interval and hence \(B_\phi(y)\equiv\phi\).  This small-cap case does not
+restore the published global theorem; it shows why the counterexample claim must
+be existential rather than universal in the cap.  Where the exit piece survives,
+its positive slope is generated by the participation threshold: a firm choosing
+to induce rival exit must raise its own sourcing as rival sourcing increases.
+This does not imply that outsourcing is globally a strategic complement, because
+other pieces of the same response are decreasing or flat.
+
+Figure~\ref{fig:br-witness} shows the exact regression \((\rho,\delta,\phi)=(3/5,1,2)\).  In that case
+\[
+B_\phi(y)=
+\begin{cases}
+1+2y,&0\le y\le1/8,\\
+\frac{10}{7}(1-y),&1/8\le y<1,\\
+0,&1\le y\le2,
+\end{cases}
+\]
+and the best-response graphs intersect at three pure equilibria.
+
+\begin{figure}[t]
+\centering
+\input{generated/duopoly_best_response.tex}
+\caption{Global pure sourcing best responses at \(\rho=3/5\), \(\delta=1\), and \(\phi=2\).  The positive-slope segment is the rival-exit branch.  The marked intersections are \((10/17,10/17)\), \((1,0)\), and \((0,1)\).  The figure is generated by \texttt{code/stage10\_generate\_figure.py}}
+\label{fig:br-witness}
+\end{figure}

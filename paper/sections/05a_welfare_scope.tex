@@ -1,0 +1,84 @@
+\section{Welfare, robustness, and scope}
+\label{sec:welfare-scope}
+
+Welfare is useful here as a diagnostic, not as the paper's headline contribution.  Treat input-production and monitoring costs as real resource costs and product-market prices as transfers.
+
+\subsection{Cournot welfare and equilibrium selection}
+
+For any feasible output and sourcing profile,
+\begin{equation}
+W_C(q,i)
+=
+DQ-\frac b2Q^2
++
+H\sum_j i_jq_j
+-
+\sum_j i_j^2.
+\label{eq:WC}
+\end{equation}
+Let \(q^*(i)\) denote the unique Cournot continuation from Lemma~\ref{lem:cournot-continuation}, and define reduced equilibrium welfare by
+\[
+\widetilde W_C(i)\equiv W_C(q^*(i),i).
+\]
+The unrestricted first-best problem within the source reduced technology chooses every \(q_j\ge0\) and every \(i_j\in[0,\phi]\).  We do not use its global solution as a contribution claim.
+
+For comparison with the private symmetric action, a narrower benchmark lets a planner choose only a common sourcing level \(s\) while leaving symmetric Cournot output decentralized.  The resulting equilibrium welfare is
+\begin{equation}
+W_C^{eq}(s)
+=
+\frac{N(N+2)(D+Hs)^2}{2b(N+1)^2}
+-
+Ns^2.
+\label{eq:restricted-welfare}
+\end{equation}
+Its constrained maximizer is a \emph{restricted-instrument equilibrium-welfare optimum}, not a first best.
+
+More importantly, welfare is selection-dependent in the multiplicity region.  At \eqref{eq:regression},
+\begin{equation}
+\widetilde W_C\left(\frac{10}{17},\frac{10}{17}\right)
+=
+\frac{20}{17}
+<
+\frac32
+=
+\widetilde W_C(1,0)
+=
+\widetilde W_C(0,1).
+\label{eq:welfare-regression}
+\end{equation}
+At the knife edge \(\rho=2/3\), welfare also varies along the pure equilibrium set whenever \(\phi>\delta/2\), so that the set is a nondegenerate segment; at \(\phi=\delta/2\) it is a singleton.  Therefore the symmetric equilibrium alone cannot support a selection-free welfare ranking throughout the multiplicity regions of the corrected source-duopoly game.
+
+\subsection{Hotelling welfare diagnostics}
+
+Under full coverage, if A serves share \(x\),
+\begin{equation}
+W_H
+=
+n\left[
+\omega-c_Ax-c_B(1-x)
+-\frac{\tau}{2}\left(x^2+(1-x)^2\right)
+\right]
+-i_A^2-i_B^2 .
+\label{eq:WH}
+\end{equation}
+Prices cancel.  For fixed sourcing, the efficient share is
+\[
+x_W=
+\operatorname{proj}_{[0,1]}
+\left[
+\frac12+\frac{c_B-c_A}{2\tau}
+\right].
+\]
+This is a fixed-sourcing allocation optimum.  Likewise, the sourcing comparison that fixes a 50--50 allocation is a fixed-allocation benchmark.  Neither restricted object is labeled first best.
+
+\subsection{Robustness boundary}
+
+The exact equilibrium results above belong to the source functional form.  The active-set mechanism has a broader interpretation, but the positive-slope global response and multiplicity result do not extend automatically to an arbitrary convex monitoring technology.  A simple counterexample keeps \(\delta=1\), \(\rho=3/5\), and rival sourcing \(y=0\), but replaces \(M(x)=x^2\) by
+\[
+M(x)=10x^2.
+\]
+The rival-exit boundary remains \(x=1\), yet the exit-inducing action is not a global best response: the payoff at \(x=1\) is strictly below the payoff at \(x=0\).  Thus Proposition~\ref{prop:prop5} and Proposition~\ref{prop:correspondence} are source-model theorems, not generic convex-monitoring theorems.
+
+The broad institutional trade-off is nevertheless recognizable.  Production fragmentation is empirically important \cite{Fort2017}, and monitoring and contractual governance are observed in outsourced manufacturing relationships \cite{HandleyGray2013}; production-process outsourcing has also been studied empirically in manufacturing settings \cite{BardhanWhitakerMithas2006}.  These facts motivate the source model's cost-saving/monitoring trade-off, but they do not validate the exact quadratic, output-independent monitoring technology or linear cost reduction.
+
+A companion reproducibility repository verifies all reported symbolic regressions and selected proof-critical inequalities.  Selected algebraic statements are also formalized in Lean, but the complete economic game and global equilibrium construction are not formally mechanized.

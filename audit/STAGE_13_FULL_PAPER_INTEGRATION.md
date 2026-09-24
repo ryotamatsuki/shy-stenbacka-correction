@@ -1,0 +1,274 @@
+> **Independent-audit reopening notice (2026-09-20).** The historical Stage-13 PASS at checkpoint `5bdf156347da4267167513d96b5ef53456cd3f9a` was reopened after a clean-room audit found a C7 quantifier defect, a C8 proof-completeness defect, and an overstatement of the multiplicity mechanism. The historical record below is preserved. The controlling repair record is `audit/STAGE_13_INDEPENDENT_AUDIT_REINTEGRATION_2026-09-20.md`; Stage 14 is not authorized until that record is closed.
+
+# Stage 13 — Full-Paper Integration for Review of Industrial Organization
+
+Status:
+
+\[
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
+\]
+
+Date: **2026-09-20**  
+Workflow: `research-paper-workflow` current Stage-13 contract  
+Stage-8 theory authority: `2fbcf47ff18ea3650d307d90cbdeab78ddb63256`  
+Stage-11 certification checkpoint: `fe2d03f42c4ee89ef831cffc758541e30dde435a`  
+Stage-12 recertified checkpoint: `27ff6ab3a77c7d4c4335b34f44d4ed6f7c1e59c3`  
+Primary journal: **Review of Industrial Organization**
+
+## 1. Executive integration verdict
+
+The Stage-12-selected RIO route can be implemented without altering the frozen economics.
+
+The manuscript now presents one coherent correction argument:
+
+1. the published Cournot competition comparative static has the wrong sign;
+2. global nonnegative-output continuation changes the source-duopoly best-response geometry and Proposition 5;
+3. the resulting complete **pure Stage-I source-duopoly** equilibrium correspondence includes the certified symmetric, asymmetric-pair, and knife-edge regimes;
+4. the Hotelling block remains a separate literal-continuation diagnosis plus an explicitly auxiliary no-loss robustness result.
+
+No new generic outsourcing, investment, symmetry-breaking, welfare, or spatial-pricing theorem was introduced at Stage 13.
+
+## 2. Section-role audit
+
+| Section | Stage-13 role | Verdict |
+|---|---|---|
+| Abstract | states source correction, global continuation consequence, pure-duopoly scope, Hotelling qualification | PASS |
+| Introduction | question before machinery; three Cournot corrections plus secondary Hotelling diagnosis; exact scope controls | PASS |
+| Model | source primitives and strategy domains only; no journal-fit assumption added | PASS |
+| Global Cournot continuation / BR | proves rather than narrates; active-set mechanism explicit | PASS |
+| Pure equilibrium correspondence | exact five-regime pure Stage-I theorem; no mixed-strategy completeness | PASS |
+| Hotelling | literal game and auxiliary no-loss game kept distinct | PASS |
+| Welfare / robustness / scope | diagnostic only; no selection-free welfare or generic monitoring claim | PASS |
+| Related literature | organized by outsourcing mechanisms, strategic investment, and spatial pricing; current RIO make-or-buy paper integrated | PASS |
+| Conclusion | restates certified corrections and methodological lesson without new theorem/policy claim | PASS |
+| Reproducibility / AI use | data, code/formal scope, and substantive generative-AI assistance disclosed | PASS |
+
+## 3. Contribution-claim audit
+
+The manuscript remains within the Stage-6/8/11 boundary.
+
+Authorized:
+
+- correction of Shy--Stenbacka (2005) equation (14) / Proposition 3;
+- global failure of Proposition 5 as a strategic-substitutes claim;
+- complete pure Stage-I correspondence for the source duopoly;
+- literal pure-price Hotelling continuation multiplicity;
+- conditional failure region in the separate (p_j\ge c_j) no-loss game.
+
+Still prohibited:
+
+- generic negative-competition novelty;
+- generic asymmetric-investment / exit / multiplicity novelty;
+- unique general-(N) SPNE;
+- mixed-strategy completeness;
+- global strategic complementarity;
+- generic convex-monitoring C7/C8 theorem;
+- selection-free Cournot welfare;
+- refinement-selected literal Hotelling equilibrium;
+- full-model formal-verification claims.
+
+No contribution inflation was found.
+
+## 4. Related-literature integration
+
+Current RIO audience evidence was incorporated without changing novelty.
+
+Added:
+
+- Chifeng Dai (2026), “A New Strategic Element to the Make-or-Buy Decision,” *Review of Industrial Organization* 69(1), 41--61, DOI `10.1007/s11151-026-10063-3`.
+
+The manuscript states the non-overlap explicitly: Dai studies a new make-or-buy / supplier-investment mechanism, whereas the present paper corrects and globally re-characterizes the published Shy--Stenbacka model.
+
+This prevents journal positioning from becoming a false novelty claim.
+
+## 5. Abstract / introduction / conclusion alignment
+
+The Stage-13 integration verifier reports:
+
+- abstract: **162 words**;
+- keywords: **5**;
+- JEL codes: **3** (`L13; L23; L24`);
+- citations: **20**;
+- labels: **55**;
+- references: **40**.
+
+The current RIO public instructions require an abstract of 150--250 words, 4--6 keywords, and JEL classification. The manuscript satisfies these public requirements.
+
+The abstract, Introduction, Related Literature, and Conclusion all describe the paper as a **source-specific correction / global re-characterization**, not a generic outsourcing theory.
+
+## 6. Figure / Table Architecture reconciliation
+
+Stage-10 architecture remains intact.
+
+### Figure 1
+
+- retained because it shows the exact global best-response witness and the three certified pure equilibria;
+- still generated by `code/stage10_generate_figure.py`;
+- exact parameterization remains ((\rho,\delta,\phi)=(3/5,1,2));
+- no normalized or manually transcribed substitute was introduced.
+
+### Table 1
+
+- retained as the compact representation of the exact five pure-equilibrium regimes;
+- caption was strengthened to define (s=2\delta/(9\rho-2)) and state explicitly that the table concerns pure Stage-I equilibria only and does not claim mixed-strategy completeness.
+
+No additional decorative figure or welfare plot was added.
+
+## 7. RIO requirements integration
+
+Current official RIO guidance was rechecked on 2026-09-20.
+
+Implemented:
+
+- abstract 150--250 words;
+- 4--6 keywords;
+- JEL codes;
+- editable LaTeX source preserved;
+- no-subfolder **generated flat submission bundle**;
+- data-availability statement;
+- code/reproducibility statement;
+- substantive generative-AI disclosure;
+- author-year citations and complete bibliography;
+- figure/table cross-reference integrity.
+
+Public RIO guidance states that mathematical manuscripts may use LaTeX and that LaTeX submissions should not use subfolders.
+
+## 8. Flat RIO source package
+
+Canonical research source remains modular.
+
+New generator:
+
+`code/stage13_build_rio_bundle.py`
+
+New Make target:
+
+`make rio-bundle`
+
+The generator:
+
+1. regenerates/uses the verified Stage-10 figure;
+2. copies the manuscript, every section, bibliography, and generated TikZ figure source into `paper/rio_submission/`;
+3. rewrites only path prefixes needed to make the package flat;
+4. creates no nested directories;
+5. compiles that flat package separately.
+
+The generated bundle is a packaging artifact, not a second manuscript authority.
+
+CI now builds both:
+
+- canonical modular manuscript;
+- flat RIO submission bundle.
+
+## 9. Reproducibility and AI disclosure
+
+Added `paper/sections/07_reproducibility.tex`.
+
+It states:
+
+- no empirical dataset was generated or analyzed;
+- verification scripts / figure generator / theorem-audit / formal source are available in the project repository;
+- formal verification covers selected proof-critical statements, not the complete game;
+- generative AI was used for drafting, code assistance, literature-search support, and adversarial checking, with human responsibility for claims/citations/final text.
+
+This implements the currently published Springer/RIO rule that substantive LLM use should be documented while avoiding LLM authorship.
+
+## 10. Items intentionally left UNVERIFIED / author-input required
+
+Stage 13 does not guess:
+
+1. exact portal article-type label;
+2. single- vs double-anonymized review;
+3. mandatory cover-letter field;
+4. reviewer-suggestion count;
+5. author name(s), affiliations, corresponding-author email, ORCID;
+6. funding status;
+7. competing-interest status;
+8. author-contribution wording;
+9. final portal placement/wording of the AI disclosure;
+10. portal-only archive/file-name behavior;
+11. any submission fee not stated publicly;
+12. final handling of inline TikZ versus a separately uploaded EPS/vector asset.
+
+These are recorded in `paper/RIO_SUBMISSION_NOTES.md` and remain mandatory Stage-14 live checks.
+
+## 11. Mechanical integration verification
+
+New verifier:
+
+`code/stage13_integration_verify.py`
+
+It checks:
+
+- RIO abstract word range;
+- keyword/JEL counts and format;
+- Dai (2026) citation/bibliography consistency;
+- every manuscript citation key against the bibliography;
+- every `ref/eqref` against labels;
+- TODO/FIXME/TBD/PLACEHOLDER absence in manuscript source;
+- Figure 1 / Table 1 labels and references;
+- frozen scope-protection phrases;
+- preservation of explicit Stage-14 author/portal unknowns.
+
+Final successful Python verification at substantive Stage-13 head:
+
+- head: `8c3988ee7589fbcea49ef802555520af6e6784a2`;
+- PR run: `35473431040` — **PASS**.
+
+An earlier Stage-13 verifier run failed only because a lint assertion searched for wording different from the actual RIO notes; the assertion was corrected. This was not a manuscript/theory defect.
+
+An earlier flat-bundle build also found one packaging bug: the figure input path inside a copied section remained `generated/...`. The bundle generator was corrected to flatten that section-level path as well. This was a Stage-13 packaging defect, not a mathematical or manuscript-content regression.
+
+## 12. Final build evidence
+
+Substantive Stage-13 integration head:
+
+`72c2f233199bea82e67de9b93987a64fe2dae804`
+
+Green evidence:
+
+- Python verification push run `35473538351` — **PASS**;
+- Python verification PR run `35473541979` — **PASS**;
+- manuscript / flat-bundle push run `35473538163` — **PASS**.
+
+The manuscript workflow confirms both build paths:
+
+1. canonical modular manuscript — **PASS**;
+2. generated flat RIO bundle — **PASS**.
+
+Both converged to a 16-page PDF after bibliography/cross-reference passes. The flat-bundle log explicitly reports:
+
+`Stage-13 RIO flat-bundle build PASS`.
+
+Two Stage-13-only implementation defects were found and repaired before closure:
+
+- an integration-lint assertion searched for wording different from the actual RIO notes;
+- the first flat-bundle generator failed to rewrite the figure input path inside a copied section file.
+
+Neither defect changed manuscript mathematics, contribution scope, or the Stage-8/11 certification state.
+
+## 13. Remaining blockers
+
+**None for Stage 13.**
+
+Author-specific and authenticated-portal requirements listed in Section 10 remain intentionally unresolved and are part of the Stage-14 contract, not Stage-13 blockers.
+
+## 14. Canonical verdict
+
+\[
+\boxed{\textbf{INTEGRATED MANUSCRIPT READY FOR SUBMISSION QA}}
+\]
+
+No rollback is triggered.
+
+Next route:
+
+\[
+\boxed{\textbf{STAGE 14 — SUBMISSION QA}}
+\]
+
+## 15. Stage-14 contract
+
+Stage 14 must re-open the live RIO requirements, inspect the complete canonical and flat submission package, resolve or explicitly fail closed on material portal/author requirements, re-run verification/build checks, audit artwork/source-package compliance, resolve all citations/cross-references, and inspect the final PDF page by page.
+
+Stage 14 may repair formatting or packaging defects. It may not materially alter the frozen theory, contribution claims, equilibrium scope, welfare interpretation, or formal-verification scope without rollback to the earliest affected stage.

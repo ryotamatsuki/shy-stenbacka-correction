@@ -1,0 +1,91 @@
+\section{Pure equilibrium correspondence}
+\label{sec:equilibrium}
+
+The global response \eqref{eq:Bphi} changes the equilibrium set qualitatively.  Define the symmetric fixed point
+\begin{equation}
+s=\frac{2\delta}{9\rho-2}.
+\label{eq:s}
+\end{equation}
+
+\begin{proposition}[Complete pure Stage-I correspondence for the source duopoly]
+\label{prop:correspondence}
+Under the source assumptions and \(\rho>4/9\), the complete set of pure Stage-I equilibria is as follows.
+\begin{enumerate}
+\item If \(\rho>2/3\), the unique pure equilibrium is
+\[
+(\min\{\phi,s\},\,\min\{\phi,s\}).
+\]
+\item If \(\rho=2/3\) and \(\phi<\delta/2\), the unique pure equilibrium is \((\phi,\phi)\).
+\item If \(\rho=2/3\) and \(\phi\ge\delta/2\), the complete pure equilibrium set is
+\begin{equation}
+\mathcal E=
+\left\{
+(x,\delta-x):
+x\in[\max\{0,\delta-\phi\},\,\min\{\phi,\delta\}]
+\right\}.
+\label{eq:knife-continuum}
+\end{equation}
+\item If \(4/9<\rho<2/3\) and \(\phi\le s\), the unique pure equilibrium is \((\phi,\phi)\).
+\item If \(4/9<\rho<2/3\) and \(\phi>s\), there are exactly three pure equilibria:
+\begin{equation}
+(s,s),\qquad(x_H,x_L),\qquad(x_L,x_H),
+\label{eq:three-eq}
+\end{equation}
+where
+\[
+x_H=\min\{\phi,R(0)\},
+\qquad
+x_L=R(x_H).
+\]
+\end{enumerate}
+\end{proposition}
+
+Table~\ref{tab:eq-regimes} summarizes the pure Stage-I equilibrium regimes of the source duopoly.  No mixed-strategy completeness claim is made.
+
+\begin{table}[t]
+\centering
+\caption{Pure Stage-I equilibrium regimes in the source duopoly.  Here \(s=2\delta/(9\rho-2)\); the table characterizes pure Stage-I equilibria only and makes no mixed-strategy completeness claim.}
+\label{tab:eq-regimes}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Parameter region & Cap condition & Pure equilibrium set\\
+\midrule
+\(\rho>2/3\) & any \(\phi\) & unique symmetric\\
+\(\rho=2/3\) & \(\phi<\delta/2\) & unique \((\phi,\phi)\)\\
+\(\rho=2/3\) & \(\phi=\delta/2\) & singleton \((\delta/2,\delta/2)\)\\
+\(\rho=2/3\) & \(\phi>\delta/2\) & nondegenerate segment \(x+y=\delta\)\\
+\(4/9<\rho<2/3\) & \(\phi\le s\) & unique \((\phi,\phi)\)\\
+\(4/9<\rho<2/3\) & \(\phi>s\) & symmetric \(+\) asymmetric pair\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For the exact regression used in Figure~\ref{fig:br-witness},
+\begin{equation}
+(\rho,\delta,\phi)=\left(\frac35,1,2\right),
+\label{eq:regression}
+\end{equation}
+the three equilibria are
+\begin{equation}
+\left(\frac{10}{17},\frac{10}{17}\right),
+\qquad
+(1,0),
+\qquad
+(0,1).
+\label{eq:regression-eq}
+\end{equation}
+The coexistence of a symmetric equilibrium and an asymmetric pair occurs even though each player's reduced payoff is globally strictly concave in its own sourcing action.  Own-payoff concavity therefore does not imply equilibrium uniqueness for the Stage-I game.  Downstream exit generates the positive-slope branch identified in Proposition~\ref{prop:prop5}, but exit is not necessary for multiplicity: with \((\rho,\delta,\phi)=(3/5,1,3/4)\), both firms remain active after every feasible sourcing history, yet the pure equilibria are
+\[
+\left(\frac{10}{17},\frac{10}{17}\right),
+\qquad
+\left(\frac34,\frac5{14}\right),
+\qquad
+\left(\frac5{14},\frac34\right).
+\]
+In that all-active example, the steep decreasing regular best response together with the sourcing cap produces the asymmetric pair.
+
+For \(\rho>2/3\), the active branch has slope magnitude
+\[
+\left|\frac{-2}{9\rho-4}\right|<1,
+\]
+and the capped/zero pieces have slope zero, so the two-player best-response operator is a contraction.  At \(\rho=2/3\), the response becomes \(B_\phi(y)=\min\{\phi,\max\{0,\delta-y\}\}\).  Equation~\eqref{eq:knife-continuum} is a singleton at \(\phi=\delta/2\) and a nondegenerate segment only when \(\phi>\delta/2\).  For \(4/9<\rho<2/3\), the complete branch-exclusion argument for the unique ordered asymmetric pair is given in Appendix~\ref{app:proofs}; it is not inferred from a numerical intersection plot.
