@@ -20,6 +20,9 @@ on:
   pull_request:
     paths:
       - 'code/**'
+      - 'audit/**'
+      - 'docs/**'
+      - 'paper/**'
       - 'requirements.txt'
       - '.python-version'
       - 'Makefile'
