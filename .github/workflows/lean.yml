@@ -7,7 +7,14 @@ concurrency:
 on:
   push:
     branches:
-      - audit/full-equilibrium-correspondence
+      - main
+    paths:
+      - 'ShyStenbackaFormal/**'
+      - 'ShyStenbackaFormal.lean'
+      - 'lakefile.toml'
+      - 'lean-toolchain'
+      - '.github/workflows/lean.yml'
+  pull_request:
     paths:
       - 'ShyStenbackaFormal/**'
       - 'ShyStenbackaFormal.lean'
