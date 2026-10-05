@@ -66,7 +66,24 @@ Submission-state authority is `main` plus `docs/CANONICAL_SUBMISSION_CANDIDATE.m
 \boxed{\textbf{STAGE 15 — READY FOR AUTHENTICATED PORTAL PREFLIGHT / NOT STARTED}}
 \]
 
-Workflow provenance: Stages 0–11 remain governed by \`research-paper-workflow\` v2.2 at \`42574d6c5931275ccff3ef7e8b4acc188077332a\`. Stage 12 was re-audited and Stage 13 integrated under the backward-compatible v2.3 workflow state at \`9eb616bd31ea3a9ef3c29e288228ed962c44c9cf\`.
+\[
+\boxed{\textbf{v2.6 ACCOUNTABILITY RETROFIT — PASS}}
+\]
+
+\[
+\boxed{\textbf{v2.7 REVIEWER VERIFIABILITY — PASS}}
+\]
+
+Retrofit evidence:
+- `audit/AI_PROVENANCE_MATERIAL_USE_LOG.md`
+- `audit/AUTHOR_INTELLECTUAL_CONTRIBUTION_RECORD.md`
+- `audit/CONTRIBUTION_ROBUSTNESS_CERTIFICATE.md`
+- `audit/REVIEWER_VERIFIABILITY_MAP.md`
+- `audit/REVIEWER_VERIFIABILITY_REPORT.md`
+- `audit/V2_6_V2_7_RETROFIT_2026-10-05.md`
+
+
+Workflow provenance: the frozen mathematical stages retain their original certified workflow pins; later backward-compatible refinements were applied explicitly rather than silently. Stage 12 was re-audited under v2.3, exposition under v2.5, and the 2026-10-05 retrofit applies the current prospective v2.6 AI-accountability and v2.7 reviewer-verifiability requirements from `research-paper-workflow` main at `7d754032f292205264bd404116b561366836c7fd`.
 
 ## Canonical architecture
 
@@ -111,7 +128,7 @@ Canonical artifacts:
 
 Formal verification is **applicable** and must be closed before theory freeze under the Stage-7.5A gate.
 
-\`main\` remains stable.
+\`main\` is the canonical production and submission-candidate branch.
 
 
 ## Stage 6 novelty re-kill
