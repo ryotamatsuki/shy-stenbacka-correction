@@ -39,3 +39,32 @@ The remaining blocker is administrative rather than mathematical: authenticated 
 ## Canonical submission materials
 
 The submission-facing manuscript and package artifacts on `main` are governed by the Stage-14 QA records. The manuscript remains deliberately compatible with unresolved portal anonymity requirements until authenticated preflight determines the correct identification/file-designation treatment.
+
+
+## Current-workflow retrofit checkpoint — 2026-10-05
+
+The prospective v2.6 AI-accountability and v2.7 reviewer-verifiability retrofit was merged to canonical `main` through PR #4.
+
+Retrofit merge checkpoint:
+
+`b9728300b388f039e3b01a8f34c707b53499e5a2`
+
+Canonical evidence added:
+- `audit/AI_PROVENANCE_MATERIAL_USE_LOG.md`;
+- `audit/AUTHOR_INTELLECTUAL_CONTRIBUTION_RECORD.md`;
+- `audit/CONTRIBUTION_ROBUSTNESS_CERTIFICATE.md`;
+- `audit/REVIEWER_VERIFIABILITY_MAP.md`;
+- `audit/REVIEWER_VERIFIABILITY_REPORT.md`;
+- `audit/V2_6_V2_7_RETROFIT_2026-10-05.md`.
+
+At that merge checkpoint, all three canonical CI workflows passed on `main`:
+- Python verification — PASS;
+- Manuscript smoke build / RIO package QA — PASS;
+- Lean formal verification — PASS.
+
+The retrofit changes evidence, exposition, QA, and CI governance only. It does not change the Stage-8 scientific theory freeze.
+
+Current submission state remains:
+- Stage 14: **CLOSED — CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED**;
+- Stage 15: **READY FOR AUTHENTICATED PORTAL PREFLIGHT / NOT STARTED**;
+- final Stage-15 AUTHOR sign-off must be tied to the exact frozen commit/PDF/package.
