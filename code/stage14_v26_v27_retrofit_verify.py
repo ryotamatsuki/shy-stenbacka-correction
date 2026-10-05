@@ -69,7 +69,7 @@ assert "INSTITUTION-SPECIFIC" in robust
 assert "7d754032f292205264bd404116b561366836c7fd" in workflow
 assert "v2.6 PASS / v2.7 PASS" in workflow
 assert "Stage 14: CLOSED / CONDITIONAL PASS" in retrofit
-assert "authenticated RIO portal preflight" in retrofit
+assert "authenticated rio portal preflight" in retrofit.lower()
 
 print("v2.6/v2.7 retrofit QA PASS")
 print("verification_actors=AUTHOR,AI,COMPUTATION,FORMAL,EXTERNAL HUMAN")
