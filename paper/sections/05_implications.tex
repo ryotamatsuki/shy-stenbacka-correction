@@ -1,0 +1,111 @@
+\section{Hotelling continuation and implications for the published results}
+\label{sec:hotelling}
+
+The Hotelling part of the paper raises a different issue: the published backward induction uses the interior market-share price formulas after sourcing histories for which those formulas need not apply.
+
+\subsection{Literal full-coverage price game}
+
+Let
+\[
+d=c_B-c_A.
+\]
+Using the clipped share \eqref{eq:clipped-share}, the pure-price equilibrium correspondence is global.
+
+\begin{proposition}[Literal pure-price continuation]
+\label{prop:literal-hotelling}
+Under the literal full-coverage interpretation described in Section~\ref{sec:model}:
+\begin{enumerate}
+\item if \(|d|<3\tau\), the unique pure price equilibrium is interior,
+\[
+p_A^*=\frac{2c_A+c_B+3\tau}{3},
+\qquad
+p_B^*=\frac{c_A+2c_B+3\tau}{3};
+\]
+\item if \(|d|=3\tau\), the pure equilibrium is the corresponding unique boundary equilibrium;
+\item if \(d>3\tau\), the pure equilibrium set is
+\begin{equation}
+p_B=z,\qquad p_A=z-\tau,
+\qquad
+z\in[c_A+3\tau,c_B],
+\label{eq:literal-corner}
+\end{equation}
+with the mirror image when \(d<-3\tau\).
+\end{enumerate}
+\end{proposition}
+
+In \eqref{eq:literal-corner}, the high-cost firm serves zero consumers and earns zero operating profit throughout the continuum, but its payoff-equivalent price changes the low-cost firm's equilibrium price and profit.  The indifference is therefore strategically material.  Once a sourcing history produces \(|d|>3\tau\), the literal Stage-I continuation payoff is set-valued absent an equilibrium-selection rule.  This is the source-compatible full-coverage diagnosis: the published interior backward induction does not define a global continuation.
+
+\subsection{What weak dominance does and does not establish}
+
+For any \(p<c\), charging \(p=c\) yields zero profit for every rival price and weakly dominates the loss-making action.  However, for every fixed \(\varepsilon>0\), \(p=c+\varepsilon\) also weakly dominates \(p=c\): profits are nonnegative for all rival prices and strictly positive whenever the firm receives positive demand.  Consequently, restricting attention to \(p\ge c\) cannot be described as elimination of all weakly dominated strategies, nor do we invoke trembling-hand perfection, proper equilibrium, or admissibility.
+
+\subsection{Auxiliary no-loss robustness game}
+
+To ask whether the published symmetric sourcing candidate survives once loss-making prices are ruled out by assumption, consider the auxiliary strategy restriction
+\begin{equation}
+p_j\ge c_j.
+\label{eq:no-loss}
+\end{equation}
+This is a separate model.  In pure prices, the continuation becomes unique for every cost gap.  When \(d>3\tau\),
+\[
+p_B=c_B,\qquad p_A=c_B-\tau,
+\]
+with the mirror image for \(d<-3\tau\).
+
+Let \(x=i_A\), \(y=i_B\), and \(k=3\tau/H\).  A's reduced pure-continuation payoff in the no-loss game is
+\begin{equation}
+V_y^{NL}(x)=
+\begin{cases}
+-x^2,
+&x-y\le-k,\\[4pt]
+\dfrac{n[3\tau+H(x-y)]^2}{18\tau}-x^2,
+&|x-y|\le k,\\[9pt]
+n[H(x-y)-\tau]-x^2,
+&x-y\ge k.
+\end{cases}
+\label{eq:no-loss-payoff}
+\end{equation}
+Under the source condition \(H^2n<18\tau\), each branch is strictly concave.
+
+The source's symmetric interior candidate is
+\begin{equation}
+i_0=\frac{Hn}{6}.
+\label{eq:i0}
+\end{equation}
+When \(H^2n\ge 27\tau/2\), define the real lower root
+\begin{equation}
+x_-=
+\frac{Hn}{2}
+-
+\frac{\sqrt{2n(2H^2n-27\tau)}}{6}.
+\label{eq:xminus}
+\end{equation}
+
+\begin{proposition}[Conditional no-loss failure region]
+\label{prop:no-loss}
+In the auxiliary pure-strategy game with \eqref{eq:no-loss}, suppose \(\phi>i_0\) and maintain the strict source condition \(H^2n<18\tau\).  If \(H^2n\le27\tau/2\), the symmetric candidate \((i_0,i_0)\) has no strictly profitable pure deviation.  If
+\[
+\frac{27}{2}\tau<H^2n<18\tau,
+\]
+the candidate fails to be a Stage-I equilibrium if and only if
+\begin{equation}
+\phi>x_-.
+\label{eq:no-loss-region}
+\end{equation}
+At \(\phi=x_-\), the best nonlocal deviation ties.  At \(H^2n=27\tau/2\), the vertex gain is zero, so there is no strict failure.
+\end{proposition}
+
+For the exact admissible values
+\[
+H=n=1,\qquad \tau=\frac1{15},\qquad \phi=1,
+\]
+a deviation from \(i_0=1/6\) to \(1/2\) increases payoff by exactly
+\begin{equation}
+\frac1{90}.
+\label{eq:one-ninety}
+\end{equation}
+This is a counterexample within the auxiliary no-loss game, not a selection-free counterexample to every subgame-perfect equilibrium of the literal source game.
+
+\subsection{Published-result map}
+
+The correction can be summarized without changing the source primitives.  Proposition 3 reverses sign once equation (14) is differentiated correctly and the sourcing cap is retained.  Corollary 4's interior signs survive, but the cap turns some strict comparative statics into weak or branch-dependent statements.  Proposition 5 is valid only as a regular all-active comparative static, not as a global strategic-substitutes theorem.  Proposition 6 is not globally established in the literal Hotelling game because off-path price continuations can be multiple; under the separate no-loss restriction, the symmetric sourcing candidate is false on the exact region \eqref{eq:no-loss-region}.

@@ -1,0 +1,584 @@
+> **Independent-audit freeze amendment (2026-09-20).** This historical freeze is controlling except where superseded by `audit/STAGE_08_THEORY_FREEZE_AMENDMENT_2026-09-20.md`, chiefly the C7 cap quantifier and the interpretation of C8 multiplicity.
+
+# Stage 8 — Canonical Theory Freeze
+
+> **2026-09-20 independent-audit freeze amendment.** The original Stage-8 checkpoint remains historical provenance. C7's cap quantifier, the C8 proof-completeness evidence, the multiplicity mechanism interpretation, Hotelling price-domain convention, no-loss root domain, and knife-edge welfare wording are superseded by this amended freeze and `audit/STAGE_08_INDEPENDENT_AUDIT_AMENDMENT_2026-09-20.md`.
+
+Status:
+
+\[
+\boxed{\textbf{CANONICAL STAGE 8 — PASS}}
+\]
+
+Freeze date: 2026-09-19  
+Workflow: `research-paper-workflow` v2.2  
+Pinned workflow commit: `42574d6c5931275ccff3ef7e8b4acc188077332a`  
+Entry checkpoint: `ff6e5b2b555b0e5660a95ad9223fb66b591c4398`
+
+## 1. Entry hard gate
+
+Stage 8 is entered only after all three pre-freeze conditions are green.
+
+- Stage 4A: **GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS**
+- Stage 7.5A: **GO — GENERALITY / QUANTIFIER CERTIFICATION PASS**
+- Formal Verification Gate: **FORMAL VERIFICATION PASS**
+
+The Stage-7.5A formal certificate records Lean 4.19.0, pinned mathlib commit
+`c44e0c8ee63ca166450922a373c7409c5d26b00b`, green GitHub Actions run
+`35439005968`, and no `sorry`, `admit`, project-specific `axiom`, or
+`sorryAx` in the certified theorem output.
+
+No theorem, equilibrium concept, robustness result, welfare claim, or literature
+positioning is widened at Stage 8.
+
+## 2. Frozen research question and contribution
+
+The paper asks whether the equilibrium and comparative-static claims reported in
+Shy and Stenbacka (2005) remain valid once the published strategy constraints,
+nonnegative Cournot quantities, global unilateral deviations, and off-path
+Hotelling continuation games are handled globally.
+
+The frozen contribution is a **source-specific correction and global
+re-characterization**, not a new general outsourcing theory.
+
+The compact contribution package is:
+
+1. equation (14) / Proposition 3 has the wrong competition comparative-static
+   sign on the corrected symmetric Cournot branch;
+2. the published all-active Cournot continuation is not globally valid after
+   sufficiently asymmetric sourcing histories;
+3. Proposition 5 is false as a global strategic-substitutes claim because the
+   exact source-duopoly pure global best response can contain a positive-slope
+   rival-exit branch;
+4. the complete **pure Stage-I** source-duopoly equilibrium correspondence can
+   contain asymmetric equilibria and, at the knife edge, a continuum;
+5. the maintained literal full-coverage Hotelling interpretation has off-path pure-price multiplicity for
+   sufficiently asymmetric costs;
+6. under the explicit auxiliary no-loss restriction `p_j >= c_j`, the pure
+   price continuation becomes unique and the published symmetric Hotelling
+   candidate fails on an exact cap-aware parameter region.
+
+Broad claims of generic negative competition effects, generic symmetry breaking,
+generic investment multiplicity, or generic no-loss-price novelty are prohibited
+by the Stage-6 theorem-absorption audit.
+
+## 3. Frozen source model
+
+### 3.1 Primitive sourcing technology
+
+For each firm `j`,
+
+\[
+0\le i_j\le \phi,
+\]
+
+and final-good marginal cost is
+
+\[
+c_j=C_0-Hi_j,
+\qquad
+C_0=H\phi+\frac{\gamma\phi^2}{2}.
+\]
+
+Monitoring cost is exactly
+
+\[
+M(i_j)=i_j^2.
+\]
+
+No free monitoring-cost coefficient is introduced into the source model.
+
+Define
+
+\[
+D=a-C_0>0.
+\]
+
+### 3.2 Cournot timing and continuation
+
+1. firms choose sourcing `i_j in [0,phi]`;
+2. induced marginal costs are realized;
+3. firms choose nonnegative Cournot quantities.
+
+Inverse demand is
+
+\[
+p=a-bQ.
+\]
+
+The equilibrium concept retained for Stage II is the unique **pure quantity**
+Nash continuation over `q_j >= 0` for every feasible sourcing history.
+
+### 3.3 Hotelling timing and continuation
+
+1. firms choose sourcing `(i_A,i_B)`;
+2. induced marginal costs are realized;
+3. firms choose prices under the maintained full-coverage interpretation of the source Hotelling market with fixed endpoints and transport parameter `tau>0`.
+
+The source does not separately impose `p_j>=c_j`; the global audit uses the clipped full-coverage demand implied by consumer choice and pure prices on the unrestricted real line. Restricting only to nonnegative prices does not change the certified pure equilibrium set because source costs/equilibrium prices are positive. No result is claimed for an uncovered-demand model with finite reservation utility.
+
+The literal full-coverage result concerns **pure-price** equilibria. The auxiliary
+no-loss result changes the price strategy domain by imposing
+
+\[
+p_j\ge c_j.
+\]
+
+That restriction is not attributed to the source paper and is not described as
+a refinement generated by iterated deletion, trembling-hand perfection, proper
+equilibrium, or admissibility.
+
+## 4. Frozen Cournot theorem block
+
+### C1 — Stage-II continuation
+
+For every feasible source sourcing history, the downstream nonnegative-quantity
+Cournot game has a unique **pure quantity vector** satisfying the Nash/KKT
+conditions.
+
+No mixed-equilibrium uniqueness claim is made.
+
+### C2 — global own-payoff concavity
+
+For integer `N>=2`, under the source SOC
+
+\[
+b>\left(\frac{HN}{N+1}\right)^2,
+\]
+
+each firm's reduced sourcing payoff is globally strictly concave in its own
+`i_j in [0,phi]` for every fixed rival sourcing profile, including across
+active-set transitions.
+
+This does not imply uniqueness of the complete Stage-I game.
+
+### C3 — symmetric pure Stage-I action
+
+The unique symmetric pure Stage-I action is
+
+\[
+i_C^*
+=
+\min\left\{
+\phi,
+\frac{HND}{b(N+1)^2-H^2N}
+\right\}.
+\]
+
+This is not a claim of unique general-`N` SPNE, unique asymmetric equilibrium,
+or mixed-strategy completeness.
+
+### C4 — corrected competition comparative static
+
+The continuous extension of the interior root is decreasing for `N>1`.
+The economic claim is frozen more narrowly:
+
+> among admissible integer market sizes satisfying the source restrictions at
+> the compared values, the corrected symmetric outsourcing action is weakly
+> decreasing in the number of firms and strictly decreasing when the compared
+> actions are both off the sourcing cap.
+
+No comparison to inadmissible market sizes is licensed.
+
+### C5 — cap comparative statics
+
+The effect of `phi` is branch dependent. The outsourced number rises one-for-one
+on the full-outsourcing cap branch and falls on the interior branch; the
+outsourced fraction is weakly decreasing. No unqualified monotone statement is
+licensed.
+
+## 5. Frozen source-duopoly pure correspondence
+
+Normalize
+
+\[
+\delta=D/H>0,
+\qquad
+\rho=b/H^2>4/9.
+\]
+
+The exact pure global best response uses the active branch
+
+\[
+A(y)=\frac{2(\delta-y)}{9\rho-4},
+\]
+
+the rival-exit threshold
+
+\[
+U(y)=\delta+2y,
+\]
+
+and the monopoly stationary point
+
+\[
+M=\frac{\delta}{4\rho-1},
+\]
+
+with sourcing cap applied after the unconstrained global maximizer is identified.
+
+The symmetric fixed point is
+
+\[
+s=\frac{2\delta}{9\rho-2}.
+\]
+
+### C7 — Proposition 5 correction
+
+For
+
+\[
+4/9<\rho<2/3,
+\]
+
+the **unconstrained** pure global response (R) contains the rival-exit piece
+(U(y)=\delta+2y), with slope (+2).  After applying the source cap
+(B_\phi(y)=\min\{\phi,R(y)\}), a positive-length increasing piece survives
+if and only if
+
+\[
+\phi>\delta
+\quad\text{for }\frac12\le\rho<\frac23,
+\]
+
+or
+
+\[
+\phi>M=\frac{\delta}{4\rho-1}
+\quad\text{for }\frac49<\rho<\frac12.
+\]
+
+At equality the feasible exit piece degenerates to a point.  Small caps can erase
+the increasing segment entirely.  The frozen conclusion is therefore
+existential rather than universal in the cap:
+
+> admissible source parameters exist for which the constrained pure global best
+> response is increasing on a nondegenerate interval, so Proposition 5 is false
+> as an unqualified global strategic-substitutes claim.
+
+The paper does not claim that outsourcing is globally a strategic complement.
+
+### C8 — complete pure Stage-I equilibrium correspondence
+
+- If `rho>2/3`, there is exactly one **pure Stage-I** equilibrium, symmetric:
+  \[
+  (\min\{\phi,s\},\min\{\phi,s\}).
+  \]
+
+- If `rho=2/3` and `phi<delta/2`, the unique pure equilibrium is
+  \[
+  (\phi,\phi).
+  \]
+
+- If `rho=2/3` and `phi>=delta/2`, the complete pure equilibrium set is
+  \[
+  x+y=\delta,
+  \qquad
+  0\le x,y\le\phi.
+  \]
+
+- If `4/9<rho<2/3` and `phi<=s`, the unique pure equilibrium is
+  \[
+  (\phi,\phi).
+  \]
+
+- If `4/9<rho<2/3` and `phi>s`, there are exactly three pure Stage-I
+  equilibria:
+  \[
+  (s,s),\qquad(x_H,x_L),\qquad(x_L,x_H),
+  \]
+  where
+  \[
+  x_H=\min\{\phi,R(0)\},
+  \qquad
+  x_L=R(x_H),
+  \]
+  for the certified unconstrained global-response map `R`.
+
+No mixed Stage-I equilibrium correspondence is claimed.
+
+The exact regression
+
+\[
+(\rho,\delta,\phi)=(3/5,1,2)
+\]
+
+has pure equilibria
+
+\[
+(10/17,10/17),\qquad(1,0),\qquad(0,1).
+\]
+
+Multiplicity does **not** require downstream exit.  At
+((\rho,\delta,\phi)=(3/5,1,3/4)), both firms remain active after every
+feasible sourcing history, yet the pure equilibria are
+((10/17,10/17)), ((3/4,5/14)), and ((5/14,3/4)).  Exit is the
+mechanism behind the positive-slope branch, not a necessary mechanism for
+multiplicity.
+
+## 6. Frozen Hotelling theorem block
+
+Let
+
+\[
+d=c_B-c_A.
+\]
+
+### H1 — literal full-coverage pure-price continuation
+
+- `|d|<3tau`: unique pure interior price equilibrium;
+- `|d|=3tau`: unique pure boundary price equilibrium;
+- `|d|>3tau`: a continuum of pure corner price equilibria.
+
+For `d>3tau`, the corner family is
+
+\[
+p_B=z,
+\qquad
+p_A=z-\tau,
+\qquad
+z\in[c_A+3\tau,c_B],
+\]
+
+with the mirrored case when B is the low-cost firm.
+
+Therefore the Stage-I reduced payoff under this maintained full-coverage interpretation is selection-dependent off path.
+No mixed-price characterization is frozen.
+
+### H2/H2b — dominance facts
+
+Every `p<c` is weakly dominated by `p=c`, but for every fixed
+`epsilon>0`, `p=c+epsilon` weakly dominates `p=c`.
+
+Hence the project does not use the label “undominated-price refinement.”
+
+### H3–H6-NL — explicit no-loss auxiliary game
+
+Under
+
+\[
+p_j\ge c_j,
+\]
+
+the pure price continuation is unique for every cost gap.
+
+Let
+
+\[
+i_0=\frac{Hn}{6}.
+\]
+
+The real lower root
+
+\[
+x_-=
+\frac{Hn}{2}
+-
+\frac{\sqrt{2n(2H^2n-27\tau)}}{6}
+\]
+
+is used only when (H^2n\ge27\tau/2). For `phi>i_0`, no strict nonlocal failure occurs when (H^2n\le27\tau/2); in the interior root region the published symmetric candidate fails exactly when
+
+\[
+\frac{27}{2}\tau<H^2n<18\tau
+\]
+
+and
+
+\[
+\phi>x_-.
+\]
+
+At `phi=x_-`, the nonlocal deviation ties rather than strictly improves.
+
+The exact regression
+
+\[
+H=n=1,\qquad\tau=1/15,\qquad\phi=1
+\]
+
+gives a deviation from `1/6` to `1/2` with exact profit gain
+
+\[
+1/90.
+\]
+
+This is a conditional robustness theorem for the auxiliary no-loss game, not a
+selection-free theorem about every literal-source SPNE.
+
+## 7. Frozen welfare and benchmark labels
+
+Exact Cournot welfare is
+
+\[
+W_C(q,i)
+=
+DQ-\frac b2Q^2
++
+H\sum_j i_jq_j
+-
+\sum_j i_j^2.
+\]
+
+Exact Hotelling welfare under full coverage is
+
+\[
+W_H
+=
+n\left[
+\omega
+-c_Ax-c_B(1-x)
+-\frac{\tau}{2}(x^2+(1-x)^2)
+\right]
+-i_A^2-i_B^2.
+\]
+
+The benchmark labels are frozen as follows.
+
+- FB-C: **first best within source reduced technology**.
+- C-R: **restricted-instrument equilibrium-welfare optimum**.
+- FB-H: **first best within source full-coverage technology**.
+- fixed-sourcing Hotelling allocation problem: **fixed-sourcing allocation optimum**.
+- 50–50 Hotelling sourcing comparison: **fixed-allocation sourcing benchmark**.
+
+No restricted benchmark may be called “first best.”
+
+Cournot equilibrium welfare is selection-dependent where Stage-I multiplicity is
+present. At the exact three-equilibrium regression,
+
+\[
+W(10/17,10/17)=20/17
+<
+3/2=W(1,0)=W(0,1).
+\]
+
+At `rho=2/3`, the equilibrium set is a singleton when `phi=delta/2` and a nondegenerate segment only when `phi>delta/2`; welfare varies along the latter. No selection-free welfare ranking is authorized in the multiplicity region.
+
+## 8. Frozen generality and institutional scope
+
+The exact C1–C8 and H1 results are source-model / baseline-functional-form
+theorems.
+
+H3-NL–H6-NL are conditional auxiliary-model results.
+
+The Stage-7.5A counterexample replacing the source monitoring cost by
+`M(x)=10x^2` blocks promotion of the positive-slope global-BR and multiplicity
+results to arbitrary convex monitoring technologies.
+
+The institutional interpretation is limited to the broad plausibility of
+production fragmentation and monitoring/auditing of outsourced production.
+The project does not claim empirical validation of the exact quadratic,
+output-independent monitoring technology.
+
+## 9. Frozen novelty boundary
+
+Stage 6 remains controlling.
+
+The manuscript may present a new correction/re-characterization of the published
+Shy–Stenbacka model. It may not claim discovery of a new general mechanism for:
+
+- negative competition effects on outsourcing;
+- endogenous asymmetry;
+- rival exit after cost-reducing investment;
+- piecewise/discontinuous investment best responses;
+- multiple asymmetric investment equilibria;
+- no-loss Hotelling pricing.
+
+The source-specific package survives the recorded theorem-absorption tests.
+
+## 10. Frozen proof and formal-verification status
+
+Analytic/adversarial status:
+
+- C1–C8: **PROVED** within the exact scopes above;
+- H1/H2/H2b: **PROVED** within pure-price/source scopes above;
+- H3-NL–H6-NL: **PROVED** within the explicit auxiliary no-loss pure-strategy scope;
+- welfare identities and stated benchmark formulas: **PROVED**;
+- broad general functional-form extensions: **REJECTED / NOT CLAIMED**;
+- mixed-strategy completeness: **NOT CLAIMED**.
+
+Formal coverage is **PROOF-CRITICAL CORE**, not full-model mechanization.
+
+The Lean mapping in
+`audit/stage075a_formal_statement_fidelity.md`
+covers selected algebra/order cores for C4, C7, H2/H2b, H5/H6, and the exact
+welfare-selection inequality. Global equilibrium construction and the complete
+economic game remain certified analytically by Stage 4A.
+
+## 11. Explicit claims not made
+
+The frozen manuscript must not claim:
+
+- a unique general-`N` SPNE;
+- absence of asymmetric general-`N` Stage-I equilibria;
+- any complete mixed-strategy equilibrium correspondence;
+- global strategic complementarity;
+- a generic convex-monitoring theorem for C7/C8;
+- a generic nonlinear-demand theorem;
+- a refinement-selected Hotelling equilibrium in the literal source game;
+- trembling-hand perfection, proper equilibrium, or admissibility;
+- selection-free welfare in Cournot multiplicity regions;
+- unrestricted first-best status for C-R or fixed-allocation Hotelling benchmarks;
+- formal verification of the complete Shy–Stenbacka economic model.
+
+## 12. Canonical evidence retained by the freeze
+
+Primary certification records:
+
+- `audit/STAGE_04A_MATH_RED_TEAM.md`
+- `audit/stage04a_theorem_certificates.md`
+- `audit/stage04a_cleanroom_derivation.md`
+- `audit/STAGE_06_NOVELTY_REKILL.md`
+- `audit/stage06_theorem_absorption_map.md`
+- `audit/STAGE_07_WELFARE_GENERALITY.md`
+- `audit/stage07_welfare_benchmarks.md`
+- `audit/STAGE_075_FREEZE_DECISION.md`
+- `audit/STAGE_075A_GENERALITY_QUANTIFIER_RED_TEAM.md`
+- `audit/stage075a_claim_scope_ledger.md`
+- `audit/stage075a_function_class_counterexamples.md`
+- `audit/stage075a_formal_statement_fidelity.md`
+- `audit/stage075a_formal_verification_certificate.md`
+- `ShyStenbackaFormal/Stage075A.lean`
+
+Counterexamples and exact regressions remain permanent provenance and may not be
+deleted merely because they narrow the manuscript.
+
+## 13. Theory-change control after freeze
+
+Stage 8 creates the canonical theory boundary for manuscript construction.
+
+Any post-freeze change to the model, strategy domain, parameter restrictions,
+equilibrium concept, theorem quantifier, benchmark definition, or formal theorem
+statement requires explicit rollback to the earliest affected gate.
+
+In particular:
+
+- correctness/global-equilibrium changes normally reopen Stage 4/4A;
+- novelty changes reopen Stage 6;
+- welfare/benchmark changes reopen Stage 7;
+- quantifier/generality changes reopen Stage 7.5A;
+- material changes to encoded formal statements or hypotheses stale the formal
+  certificate and reopen the Formal Verification Gate.
+
+Prose may simplify exposition only if it remains logically equivalent to this
+freeze.
+
+## 14. Stage-8 verdict and routing
+
+No material field is `NOT TESTED` within the frozen claim set.
+
+No new extension is required for the paper to proceed.
+
+\[
+\boxed{\textbf{CANONICAL STAGE 8 — PASS}}
+\]
+
+\[
+\boxed{\textbf{THEORY FROZEN}}
+\]
+
+Next route:
+
+\[
+\boxed{\textbf{STAGE 9 — REPOSITORY / REPRODUCIBILITY SETUP}}
+\]

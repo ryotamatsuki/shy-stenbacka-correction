@@ -1,0 +1,48 @@
+name: Lean formal verification
+
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches:
+      - audit/full-equilibrium-correspondence
+    paths:
+      - 'ShyStenbackaFormal/**'
+      - 'ShyStenbackaFormal.lean'
+      - 'lakefile.toml'
+      - 'lean-toolchain'
+      - '.github/workflows/lean.yml'
+jobs:
+  formal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reject proof escapes
+        run: |
+          if grep -R -n -E '(^|[^[:alnum:]_])(sorry|admit)([^[:alnum:]_]|$)' ShyStenbackaFormal ShyStenbackaFormal.lean; then
+            echo "Proof placeholder found."
+            exit 1
+          fi
+          if grep -R -n -E '^[[:space:]]*axiom[[:space:]]' ShyStenbackaFormal ShyStenbackaFormal.lean; then
+            echo "Project-specific axiom found."
+            exit 1
+          fi
+
+      - name: Install elan
+        run: |
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Resolve pinned toolchain and mathlib
+        run: |
+          elan toolchain install "$(cat lean-toolchain)"
+          lean --version
+          lake --version
+          lake update
+          lake exe cache get
+
+      - name: Build formal certificate
+        run: lake build
