@@ -16,6 +16,7 @@ verify-python:
 	$(PYTHON) code/independent_audit_repair_verify.py
 	$(PYTHON) code/stage13_integration_verify.py
 	$(PYTHON) code/stage14_submission_qa.py
+	$(PYTHON) code/stage14_v26_v27_retrofit_verify.py
 
 verify-formal:
 	lake build
@@ -34,6 +35,7 @@ rio-bundle: figures
 
 submission-qa: rio-bundle
 	$(PYTHON) code/stage14_submission_qa.py --require-bundle
+	$(PYTHON) code/stage14_v26_v27_retrofit_verify.py
 
 clean:
 	cd paper && latexmk -C || true

@@ -280,3 +280,56 @@ Accordingly, the Stage-14 closure remains:
 
 This is the strongest verdict permitted by the canonical workflow without live
 authenticated portal access and is therefore the final Stage-14 state.
+
+
+## 15. Current-workflow retrofit refresh — 2026-10-05
+
+The project was re-audited against the current backward-compatible refinements in `research-paper-workflow` main.
+
+### Prospective v2.6 — AI provenance / human accountability
+
+PASS.
+
+New evidence:
+- `audit/AI_PROVENANCE_MATERIAL_USE_LOG.md`;
+- `audit/AUTHOR_INTELLECTUAL_CONTRIBUTION_RECORD.md`.
+
+The material-use record distinguishes AUTHOR, AI, COMPUTATION, FORMAL, and EXTERNAL HUMAN evidence. No external-human review is claimed. The manuscript AI disclosure has been reconciled to this evidence and no longer collapses machine-side checking into human verification.
+
+The central-result accountability record makes the author's accepted research scope, assumptions, proof logic, failure boundaries, and maximum defensible wording explicit. Stage 15 still requires a personal AUTHOR sign-off tied to the exact final commit, portal-generated PDF, and upload package.
+
+### Prospective v2.7 — reviewer verifiability
+
+PASS.
+
+New evidence:
+- `audit/REVIEWER_VERIFIABILITY_MAP.md`;
+- `audit/REVIEWER_VERIFIABILITY_REPORT.md`.
+
+A manuscript-facing reconstruction covered every headline derivation/proof chain. It found no substantive defect.
+
+Two presentation-only repairs were made:
+1. corrected a malformed `\qquad` command in the literal-Hotelling Appendix proof;
+2. expanded the manuscript's formal-verification boundary so a referee can see what Lean certifies and what remains analytically certified.
+
+The v2.5 streamlining remains valid: no proof-critical bridge was lost.
+
+### Current-workflow normalization
+
+The existing Stage-7.5A portability evidence is now packaged as:
+- `audit/CONTRIBUTION_ROBUSTNESS_CERTIFICATE.md`.
+
+No theorem was widened.
+
+Dedicated regression QA:
+- `code/stage14_v26_v27_retrofit_verify.py`.
+
+### Updated Stage-14 verdict
+
+The v2.6/v2.7 retrofit introduces no new scientific blocker.
+
+\[
+\boxed{\textbf{STAGE 14 — CLOSED / CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED}}
+\]
+
+The remaining Stage-14 blocker is still portal-only. Stage 15 additionally requires the final exact-package AUTHOR sign-off mandated by the current workflow.

@@ -7,9 +7,12 @@ concurrency:
 on:
   push:
     branches:
-      - audit/full-equilibrium-correspondence
+      - main
     paths:
       - 'code/**'
+      - 'audit/**'
+      - 'docs/**'
+      - 'paper/**'
       - 'requirements.txt'
       - '.python-version'
       - 'Makefile'
@@ -17,6 +20,9 @@ on:
   pull_request:
     paths:
       - 'code/**'
+      - 'audit/**'
+      - 'docs/**'
+      - 'paper/**'
       - 'requirements.txt'
       - '.python-version'
       - 'Makefile'
