@@ -4,6 +4,12 @@ Reproducible correction and adversarial equilibrium audit of Shy & Stenbacka (20
 
 ## Canonical status
 
+**Canonical branch:** `main`  
+**Canonical submission candidate:** the current `main` HEAD.  
+PR #1 (`Stages 0–14: RIO submission QA conditional pass`) was promoted to `main` on 2026-10-05. The former `audit/full-equilibrium-correspondence` and `workflow/v2.5-exposition-sync` branches are retained only as development-history refs and are not independent submission candidates.
+
+Submission-state authority is `main` plus `docs/CANONICAL_SUBMISSION_CANDIDATE.md`. Any future manuscript, theorem, journal-positioning, or submission-package change must be made through a branch based on the current `main` and merged back before it is treated as canonical.
+
 \[
 \boxed{\textbf{STAGE 4 — PASS (AMENDED)}}
 \]
