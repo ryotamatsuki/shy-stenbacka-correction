@@ -283,3 +283,27 @@ The project adopts `research-paper-workflow` v2.5 @ `46d17bc4c1036955103224a5c03
 Retrofit evidence: `audit/EXPOSITION_STREAMLINING_V2_5_RETROFIT.md`.
 
 Verdict: `PASS — no manuscript content change required`. Existing Stage-14 conditional blockers remain author-input / authenticated-portal items only.
+
+
+## v2.6 / v2.7 accountability and reviewer-verifiability retrofit — 2026-10-05
+
+Current retrofit workflow authority:
+
+- `research-paper-workflow` main: `7d754032f292205264bd404116b561366836c7fd`;
+- prospective v2.6 accountability commit: `cb1cfdde94e9dac9d40789a605e810b79319e8fd`;
+- prospective v2.7 reviewer-verifiability commit: `7d754032f292205264bd404116b561366836c7fd`.
+
+This is a backward-compatible evidence/exposition retrofit. It does not silently reopen or widen the Stage-8 theory freeze.
+
+Canonical retrofit artifacts:
+
+- `audit/AI_PROVENANCE_MATERIAL_USE_LOG.md`;
+- `audit/AUTHOR_INTELLECTUAL_CONTRIBUTION_RECORD.md`;
+- `audit/CONTRIBUTION_ROBUSTNESS_CERTIFICATE.md`;
+- `audit/REVIEWER_VERIFIABILITY_MAP.md`;
+- `audit/REVIEWER_VERIFIABILITY_REPORT.md`;
+- `audit/V2_6_V2_7_RETROFIT_2026-10-05.md`.
+
+Verdict: **v2.6 PASS / v2.7 PASS**.
+
+The current Stage-14 conditional status is unchanged in substance: the remaining pre-submission blocker is authenticated RIO portal preflight. Stage 15 additionally requires personal AUTHOR sign-off tied to the exact frozen commit/PDF/package.
