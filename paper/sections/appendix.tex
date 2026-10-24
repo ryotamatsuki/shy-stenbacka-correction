@@ -152,11 +152,17 @@ For clarity, the corresponding downstream quantities in the both-active region a
 q_j=\frac{H(\delta+2x-y)}{3b},\qquad
 q_k=\frac{H(\delta+2y-x)}{3b}.
 \]
-Thus own entry occurs at \(x=(y-\delta)/2\), and rival exit occurs at
-\(x=\delta+2y\).  The three payoff expressions above apply, respectively,
-when own output is zero, when both quantities are positive, and when rival
-output is zero.  At the thresholds the adjacent operating-payoff formulas
-agree; the global concavity lemma handles their one-sided derivatives.
+Thus, for fixed \(y\ge0\) and \(x\in[0,\phi]\), the three payoff
+expressions apply on the respective intervals
+\[
+x\le\frac{y-\delta}{2}\quad\text{(own inactive)},\qquad
+\frac{y-\delta}{2}<x<\delta+2y\quad\text{(both active)},\qquad
+x\ge\delta+2y\quad\text{(rival inactive)}.
+\]
+An interval may be empty after intersecting it with \([0,\phi]\).
+At either boundary the adjacent formulas agree, so assigning a zero-output
+firm to the inactive branch does not affect the payoff.  The global concavity
+lemma handles the one-sided derivatives at these joins.
 
 The both-active stationary point, the rival-exit boundary, and the monopoly
 stationary point are therefore
@@ -217,6 +223,11 @@ A pure Stage-I equilibrium solves
 \[
 x=B_\phi(y),\qquad y=B_\phi(x).
 \]
+The proof separates three response geometries: a contraction for
+\(\rho>2/3\), a clipped affine map at \(\rho=2/3\), and, for
+\(4/9<\rho<2/3\), a crossing property followed by an exhaustive split of
+ordered asymmetric candidates at the downstream entry threshold
+\(x_H=\delta\).
 
 \paragraph{Case \(\rho>2/3\).}
 Here the uncapped response is the active branch \(A\) for
@@ -518,8 +529,10 @@ The two roots are real, and the lower one is \(x_-\) in
 =
 \frac12.
 \]
-For the first inequality, both sides of the equivalent comparison are
-positive and the decisive squared difference is
+The first inequality is equivalent to
+\(2-18/\lambda>
+\sqrt{2(2\lambda-27)/\lambda}\).  Both sides are positive on the
+maintained interval, and their squared difference is
 \[
 \left(2-\frac{18}{\lambda}\right)^2
 -\frac{2(2\lambda-27)}{\lambda}
