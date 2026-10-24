@@ -24,14 +24,14 @@ These pages were reopened for this revision; the 2026-09-20 ledger is historical
 | Article category / correction vs research label | Must use actual selectable category; no public rule establishes exact portal label | L2 needed | UNVERIFIED — PORTAL ONLY |
 | Anonymity and author identification | Public page asks for identified title page; review model and upload designation not unambiguously specified | L3; L2 needed | UNVERIFIED — PORTAL ONLY |
 | Corresponding author, email, ORCID, affiliation | Populated in `paper/RIO_TITLE_PAGE.tex` from prior author-approved record; canonical `\author{}` preserved for reversible anonymity choice | L3; local evidence | PASS locally; portal mapping pending |
-| Abstract | 150–250 words | L3; CI Stage-14 checker | PASS subject to final-head CI |
-| Keywords and JEL | 4–6 keywords; appropriate JEL codes | L3; manuscript | PASS subject to final-head CI |
-| Manuscript format | Mathematical paper may be submitted as LaTeX; editable source mandatory even at initial submission | L3; flat source builder | PASS subject to final-head CI |
-| LaTeX folder structure | No subdirectories; submission source automatically compiled for approval | L3; isolated flat build | PASS locally subject to CI; portal compilation pending |
+| Abstract | 150–250 words | L3; CI Stage-14 checker | PASS — final-head CI |
+| Keywords and JEL | 4–6 keywords; appropriate JEL codes | L3; manuscript | PASS — final-head CI |
+| Manuscript format | Mathematical paper may be submitted as LaTeX; editable source mandatory even at initial submission | L3; flat source builder | PASS — final-head CI |
+| LaTeX folder structure | No subdirectories; submission source automatically compiled for approval | L3; isolated flat build | PASS locally and in CI; portal compilation pending |
 | Citations / DOI | Author-year, reference list of cited/accepted-published works, alphabetical; full DOI links if available | L3; BibTeX and project source ledger | PASS to project regression scope; no new citations introduced |
-| Figure 1 and Table 1 | Number/caption/text references, black solid/dashed vector, legibility, embedded fonts, regenerated values | L3; generator + PDF | PASS at Stage-13 input; final-head CI/PDF to recheck |
-| Figure caption | Fig. 1 convention and AI-assisted plotting-code disclosure where applicable | L3 + L4 | Stage-14 manuscript caption clarified; rebuild pending |
-| AI use | Disclose material research-stage and manuscript-preparation assistance; record methods, provenance, human accountability, and verifiable figure inputs; AI not author | L3 + L4 | Stage-14 statement clarified; personal exact-package AUTHOR sign-off pending Stage 15 |
+| Figure 1 and Table 1 | Number/caption/text references, black solid/dashed vector, legibility, embedded fonts, regenerated values | L3; generator + PDF | PASS — current 24-page PDF and final-head CI rechecked |
+| Figure caption | Fig. 1 convention and AI-assisted plotting-code disclosure where applicable | L3 + L4 | PASS — revised caption rendered and readable in current PDF |
+| AI use | Disclose material research-stage and manuscript-preparation assistance; record methods, provenance, human accountability, and verifiable figure inputs; AI not author | L3 + L4 | PASS — revised statement visible in current PDF; personal exact-package AUTHOR sign-off pending Stage 15 |
 | Funding / conflicts / contribution | Manuscript statements and submission-interface contributions/conflicts must agree | L3 | PASS locally; portal fields pending |
 | Data / code availability | Required data availability statement for original research; code and selected Lean scope accurately distinguished | L3 | PASS locally; exact links checked in PDF |
 | Ethics/consent | No human/animal research asserted by this theoretical manuscript | L3 | NOT APPLICABLE as evidenced; portal attestations pending |
@@ -51,7 +51,11 @@ These pages were reopened for this revision; the 2026-09-20 ledger is historical
 - Every page 1–24 was rendered for visual scanning: Figure 1 and Table 1 are present on page 8; proof appendix begins on page 14; Statements and Declarations span pages 21–22; references continue to page 24. No visually evident clipped text, equation spill, overlapping figure/table text, broken glyph or missing page was identified. PDF text blocks were also checked for text outside the horizontal print margins (none).
 - No PDF placeholder `TODO`, `FIXME`, `[?]`, or literal `undefined` detected in extracted text.
 - A newly added Stage-13 payoff-domain display fits within the page after the three-line reformulation. The 23 to 24 page change reflects additional mathematical exposition and reference pagination, not a broken build.
-- The initial 24-page review predates the Stage-14 **disclosure-only** manuscript edits. **The exact Stage-14 head requires fresh CI and PDF visual QA before the non-portal close-out verdict.**
+- **Current Stage-14 manuscript-content head:** `f50398c8ad0caba8f0b5e4d70eaf61efb635c2d8`. Both Python verification (`40088067621`) and manuscript smoke build (`40088067520`) completed **SUCCESS**, including Stage-10 figure regression, Stage-14 non-portal QA, flat source compile, font embedding, and page counts. There were no `Overfull \\hbox` warnings; minor `Underfull \\hbox` warnings did not impair the rendered layout. Transient first-pass undefined-reference warnings cleared by the final LaTeX passes.
+- **Stage-14 final-content artifact:** `stage14-review-pdfs` artifact ID `12558131803`, GitHub digest `sha256:44d5c6e7e85695354ddc4fcdcdca427bb11f29c6eae4d294652925a417806414`. Independently downloaded and visually reviewed. Canonical PDF SHA256 `a7a572d7861c70fd0cc85eba91b18e9dbc98b9569ed2a592e6d491f1c8ea5c56`; both canonical/flat PDFs still **24 pages** with identical extracted text and embedded fonts.
+- **Current exact Stage-14 documentation head before this closure text:** `d1b946ea50d53250237b3bd2430b6d59fe9629d8`, with Python CI `40088191482` **SUCCESS** and manuscript CI `40088191591` **SUCCESS**. Compared with `f50398c8...`, the intervening commit adds only this audit document; no compiled source changed.
+- All **24/24** current manuscript pages were rendered and inspected in three contact sheets, with zoom inspection of page 8 (Figure 1, revised caption, equations) and page 22 (expanded AI disclosure and DOI rendering). Figure 1 and Table 1 are still numbered and readable; the Table 1 float now begins on page 9 rather than page 8, and the surrounding narrative remains sequential. Statements and Declarations are on pages 21–22, references end on page 24. No clipping, broken glyphs, missing figure, table overflow, or out-of-page horizontal text blocks identified. The text extractor found no literal placeholder flags.
+- **No independent full new bibliographic DOI-by-DOI web cross-check or whole-theory/Lean recertification is claimed.** Bibliography sources and Lean proof files were unchanged, and the project verification suite passed.
 
 ## 4. Stage-14 bounded repairs
 
@@ -74,6 +78,6 @@ Do not claim that all proofs were formally certified; only selected Lean mapping
 
 ## 6. Stage-14 decision and next gate
 
-**Provisional result until exact Stage-14-head rebuild:** compliant source/package design and 24-page Stage-13 input review. Re-run manuscript build, Python CI, extraction, exact 24/25-page PDF visual and figure-caption review after the Stage-14 edits. Only then consider **CLOSED / CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED**.
+**CLOSED / CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED.** The complete non-portal Stage-14 package and PDF review is complete on the actual revised text (24 pages), with both CI workflows successful. All official public rules checked in this re-audit are satisfied within the project's evidence scope; unobservable authenticated-portal fields are not marked PASS.
 
 The full Stage-14 PASS is barred by (i) authenticated RIO article category, anonymity model, title-page/upload designations, declarations/reviewer/fee/cover-letter fields; (ii) portal-generated PDF review and approval; and (iii) exact-commit and package AUTHOR sign-off. The stacked draft PR must **not** be merged automatically or taken as a final submission.
