@@ -147,6 +147,25 @@ reduced payoff has the relevant pieces
 \frac{(\delta+x)^2}{4\rho}-x^2,
 \]
 for own inactivity, both-active output, and rival inactivity, respectively.
+For clarity, the corresponding downstream quantities in the both-active region are
+\[
+q_j=\frac{H(\delta+2x-y)}{3b},\qquad
+q_k=\frac{H(\delta+2y-x)}{3b}.
+\]
+Thus, for fixed \(y\ge0\) and \(x\in[0,\phi]\), the three payoff
+expressions apply on the respective intervals:
+\[
+\begin{array}{ll}
+x\le(y-\delta)/2 & \text{own inactive},\\
+(y-\delta)/2<x<\delta+2y & \text{both active},\\
+x\ge\delta+2y & \text{rival inactive}.
+\end{array}
+\]
+An interval may be empty after intersecting it with \([0,\phi]\).
+At either boundary the adjacent formulas agree, so assigning a zero-output
+firm to the inactive branch does not affect the payoff.  The global concavity
+lemma handles the one-sided derivatives at these joins.
+
 The both-active stationary point, the rival-exit boundary, and the monopoly
 stationary point are therefore
 \[
@@ -206,6 +225,11 @@ A pure Stage-I equilibrium solves
 \[
 x=B_\phi(y),\qquad y=B_\phi(x).
 \]
+The proof separates three response geometries: a contraction for
+\(\rho>2/3\), a clipped affine map at \(\rho=2/3\), and, for
+\(4/9<\rho<2/3\), a crossing property followed by an exhaustive split of
+ordered asymmetric candidates at the downstream entry threshold
+\(x_H=\delta\).
 
 \paragraph{Case \(\rho>2/3\).}
 Here the uncapped response is the active branch \(A\) for
@@ -507,8 +531,17 @@ The two roots are real, and the lower one is \(x_-\) in
 =
 \frac12.
 \]
-The first inequality becomes equality only at \(\lambda=18\), which is
-outside the maintained strict source condition.  Hence the positive-gain
+The first inequality is equivalent to
+\(2-18/\lambda>
+\sqrt{2(2\lambda-27)/\lambda}\).  Both sides are positive on the
+maintained interval, and their squared difference is
+\[
+\left(2-\frac{18}{\lambda}\right)^2
+-\frac{2(2\lambda-27)}{\lambda}
+=\frac{18(18-\lambda)}{\lambda^2}>0.
+\]
+Equality would occur only at \(\lambda=18\), outside the maintained strict
+source condition.  Hence the positive-gain
 interval begins strictly inside the correct full-market branch.  If
 \(\phi\le x_-\), no feasible action has positive gain.  If
 \(x_-<\phi\le x_M\), any action in \((x_-,\phi]\) sufficiently close
